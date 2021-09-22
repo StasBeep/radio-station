@@ -6,7 +6,7 @@
   /*Максимальная ширина страницы и выравнивание содержимого по центру*/
   max-width: 1440px;
   margin: 0 auto;
-  background-color: #ffc000;
+  background-color: #ffd500;
   /* Обёртка для прижатия подвала к нижней части */
 }
 
@@ -26,7 +26,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #1d1ab2;
+  background-color: #3b14af;
 }
 
 /* end === wrapper === end */
@@ -72,4 +72,79 @@
     line-height: $linehe;
 }*/
 /* index */
+/* header */
+.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.fixed-menu {
+  padding: 30px;
+  background-color: #3b14af;
+}
+
+.fixed-menu-btn {
+  display: none;
+}
+
+.fixed-menu-btn:checked ~ .fixed-nav {
+  visibility: visible;
+}
+
+.fixed-menu-btn-icon {
+  fill: #ffd500;
+  -webkit-filter: drop-shadow(2px 2px 0 #fff100);
+          filter: drop-shadow(2px 2px 0 #fff100);
+  -webkit-transition: fill ease 0.5s;
+  transition: fill ease 0.5s;
+}
+
+.fixed-menu-btn-icon:hover {
+  fill: #a13dd5;
+  -webkit-filter: drop-shadow(2px 2px 0 #4a036f);
+          filter: drop-shadow(2px 2px 0 #4a036f);
+}
+
+.fixed-center {
+  width: 50px;
+  position: absolute;
+  left: 48.8%;
+  top: 12%;
+}
+
+.fixed-nav {
+  visibility: hidden;
+  position: relative;
+}
+
+.fixed-nav-menu {
+  margin: 0;
+  padding: 0 100px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.fixed-nav-menu-el {
+  font-family: lato;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  line-height: 10px;
+  color: #fff100;
+  -webkit-transition: color ease 0.5s;
+  transition: color ease 0.5s;
+}
+
+.fixed-nav-menu-el:hover {
+  color: #a13dd5;
+}
+
+/* end header end */
+/* end index end */
 /*# sourceMappingURL=style.css.map */

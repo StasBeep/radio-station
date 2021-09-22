@@ -1,1 +1,66 @@
 /* index */
+
+/* header */
+.fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+    &-menu {
+        padding: 30px;
+        background-color: $rear-panel;
+
+        &-btn {
+            display: none;
+
+            &:checked~.fixed-nav{
+                visibility: visible;
+            }
+
+            &-icon {
+                fill: $front-panel;
+                filter: drop-shadow( 2px 2px 0 $main-color);
+                transition: fill ease 0.5s;
+
+                &:hover {
+                    fill: $fill-logo;
+                    filter: drop-shadow( 2px 2px 0 $fill-shadow);
+                }
+            }
+        }
+    }
+
+    &-center {
+        width: 50px;
+        position: absolute;
+        left: 48.8%;
+        top: 12%;
+    }
+
+    &-nav {
+        visibility: hidden;
+        position: relative;
+
+        &-menu {
+            margin: 0;
+            padding: 0 100px;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+
+            &-el {
+                @include font-open-regular;
+                color: $main-color;
+                transition: color ease 0.5s;
+
+                &:hover {
+                    color: $fill-logo;
+                }
+            }
+        }
+    }
+}
+
+/* end header end */
+
+/* end index end */
