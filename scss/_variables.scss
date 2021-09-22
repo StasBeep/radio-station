@@ -1,16 +1,18 @@
 /* Переменные (через $) */
-
+$rear-panel: #1d1ab2;
+$front-panel: #ffc000;
 
 /* === wrapper === */
 /* Обёртки - отдельный блок */
 .wrapper{
     /*Максимальная ширина страницы и выравнивание содержимого по центру*/
-    //max-width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
+    background-color: $front-panel;
 
     //Отступы по краям
     &-container {
-        //padding: 0 120px;
+        padding: 0 140px;
         box-sizing: border-box;
     }
     
@@ -19,6 +21,7 @@
         min-height: 100vh; /* 100 видимых высот */
         display: flex;
         flex-direction: column;
+        background-color: $rear-panel;
     }
 }
 /* end === wrapper === end */

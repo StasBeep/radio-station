@@ -3,7 +3,17 @@
 /* === wrapper === */
 /* Обёртки - отдельный блок */
 .wrapper {
+  /*Максимальная ширина страницы и выравнивание содержимого по центру*/
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #ffc000;
   /* Обёртка для прижатия подвала к нижней части */
+}
+
+.wrapper-container {
+  padding: 0 140px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .wrapper-forcontent {
@@ -16,6 +26,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #1d1ab2;
 }
 
 /* end === wrapper === end */
@@ -37,6 +48,20 @@
     font-weight: 300;
     font-style: normal;
 }*/
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url(../fonts/OpenSans-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url(../fonts/OpenSans-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* mixin */
 /* example:
 @mixin font-lato-normal-size-line($size-format: 400, $fonts:14px, $linehe: 17px) {
