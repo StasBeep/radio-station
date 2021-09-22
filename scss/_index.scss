@@ -1,1 +1,49 @@
 /* index */
+
+/* header */
+.fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+
+    &-menu {
+        padding: 30px;
+
+        &-btn {
+            display: none;
+
+            &:checked~.fixed-nav{
+                visibility: visible;
+            }
+
+            &-icon {
+                // fill: $front-panel;
+
+            }
+        }
+    }
+
+    &-center {
+        width: 50px;
+        position: absolute;
+        left: 48.8%;
+        top: 12%;
+    }
+
+    &-nav {
+        visibility: hidden;
+        position: relative;
+
+        &-menu {
+            margin: 0;
+            padding: 0 100px;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+/* end header end */
+
+/* end index end */

@@ -6,7 +6,7 @@
   /*Максимальная ширина страницы и выравнивание содержимого по центру*/
   max-width: 1440px;
   margin: 0 auto;
-  background-color: #ffc000;
+  background-color: #ffd500;
   /* Обёртка для прижатия подвала к нижней части */
 }
 
@@ -26,7 +26,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #1d1ab2;
+  background-color: #3b14af;
 }
 
 /* end === wrapper === end */
@@ -72,4 +72,49 @@
     line-height: $linehe;
 }*/
 /* index */
+/* header */
+.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.fixed-menu {
+  padding: 30px;
+}
+
+.fixed-menu-btn {
+  display: none;
+}
+
+.fixed-menu-btn:checked ~ .fixed-nav {
+  visibility: visible;
+}
+
+.fixed-center {
+  width: 50px;
+  position: absolute;
+  left: 48.8%;
+  top: 12%;
+}
+
+.fixed-nav {
+  visibility: hidden;
+  position: relative;
+}
+
+.fixed-nav-menu {
+  margin: 0;
+  padding: 0 100px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* end header end */
+/* end index end */
 /*# sourceMappingURL=style.css.map */
