@@ -8,6 +8,7 @@
 
     &-menu {
         padding: 30px;
+        background-color: $rear-panel;
 
         &-btn {
             display: none;
@@ -17,8 +18,14 @@
             }
 
             &-icon {
-                // fill: $front-panel;
+                fill: $front-panel;
+                filter: drop-shadow( 2px 2px 0 $main-color);
+                transition: fill ease 0.5s;
 
+                &:hover {
+                    fill: $fill-logo;
+                    filter: drop-shadow( 2px 2px 0 $fill-shadow);
+                }
             }
         }
     }
@@ -40,6 +47,16 @@
             list-style-type: none;
             display: flex;
             justify-content: space-between;
+
+            &-el {
+                @include font-open-regular;
+                color: $main-color;
+                transition: color ease 0.5s;
+
+                &:hover {
+                    color: $fill-logo;
+                }
+            }
         }
     }
 }
