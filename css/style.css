@@ -77,32 +77,10 @@
   position: fixed;
   width: 100%;
   z-index: 10;
-  /*&-nav {
-        visibility: hidden;
-        position: relative;
-
-        &-menu {
-            margin: 0;
-            padding: 0 100px;
-            list-style-type: none;
-            display: flex;
-            justify-content: space-between;
-
-            &-el {
-                @include font-open-regular;
-                color: $main-color;
-                transition: color ease 0.5s;
-
-                &:hover {
-                    color: $fill-logo;
-                }
-            }
-        }
-    }*/
 }
 
 .fixed-menu {
-  padding: 30px;
+  padding: 15px;
   background-color: #3b14af;
 }
 
@@ -130,11 +108,16 @@
 
 .fixed-center {
   width: 50px;
-  position: absolute;
-  left: 48.8%;
-  top: 12%;
+  display: block;
+  margin: 0 auto;
 }
 
 /* end header end */
+/* main */
+.content {
+  margin-top: 84px;
+}
+
+/* end main end */
 /* end index end */
 /*# sourceMappingURL=style.css.map */
