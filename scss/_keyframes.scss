@@ -1,0 +1,10 @@
+// Анимация заднего фона заголовка
+@keyframes title-bg {
+    0% {
+        background-position: -300px 0
+    }
+
+    100% {
+        background-position: 300px -300px
+    }
+}

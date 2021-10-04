@@ -9,6 +9,7 @@
     &-menu {
         padding: 15px;
         background-color: $rear-panel;
+        box-sizing: border-box;
 
         &-btn-icon {
             fill: $front-panel;
@@ -34,227 +35,63 @@
 /* main */
 .content {
     margin-top: 84px;
-}
 
-// ! Блок редакции
-// положение кнопок запуска/стоп/перемоток/ стилизации
-ul.vc-controls {
-    list-style: none;
-    padding: 0;
-    width: 440px;
-    position: absolute;
-    bottom: 18px;
-    left: 50%;
-    margin: 0 0 0 -170px;
-    background: -moz-linear-gradient(top, rgba(170, 170, 170, 0.35) 0%, rgba(255, 255, 255, 0.44) 50%, rgba(255, 255, 255, 0.53) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(170, 170, 170, 0.35)), color-stop(50%, rgba(255, 255, 255, 0.44)), color-stop(100%, rgba(255, 255, 255, 0.53)));
-    background: -webkit-linear-gradient(top, rgba(170, 170, 170, 0.35) 0%, rgba(255, 255, 255, 0.44) 50%, rgba(255, 255, 255, 0.53) 100%);
-    background: -o-linear-gradient(top, rgba(170, 170, 170, 0.35) 0%, rgba(255, 255, 255, 0.44) 50%, rgba(255, 255, 255, 0.53) 100%);
-    background: -ms-linear-gradient(top, rgba(170, 170, 170, 0.35) 0%, rgba(255, 255, 255, 0.44) 50%, rgba(255, 255, 255, 0.53) 100%);
-    background: linear-gradient(to bottom, rgba(170, 170, 170, 0.35) 0%, rgba(255, 255, 255, 0.44) 50%, rgba(255, 255, 255, 0.53) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#59aaaaaa', endColorstr='#87ffffff', GradientType=0);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom-color: rgba(255, 255, 255, 0.6);
-    padding: 8px;
-    height: 54px;
-    box-shadow:
-        inset 0 1px 0px rgba(0, 0, 0, 0.05),
-        0 1px 0 rgba(255, 255, 255, 0.8),
-        0 -1px 0 rgba(255, 255, 255, 0.4),
-        inset 0 2px 19px rgba(0, 0, 0, 0.05),
-        0 2px 1px rgba(0, 0, 0, 0.06);
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    border-radius: 12px;
-}
+    &-wrp {
+        padding: 0 65px;
+        box-sizing: border-box;
+        position: relative;
 
-// стилизация каждой кнопки в отдельности
-ul.vc-controls li {
-    display: block;
-    float: left;
-    width: 80px;
-    height: 50px;
-    line-height: 55px;
-    text-align: left;
-    padding: 10px;
-    margin: 0;
-    cursor: pointer;
-    background: #ddd url(../images/metal.jpg) no-repeat center top;
-    box-shadow:
-        inset 0 0 0 1px rgba(0, 0, 0, 0.2),
-        inset 0 0 1px 2px rgba(255, 255, 255, 0.9),
-        inset 0 -6px 5px rgba(0, 0, 0, 0.1),
-        0 6px 7px rgba(0, 0, 0, 0.3),
-        0 4px 1px rgba(0, 0, 0, 0.5);
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
+        &-title {
+            display: block;
+            @include font-open-bold(700, 70px, 20px);
+            margin: 0;
+            padding: 45px 10px 35px;
+            box-sizing: border-box;
+            letter-spacing: 10px;
+            text-align: center;
+            text-transform: uppercase;
 
-// Иконки перед кнопками
-ul.vc-controls li span:before {
-    font-size: 16px;
-    line-height: 50px;
-    text-align: center;
-    color: #444;
-    font-family: 'playericons';
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9);
-    font-style: normal;
-    font-weight: normal;
-    text-transform: none;
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    margin-right: 0.2em;
-    text-align: center;
-}
+            // Анимация заднего фона заголовка
+            animation-play-state: running;
+            color: transparent;
+            background: url(../img/bg-title.png);
+            background-size: cover;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-animation: title-bg 20s infinite linear alternate;
+            -moz-animation: title-bg 20s infinite linear alternate;
+            animation: title-bg 20s infinite linear alternate;
 
-// отображение иконки перемотки вперед
-li.vc-control-fforward span:before {
-    content: '\23e9';
-}
+            border-bottom: .25rem solid $whcolor;
 
-// отображение иконки перемотки назад
-li.vc-control-rewind span:before {
-    content: '\23ea';
-}
+            &::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: -1.25rem;
+                transform: translateX(-1.25rem);
+                border-top: 1.25rem solid $whcolor;
+                border-left: 1.25rem solid transparent;
+                border-right: 1.25rem solid transparent;
+            }
 
-// отображение иконки стоп
-li.vc-control-stop span:before {
-    content: '\25aa';
-}
-
-// отображение иконки перемотки старт
-li.vc-control-play span:before {
-    content: '\70';
-}
-
-// * Эффект наведения!
-
-/* Pressed (active) */
-ul.vc-controls li.vc-control-active {
-    height: 50px;
-    margin-top: 2px;
-    background-image: url(../images/metal_dark.jpg);
-    box-shadow:
-        inset 0 0 0 1px rgba(0, 0, 0, 0.18),
-        inset 0 0 1px 2px rgba(255, 255, 255, 0.5),
-        inset 0 -6px 5px rgba(0, 0, 0, 0.1),
-        0 6px 7px rgba(0, 0, 0, 0.3),
-        0 2px 1px rgba(0, 0, 0, 0.5);
-
-}
-
-// Стилизация блока 
-.vc-volume-wrap {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    margin-left: -288px;
-    background: -moz-linear-gradient(top, rgba(170, 170, 170, 0.35) 0%, rgba(255, 255, 255, 0.44) 50%, rgba(255, 255, 255, 0.53) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(170, 170, 170, 0.35)), color-stop(50%, rgba(255, 255, 255, 0.44)), color-stop(100%, rgba(255, 255, 255, 0.53)));
-    background: -webkit-linear-gradient(top, rgba(170, 170, 170, 0.35) 0%, rgba(255, 255, 255, 0.44) 50%, rgba(255, 255, 255, 0.53) 100%);
-    background: -o-linear-gradient(top, rgba(170, 170, 170, 0.35) 0%, rgba(255, 255, 255, 0.44) 50%, rgba(255, 255, 255, 0.53) 100%);
-    background: -ms-linear-gradient(top, rgba(170, 170, 170, 0.35) 0%, rgba(255, 255, 255, 0.44) 50%, rgba(255, 255, 255, 0.53) 100%);
-    background: linear-gradient(to bottom, rgba(170, 170, 170, 0.35) 0%, rgba(255, 255, 255, 0.44) 50%, rgba(255, 255, 255, 0.53) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#59aaaaaa', endColorstr='#87ffffff', GradientType=0);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    padding: 8px;
-    box-shadow:
-        inset 0 1px 0px rgba(0, 0, 0, 0.05),
-        0 1px 0 rgba(255, 255, 255, 0.6),
-        0 -1px 0 rgba(255, 255, 255, 0.4),
-        inset 0 2px 19px rgba(0, 0, 0, 0.05),
-        0 2px 1px rgba(0, 0, 0, 0.06);
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-}
-
-.vc-volume-wrap:after {
-    content: 'Volume';
-    margin-top: 15px;
-    display: block;
-}
-
-/* Text style for controls */
-ul.vc-controls li,
-.vc-volume-wrap:after {
-    font-family: 'Aldrich';
-    font-size: 10px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #666;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
-}
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: -1.125rem;
+                transform: translateX(-1.25rem);
+                border-top: 1.5rem solid $front-panel;
+                border-left: 1.25rem solid transparent;
+                border-right: 1.25rem solid transparent;
+            }
+        }
+    }
 
 
-// ! Блок видимости - надо переделать (этот убрать)
-ul.vc-controls {
-    position: relative;
-    margin: 30px 0 0 -110px;
-    width: 360px;
-}
-
-
-// потожение ролика звука относительно страницы
-.vc-volume-wrap {
-    position: relative;
-    margin-top: -100px;
-}
-
-// размеры ползунка звука
-.knob {
-    width: 100px;
-    height: 100px;
-    position: relative;
-}
-
-// положение точки и звука (с элементом заднего фона)
-.knob .top {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url(../images/knob.jpg) no-repeat center center;
-    z-index: 10;
-    cursor: default !important;
-    border-radius: 50%;
-    box-shadow: inset 0 0 3px 2px rgba(255, 255, 255, 0.6);
-}
-
-// контур звука
-.knob .base {
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 5px 0 #555, 0px 5px 5px black;
-    position: absolute;
-    z-index: 1;
-    border-radius: 50%;
-}
-
-// Точка на звуке
-.knob .top:after {
-    content: '';
-    width: 4px;
-    height: 4px;
-    background-color: #666;
-    position: absolute;
-    top: 50%;
-    margin-top: -2px;
-    left: 4px;
-    border-radius: 50%;
-    cursor: default !important;
-    box-shadow:
-        0 0 1px #5a5a5a inset,
-        1px -1px 1px rgba(255, 255, 255, 0.5);
 }
 
 /* end main end */
