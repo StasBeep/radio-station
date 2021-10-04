@@ -9,6 +9,8 @@
     <title>Reggae Universe Radio</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- jquery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="./src/index.js" defer></script>
 </head>
 
@@ -69,7 +71,21 @@
             <main class="wrapper wrapper-container">
                 <!--Первая секция основной части-->
                 <section class="content">
-                    Проверка
+                    <audio id="audioElem"><span>HTML5 audio not supported</span></audio>
+                    <div class="vc-buttons">
+                        <ul class="vc-controls">
+                            <li class="vc-control-play" id="vc-control-play">Play<span></span></li>
+                            <li class="vc-control-rewind" id="vc-control-rewind">Rew<span></span></li>
+                            <li class="vc-control-fforward" id="vc-control-fforward">FF<span></span></li>
+                            <li class="vc-control-stop" id="vc-control-stop">Stop<span></span></li>
+                        </ul>
+                        <div class="vc-volume-wrap">
+                            <div class="vc-volume-control">
+                                <div class="vc-volume-knob">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <!--Вторая секция-->
                 <section>
@@ -83,6 +99,9 @@
 
         </footer>
     </div>
+    <!-- скрипты запуска/перемотки/остановки/звука -->
+	<script src="./src/knobknob.jquery.js"></script>
+	<script type="text/javascript" src="./src/jquery.cassette.js"></script>
 </body>
 
 </html>
