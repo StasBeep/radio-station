@@ -79,21 +79,22 @@
                     <section class="content-player">
                         <img class="content-player-equalizer" src="./img/equalizer_pause.gif" alt="equalizer"
                             id="player-equalizer">
-                        <audio id="audioElem"><span>HTML5 audio not supported</span></audio>
-                        <div class="vc-buttons">
-                            <ul class="vc-controls">
-                                <li class="vc-control-play" id="vc-control-play">Play<span></span></li>
-                                <li class="vc-control-rewind" id="vc-control-rewind">Rew<span></span></li>
-                                <li class="vc-control-fforward" id="vc-control-fforward">FF<span></span></li>
-                                <li class="vc-control-stop" id="vc-control-stop">Stop<span></span></li>
-                            </ul>
-                            <div class="vc-volume-wrap">
-                                <div class="vc-volume-control">
-                                    <div class="vc-volume-knob">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <audio id="audioElem"></audio>
+                        <ul class="content-player-controls">
+                            <li>
+                                <ul class="content-player-controls-launch">
+                                    <li class="content-player-volume"></li>
+                                    <li><button class="content-player-controls-play" id="control-play">Play</button></li>
+                                    <li><button class="content-player-controls-stop" id="control-stop">Stop</button></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="content-player-controls-rotation">
+                                    <li><button class="content-player-controls-rewind" id="control-rewind">Rew</button></li>
+                                    <li><button class="content-player-controls-fforward" id="control-fforward">FF</button></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </section>
                     <!--Слайдер-->
                     <section>

@@ -102,26 +102,22 @@ function updateSong(title, artist, url, image, autoplay) {
 
 // * настройка работы плеера
 // При нажатии на play
-$('#vc-control-play').on('mousedown', function (event) {
-    setButtonActive($(this));
+$('#control-play').on('mousedown', function (event) {
     play();
 });
 
 // При нажатии на stop
-$('#vc-control-stop').on('mousedown', function (event) {
-    setButtonActive($(this));
+$('#control-stop').on('mousedown', function (event) {
     stop();
 });
 
 // При нажатии на вперёд
-$('#vc-control-fforward').on('mousedown', function (event) {
-    setButtonActive($(this));
+$('#control-fforward').on('mousedown', function (event) {
     forward();
 });
 
 // При нажатии на назад
-$('#vc-control-rewind').on('mousedown', function (event) {
-    setButtonActive($(this));
+$('#control-rewind').on('mousedown', function (event) {
     rewind();
 });
 
@@ -138,15 +134,6 @@ $('#audioElem').on('ended', function (event) {
     stop();
 });
 
-// TODO: добавление класса и удаление класса с эффектами нажатия (этого класса нет)
-function setButtonActive($button) {
-    // TODO. Solve! For now:
-    $button.addClass('vc-control-pressed');
-    setTimeout(function () {
-        $button.removeClass('vc-control-pressed');
-    }, 100);
-}
-
 // событие воспроизведения
 function updateAction(action) {
     lastaction = action;
@@ -160,22 +147,22 @@ function changeVolume(ratio) {
 // процесс воспроизведения нажатия на кнопке (главная функция запуска)
 function updateButtons(button) {
     // класс стилей
-    const pressedClass = 'vc-control-active';
-    // удаяется класс "vc-control-active"
-    $('div.vc-control-play').removeClass(pressedClass);
-    $('div.vc-control-stop').removeClass(pressedClass);
-    $('div.vc-control-rewind').removeClass(pressedClass);
-    $('div.vc-control-fforward').removeClass(pressedClass);
+    const pressedClass = 'control-active';
+    // удаяется класс "control-active"
+    $('div.control-play').removeClass(pressedClass);
+    $('div.control-stop').removeClass(pressedClass);
+    $('div.control-rewind').removeClass(pressedClass);
+    $('div.control-fforward').removeClass(pressedClass);
     // запуск определённой кнопки
     switch (button) {
         case 'play':
-            $('div.vc-control-play').addClass(pressedClass);
+            $('div.control-play').addClass(pressedClass);
             break;
         case 'rewind':
-            $('div.vc-control-rewind').addClass(pressedClass);
+            $('div.control-rewind').addClass(pressedClass);
             break;
         case 'forward':
-            $('div.vc-control-fforward').addClass(pressedClass);
+            $('div.control-fforward').addClass(pressedClass);
             break;
     }
 }
@@ -370,8 +357,6 @@ function playSE(seName, isLoop) {
         if (isLoop) {
             loopAudio.loop = true;
             loopAudio.autoplay = false;
-            // звук при нажатии
-            loopAudio.src = "sounds/" + seName + ".mp3";
             loopAudio.play();
         } else {
             seAudio = new Audio("");
@@ -388,7 +373,7 @@ function playSE(seName, isLoop) {
     });
 }
 // регулятор громкости
-$('div.vc-volume-knob').knobKnob({
+$('li.content-player-volume').knobKnob({
     snap: 10,
     value: 359 * aux.initialVolume,
     turn: function (ratio) {

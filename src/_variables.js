@@ -1,5 +1,5 @@
-const numPlay = document.getElementById('vc-control-play');
-const numStop = document.getElementById('vc-control-stop');
+const numPlay = document.getElementById('control-play');
+const numStop = document.getElementById('control-stop');
 
 const elEqualizer = document.getElementById('player-equalizer');
 
