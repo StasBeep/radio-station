@@ -35,7 +35,7 @@ let lastaction = '';
 // если активна функция воспроизведения / перемотки вперёд / назад ...
 let isMoving = false;
 
-// ! ищёт элемент audio (надо переделать, на создание и добавление элемента)
+// ищёт элемент audio
 let audio = document.getElementById("audioElem");
 // * Создание нового потока
 const loopAudio = new Audio("");
@@ -62,8 +62,8 @@ $(document).ready(function () {
         let wheelVal = getWheelValues(0);
         updateWheelValue(wheelVal);
         //updateSong(title, artist, mp3url,image,false);
-		
-		updateSong(title, artist, "https://c18.radioboss.fm:18066/stream",image,false);
+
+        updateSong(title, artist, "https://c18.radioboss.fm:18066/stream", image, false);
     });
 });
 
@@ -76,7 +76,7 @@ $(document).on('click', ".jp-playlist-item", function () {
     let wheelVal = getWheelValues(0);
     updateWheelValue(wheelVal);
     //switchSides();
-    updateSong(title, artist, mp3url, image,true);
+    updateSong(title, artist, mp3url, image, true);
 });
 
 // отображение обложки при стриме
@@ -84,17 +84,19 @@ function updateSong(title, artist, url, image, autoplay) {
     $('div.vc-buttons').hide();
     $('div.vc-loader').show();
     $('.track-title').text(title);
-    $('.track-image').attr("src",image);
+    $('.track-image').attr("src", image);
     //$('.track-artist').text(artist);
     stop();
     audio.src = url;
     cntTime = 0;
     playable = false;
-    if(autoplay){
+    if (autoplay) {
         play();
-    }else{
+    } else {
         play();
-        setTimeout(function(){stop();},1000);
+        setTimeout(function () {
+            stop();
+        }, 1000);
     }
 }
 
@@ -130,9 +132,6 @@ $('#audioElem').on('timeupdate', function (event) {
     updateWheelValue(wheelVal);
 });
 
-// TODO: оповещение при загрузке мета-данных для видео (нужна ли)
-$('#audioElem').on('loadedmetadata', function (event) {});
-
 // событие ended происходит, когда аудио/видео достиг конца
 $('#audioElem').on('ended', function (event) {
     timeIterator += audio.duration;
@@ -158,37 +157,6 @@ function changeVolume(ratio) {
     audio.volume = ratio;
 }
 
-// сторона касеты
-/*
-function switchSides() {
-    playSE('switch');
-    lastaction = '';
-    //currentSide = 2;
-    $('div.vc-tape').css({
-        '-webkit-transform': 'rotate3d(0, 1, 0, 180deg)'
-        , '-moz-transform': 'rotate3d(0, 1, 0, 180deg)'
-        , '-o-transform': 'rotate3d(0, 1, 0, 180deg)'
-        , '-ms-transform': 'rotate3d(0, 1, 0, 180deg)'
-        , 'transform': 'rotate3d(0, 1, 0, 180deg)'
-    });
-    //currentSide = 1;
-    setTimeout(function () {
-        $('div.vc-tape').css({
-            '-webkit-transform': 'rotate3d(0, 1, 0, 0deg)'
-            , '-moz-transform': 'rotate3d(0, 1, 0, 0deg)'
-            , '-o-transform': 'rotate3d(0, 1, 0, 0deg)'
-            , '-ms-transform': 'rotate3d(0, 1, 0, 0deg)'
-            , 'transform': 'rotate3d(0, 1, 0, 0deg)'
-        });
-        //_self.$tapeSideB.hide();
-        //_self.$tapeSideA.show();
-        // update wheels
-        cntTime = 0;
-    }, 300);
-}
-*/
-
-
 // процесс воспроизведения нажатия на кнопке (главная функция запуска)
 function updateButtons(button) {
     // класс стилей
@@ -200,15 +168,15 @@ function updateButtons(button) {
     $('div.vc-control-fforward').removeClass(pressedClass);
     // запуск определённой кнопки
     switch (button) {
-    case 'play':
-        $('div.vc-control-play').addClass(pressedClass);
-        break;
-    case 'rewind':
-        $('div.vc-control-rewind').addClass(pressedClass);
-        break;
-    case 'forward':
-        $('div.vc-control-fforward').addClass(pressedClass);
-        break;
+        case 'play':
+            $('div.vc-control-play').addClass(pressedClass);
+            break;
+        case 'rewind':
+            $('div.vc-control-rewind').addClass(pressedClass);
+            break;
+        case 'forward':
+            $('div.vc-control-fforward').addClass(pressedClass);
+            break;
     }
 }
 
@@ -246,8 +214,7 @@ function updateStatus(buttons) {
     // the current time to play is this.cntTime +/- [this.elapsed]
     if (lastaction === 'forward') {
         posTime += elapsed;
-    }
-    else if (lastaction === 'rewind') {
+    } else if (lastaction === 'rewind') {
         posTime -= elapsed;
     }
     // check if we have more songs to play on the current side..
@@ -279,7 +246,6 @@ function rewind() {
         updateStatus(true);
         isMoving = true;
         updateAction(action);
-        playSE('rewind', true);
         // setWheelAnimation('0.5s', action);
         timer();
     });
@@ -296,7 +262,6 @@ function forward() {
         updateStatus(true);
         isMoving = true;
         updateAction(action);
-        playSE('fforward', true);
         // setWheelAnimation('0.5s', action);
         timer();
     });
@@ -314,11 +279,6 @@ function stop(buttons) {
     stopTimer();
 }
 
-// удаление ссылки, но связи нет с ней
-/*function clear() {
-    this.$audioEl.children('source').remove();
-}*/
-
 // функция статуса и положения аудиодорожки
 function setSidesPosStatus(position) {
     cntPosition = position;
@@ -334,21 +294,6 @@ function getWheelValues(x) {
     return val;
 }
 
-// Пустая функция
-/*function getPosTime() {
-    let wleft = this.$wheelLeft.data('wheel')
-        , wright = this.$wheelRight.data('wheel');
-    if (wleft === undefined) {
-        wleft = 70;
-    }
-    if (wright === undefined) {
-        wright = 0;
-    }
-    let T = this._getSide().current.getDuration()
-        , posTime = this.currentSide === 2 ? (T * wleft) / 70 : (T * wright) / 70;
-    return posTime;
-}*/
-
 // playlist
 function updateWheelValue(wheelVal) {
     this.$('div.vc-tape-wheel-left').data('wheel', wheelVal.left).css({
@@ -359,45 +304,11 @@ function updateWheelValue(wheelVal) {
     });
 }
 
-// * Функция вращения (скорости вращения) колеса касеты "анимация"
-/*function setWheelAnimation(speed, mode) {
-    let anim = '';
-    if (mode === 'play' || mode === 'forward') {
-        anim = 'rotateLeft';
-    }
-    else if (mode === 'rewind') {
-        anim = 'rotateRight';
-    }
-    let animStyle = {
-        '-webkit-animation': anim + ' ' + speed + ' linear infinite forwards'
-        , '-moz-animation': anim + ' ' + speed + ' linear infinite forwards'
-        , '-o-animation': anim + ' ' + speed + ' linear infinite forwards'
-        , '-ms-animation': anim + ' ' + speed + ' linear infinite forwards'
-        , 'animation': anim + ' ' + speed + ' linear infinite forwards'
-    };
-    setTimeout(function () {
-        $('div.vc-tape-wheel-right').css(animStyle);
-        $('div.vc-tape-wheel-left').css(animStyle);
-    }, 0);
-}
-
-function stopWheels() {
-    const wheelStyle = {
-        '-webkit-animation': 'none'
-        , '-moz-animation': 'none'
-        , '-o-animation': 'none'
-        , '-ms-animation': 'none'
-        , 'animation': 'none'
-    }
-    $('div.vc-tape-wheel-left').css(wheelStyle);
-    $('div.vc-tape-wheel-right').css(wheelStyle);
-}*/
-
 // credits: http://www.sitepoint.com/creating-accurate-timers-in-javascript/
 // функция запоминания времени нужная для перемотки вперёд и назад
 function timer() {
-    let start = new Date().getTime()
-        , time = 0;
+    let start = new Date().getTime(),
+        time = 0;
     resetElapsed();
     isSeeking = true;
     setSidesPosStatus('middle');
@@ -421,8 +332,7 @@ function timerinstance(start, time) {
     let posTime = cntTime;
     if (lastaction === 'forward') {
         posTime += elapsed;
-    }
-    else if (lastaction === 'rewind') {
+    } else if (lastaction === 'rewind') {
         posTime -= elapsed;
     }
     let wheelVal = getWheelValues(posTime);
@@ -463,8 +373,7 @@ function playSE(seName, isLoop) {
             // звук при нажатии
             loopAudio.src = "sounds/" + seName + ".mp3";
             loopAudio.play();
-        }
-        else {
+        } else {
             seAudio = new Audio("");
             seAudio.autoplay = false;
             seAudio.loop = false;
