@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- jquery -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="./src/index.js" defer></script>
+    <script src="./src/index.js" type="module" defer></script>
 </head>
 
 <body>
@@ -69,32 +69,37 @@
 
             <!--Основная часть-->
             <main class="wrapper wrapper-container content">
+                <!--Заголовок-->
                 <section class="content-wrp">
                     <span class="content-wrp-title"><span class="content-wrp-title-first">reggae</span> universe</span>
                 </section>
 
-                <!--Первая секция основной части-->
-                <section class="content">
-                    <audio id="audioElem"><span>HTML5 audio not supported</span></audio>
-                    <div class="vc-buttons">
-                        <ul class="vc-controls">
-                            <li class="vc-control-play" id="vc-control-play">Play<span></span></li>
-                            <li class="vc-control-rewind" id="vc-control-rewind">Rew<span></span></li>
-                            <li class="vc-control-fforward" id="vc-control-fforward">FF<span></span></li>
-                            <li class="vc-control-stop" id="vc-control-stop">Stop<span></span></li>
-                        </ul>
-                        <div class="vc-volume-wrap">
-                            <div class="vc-volume-control">
-                                <div class="vc-volume-knob">
+                <div class="content-playslider">
+                    <!--Плеер-->
+                    <section class="content-player">
+                        <img class="content-player-equalizer" src="./img/equalizer_pause.gif" alt="equalizer"
+                            id="player-equalizer">
+                        <audio id="audioElem"><span>HTML5 audio not supported</span></audio>
+                        <div class="vc-buttons">
+                            <ul class="vc-controls">
+                                <li class="vc-control-play" id="vc-control-play">Play<span></span></li>
+                                <li class="vc-control-rewind" id="vc-control-rewind">Rew<span></span></li>
+                                <li class="vc-control-fforward" id="vc-control-fforward">FF<span></span></li>
+                                <li class="vc-control-stop" id="vc-control-stop">Stop<span></span></li>
+                            </ul>
+                            <div class="vc-volume-wrap">
+                                <div class="vc-volume-control">
+                                    <div class="vc-volume-knob">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-                <!--Вторая секция-->
-                <section>
+                    </section>
+                    <!--Слайдер-->
+                    <section>
 
-                </section>
+                    </section>
+                </div>
             </main>
         </div>
 
@@ -103,9 +108,9 @@
 
         </footer>
     </div>
-        <!-- скрипты запуска/перемотки/остановки/звука -->
-	<script src="./src/knobknob.jquery.js"></script>
-	<script type="text/javascript" src="./src/jquery.cassette.js"></script>
+    <!-- скрипты запуска/перемотки/остановки/звука -->
+    <script src="./src/knobknob.jquery.js"></script>
+    <script type="text/javascript" src="./src/jquery.cassette.js"></script>
 </body>
 
 </html>

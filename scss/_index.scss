@@ -38,6 +38,7 @@
 
     &-wrp {
         padding: 0 65px;
+        margin-bottom: 40px;
         box-sizing: border-box;
         position: relative;
 
@@ -91,7 +92,18 @@
         }
     }
 
+    &-playslider {
+        padding: 0 65px;
+    }
 
+    &-player {
+        &-equalizer {
+            
+            width: 380px;
+            padding: 0 65px;
+            box-sizing: border-box;
+        }
+    }
 }
 
 
