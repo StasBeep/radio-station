@@ -185,12 +185,166 @@
 }
 
 .content-player-controls {
+  max-width: 420px;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 12px 0 0 39px;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.content-player-controls-rewind {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 5px 10px 1px 5px;
+  -webkit-box-shadow: 5px 5px 13px 0px rgba(40, 116, 174, 0.4);
+          box-shadow: 5px 5px 13px 0px rgba(40, 116, 174, 0.4);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: transparent;
+  border: 3px solid #3b14af;
+  -webkit-transition: background 1.5s ease, border 1.5s ease;
+  transition: background 1.5s ease, border 1.5s ease;
+}
+
+.content-player-controls-rewind-svg {
+  fill: #3b14af;
+  -webkit-transition: fill 1.5s ease;
+  transition: fill 1.5s ease;
+}
+
+.content-player-controls-rewind:hover {
+  background: #3b14af;
+  border-radius: 50%;
+  border: 3px solid #ffd500;
+}
+
+.content-player-controls-rewind:hover .content-player-controls-rewind-svg {
+  fill: #ffd500;
+}
+
+.content-player-controls-rewind:active {
+  background: transparent;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+}
+
+.content-player-controls-rewind:active .content-player-controls-rewind-svg {
+  fill: #ff0000;
+}
+
+.content-player-controls-play {
+  display: none;
+  position: absolute;
+  z-index: 11;
+  width: 56px;
+  height: 74px;
+  left: 78px;
+  top: 65px;
+  background: transparent;
+  border: none;
+}
+
+.content-player-controls-play-svg {
+  position: absolute;
+  width: 120px;
+  height: 110px;
+  z-index: 12;
+  right: -35px;
+  top: -20px;
+  stroke: #3b14af;
+  fill: transparent;
+  -webkit-transition: stroke 1s ease;
+  transition: stroke 1s ease;
+}
+
+.content-player-controls-play:hover .content-player-controls-play-svg {
+  stroke: #ff0000;
+}
+
+.content-player-controls-stop {
+  position: absolute;
+  z-index: 11;
+  width: 67px;
+  height: 76px;
+  left: 70px;
+  top: 64px;
+  background: transparent;
+  border: none;
+}
+
+.content-player-controls-stop-svg {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  z-index: 12;
+  left: 0px;
+  top: -14px;
+  fill: #3b14af;
+  -webkit-transition: stroke 1s ease, fill 1s ease;
+  transition: stroke 1s ease, fill 1s ease;
+}
+
+.content-player-controls-stop:hover .content-player-controls-stop-svg {
+  fill: #ff0000;
+}
+
+.content-player-controls-fforward {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 7px 4px 5px 10px;
+  -webkit-box-shadow: 5px 5px 13px 0px rgba(40, 116, 174, 0.4);
+          box-shadow: 5px 5px 13px 0px rgba(40, 116, 174, 0.4);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: transparent;
+  border: 3px solid #3b14af;
+  -webkit-transition: background 1.5s ease, border 1.5s ease;
+  transition: background 1.5s ease, border 1.5s ease;
+}
+
+.content-player-controls-fforward-svg {
+  fill: #3b14af;
+  -webkit-transition: fill 1.5s ease;
+  transition: fill 1.5s ease;
+}
+
+.content-player-controls-fforward:hover {
+  background: #3b14af;
+  border-radius: 50%;
+  border: 3px solid #ffd500;
+}
+
+.content-player-controls-fforward:hover .content-player-controls-fforward-svg {
+  fill: #ffd500;
+}
+
+.content-player-controls-fforward:active {
+  background: transparent;
+  border-radius: 50%;
+  border: 3px solid #ff0000;
+}
+
+.content-player-controls-fforward:active .content-player-controls-fforward-svg {
+  fill: #ff0000;
+}
+
+.content-player-volume {
+  position: relative;
+  z-index: 1;
 }
 
 .content-player-volume-knob {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   position: relative;
   border-radius: 50%;
 }

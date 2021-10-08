@@ -106,15 +106,159 @@
         }
 
         &-controls {
+            max-width: 420px;
             list-style: none;
+            display: flex;
+            justify-content: space-between;
+            margin: 12px 0 0 39px;
+            padding: 0;
+            box-sizing: border-box;
+
+            &-rewind {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                padding: 5px 10px 1px 5px;
+                box-shadow: 5px 5px 13px 0px rgba(40, 116, 174, 0.4);
+                box-sizing: border-box;
+                background: transparent;
+                border: 3px solid $rear-panel;
+                transition: background 1.5s ease,
+                    border 1.5s ease;
+
+                &-svg {
+                    fill: $rear-panel;
+                    transition: fill 1.5s ease;
+                }
+
+                &:hover {
+                    background: $rear-panel;
+                    border-radius: 50%;
+                    border: 3px solid $front-panel;
+
+                    & .content-player-controls-rewind-svg {
+                        fill: $front-panel;
+                    }
+                }
+
+                &:active {
+                    background: transparent;
+                    border-radius: 50%;
+                    border: 3px solid $cursor-color;
+
+                    & .content-player-controls-rewind-svg {
+                        fill: $cursor-color;
+                    }
+                }
+            }
+
+            &-play {
+                display: none;
+                position: absolute;
+                z-index: 11;
+                width: 56px;
+                height: 74px;
+                left: 78px;
+                top: 65px;
+                background: transparent;
+                border: none;
+
+                &-svg {
+                    position: absolute;
+                    width: 120px;
+                    height: 110px;
+                    z-index: 12;
+                    right: -35px;
+                    top: -20px;
+
+                    stroke: $rear-panel;
+                    fill: transparent;
+
+                    transition: stroke 1s ease;
+                }
+
+                &:hover .content-player-controls-play-svg {
+                    stroke: $cursor-color;
+                }
+            }
+
+            &-stop {
+                //display: none;
+                position: absolute;
+                z-index: 11;
+                width: 67px;
+                height: 76px;
+                left: 70px;
+                top: 64px;
+                background: transparent;
+                border: none;
+
+                &-svg {
+                    position: absolute;
+                    width: 100px;
+                    height: 100px;
+                    z-index: 12;
+                    left: 0px;
+                    top: -14px;
+
+                    fill: $rear-panel;
+
+                    transition: stroke 1s ease,
+                        fill 1s ease;
+                }
+
+                &:hover .content-player-controls-stop-svg {
+                    fill: $cursor-color;
+                }
+            }
+
+            &-fforward {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                padding: 7px 4px 5px 10px;
+                box-shadow: 5px 5px 13px 0px rgba(40, 116, 174, 0.4);
+                box-sizing: border-box;
+                background: transparent;
+                border: 3px solid $rear-panel;
+                transition: background 1.5s ease,
+                    border 1.5s ease;
+
+                &-svg {
+                    fill: $rear-panel;
+                    transition: fill 1.5s ease;
+                }
+
+                &:hover {
+                    background: $rear-panel;
+                    border-radius: 50%;
+                    border: 3px solid $front-panel;
+
+                    & .content-player-controls-fforward-svg {
+                        fill: $front-panel;
+                    }
+                }
+
+                &:active {
+                    background: transparent;
+                    border-radius: 50%;
+                    border: 3px solid $cursor-color;
+
+                    & .content-player-controls-fforward-svg {
+                        fill: $cursor-color;
+                    }
+                }
+            }
         }
 
         &-volume {
+            position: relative;
+            z-index: 1;
 
             // размеры ползунка звука
             &-knob {
-                width: 250px;
-                height: 250px;
+                width: 200px;
+                height: 200px;
                 position: relative;
                 border-radius: 50%;
             }
