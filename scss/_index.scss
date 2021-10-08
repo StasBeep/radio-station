@@ -153,7 +153,6 @@
             }
 
             &-play {
-                display: none;
                 position: absolute;
                 z-index: 11;
                 width: 56px;
@@ -183,7 +182,7 @@
             }
 
             &-stop {
-                //display: none;
+                display: none;
                 position: absolute;
                 z-index: 11;
                 width: 67px;

@@ -241,7 +241,6 @@
 }
 
 .content-player-controls-play {
-  display: none;
   position: absolute;
   z-index: 11;
   width: 56px;
@@ -270,6 +269,7 @@
 }
 
 .content-player-controls-stop {
+  display: none;
   position: absolute;
   z-index: 11;
   width: 67px;
