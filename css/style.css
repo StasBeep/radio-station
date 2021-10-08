@@ -204,6 +204,7 @@
   height: 60px;
   border-radius: 50%;
   padding: 5px 10px 1px 5px;
+  margin-top: 70px;
   -webkit-box-shadow: 5px 5px 13px 0px rgba(40, 116, 174, 0.4);
           box-shadow: 5px 5px 13px 0px rgba(40, 116, 174, 0.4);
   -webkit-box-sizing: border-box;
@@ -301,6 +302,7 @@
   height: 60px;
   border-radius: 50%;
   padding: 7px 4px 5px 10px;
+  margin-top: 70px;
   -webkit-box-shadow: 5px 5px 13px 0px rgba(40, 116, 174, 0.4);
           box-shadow: 5px 5px 13px 0px rgba(40, 116, 174, 0.4);
   -webkit-box-sizing: border-box;
