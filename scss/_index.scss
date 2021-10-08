@@ -94,9 +94,14 @@
 
     &-playslider {
         padding: 0 65px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
     }
 
     &-player {
+        padding: 0 0 20px;
+        box-sizing: border-box;
 
         &-equalizer {
             height: 359px;
@@ -295,6 +300,22 @@
                 z-index: 1;
                 border-radius: 50%;
             }
+        }
+    }
+
+    &-slider {
+        display: flex;
+        flex-direction: column;
+
+        &-img {
+            max-width: 500px;
+            height: 358px;
+        }
+
+        &-switch {
+            max-width: 500px;
+            display: flex;
+            justify-content: space-between;
         }
     }
 }
