@@ -115,7 +115,7 @@
             list-style: none;
             display: flex;
             justify-content: space-between;
-            margin: 12px 0 0 39px;
+            margin: 45px 0 0 39px;
             padding: 0;
             box-sizing: border-box;
 
@@ -306,6 +306,8 @@
     &-slider {
         display: flex;
         flex-direction: column;
+        padding-bottom: 10px;
+        box-sizing: border-box;
 
         &-img {
             max-width: 500px;
@@ -316,6 +318,101 @@
             max-width: 500px;
             display: flex;
             justify-content: space-between;
+
+            &-btn {
+                background: transparent;
+                border: 2px solid $rear-panel;
+                border-top: none;
+                transition: background-color 0.8s ease,
+                    border 0.8s ease,
+                    box-shadow 0.5s ease;
+
+                &-svg {
+                    width: 40px;
+                    fill: $rear-panel;
+                    transition: fill 0.8s ease;
+                }
+
+                &:nth-child(1) {
+                    border-right: none;
+                }
+
+                &:nth-child(3) {
+                    border-left: none;
+                }
+
+                &:hover {
+                    background-color: $rear-panel;
+                    border: 2px solid $front-panel;
+                    border-top: none;
+
+                    &:nth-child(1) {
+                        border-right: none;
+                        box-shadow: -10px 10px 3px -6px $rear-panel;
+                    }
+
+                    &:nth-child(3) {
+                        border-left: none;
+                        box-shadow: 10px 10px 3px -6px $rear-panel;
+                    }
+
+                    & .content-slider-switch-btn-svg {
+                        fill: $front-panel;
+                    }
+                }
+
+                &:active {
+                    background-color: $cursor-color;
+                    border: 2px solid $contour;
+                    border-top: none;
+
+                    &:nth-child(1) {
+                        border-right: none;
+                        box-shadow: -10px 10px 3px -6px $contour;
+                    }
+
+                    &:nth-child(3) {
+                        border-left: none;
+                        box-shadow: 10px 10px 3px -6px $contour;
+                    }
+
+                    & .content-slider-switch-btn-svg {
+                        fill: $contour;
+                    }
+                }
+            }
+
+            &-modal {
+                padding: 10px 5px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                border-bottom: 2px solid $rear-panel;
+
+                &-title {
+                    @include font-open-regular(400, 25px, 40px);
+                    align-self: center;
+                }
+
+                &-text {
+                    @include font-open-regular(400, 20px, 20px);
+                }
+
+                &-link {
+                    @include font-open-regular(400, 20px, 30px);
+                    align-self: flex-end;
+                    
+                    &:hover {
+                        color: $cursor-color;
+                    }
+                }
+
+                &-data {
+                    @include font-open-regular(400, 20px, 5px);
+                    align-self: flex-end;
+                    margin-top: 5px;
+                }
+            }
         }
     }
 }
