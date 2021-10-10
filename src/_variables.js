@@ -1,3 +1,6 @@
+// глобальные переменные
+let condition = 0;
+
 // Переменные player
 const numPlay = document.getElementById('control-play');
 const numStop = document.getElementById('control-stop');
@@ -7,5 +10,27 @@ const numForw = document.getElementById('control-fforward');
 const elEqualizer = document.getElementById('player-equalizer');
 
 // Переменные slider
+const sliderImg = document.getElementById('slider-img');
+const sliderTitle = document.getElementById('slider-title');
+const sliderText = document.getElementById('slider-text');
+const sliderLink = document.getElementById('slider-link');
+const sliderData = document.getElementById('slider-data');
 
-export {numPlay, numStop, elEqualizer, numRew, numForw}
+const sliderBack = document.getElementById('slider-back');
+const sliderForward = document.getElementById('slider-forward');
+
+export {
+    numPlay,
+    numStop,
+    elEqualizer,
+    numRew,
+    numForw,
+    condition,
+    sliderImg,
+    sliderTitle,
+    sliderText,
+    sliderLink,
+    sliderData,
+    sliderBack,
+    sliderForward
+}
