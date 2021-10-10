@@ -7,11 +7,10 @@ import {
 } from './_variables.js'
 
 /**
- * Загрузка первого объекта в слайдер
- * при загрузке страницы
+ * Загрузка в слайдер элементов массива
  * @param {object} первый объект массива
  */
-export function firstElementLoaded(arrObjSlider) {
+export function elementLoaded(arrObjSlider) {
     sliderImg.src = `${arrObjSlider.image}`;
     sliderTitle.textContent = `${arrObjSlider.title}`;
     sliderText.textContent = `${arrObjSlider.text}`;
@@ -30,6 +29,7 @@ function availabilityLink(link) {
         sliderLink.href = '#';
         sliderLink.target = '_self';
     } else {
+        sliderLink.textContent = 'Подробнее';
         sliderLink.href = `${link}`;
     }
 }
@@ -44,4 +44,13 @@ function availabilityData(data) {
     } else {
         sliderData.textContent = `${data}`;
     }
+}
+
+export function checkCondition(condition, length) {
+    if (condition === -1) {
+        condition = --length;
+    } else if (condition === length) {
+        condition = 0;
+    }
+    return condition;
 }

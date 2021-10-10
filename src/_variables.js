@@ -1,6 +1,3 @@
-// глобальные переменные
-let condition = 0;
-
 // Переменные player
 const numPlay = document.getElementById('control-play');
 const numStop = document.getElementById('control-stop');
@@ -25,7 +22,6 @@ export {
     elEqualizer,
     numRew,
     numForw,
-    condition,
     sliderImg,
     sliderTitle,
     sliderText,
