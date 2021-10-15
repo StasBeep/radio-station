@@ -1,4 +1,4 @@
-// Переменные player
+// * Переменные player
 const numPlay = document.getElementById('control-play');
 const numStop = document.getElementById('control-stop');
 const numRew = document.getElementById('control-rewind');
@@ -6,7 +6,10 @@ const numForw = document.getElementById('control-fforward');
 
 const elEqualizer = document.getElementById('player-equalizer');
 
-// Переменные slider
+// * Переменные slider
+// Ссылка положение json-файла на gitub
+const API_slider = 'https://raw.githubusercontent.com/StasBeep/radio-station/slider-click/sliderObj.json';
+
 const sliderImg = document.getElementById('slider-img');
 const sliderTitle = document.getElementById('slider-title');
 const sliderText = document.getElementById('slider-text');
@@ -22,6 +25,7 @@ export {
     elEqualizer,
     numRew,
     numForw,
+    API_slider,
     sliderImg,
     sliderTitle,
     sliderText,

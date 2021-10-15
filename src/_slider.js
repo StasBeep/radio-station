@@ -1,6 +1,7 @@
 import {
     sliderBack,
-    sliderForward
+    sliderForward,
+    API_slider
 } from './_variables.js';
 
 import {
@@ -8,9 +9,23 @@ import {
     checkCondition
 } from './_slider.operation.js'
 
-//! массив из объектов slider (потом через API)
+
 // в объектах в разделе text не больше 450 символов
-const arrObjSlider = '';
+let arrObjSlider = [];
+
+// Пока не выполнится промис через API (ожидание)
+let response = await fetch(`${API_slider}`);
+// Проверка статуса ответа от API
+if (response.ok) {
+    // ожидание загрузки .json файла
+    let json = await response.json();
+    // перемещение содержимого в переменную слайдера
+    arrObjSlider = json.arrObjSlider;
+} else {
+    // В случае ошибки
+    console.log("Ошибка HTTP: " + response.status);
+}
+
 
 // первоначальное состояние
 let condition = 0;
