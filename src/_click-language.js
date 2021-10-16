@@ -3,7 +3,11 @@ import {
     menuEl2,
     menuEl3,
     menuEl4,
-    langBtn
+    langBtn,
+    contDesc,
+    contCard1,
+    contCard2,
+    contCard3
 } from './_variables.js'
 
 import {
@@ -35,4 +39,8 @@ function arrangeOfElement(content) {
     menuEl2.textContent = content.elMenu2;
     menuEl3.textContent = content.elMenu3;
     menuEl4.textContent = content.elMenu4;
+    contDesc.textContent = content.contentDes;
+    contCard1.textContent = content.card1;
+    contCard2.textContent = content.card2;
+    contCard3.textContent = content.card3;
 }

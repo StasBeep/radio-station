@@ -16,7 +16,7 @@
     line-height: $linehe;
 }
 
-@mixin font-open-regular($size-format: 400, $fonts: 25px, $linehe: 10px) {
+@mixin font-open-regular($size-format: 400, $fonts: 20px, $linehe: 25px) {
     font-family: OpenSans-Regular;
     font-weight: $size-format;
     font-style: normal;
