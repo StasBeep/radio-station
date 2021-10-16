@@ -223,12 +223,22 @@
   background-color: transparent;
   border: none;
   color: #feec92;
-  -webkit-transition: color 1s ease;
-  transition: color 1s ease;
+  -webkit-transition: color 1s ease, -webkit-transform 0.5s ease;
+  transition: color 1s ease, -webkit-transform 0.5s ease;
+  transition: color 1s ease, transform 0.5s ease;
+  transition: color 1s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .fixed-menu-btn:hover {
   color: #00cc00;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.fixed-menu-btn:active {
+  color: #ff0000;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 /* end header end */

@@ -2,7 +2,8 @@ import {
     menuEl1,
     menuEl2,
     menuEl3,
-    menuEl4
+    menuEl4,
+    langBtn
 } from './_variables.js'
 
 import {
@@ -10,12 +11,21 @@ import {
     contentEn
 } from './_language-content.js'
 
-document.addEventListener('DOMContentLoaded', langVariation(true));
+let toggle = true;
+
+document.addEventListener('DOMContentLoaded', langVariation(toggle));
+
+langBtn.addEventListener('click', () => {
+    toggle = !toggle;
+    langVariation(toggle);
+});
 
 function langVariation(language) {
     if (language) {
+        langBtn.textContent = 'ru';
         arrangeOfElement(contentRu);
     } else {
+        langBtn.textContent = 'en';
         arrangeOfElement(contentEn);
     }
 }

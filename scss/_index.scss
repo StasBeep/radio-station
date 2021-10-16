@@ -118,10 +118,17 @@
             background-color: transparent;
             border: none;
             color: $main-color;
-            transition: color 1s ease;
+            transition: color 1s ease,
+                transform 0.5s ease;
 
             &:hover {
                 color: $contour;
+                transform: scale(1.1);
+            }
+
+            &:active {
+                color: $cursor-color;
+                transform: scale(1);
             }
         }
     }
