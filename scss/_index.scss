@@ -7,58 +7,22 @@
     z-index: 10;
 
     &-menu {
-        padding: 30px;
+        padding: 20px 120px;
         background-color: $rear-panel;
+        box-sizing: border-box;
 
-        &-btn {
-            display: none;
+        &-icon {
+            width: 80px;
+            fill: $rear-panel;
+            transition: background-color ease 0.5s;
+            background-color: $front-panel;
+            animation: change-fill 3s ease infinite;
 
-            &:checked~.fixed-nav{
-                visibility: visible;
-            }
-
-            &-icon {
-                fill: $front-panel;
-                filter: drop-shadow( 2px 2px 0 $main-color);
-                transition: fill ease 0.5s;
-
-                &:hover {
-                    fill: $fill-logo;
-                    filter: drop-shadow( 2px 2px 0 $fill-shadow);
-                }
+            &:hover {
+                background-color: $fill-logo;
             }
         }
     }
-
-    &-center {
-        width: 50px;
-        position: absolute;
-        left: 48.8%;
-        top: 12%;
-    }
-
-    /*&-nav {
-        visibility: hidden;
-        position: relative;
-
-        &-menu {
-            margin: 0;
-            padding: 0 100px;
-            list-style-type: none;
-            display: flex;
-            justify-content: space-between;
-
-            &-el {
-                @include font-open-regular;
-                color: $main-color;
-                transition: color ease 0.5s;
-
-                &:hover {
-                    color: $fill-logo;
-                }
-            }
-        }
-    }*/
 }
 
 /* end header end */

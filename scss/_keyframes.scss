@@ -1,0 +1,18 @@
+// Переменные для анимации
+$yellow-animation-one: #fafc3a;
+$yellow-animation-two: #fcfe92;
+
+@keyframes change-fill {
+    0% {
+        background-color: $yellow-animation-one;
+    }
+    45% {
+        background-color: $front-panel;
+    }
+    75% {
+        background-color: $yellow-animation-two;
+    }
+    100% {
+        background-color: $main-color;
+    }
+}

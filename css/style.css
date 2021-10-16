@@ -6,12 +6,12 @@
   /*Максимальная ширина страницы и выравнивание содержимого по центру*/
   max-width: 1440px;
   margin: 0 auto;
-  background-color: #ffd500;
+  background-color: #fddd3a;
   /* Обёртка для прижатия подвала к нижней части */
 }
 
 .wrapper-container {
-  padding: 0 140px;
+  padding: 0 120px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -26,7 +26,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #3b14af;
+  background-color: #283673;
 }
 
 /* end === wrapper === end */
@@ -77,64 +77,57 @@
   position: fixed;
   width: 100%;
   z-index: 10;
-  /*&-nav {
-        visibility: hidden;
-        position: relative;
-
-        &-menu {
-            margin: 0;
-            padding: 0 100px;
-            list-style-type: none;
-            display: flex;
-            justify-content: space-between;
-
-            &-el {
-                @include font-open-regular;
-                color: $main-color;
-                transition: color ease 0.5s;
-
-                &:hover {
-                    color: $fill-logo;
-                }
-            }
-        }
-    }*/
 }
 
 .fixed-menu {
-  padding: 30px;
-  background-color: #3b14af;
+  padding: 20px 120px;
+  background-color: #283673;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.fixed-menu-btn {
-  display: none;
+.fixed-menu-icon {
+  width: 80px;
+  fill: #283673;
+  -webkit-transition: background-color ease 0.5s;
+  transition: background-color ease 0.5s;
+  background-color: #fddd3a;
+  -webkit-animation: change-fill 3s ease infinite;
+          animation: change-fill 3s ease infinite;
 }
 
-.fixed-menu-btn:checked ~ .fixed-nav {
-  visibility: visible;
-}
-
-.fixed-menu-btn-icon {
-  fill: #ffd500;
-  -webkit-filter: drop-shadow(2px 2px 0 #fff100);
-          filter: drop-shadow(2px 2px 0 #fff100);
-  -webkit-transition: fill ease 0.5s;
-  transition: fill ease 0.5s;
-}
-
-.fixed-menu-btn-icon:hover {
-  fill: #a13dd5;
-  -webkit-filter: drop-shadow(2px 2px 0 #4a036f);
-          filter: drop-shadow(2px 2px 0 #4a036f);
-}
-
-.fixed-center {
-  width: 50px;
-  position: absolute;
-  left: 48.8%;
-  top: 12%;
+.fixed-menu-icon:hover {
+  background-color: #7f2da9;
 }
 
 /* end header end */
 /* end index end */
+@-webkit-keyframes change-fill {
+  0% {
+    background-color: #fafc3a;
+  }
+  45% {
+    background-color: #fddd3a;
+  }
+  75% {
+    background-color: #fcfe92;
+  }
+  100% {
+    background-color: #feec92;
+  }
+}
+@keyframes change-fill {
+  0% {
+    background-color: #fafc3a;
+  }
+  45% {
+    background-color: #fddd3a;
+  }
+  75% {
+    background-color: #fcfe92;
+  }
+  100% {
+    background-color: #feec92;
+  }
+}
 /*# sourceMappingURL=style.css.map */
