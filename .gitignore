@@ -36,4 +36,5 @@ node_modules
 .cache
 dist
 
+# черновик
 draft.md

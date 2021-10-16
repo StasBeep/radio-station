@@ -7,7 +7,7 @@
     z-index: 10;
 
     &-menu {
-        padding: 20px 120px;
+padding: 20px 120px;
         background-color: $rear-panel;
         box-sizing: border-box;
         display: flex;
@@ -72,5 +72,67 @@
 }
 
 /* end header end */
+
+/* main */
+.content {
+    margin-top: 84px;
+
+    &-wrp {
+        padding: 0 65px;
+        box-sizing: border-box;
+        position: relative;
+
+        &-title {
+            display: block;
+            @include font-open-bold(700, 70px, 20px);
+            margin: 0;
+            padding: 45px 10px 35px;
+            box-sizing: border-box;
+            letter-spacing: 18px;
+            text-align: center;
+            text-transform: uppercase;
+
+            // Анимация заднего фона заголовка
+            animation-play-state: running;
+            color: transparent;
+            background: url(../img/bg-title.png);
+            background-size: cover;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-animation: title-bg 20s infinite linear alternate;
+            -moz-animation: title-bg 20s infinite linear alternate;
+            animation: title-bg 20s infinite linear alternate;
+
+            border-bottom: .25rem solid $whcolor;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: -1.25rem;
+                transform: translateX(-1.25rem);
+                border-top: 1.25rem solid $whcolor;
+                border-left: 1.25rem solid transparent;
+                border-right: 1.25rem solid transparent;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: -1.125rem;
+                transform: translateX(-1.25rem);
+                border-top: 1.5rem solid $front-panel;
+                border-left: 1.25rem solid transparent;
+                border-right: 1.25rem solid transparent;
+            }
+        }
+    }
+}
+
+/* end main end */
 
 /* end index end */
