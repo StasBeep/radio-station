@@ -9,6 +9,8 @@
     <title>Reggae Universe Radio</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- jquery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="./src/index.js" type="module" defer></script>
 </head>
 
@@ -336,14 +338,106 @@
 
             <!--Основная часть-->
             <main class="wrapper wrapper-container content">
-                <!--Первая секция основной части-->
-                <section>
-
+                <!--Заголовок-->
+                <section class="content-wrp">
+                    <span class="content-wrp-title"><span class="content-wrp-title-first">reggae</span> universe</span>
                 </section>
-                <!--Вторая секция-->
-                <section>
 
-                </section>
+                <div class="content-playslider">
+                    <!--Плеер-->
+                    <section class="content-player">
+                        <img class="content-player-equalizer" src="./img/equalizer_pause.gif" alt="equalizer"
+                            id="player-equalizer">
+                        <audio id="audioElem"></audio>
+                        <ul class="content-player-controls">
+                            <li>
+                                <button class="content-player-controls-rewind" id="control-rewind">
+                                    <svg class="content-player-controls-rewind-svg" viewbox="0 0 456.555 456.555">
+                                        <g>
+                                            <path d="M440.358,456.555c-3.084,0-6.141-1.063-8.599-3.112l-257.82-214.85c-3.063-2.553-4.833-6.329-4.833-10.316
+		                                        c0-3.986,1.769-7.763,4.833-10.316l257.82-214.85c3.993-3.336,9.568-4.049,14.292-1.846c4.717,2.21,7.732,6.952,7.732,12.162v429.7
+		                                        c0,5.21-3.014,9.952-7.732,12.162C444.232,456.135,442.288,456.555,440.358,456.555z M203.509,228.277l223.417,186.182V42.094
+		                                        L203.509,228.277z" />
+                                            <path d="M274.024,456.555c-3.084,0-6.141-1.063-8.599-3.112L7.605,238.592c-3.063-2.553-4.833-6.329-4.833-10.316
+		                                        c0-3.986,1.769-7.763,4.833-10.316l257.82-214.85c3.993-3.336,9.564-4.049,14.292-1.846c4.717,2.21,7.732,6.952,7.732,12.162
+		                                        v66.532c0,7.413-6.011,13.428-13.428,13.428c-7.417,0-13.428-6.015-13.428-13.428V42.094L37.175,228.277l223.417,186.182v-37.865
+		                                        c0-7.413,6.011-13.428,13.428-13.428c7.417,0,13.428,6.015,13.428,13.428v66.532c0,5.21-3.014,9.952-7.732,12.162
+		                                        C277.898,456.135,275.954,456.555,274.024,456.555z" />
+                                        </g>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="content-player-volume">
+                                <button class="content-player-controls-play" id="control-play">
+                                    <!-- svg play -->
+                                    <svg class="content-player-controls-play-svg" viewbox="0 0 400 400">
+                                        <g transform="matrix(14.29 0 0 14.29 200 200)">
+                                            <polygon
+                                                style="stroke-width: 2; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill-rule: nonzero; opacity: 1;"
+                                                points="-7,-9 7,0 -7,9 -7,-9 " />
+                                        </g>
+                                    </svg></button>
+                                <button class="content-player-controls-stop" id="control-stop">
+                                    <!-- svg pause -->
+                                    <svg class="content-player-controls-stop-svg" viewbox="0 0 32 32">
+                                        <g>
+                                            <path
+                                                d="M4,28a4,4,0,0,1-4-4V8A4,4,0,0,1,4,4,4.06,4.06,0,0,1,6.83,5.17,4.06,4.06,0,0,1,8,8V24A4,4,0,0,1,4,28ZM4,6A2,2,0,0,0,2,8V24a2,2,0,0,0,4,0V8A2,2,0,0,0,4,6Z" />
+                                            <path
+                                                d="M16,28a4,4,0,0,1-4-4V8a4,4,0,0,1,4-4,4,4,0,0,1,4,4V24A4,4,0,0,1,16,28ZM16,6a2,2,0,0,0-2,2V24a2,2,0,0,0,4,0V8a2,2,0,0,0-2-2Z" />
+                                        </g>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="content-player-controls-fforward" id="control-fforward">
+                                    <svg class="content-player-controls-fforward-svg" viewbox="0 0 456.551 456.551">
+                                        <g>
+                                            <path d="M16.195,456.551c-1.937,0-3.882-0.42-5.693-1.266c-4.721-2.21-7.735-6.952-7.735-12.162v-429.7
+		                                        c0-5.21,3.014-9.952,7.735-12.162c4.7-2.196,10.281-1.49,14.288,1.846l257.82,214.85c3.063,2.553,4.833,6.329,4.833,10.316
+		                                        c0,3.986-1.769,7.763-4.833,10.316l-257.82,214.85C22.329,455.488,19.28,456.551,16.195,456.551z M29.624,42.091v372.364
+		                                        l223.417-186.182L29.624,42.091z" />
+                                            <path d="M182.536,456.551c-1.937,0-3.882-0.42-5.693-1.266c-4.721-2.21-7.735-6.952-7.735-12.162v-66.532
+		                                        c0-7.413,6.015-13.428,13.428-13.428s13.428,6.015,13.428,13.428v37.865l223.417-186.182L195.964,42.091v37.864
+		                                        c0,7.413-6.015,13.428-13.428,13.428s-13.428-6.015-13.428-13.428V13.424c0-5.21,3.014-9.952,7.735-12.162
+		                                        c4.693-2.196,10.281-1.49,14.288,1.846l257.82,214.85c3.063,2.553,4.833,6.329,4.833,10.316c0,3.986-1.769,7.763-4.833,10.316
+		                                        l-257.82,214.85C188.67,455.488,185.62,456.551,182.536,456.551z" />
+                                        </g>
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </section>
+                    <!--Слайдер-->
+                    <section class="content-slider">
+                        <img class="content-slider-img"
+                            src="./img/error-slider.png"
+                            alt="picture" id="slider-img">
+                        <section class="content-slider-switch">
+                            <button class="content-slider-switch-btn" id="slider-back">
+                                <svg class="content-slider-switch-btn-svg" viewbox="0 0 306 306">
+                                    <polygon
+                                        points="247.35,35.7 211.65,0 58.65,153 211.65,306 247.35,270.3 130.05,153" />
+                                </svg>
+                            </button>
+                            <div class="content-slider-switch-modal">
+                                <span class="content-slider-switch-modal-title"
+                                    id="slider-title"></span>
+                                <span class="content-slider-switch-modal-text"
+                                    id="slider-text"></span>
+                                <a class="content-slider-switch-modal-link"
+                                    href="#" target="_blank" id="slider-link"></a>
+                                <span class="content-slider-switch-modal-data"
+                                    id="slider-data"></span>
+                            </div>
+                            <button class="content-slider-switch-btn" id="slider-forward">
+                                <svg class="content-slider-switch-btn-svg" viewbox="0 0 306 306">
+                                    <polygon points="58.65,267.75 175.95,153 58.65,35.7 94.35,0 247.35,153 94.35,306" />
+                                </svg>
+                            </button>
+                        </section>
+                    </section>
+                </div>
             </main>
         </div>
 
@@ -352,6 +446,9 @@
 
         </footer>
     </div>
+    <!-- скрипты запуска/перемотки/остановки/звука -->
+    <script src="./src/knobknob.jquery.js"></script>
+    <script type="text/javascript" src="./src/jquery.cassette.js"></script>
 </body>
 
 </html>
