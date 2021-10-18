@@ -21,11 +21,11 @@ const elEqualizer = document.getElementById('player-equalizer');
 // Ссылка положение json-файла на gitub
 const API_slider = 'https://raw.githubusercontent.com/StasBeep/radio-station/slider-click/sliderObj.json';
 
-const sliderImg = document.getElementById('slider-img');
-const sliderTitle = document.getElementById('slider-title');
-const sliderText = document.getElementById('slider-text');
-const sliderLink = document.getElementById('slider-link');
-const sliderData = document.getElementById('slider-data');
+const sliderImg2 = document.getElementById('slider-img-2');
+const sliderTitle2 = document.getElementById('slider-title-2');
+const sliderText2 = document.getElementById('slider-text-2');
+const sliderLink2 = document.getElementById('slider-link-2');
+const sliderData2 = document.getElementById('slider-data-2');
 
 const sliderBack = document.getElementById('slider-back');
 const sliderForward = document.getElementById('slider-forward');
@@ -37,11 +37,11 @@ export {
     numRew,
     numForw,
     API_slider,
-    sliderImg,
-    sliderTitle,
-    sliderText,
-    sliderLink,
-    sliderData,
+    sliderImg2,
+    sliderTitle2,
+    sliderText2,
+    sliderLink2,
+    sliderData2,
     sliderBack,
     sliderForward,
     menuEl1,
