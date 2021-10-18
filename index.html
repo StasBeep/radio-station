@@ -19,9 +19,8 @@
     <div class="wrapper-forcontent">
         <!--Содержимое сайта без подвала (нужно для прижатия подвала к нижней части)-->
         <div class="content-without-footer">
-
             <!--Шапка сайта-->
-            <header class="fixed">
+            <header>
                 <nav class="wrapper wrapper-container fixed-menu">
                     <svg class="fixed-menu-icon" viewbox="59 30 135 152">
                         <g transform="translate(0.000000,207.000000) scale(0.100000,-0.100000)">
@@ -166,7 +165,7 @@
                     </ul>
                     <button class="fixed-menu-btn" type="button" id="languages-button">ru</button>
                 </nav>
-                <section class="wrapper wrapper-container">
+                <section class="wrapper wrapper-container content">
                     <section class="content-wrp">
                         <span class="content-wrp-title"><span class="content-wrp-title-first">reggae</span>
                             universe</span>
@@ -338,11 +337,6 @@
 
             <!--Основная часть-->
             <main class="wrapper wrapper-container content">
-                <!--Заголовок-->
-                <section class="content-wrp">
-                    <span class="content-wrp-title"><span class="content-wrp-title-first">reggae</span> universe</span>
-                </section>
-
                 <div class="content-playslider">
                     <!--Плеер-->
                     <section class="content-player">
@@ -410,9 +404,7 @@
                     </section>
                     <!--Слайдер-->
                     <section class="content-slider">
-                        <img class="content-slider-img"
-                            src="./img/error-slider.png"
-                            alt="picture" id="slider-img">
+                        <img class="content-slider-img" src="./img/error-slider.png" alt="picture" id="slider-img">
                         <section class="content-slider-switch">
                             <button class="content-slider-switch-btn" id="slider-back">
                                 <svg class="content-slider-switch-btn-svg" viewbox="0 0 306 306">
@@ -421,14 +413,11 @@
                                 </svg>
                             </button>
                             <div class="content-slider-switch-modal">
-                                <span class="content-slider-switch-modal-title"
-                                    id="slider-title"></span>
-                                <span class="content-slider-switch-modal-text"
-                                    id="slider-text"></span>
-                                <a class="content-slider-switch-modal-link"
-                                    href="#" target="_blank" id="slider-link"></a>
-                                <span class="content-slider-switch-modal-data"
-                                    id="slider-data"></span>
+                                <span class="content-slider-switch-modal-title" id="slider-title"></span>
+                                <span class="content-slider-switch-modal-text" id="slider-text"></span>
+                                <a class="content-slider-switch-modal-link" href="#" target="_blank"
+                                    id="slider-link"></a>
+                                <span class="content-slider-switch-modal-data" id="slider-data"></span>
                             </div>
                             <button class="content-slider-switch-btn" id="slider-forward">
                                 <svg class="content-slider-switch-btn-svg" viewbox="0 0 306 306">
