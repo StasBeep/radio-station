@@ -1,9 +1,9 @@
 import {
-    sliderImg2,
-    sliderTitle2,
-    sliderText2,
-    sliderLink2,
-    sliderData2,
+    sliderImg,
+    sliderTitle,
+    sliderText,
+    sliderLink,
+    sliderData,
 } from './_variables.js'
 
 /**
@@ -11,9 +11,9 @@ import {
  * @param {object} первый объект массива
  */
 export function elementLoaded(arrObjSlider) {
-    sliderImg2.src = `${arrObjSlider.image}`;
-    sliderTitle2.textContent = `${arrObjSlider.title}`;
-    sliderText2.textContent = `${arrObjSlider.text}`;
+    sliderImg.src = `${arrObjSlider.image}`;
+    sliderTitle.textContent = `${arrObjSlider.title}`;
+    sliderText.textContent = `${arrObjSlider.text}`;
 
     availabilityLink(arrObjSlider.link);
     availabilityData(arrObjSlider.data);
@@ -25,12 +25,12 @@ export function elementLoaded(arrObjSlider) {
  */
 function availabilityLink(link) {
     if (link === '') {
-        sliderLink2.textContent = 'Нет подробностей';
-        sliderLink2.href = '#';
-        sliderLink2.target = '_self';
+        sliderLink.textContent = 'Нет подробностей';
+        sliderLink.href = '#';
+        sliderLink.target = '_self';
     } else {
-        sliderLink2.textContent = 'Подробнее';
-        sliderLink2.href = `${link}`;
+        sliderLink.textContent = 'Подробнее';
+        sliderLink.href = `${link}`;
     }
 }
 
@@ -40,9 +40,9 @@ function availabilityLink(link) {
  */
 function availabilityData(data) {
     if (data === '') {
-        sliderData2.textContent = '--.--.----';
+        sliderData.textContent = '--.--.----';
     } else {
-        sliderData2.textContent = `${data}`;
+        sliderData.textContent = `${data}`;
     }
 }
 
