@@ -1,3 +1,49 @@
+// Переменные для анимации
+$yellow-animation-one: #fafc3a;
+$yellow-animation-two: #fcfe92;
+$play-one: #42b5be;
+$play-two: #9ce6ab;
+$play-three: #fbbb74;
+$play-four: #c63d7c;
+
+// Анимация изменения цвета логотипа
+@keyframes change-fill {
+    0% {
+        background-color: $yellow-animation-one;
+    }
+
+    45% {
+        background-color: $front-panel;
+    }
+
+    75% {
+        background-color: $yellow-animation-two;
+    }
+
+    100% {
+        background-color: $main-color;
+    }
+}
+
+// Анимация плей-маркета
+@keyframes fill-market {
+    0% {
+        fill: $play-one;
+    }
+
+    45% {
+        fill: $play-two;
+    }
+
+    75% {
+        fill: $play-three;
+    }
+
+    100% {
+        fill: $play-four;
+    }
+}
+
 // Анимация заднего фона заголовка
 @keyframes title-bg {
     0% {

@@ -1,13 +1,17 @@
 /* Переменные (через $) */
 $whcolor: #ffffff;
-$rear-panel: #3b14af;
-$front-panel: #ffd500;
-$main-color: #fff100;
-$main-text: #560ead;
-$fill-logo: #a13dd5;
-$fill-shadow: #4a036f;
+$rear-panel: #283673;
+$front-panel: #fddd3a;
+$main-color: #feec92;
+$main-text: #5537ae;
+$fill-logo: #7f2da9;
+$fill-shadow: #ad60d4;
 $cursor-color: #ff0000;
 $contour: #00cc00;
+$social-face: #3b5998;
+$instagram: #dd2a7b;
+$social-vk: #597da3;
+$twitter: #00acee;
 
 /* === wrapper === */
 /* Обёртки - отдельный блок */
@@ -19,7 +23,7 @@ $contour: #00cc00;
 
     //Отступы по краям
     &-container {
-        padding: 0 140px;
+        padding: 0 120px;
         box-sizing: border-box;
     }
 
