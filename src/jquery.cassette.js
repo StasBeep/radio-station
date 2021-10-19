@@ -373,7 +373,7 @@ function playSE(seName, isLoop) {
     });
 }
 // регулятор громкости
-$('li.content-player-volume').knobKnob({
+$('li.player-volume').knobKnob({
     snap: 10,
     value: 359 * aux.initialVolume,
     turn: function (ratio) {

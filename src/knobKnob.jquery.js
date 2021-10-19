@@ -17,9 +17,9 @@
 			turn: function () {}
 		}, props || {});
 
-		const tpl = '<div class="content-player-volume-knob">\
-						<div class="content-player-volume-top"></div>\
-						<div class="content-player-volume-base"></div>\
+		const tpl = '<div class="player-volume-knob">\
+						<div class="player-volume-top"></div>\
+						<div class="player-volume-base"></div>\
 					</div>';
 
 		return this.each(function () {
@@ -27,8 +27,8 @@
 			const el = $(this);
 			el.append(tpl);
 
-			let knob = $('.content-player-volume-knob', el),
-				knobTop = knob.find('.content-player-volume-top'),
+			let knob = $('.player-volume-knob', el),
+				knobTop = knob.find('.player-volume-top'),
 				startDeg = -1,
 				currentDeg = 0,
 				rotation = 0,

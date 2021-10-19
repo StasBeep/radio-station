@@ -444,214 +444,126 @@
     }
 }
 
-/* end main end */
 
-/* end index end */
+.player {
+    padding: 0 0 20px;
+    box-sizing: border-box;
 
-//! Блок редакции
+    &-equalizer {
+        width: 750px;
+        height: 300px;
+        margin: 0 auto;
+    }
 
-.content {
-    &-player {
-        padding: 0 0 20px;
+    &-controls {
+        max-width: 420px;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 15px 0;
         box-sizing: border-box;
 
-        &-equalizer {
-            height: 359px;
-            width: 500px;
-            padding: 0 65px;
-            box-sizing: border-box;
-        }
-
-        &-controls {
-            max-width: 420px;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            margin: 50px 0 0 39px;
-            padding: 0;
-            box-sizing: border-box;
-
-            &-rewind {
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                padding: 5px 10px 1px 5px;
-                margin-top: 70px;
-                box-shadow: 5px 5px 13px 0px rgba(40, 116, 174, 0.4);
-                box-sizing: border-box;
-                background: transparent;
-                border: 3px solid $rear-panel;
-                transition: background 1.5s ease,
-                    border 1.5s ease;
-
-                &-svg {
-                    fill: $rear-panel;
-                    transition: fill 1.5s ease;
-                }
-
-                &:hover {
-                    background: $rear-panel;
-                    border-radius: 50%;
-                    border: 3px solid $front-panel;
-
-                    & .content-player-controls-rewind-svg {
-                        fill: $front-panel;
-                    }
-                }
-
-                &:active {
-                    background: transparent;
-                    border-radius: 50%;
-                    border: 3px solid $cursor-color;
-
-                    & .content-player-controls-rewind-svg {
-                        fill: $cursor-color;
-                    }
-                }
-            }
-
-            &-play {
-                position: absolute;
-                z-index: 11;
-                width: 56px;
-                height: 74px;
-                left: 78px;
-                top: 65px;
-                background: transparent;
-                border: none;
-
-                &-svg {
-                    position: absolute;
-                    width: 120px;
-                    height: 110px;
-                    z-index: 12;
-                    right: -35px;
-                    top: -20px;
-
-                    stroke: $rear-panel;
-                    fill: transparent;
-
-                    transition: stroke 1s ease;
-                }
-
-                &:hover .content-player-controls-play-svg {
-                    stroke: $cursor-color;
-                }
-            }
-
-            &-stop {
-                display: none;
-                position: absolute;
-                z-index: 11;
-                width: 67px;
-                height: 76px;
-                left: 70px;
-                top: 64px;
-                background: transparent;
-                border: none;
-
-                &-svg {
-                    position: absolute;
-                    width: 100px;
-                    height: 100px;
-                    z-index: 12;
-                    left: 0px;
-                    top: -14px;
-
-                    fill: $rear-panel;
-
-                    transition: stroke 1s ease,
-                        fill 1s ease;
-                }
-
-                &:hover .content-player-controls-stop-svg {
-                    fill: $cursor-color;
-                }
-            }
-
-            &-fforward {
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                padding: 7px 4px 5px 10px;
-                margin-top: 70px;
-                box-shadow: 5px 5px 13px 0px rgba(40, 116, 174, 0.4);
-                box-sizing: border-box;
-                background: transparent;
-                border: 3px solid $rear-panel;
-                transition: background 1.5s ease,
-                    border 1.5s ease;
-
-                &-svg {
-                    fill: $rear-panel;
-                    transition: fill 1.5s ease;
-                }
-
-                &:hover {
-                    background: $rear-panel;
-                    border-radius: 50%;
-                    border: 3px solid $front-panel;
-
-                    & .content-player-controls-fforward-svg {
-                        fill: $front-panel;
-                    }
-                }
-
-                &:active {
-                    background: transparent;
-                    border-radius: 50%;
-                    border: 3px solid $cursor-color;
-
-                    & .content-player-controls-fforward-svg {
-                        fill: $cursor-color;
-                    }
-                }
-            }
-        }
-
-        &-volume {
+        &-play {
+            width: 10px;
+            height: 10px;
+            background: transparent;
             position: relative;
-            z-index: 1;
+            border: none;
 
-            // размеры ползунка звука
-            &-knob {
-                width: 200px;
-                height: 200px;
-                position: relative;
-                border-radius: 50%;
+            &-svg {
+                width: 180px;
+                height: 170px;
+                position: absolute;
+                left: -55px;
+                top: -15px;
+
+                stroke: $rear-panel;
+                fill: transparent;
+                animation: stroke-play 7s infinite;
+
+                transition: stroke 1s ease;
             }
 
-            // положение точки и звука (с элементом заднего фона)
-            &-top {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                background: url(../img/bg-volume.gif) no-repeat center center;
-                z-index: 10;
-                cursor: default !important;
-                border-radius: 50%;
-                box-shadow: inset 0 0 3px 2px $contour;
+            &:hover .player-controls-play-svg {
+                stroke: $cursor-color;
+            }
+        }
 
-                &::after {
-                    content: '';
-                    width: 35px;
-                    height: 8px;
-                    background-color: $cursor-color;
-                    position: absolute;
-                    top: 50%;
-                    margin-top: -2px;
-                    left: 4px;
-                }
+        &-stop {
+            display: none;
+            width: 10px;
+            height: 10px;
+            background: transparent;
+            position: relative;
+            border: none;
+
+            &-svg {
+                width: 160px;
+                height: 160px;
+                position: absolute;
+                left: -151px;
+                top: -10px;
+
+                fill: $rear-panel;
+                animation: fill-stop 7s infinite;
+
+                transition: stroke 1s ease,
+                    fill 1s ease;
             }
 
-            &-base {
-                width: 100%;
-                height: 100%;
-                box-shadow: 0 5px 0 $rear-panel, 0px 5px 5px $rear-panel;
-                position: absolute;
-                z-index: 1;
-                border-radius: 50%;
+            &:hover .player-controls-stop-svg {
+                fill: $cursor-color;
             }
         }
     }
+
+    &-volume {
+        position: relative;
+        z-index: 1;
+
+        // размеры ползунка звука
+        &-knob {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            border-radius: 50%;
+        }
+
+        // положение точки и звука (с элементом заднего фона)
+        &-top {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url(../img/bg-volume.gif) no-repeat center center;
+            z-index: 10;
+            cursor: default !important;
+            border-radius: 50%;
+            box-shadow: inset 0 0 3px 2px $rear-panel;
+
+            &::after {
+                content: '';
+                width: 35px;
+                height: 8px;
+                background-color: $cursor-color;
+                position: absolute;
+                top: 50%;
+                margin-top: -2px;
+                left: 4px;
+            }
+        }
+
+        &-base {
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 5px 0 $rear-panel, 0px 5px 5px $rear-panel;
+            position: absolute;
+            z-index: 1;
+            border-radius: 50%;
+        }
+    }
 }
+
+/* end main end */
+
+/* end index end */

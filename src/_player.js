@@ -9,13 +9,18 @@ import {
     audioEl
 } from './_variables.js';
 
-// Подключение библиотеки эквалайзера
+/**
+ * Подключение библиотеки эквалайзера
+ * for documentation and more demos,
+ * visit https://audiomotion.dev
+ * подробнее: https://jsfiddle.net/Stanislav_Osk/ebpk9uox/3/
+ */
 import AudioMotionAnalyzer from './_audioMotion-analyzer.js';
 
 new AudioMotionAnalyzer(
     document.getElementById('equalizer'), {
         source: audioEl,
-        height: window.innerHeight - 50,
+        height: 300,
         mode: 3,
         barSpace: .6,
         showLeds: true

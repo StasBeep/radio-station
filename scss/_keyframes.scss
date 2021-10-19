@@ -54,3 +54,25 @@ $play-four: #c63d7c;
         background-position: 300px -300px
     }
 }
+
+// Анимация кнопки паузы
+@keyframes stroke-play {
+    0% {
+        stroke: $rear-panel;
+    }
+
+    100% {
+        stroke: $cursor-color;
+    }
+}
+
+// Анимация кнопки паузы
+@keyframes fill-stop {
+    0% {
+        fill: $rear-panel;
+    }
+
+    100% {
+        fill: $cursor-color;
+    }
+}
