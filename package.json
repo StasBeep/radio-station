@@ -1,0 +1,20 @@
+{
+  "name": "radio-station",
+  "version": "1.0.0",
+  "description": "радиостанция",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StasBeep/radio-station.git"
+  },
+  "author": "StasBeep",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StasBeep/radio-station/issues"
+  },
+  "homepage": "https://github.com/StasBeep/radio-station#readme"
+}
