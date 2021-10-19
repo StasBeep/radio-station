@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/StasBeep/radio-station/issues"
   },
-  "homepage": "https://github.com/StasBeep/radio-station#readme"
+  "homepage": "https://github.com/StasBeep/radio-station#readme",
+  "dependencies": {
+    "audiomotion-analyzer": "^3.6.0"
+  }
 }

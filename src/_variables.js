@@ -12,10 +12,8 @@ const contCard3 = document.getElementById('card-words-3');
 // * Переменные player
 const numPlay = document.getElementById('control-play');
 const numStop = document.getElementById('control-stop');
-const numRew = document.getElementById('control-rewind');
-const numForw = document.getElementById('control-fforward');
 
-const elEqualizer = document.getElementById('player-equalizer');
+const audioEl = document.getElementById('audioElem');
 
 // * Переменные slider
 // Ссылка положение json-файла на gitub
@@ -42,9 +40,7 @@ const sliderForward = document.getElementById('slider-forward');
 export {
     numPlay,
     numStop,
-    elEqualizer,
-    numRew,
-    numForw,
+    audioEl,
     API_slider,
     sliderImg,
     sliderImg1,
