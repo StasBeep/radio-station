@@ -27,6 +27,15 @@ const sliderText = document.getElementById('slider-text');
 const sliderLink = document.getElementById('slider-link');
 const sliderData = document.getElementById('slider-data');
 
+const sliderImg1 = document.getElementById('slider-img-1');
+const sliderImg3 = document.getElementById('slider-img-3');
+
+const sliderTitle1 = document.getElementById('slider-title-1');
+const sliderTitle3 = document.getElementById('slider-title-3');
+
+const sliderLink1 = document.getElementById('slider-link-1');
+const sliderLink3 = document.getElementById('slider-link-3');
+
 const sliderBack = document.getElementById('slider-back');
 const sliderForward = document.getElementById('slider-forward');
 
@@ -38,6 +47,12 @@ export {
     numForw,
     API_slider,
     sliderImg,
+    sliderImg1,
+    sliderImg3,
+    sliderLink1,
+    sliderLink3,
+    sliderTitle1,
+    sliderTitle3,
     sliderTitle,
     sliderText,
     sliderLink,
