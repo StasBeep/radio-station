@@ -296,18 +296,43 @@
     display: flex;
     justify-content: space-between;
 }
+
 .slider {
     display: flex;
     flex-direction: column;
     padding-bottom: 40px;
     box-sizing: border-box;
 
-    &-side{
-        padding-top: 105px;
+    &-side {
+        padding-top: 250px;
 
-        &-img{
+        &-img {
             width: 230px;
             height: 150px;
+        }
+
+        &-modal {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid $rear-panel;
+            border-top: none;
+            margin-top: -4px;
+
+            &-title {
+                @include font-open-regular(400, 17px, 40px);
+                align-self: center;
+            }
+
+            &-link {
+                @include font-open-regular(400, 12px, 30px);
+                align-self: center;
+                padding-bottom: 2px;
+                box-sizing: border-box;
+
+                &:hover {
+                    color: $cursor-color;
+                }
+            }
         }
     }
 
