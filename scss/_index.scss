@@ -306,13 +306,13 @@
         padding-top: 105px;
 
         &-img{
-            max-width: 230px;
+            width: 230px;
             height: 150px;
         }
     }
 
     &-img {
-        max-width: 500px;
+        width: 500px;
         height: 358px;
     }
 
@@ -358,7 +358,7 @@
                     box-shadow: 10px 10px 3px -6px $rear-panel;
                 }
 
-                & .content-slider-switch-btn-svg {
+                & .slider-switch-btn-svg {
                     fill: $front-panel;
                 }
             }

@@ -442,12 +442,12 @@
 }
 
 .slider-side-img {
-  max-width: 230px;
+  width: 230px;
   height: 150px;
 }
 
 .slider-img {
-  max-width: 500px;
+  width: 500px;
   height: 358px;
 }
 
@@ -504,7 +504,7 @@
           box-shadow: 10px 10px 3px -6px #283673;
 }
 
-.slider-switch-btn:hover .content-slider-switch-btn-svg {
+.slider-switch-btn:hover .slider-switch-btn-svg {
   fill: #fddd3a;
 }
 

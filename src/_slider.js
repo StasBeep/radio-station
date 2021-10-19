@@ -42,10 +42,16 @@ document.addEventListener('DOMContentLoaded', sideSliders(arrObjSlider[sideLeft]
 // События нажатия на перелистывание слайдера
 sliderBack.addEventListener('click', () => {
     condition = checkCondition(condition - 1, arrObjSlider.length);
+    sideLeft = checkCondition(sideLeft - 1, arrObjSlider.length);
+    sideRight = checkCondition(sideRight - 1, arrObjSlider.length);
     elementLoaded(arrObjSlider[condition]);
+    sideSliders(arrObjSlider[sideLeft], arrObjSlider[sideRight]);
 });
 
 sliderForward.addEventListener('click', () => {
     condition = checkCondition(condition + 1, arrObjSlider.length);
+    sideLeft = checkCondition(sideLeft + 1, arrObjSlider.length);
+    sideRight = checkCondition(sideRight + 1, arrObjSlider.length);
     elementLoaded(arrObjSlider[condition]);
+    sideSliders(arrObjSlider[sideLeft], arrObjSlider[sideRight]);
 });
