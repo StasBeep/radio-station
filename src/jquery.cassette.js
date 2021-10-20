@@ -46,60 +46,6 @@ let aux = {
     initialVolume: 0.7
 };
 
-// playlist
-$(document).ready(function () {
-    let title, artist, mp3url, image;
-    $.getJSON("https://listen.ssr990.com/assets/podparser.php?callback=?&Podurl=" + Podurl, {}, function (playlist) {
-        console.log(playlist);
-        for (let i = 0; Object.keys(playlist).length > i; i++) {
-            $('.tracklist').prepend('<li class=""><div><a href="javascript:;" class="jp-playlist-item-remove" style="display: none;">×</a><a href="javascript:;" class="jp-playlist-item" tabindex="0" name="' + escape_html(playlist[i].title) + '" artist="' + escape_html(playlist[i].artist) + '" url="' + playlist[i].mp3 + '" image="' + playlist[i].poster + '">' + escape_html(playlist[i].title) + '</a></div></li>');
-        }
-        let num = Object.keys(playlist).length - 1;
-        title = escape_html(playlist[num].title);
-        artist = escape_html(playlist[num].artist);
-        mp3url = playlist[num].mp3;
-        image = playlist[num].poster;
-        let wheelVal = getWheelValues(0);
-        updateWheelValue(wheelVal);
-        //updateSong(title, artist, mp3url,image,false);
-
-        updateSong(title, artist, "https://c18.radioboss.fm:18066/stream", image, false);
-    });
-});
-
-// элемент playlist
-$(document).on('click', ".jp-playlist-item", function () {
-    title = $(this).attr('name');
-    artist = $(this).attr('artist');
-    mp3url = $(this).attr('url');
-    image = $(this).attr('image');
-    let wheelVal = getWheelValues(0);
-    updateWheelValue(wheelVal);
-    //switchSides();
-    updateSong(title, artist, mp3url, image, true);
-});
-
-// отображение обложки при стриме
-function updateSong(title, artist, url, image, autoplay) {
-    $('div.vc-buttons').hide();
-    $('div.vc-loader').show();
-    $('.track-title').text(title);
-    $('.track-image').attr("src", image);
-    //$('.track-artist').text(artist);
-    stop();
-    audio.src = url;
-    cntTime = 0;
-    playable = false;
-    if (autoplay) {
-        play();
-    } else {
-        play();
-        setTimeout(function () {
-            stop();
-        }, 1000);
-    }
-}
-
 // * настройка работы плеера
 // При нажатии на play
 $('#control-play').on('mousedown', function (event) {
@@ -109,16 +55,6 @@ $('#control-play').on('mousedown', function (event) {
 // При нажатии на stop
 $('#control-stop').on('mousedown', function (event) {
     stop();
-});
-
-// При нажатии на вперёд
-$('#control-fforward').on('mousedown', function (event) {
-    forward();
-});
-
-// При нажатии на назад
-$('#control-rewind').on('mousedown', function (event) {
-    rewind();
 });
 
 // При изменении положения звука -> отображение текущего положения
@@ -220,38 +156,6 @@ function updateStatus(buttons) {
         timeIterator = cntTime - audio.duration;
     }
     return true;
-}
-
-// функция запуска (обратная перемотка)
-function rewind() {
-    const action = 'rewind';
-    if (audio.currentTime == 0) {
-        return false;
-    }
-    updateButtons(action);
-    $.when(playSE('click')).done(function () {
-        updateStatus(true);
-        isMoving = true;
-        updateAction(action);
-        // setWheelAnimation('0.5s', action);
-        timer();
-    });
-}
-
-// функция запуска (вперёд)
-function forward() {
-    const action = 'forward';
-    if (audio.currentTime === audio.duration) {
-        return false;
-    }
-    updateButtons(action);
-    $.when(playSE('click')).done(function () {
-        updateStatus(true);
-        isMoving = true;
-        updateAction(action);
-        // setWheelAnimation('0.5s', action);
-        timer();
-    });
 }
 
 // функция запуска (stop)
