@@ -755,6 +755,90 @@
   border-radius: 50%;
 }
 
+.playlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.playlist-cover {
+  width: 300px;
+  text-align: center;
+}
+
+.playlist-cover-title {
+  font-family: OpenSans-Bold;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 25px;
+  line-height: 25px;
+  color: #283673;
+}
+
+.playlist-cover-track {
+  font-family: OpenSans-Regular;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 30px 0;
+  border-top: 1px solid #283673;
+  border-bottom: 1px solid #283673;
+  color: #283673;
+}
+
+.playlist-cover-track:before {
+  content: "\25B7";
+  margin-right: 10px;
+  color: #00cc00;
+}
+
+.playlist-cover-img {
+  width: 250px;
+  height: 250px;
+}
+
+.playlist-list {
+  text-align: center;
+  margin-left: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.playlist-list-title {
+  font-family: OpenSans-Bold;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 25px;
+  line-height: 25px;
+  color: #283673;
+}
+
+.playlist-list-el {
+  font-family: OpenSans-Regular;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: left;
+  width: 340px;
+  color: #283673;
+}
+
+.playlist-list-el > ul {
+  list-style-type: "\25B7";
+}
+
+.playlist-list-el > ul > li {
+  padding-left: 10px;
+}
+
 /* end main end */
 /* end index end */
 @-webkit-keyframes change-fill {
