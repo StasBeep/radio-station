@@ -8,6 +8,10 @@ const contDesc = document.getElementById('content-description');
 const contCard1 = document.getElementById('card-words-1');
 const contCard2 = document.getElementById('card-words-2');
 const contCard3 = document.getElementById('card-words-3');
+const projectTitleOne = document.getElementById('project-title-one');
+const projectTitleTwo = document.getElementById('project-title-two');
+const projectTitleThree = document.getElementById('project-title-three');
+const projectTitleFour = document.getElementById('project-title-four');
 
 // * Переменные player
 const numPlay = document.getElementById('control-play');
@@ -89,5 +93,9 @@ export {
     linkOne,
     linkTwo,
     linkThree,
-    linkFour
+    linkFour,
+    projectTitleOne,
+    projectTitleTwo,
+    projectTitleThree,
+    projectTitleFour
 }
