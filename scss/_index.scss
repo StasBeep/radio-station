@@ -620,6 +620,106 @@
 
                 &>li {
                     padding-left: 10px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+}
+
+.projects {
+    border-top: 2px solid $rear-panel;
+    border-bottom: 2px solid $rear-panel;
+    text-align: center;
+    padding: 15px 0;
+    box-sizing: border-box;
+
+    &-title {
+        @include font-open-bold(700, 25px, 25px);
+        text-transform: uppercase;
+        color: $rear-panel;
+    }
+
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        box-sizing: border-box;
+        list-style-type: none;
+
+        &-li {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+
+            &-img {
+                height: 240px;
+
+                &-two {
+                    width: 120px;
+                }
+
+                &-three {
+                    width: 200px;
+                }
+            }
+
+            &-title {
+                @include font-open-bold(700, 20px, 20px);
+                color: $rear-panel;
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+
+            &-description {
+                @include font-open-regular(400, 11px, 15px);
+                color: $rear-panel;
+                margin-bottom: 5px;
+            }
+
+            &-details {
+                @include font-open-regular(400, 12px, 12px);
+                color: $cursor-color;
+            }
+
+            &-btn {
+                width: 50px;
+                height: 40px;
+                margin: 0 auto;
+                background: transparent;
+                border: none;
+
+                &-svg {
+                    width: 35px;
+                    fill: $main-color;
+                    stroke: $rear-panel;
+                    transition: transform 1s ease,
+                        fill 1s ease,
+                        stroke 1s ease;
+                }
+
+                &:hover .projects-list-li-btn-svg {
+                    transform: scale(1.3);
+                    fill: $rear-panel;
+                    stroke: $main-color;
+                }
+
+                &:active .projects-list-li-btn-svg {
+                    transform: scale(1.1);
+                    fill: $cursor-color;
+                    stroke: $cursor-color;
+                }
+            }
+
+            &:nth-child(2) {
+                margin-top: 55px;
+            }
+
+            &:nth-child(3) {
+                margin-top: 67px;
+
+                & .projects-list-li-title {
+                    margin-top: 19px;
                 }
             }
         }
