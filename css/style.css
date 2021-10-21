@@ -915,6 +915,7 @@
   line-height: 15px;
   color: #283673;
   margin-bottom: 5px;
+  display: none;
 }
 
 .projects-list-li-details {
@@ -924,6 +925,7 @@
   font-size: 12px;
   line-height: 12px;
   color: #ff0000;
+  display: none;
 }
 
 .projects-list-li-btn {
@@ -938,10 +940,10 @@
   width: 35px;
   fill: #feec92;
   stroke: #283673;
-  -webkit-transition: fill 1s ease, stroke 1s ease, -webkit-transform 1s ease;
-  transition: fill 1s ease, stroke 1s ease, -webkit-transform 1s ease;
-  transition: transform 1s ease, fill 1s ease, stroke 1s ease;
-  transition: transform 1s ease, fill 1s ease, stroke 1s ease, -webkit-transform 1s ease;
+  -webkit-transition: fill 0.5s ease, stroke 0.5s ease, -webkit-transform 0.5s ease;
+  transition: fill 0.5s ease, stroke 0.5s ease, -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease, fill 0.5s ease, stroke 0.5s ease;
+  transition: transform 0.5s ease, fill 0.5s ease, stroke 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 .projects-list-li-btn:hover .projects-list-li-btn-svg {

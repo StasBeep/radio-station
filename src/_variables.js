@@ -37,6 +37,20 @@ const sliderLink3 = document.getElementById('slider-link-3');
 const sliderBack = document.getElementById('slider-back');
 const sliderForward = document.getElementById('slider-forward');
 
+// * Переменные our-project
+const btnOne = document.getElementById('project-btn-one');
+const btnTwo = document.getElementById('project-btn-two');
+const btnThree = document.getElementById('project-btn-three');
+const btnFour = document.getElementById('project-btn-four');
+const descrOne = document.getElementById('project-description-one');
+const descrTwo = document.getElementById('project-description-two');
+const descrThree = document.getElementById('project-description-three');
+const descrFour = document.getElementById('project-description-four');
+const linkOne = document.getElementById('project-details-one');
+const linkTwo = document.getElementById('project-details-two');
+const linkThree = document.getElementById('project-details-three');
+const linkFour = document.getElementById('project-details-four');
+
 export {
     numPlay,
     numStop,
@@ -63,5 +77,17 @@ export {
     contDesc,
     contCard1,
     contCard2,
-    contCard3
+    contCard3,
+    btnOne,
+    btnTwo,
+    btnThree,
+    btnFour,
+    descrOne,
+    descrTwo,
+    descrThree,
+    descrFour,
+    linkOne,
+    linkTwo,
+    linkThree,
+    linkFour
 }

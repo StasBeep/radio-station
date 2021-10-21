@@ -675,11 +675,13 @@
                 @include font-open-regular(400, 11px, 15px);
                 color: $rear-panel;
                 margin-bottom: 5px;
+                display: none;
             }
 
             &-details {
                 @include font-open-regular(400, 12px, 12px);
                 color: $cursor-color;
+                display: none;
             }
 
             &-btn {
@@ -693,9 +695,9 @@
                     width: 35px;
                     fill: $main-color;
                     stroke: $rear-panel;
-                    transition: transform 1s ease,
-                        fill 1s ease,
-                        stroke 1s ease;
+                    transition: transform 0.5s ease,
+                        fill 0.5s ease,
+                        stroke 0.5s ease;
                 }
 
                 &:hover .projects-list-li-btn-svg {
