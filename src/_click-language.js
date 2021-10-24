@@ -8,6 +8,7 @@ import {
     contCard1,
     contCard2,
     contCard3,
+    projectTitle,
     descrOne,
     descrTwo,
     descrThree,
@@ -15,7 +16,11 @@ import {
     projectTitleOne,
     projectTitleTwo,
     projectTitleThree,
-    projectTitleFour
+    projectTitleFour,
+    linkOne,
+    linkTwo,
+    linkThree,
+    linkFour
 } from './_variables.js'
 
 import {
@@ -51,6 +56,7 @@ function arrangeOfElement(content) {
     contCard1.textContent = content.card1;
     contCard2.textContent = content.card2;
     contCard3.textContent = content.card3;
+    projectTitle.textContent = content.project;
     descrOne.textContent = content.projectOne;
     descrTwo.textContent = content.projectTwo;
     descrThree.textContent = content.projectThree;
@@ -59,4 +65,8 @@ function arrangeOfElement(content) {
     projectTitleTwo.textContent = content.projectTitleTwo;
     projectTitleThree.textContent = content.projectTitleThree;
     projectTitleFour.textContent = content.projectTitleFour;
+    linkOne.textContent = content.more;
+    linkTwo.textContent = content.more;
+    linkThree.textContent = content.more;
+    linkFour.textContent = content.more;
 }

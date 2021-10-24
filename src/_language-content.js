@@ -7,6 +7,7 @@ const contentRu = {
     card1: "Lorem ipsum dolor sit amet",
     card2: "Lorem ipsum dolor sit amet",
     card3: "Lorem ipsum dolor sit amet",
+    project: "наши проекты", 
     projectTitleOne: "Зависимые от вайба",
     projectTitleTwo: "Дембоу",
     projectTitleThree: "Вселенная Рэгги",
@@ -15,6 +16,7 @@ const contentRu = {
     projectTwo: "Самый беззаботный ресурс рунет о карибской танцевальной музыке",
     projectThree: "Паблик, специализирующийся на эксклюзивной выкладке тех Рэгги-альбомов, которых ещё нет в вк. Наш девиз - для этой музыки нет границ, поэтому мы постим музыку всех стран и континентов",
     projectFour: "Тематическая группа о вкладе женщин в становление Рэгги-музыки и смежных карибских стилей, а также их роли в современном развитии этих направлений",
+    more: "Подробнее",
 };
 
 const contentEn = {
@@ -26,6 +28,7 @@ const contentEn = {
     card1: "Lorem ipsum dolor sit amet",
     card2: "Lorem ipsum dolor sit amet",
     card3: "Lorem dolor sit amet",
+    project: "our projects",
     projectTitleOne: "Dependent on vibe",
     projectTitleTwo: "Dembou",
     projectTitleThree: "The Reggae Universe",
@@ -34,6 +37,7 @@ const contentEn = {
     projectTwo: "The most carefree runet resource about Caribbean dance music",
     projectThree: "A public specializing in the exclusive distribution of those Reggae albums that are not yet in the VK. Our motto is that there are no borders for this music, so we post music from all countries and continents",
     projectFour: "Thematic group on the contribution of women to the formation of Reggae music and related Caribbean styles, as well as their role in the modern development of these areas",
+    more: "More",
 };
 
 export {

@@ -1,4 +1,5 @@
 import {
+    ulProjects,
     btnOne,
     btnTwo,
     btnThree,
@@ -29,6 +30,7 @@ let clickOne = false;
 let clickTwo = false;
 let clickThree = false;
 let clickFour = false;
+let shift = true;
 
 btnOne.addEventListener('click', () => {
     clickOne = definitionData('1', clickOne);
@@ -75,3 +77,19 @@ function openingInformation(btn, descr, link, condition) {
         link.style.display = 'block';
     }
 }
+
+setInterval(() => {
+    if (shift) {
+        ulProjects[0].style.order = '4';
+        ulProjects[1].style.order = '3';
+        ulProjects[2].style.order = '2';
+        ulProjects[3].style.order = '1';
+        shift = !shift;
+    } else {
+        ulProjects[0].style.order = '1';
+        ulProjects[1].style.order = '2';
+        ulProjects[2].style.order = '3';
+        ulProjects[3].style.order = '4';
+        shift = !shift;
+    }
+}, 30000);

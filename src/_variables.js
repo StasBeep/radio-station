@@ -42,6 +42,8 @@ const sliderBack = document.getElementById('slider-back');
 const sliderForward = document.getElementById('slider-forward');
 
 // * Переменные our-project
+const ulProjects = document.getElementsByClassName('projects-list-li');
+const projectTitle = document.getElementById('project-title');
 const btnOne = document.getElementById('project-btn-one');
 const btnTwo = document.getElementById('project-btn-two');
 const btnThree = document.getElementById('project-btn-three');
@@ -82,6 +84,8 @@ export {
     contCard1,
     contCard2,
     contCard3,
+    ulProjects,
+    projectTitle,
     btnOne,
     btnTwo,
     btnThree,
