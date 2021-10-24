@@ -14,6 +14,8 @@ const projectTitleThree = document.getElementById('project-title-three');
 const projectTitleFour = document.getElementById('project-title-four');
 
 // * Переменные player
+const playlistTitle = document.getElementById('playlist-title');
+const playlistList = document.getElementById('playlist-list');
 const numPlay = document.getElementById('control-play');
 const numStop = document.getElementById('control-stop');
 
@@ -61,6 +63,8 @@ export {
     numPlay,
     numStop,
     audioEl,
+    playlistTitle,
+    playlistList,
     API_slider,
     sliderImg,
     sliderImg1,

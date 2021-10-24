@@ -20,7 +20,9 @@ import {
     linkOne,
     linkTwo,
     linkThree,
-    linkFour
+    linkFour,
+    playlistTitle,
+    playlistList
 } from './_variables.js'
 
 import {
@@ -56,6 +58,8 @@ function arrangeOfElement(content) {
     contCard1.textContent = content.card1;
     contCard2.textContent = content.card2;
     contCard3.textContent = content.card3;
+    playlistTitle.textContent = content.playlistTitle;
+    playlistList.textContent = content.playlistList;
     projectTitle.textContent = content.project;
     descrOne.textContent = content.projectOne;
     descrTwo.textContent = content.projectTwo;
