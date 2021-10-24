@@ -12,6 +12,7 @@ const projectTitleOne = document.getElementById('project-title-one');
 const projectTitleTwo = document.getElementById('project-title-two');
 const projectTitleThree = document.getElementById('project-title-three');
 const projectTitleFour = document.getElementById('project-title-four');
+const broadcastTitle = document.getElementById('broadcast-title');
 
 // * Переменные player
 const playlistTitle = document.getElementById('playlist-title');
@@ -105,5 +106,6 @@ export {
     projectTitleOne,
     projectTitleTwo,
     projectTitleThree,
-    projectTitleFour
+    projectTitleFour,
+    broadcastTitle
 }

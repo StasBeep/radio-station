@@ -22,7 +22,8 @@ import {
     linkThree,
     linkFour,
     playlistTitle,
-    playlistList
+    playlistList,
+    broadcastTitle
 } from './_variables.js'
 
 import {
@@ -73,4 +74,5 @@ function arrangeOfElement(content) {
     linkTwo.textContent = content.more;
     linkThree.textContent = content.more;
     linkFour.textContent = content.more;
+    broadcastTitle.textContent = content.broadcast;
 }
