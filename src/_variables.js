@@ -13,6 +13,11 @@ const projectTitleTwo = document.getElementById('project-title-two');
 const projectTitleThree = document.getElementById('project-title-three');
 const projectTitleFour = document.getElementById('project-title-four');
 const broadcastTitle = document.getElementById('broadcast-title');
+const feedTitle = document.getElementsByClassName('feedback-form-title')[0];
+const feedLabel = document.getElementsByClassName('feedback-form-subtitle');
+const feedProposal = document.getElementsByClassName('feedback-form-proposal');
+const feedBtn = document.getElementsByClassName('feedback-form-btn');
+const feedExp = document.getElementsByClassName('feedback-explanations');
 
 // * Переменные player
 const playlistTitle = document.getElementById('playlist-title');
@@ -107,5 +112,10 @@ export {
     projectTitleTwo,
     projectTitleThree,
     projectTitleFour,
-    broadcastTitle
+    broadcastTitle,
+    feedExp,
+    feedBtn,
+    feedLabel,
+    feedTitle,
+    feedProposal
 }

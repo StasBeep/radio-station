@@ -1091,12 +1091,12 @@
 }
 
 .feedback-form-subtitle:nth-child(4)::after {
-  left: 39px;
+  left: 45px;
   top: -3px;
 }
 
 .feedback-form-subtitle:nth-child(6)::after {
-  left: 119px;
+  left: 79px;
   top: -3px;
 }
 

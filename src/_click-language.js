@@ -23,7 +23,12 @@ import {
     linkFour,
     playlistTitle,
     playlistList,
-    broadcastTitle
+    broadcastTitle,
+    feedTitle,
+    feedProposal,
+    feedLabel,
+    feedExp,
+    feedBtn
 } from './_variables.js'
 
 import {
@@ -75,4 +80,10 @@ function arrangeOfElement(content) {
     linkThree.textContent = content.more;
     linkFour.textContent = content.more;
     broadcastTitle.textContent = content.broadcast;
+    feedTitle.textContent = content.feedTitle;
+    feedLabel[1].textContent = content.feedName;
+    feedLabel[2].textContent = content.feedComent;
+    feedProposal[0].textContent = content.feedProposal;
+    feedBtn[0].textContent = content.feedBtn;
+    feedExp[0].textContent = content.feedExpl;
 }
