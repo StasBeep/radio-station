@@ -430,6 +430,7 @@
                         <!-- RadioBOSS Cloud Recent Tracks Widget (End) -->
                     </article>
                 </section>
+                <!-- Наши проекты -->
                 <aside class="projects">
                     <span class="projects-title" id="project-title"></span>
                     <ul class="projects-list">
@@ -500,6 +501,7 @@
                         </li>
                     </ul>
                 </aside>
+                <!-- Нас вещают -->
                 <aside class="broadcast">
                     <span class="broadcast-title" id="broadcast-title"></span>
                     <figure class="broadcast-images">
@@ -520,6 +522,23 @@
                                 class="broadcast-images-allradio" src="./img/allradio.png" alt="all-radio"></a>
                     </figure>
                 </aside>
+                <!-- Форма обратной связи -->
+                <figure class="feedback">
+                    <form action="https://reggaeuniverse.ru/blog/wp-comments-post.php" method="post" class="feedback-form" novalidate>
+                        <span class="feedback-form-title">Обратная связь</span>
+                        <label class="feedback-form-subtitle" for="email">email</label>
+                        <input type="email" id="email" name="email" class="feedback-form-inp" aria-describedby="email-notes" required="required">
+                        <label class="feedback-form-subtitle" for="author">имя</label>
+                        <input type="text" name="author" id="author" class="feedback-form-inp" required="required">
+                        <label class="feedback-form-subtitle" for="comment">комментарий</label>
+                        <textarea id="comment" name="comment" class="feedback-form-textarea" required="required"></textarea>
+                        <span class="feedback-form-proposal">Ваш адрес email не будет опубликован. Обязательные поля помечены</span>
+                        <button type="submit" class="feedback-form-btn">Отправить</button>
+                    </form>
+                    <p class="feedback-explanations">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aspernatur quidem officia
+                        assumenda cumque labore eligendi nobis quo veniam quam, omnis facere repellat sequi minus enim!
+                        Qui dignissimos aut quis?</p>
+                </figure>
             </main>
         </div>
 

@@ -975,7 +975,7 @@
 .broadcast {
   text-align: center;
   border-bottom: 2px solid #283673;
-  padding: 15px 0;
+  padding: 15px 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -1034,6 +1034,159 @@
 
 .broadcast-images:nth-child(3) {
   margin-bottom: 20px;
+}
+
+.feedback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 15px 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.feedback-form {
+  width: 478px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.feedback-form-title {
+  font-family: OpenSans-Bold;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 25px;
+  color: #283673;
+  margin-bottom: 10px;
+}
+
+.feedback-form-subtitle {
+  font-family: OpenSans-Regular;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #283673;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.feedback-form-subtitle::after {
+  content: '\1F7BD';
+  font-size: 10px;
+  position: absolute;
+  left: 47px;
+  top: -3px;
+}
+
+.feedback-form-subtitle:nth-child(4)::after {
+  left: 39px;
+  top: -3px;
+}
+
+.feedback-form-subtitle:nth-child(6)::after {
+  left: 119px;
+  top: -3px;
+}
+
+.feedback-form-inp {
+  font-family: OpenSans-Regular;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 20px;
+  width: 465px;
+  height: 20px;
+  color: #283673;
+  padding: 5px;
+  margin-bottom: 10px;
+  background: #fddd3a;
+  border: 1px solid #283673;
+  outline: 0;
+}
+
+.feedback-form-textarea {
+  font-family: OpenSans-Regular;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 20px;
+  width: 465px;
+  height: 70px;
+  border: 1px solid #283673;
+  outline: 0;
+  padding: 5px;
+  margin-bottom: 10px;
+  background: #fddd3a;
+  color: #283673;
+}
+
+.feedback-form-proposal {
+  font-family: OpenSans-Regular;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color: #283673;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.feedback-form-proposal::after {
+  content: '\1F7BD';
+  font-size: 10px;
+  position: absolute;
+  left: 281px;
+  top: 21px;
+}
+
+.feedback-form-btn {
+  font-family: OpenSans-Regular;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 20px;
+  color: #fddd3a;
+  background-color: #283673;
+  border: 1px solid #283673;
+  padding: 10px;
+  -webkit-transition: background-color 1s ease, color 1s ease;
+  transition: background-color 1s ease, color 1s ease;
+}
+
+.feedback-form-btn:hover {
+  color: #283673;
+  background-color: #00cc00;
+}
+
+.feedback-form-btn:active {
+  color: #283673;
+  background-color: #ff0000;
+}
+
+.feedback-explanations {
+  font-family: OpenSans-Regular;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 20px;
+  width: 300px;
+  text-align: center;
+  color: #283673;
+  margin-top: 100px;
+  margin-right: 120px;
 }
 
 /* end main end */
