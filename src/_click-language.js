@@ -7,7 +7,28 @@ import {
     contDesc,
     contCard1,
     contCard2,
-    contCard3
+    contCard3,
+    projectTitle,
+    descrOne,
+    descrTwo,
+    descrThree,
+    descrFour,
+    projectTitleOne,
+    projectTitleTwo,
+    projectTitleThree,
+    projectTitleFour,
+    linkOne,
+    linkTwo,
+    linkThree,
+    linkFour,
+    playlistTitle,
+    playlistList,
+    broadcastTitle,
+    feedTitle,
+    feedProposal,
+    feedLabel,
+    feedExp,
+    feedBtn
 } from './_variables.js'
 
 import {
@@ -43,4 +64,26 @@ function arrangeOfElement(content) {
     contCard1.textContent = content.card1;
     contCard2.textContent = content.card2;
     contCard3.textContent = content.card3;
+    playlistTitle.textContent = content.playlistTitle;
+    playlistList.textContent = content.playlistList;
+    projectTitle.textContent = content.project;
+    descrOne.textContent = content.projectOne;
+    descrTwo.textContent = content.projectTwo;
+    descrThree.textContent = content.projectThree;
+    descrFour.textContent = content.projectFour;
+    projectTitleOne.textContent = content.projectTitleOne;
+    projectTitleTwo.textContent = content.projectTitleTwo;
+    projectTitleThree.textContent = content.projectTitleThree;
+    projectTitleFour.textContent = content.projectTitleFour;
+    linkOne.textContent = content.more;
+    linkTwo.textContent = content.more;
+    linkThree.textContent = content.more;
+    linkFour.textContent = content.more;
+    broadcastTitle.textContent = content.broadcast;
+    feedTitle.textContent = content.feedTitle;
+    feedLabel[1].textContent = content.feedName;
+    feedLabel[2].textContent = content.feedComent;
+    feedProposal[0].textContent = content.feedProposal;
+    feedBtn[0].textContent = content.feedBtn;
+    feedExp[0].textContent = content.feedExpl;
 }
