@@ -1190,6 +1190,72 @@
 }
 
 /* end main end */
+/* footer */
+.footer {
+  width: 1440px;
+  padding: 20px 120px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #283673;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-icon {
+  width: 60px;
+  fill: #283673;
+  -webkit-transition: background-color ease 0.5s;
+  transition: background-color ease 0.5s;
+  background-color: #fddd3a;
+  -webkit-animation: change-fill 3s ease infinite;
+          animation: change-fill 3s ease infinite;
+}
+
+.footer-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.footer-description-year {
+  font-family: OpenSans-Regular;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #feec92;
+  margin-top: 10px;
+}
+
+.footer-description-year::before {
+  content: '\00A9';
+  padding-right: 10px;
+}
+
+.footer-description-version {
+  font-family: OpenSans-Regular;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #feec92;
+}
+
+.footer-developer {
+  width: 50px;
+}
+
+/* end footer end */
 /* end index end */
 @-webkit-keyframes change-fill {
   0% {
