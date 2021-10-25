@@ -65,6 +65,9 @@ const linkTwo = document.getElementById('project-details-two');
 const linkThree = document.getElementById('project-details-three');
 const linkFour = document.getElementById('project-details-four');
 
+// * Переменные блока footer
+const footerYear = document.getElementById('footer-year');
+
 export {
     numPlay,
     numStop,
@@ -117,5 +120,6 @@ export {
     feedBtn,
     feedLabel,
     feedTitle,
-    feedProposal
+    feedProposal,
+    footerYear
 }
