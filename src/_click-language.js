@@ -47,10 +47,10 @@ langBtn.addEventListener('click', () => {
 
 function langVariation(language) {
     if (language) {
-        langBtn.textContent = 'ru';
+        langBtn.textContent = 'en';
         arrangeOfElement(contentRu);
     } else {
-        langBtn.textContent = 'en';
+        langBtn.textContent = 'ru';
         arrangeOfElement(contentEn);
     }
 }

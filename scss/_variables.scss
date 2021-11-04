@@ -1,7 +1,7 @@
 /* Переменные (через $) */
 $whcolor: #ffffff;
 $rear-panel: #283673;
-$front-panel: #fddd3a;
+$front-panel: #ffff33;
 $main-color: #feec92;
 $main-text: #5537ae;
 $fill-logo: #7f2da9;
@@ -33,7 +33,9 @@ $twitter: #00acee;
         /* 100 видимых высот */
         display: flex;
         flex-direction: column;
-        background-color: $rear-panel;
+        //background-color: $rear-panel;
+        background: url(../img/bg-rear.jpg);
+        background-size: contain;
     }
 }
 

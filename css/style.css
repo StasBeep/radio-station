@@ -6,7 +6,7 @@
   /*Максимальная ширина страницы и выравнивание содержимого по центру*/
   max-width: 1440px;
   margin: 0 auto;
-  background-color: #fddd3a;
+  background-color: #ffff33;
   /* Обёртка для прижатия подвала к нижней части */
 }
 
@@ -26,7 +26,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #283673;
+  background: url(../img/bg-rear.jpg);
+  background-size: contain;
 }
 
 /* end === wrapper === end */
@@ -90,6 +91,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
 }
 
 .fixed-menu-icon {
@@ -97,7 +100,7 @@
   fill: #283673;
   -webkit-transition: background-color ease 0.5s;
   transition: background-color ease 0.5s;
-  background-color: #fddd3a;
+  background-color: #ffff33;
   -webkit-animation: change-fill 3s ease infinite;
           animation: change-fill 3s ease infinite;
 }
@@ -241,8 +244,32 @@
           transform: scale(1);
 }
 
+.front {
+  position: relative;
+}
+
+.front-astronaut {
+  width: 550px;
+  height: 746px;
+  position: fixed;
+  z-index: 0;
+  top: 23%;
+  left: 20%;
+  background-image: url(../img/reggi-gotovye.png);
+  background-position: -8px -303px;
+  background-size: 190%;
+  background-repeat: no-repeat;
+}
+
+.front-end {
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+
 .content {
-  margin-top: 113px;
+  margin-top: 112px;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
 }
 
 .content-wrp {
@@ -280,6 +307,10 @@
   border-bottom: 0.25rem solid #ffffff;
 }
 
+.content-wrp-title-first {
+  margin-left: 118px;
+}
+
 .content-wrp-title::before {
   content: "";
   position: absolute;
@@ -299,12 +330,13 @@
   bottom: -1.125rem;
   -webkit-transform: translateX(-1.25rem);
           transform: translateX(-1.25rem);
-  border-top: 1.5rem solid #fddd3a;
+  border-top: 1.5rem solid #ffff33;
   border-left: 1.25rem solid transparent;
   border-right: 1.25rem solid transparent;
 }
 
 .content-description {
+  position: relative;
   display: block;
   text-align: center;
   padding: 0 275px 17px;
@@ -422,6 +454,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
 }
 
 .slider {
@@ -468,6 +501,7 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  color: #5537ae;
 }
 
 .slider-side-modal-link {
@@ -530,7 +564,7 @@
 
 .slider-switch-btn:hover {
   background-color: #283673;
-  border: 2px solid #fddd3a;
+  border: 2px solid #ffff33;
   border-top: none;
 }
 
@@ -547,7 +581,7 @@
 }
 
 .slider-switch-btn:hover .slider-switch-btn-svg {
-  fill: #fddd3a;
+  fill: #ffff33;
 }
 
 .slider-switch-btn:active {
@@ -596,6 +630,7 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  color: #283673;
 }
 
 .slider-switch-modal-text {
@@ -604,6 +639,7 @@
   font-style: normal;
   font-size: 20px;
   line-height: 20px;
+  color: #283673;
 }
 
 .slider-switch-modal-link {
@@ -629,12 +665,14 @@
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-top: 5px;
+  color: #283673;
 }
 
 .player {
   padding: 0 0 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
 }
 
 .player-equalizer {
@@ -656,21 +694,24 @@
   padding: 15px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
 }
 
 .player-controls-play {
-  width: 10px;
-  height: 10px;
-  background: transparent;
+  margin-top: 7px;
+  width: 130px;
+  height: 140px;
   position: relative;
   border: none;
+  background-image: url(../img/bg-play.gif);
+  border-radius: 45px;
 }
 
 .player-controls-play-svg {
   width: 180px;
   height: 170px;
   position: absolute;
-  left: -55px;
+  left: -16px;
   top: -15px;
   stroke: #283673;
   fill: transparent;
@@ -686,18 +727,22 @@
 
 .player-controls-stop {
   display: none;
-  width: 10px;
-  height: 10px;
-  background: transparent;
-  position: relative;
+  margin-top: 7px;
+  width: 130px;
+  height: 140px;
+  position: absolute;
   border: none;
+  left: 220px;
+  top: 16px;
+  border-radius: 45px;
+  background-image: url(../img/bg-play.gif);
 }
 
 .player-controls-stop-svg {
   width: 160px;
   height: 160px;
   position: absolute;
-  left: -151px;
+  left: 14px;
   top: -10px;
   fill: #283673;
   -webkit-animation: fill-stop 7s infinite;
@@ -765,6 +810,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
 }
 
 .playlist-cover {
@@ -848,6 +894,7 @@
   padding: 15px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
 }
 
 .projects-title {
@@ -978,6 +1025,7 @@
   padding: 15px 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
 }
 
 .broadcast-title {
@@ -1047,6 +1095,8 @@
   padding: 15px 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border-bottom-left-radius: 7%;
+  position: relative;
 }
 
 .feedback-form {
@@ -1111,7 +1161,7 @@
   color: #283673;
   padding: 5px;
   margin-bottom: 10px;
-  background: #fddd3a;
+  background: #ffff33;
   border: 1px solid #283673;
   outline: 0;
 }
@@ -1128,7 +1178,7 @@
   outline: 0;
   padding: 5px;
   margin-bottom: 10px;
-  background: #fddd3a;
+  background: #ffff33;
   color: #283673;
 }
 
@@ -1158,7 +1208,7 @@
   font-style: normal;
   font-size: 15px;
   line-height: 20px;
-  color: #fddd3a;
+  color: #ffff33;
   background-color: #283673;
   border: 1px solid #283673;
   padding: 10px;
@@ -1203,6 +1253,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  z-index: 2;
 }
 
 .footer-icon {
@@ -1210,7 +1263,7 @@
   fill: #283673;
   -webkit-transition: background-color ease 0.5s;
   transition: background-color ease 0.5s;
-  background-color: #fddd3a;
+  background-color: #ffff33;
   -webkit-animation: change-fill 3s ease infinite;
           animation: change-fill 3s ease infinite;
   margin-left: 25px;
@@ -1338,7 +1391,7 @@
     background-color: #fafc3a;
   }
   45% {
-    background-color: #fddd3a;
+    background-color: #ffff33;
   }
   75% {
     background-color: #fcfe92;
@@ -1352,7 +1405,7 @@
     background-color: #fafc3a;
   }
   45% {
-    background-color: #fddd3a;
+    background-color: #ffff33;
   }
   75% {
     background-color: #fcfe92;
@@ -1412,7 +1465,7 @@
 
 @-webkit-keyframes stroke-play {
   0% {
-    stroke: #283673;
+    stroke: #ffff33;
   }
   100% {
     stroke: #ff0000;
@@ -1421,7 +1474,7 @@
 
 @keyframes stroke-play {
   0% {
-    stroke: #283673;
+    stroke: #ffff33;
   }
   100% {
     stroke: #ff0000;
