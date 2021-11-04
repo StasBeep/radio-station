@@ -163,12 +163,16 @@
                                 </svg>
                             </a></li>
                     </ul>
-                    <button class="fixed-menu-btn" type="button" id="languages-button">ru</button>
+                    <button class="fixed-menu-btn" type="button" id="languages-button"></button>
                 </nav>
-                <section class="wrapper wrapper-container content">
+            </header>
+
+            <div class="front">
+                <div class="front-astronaut"></div>
+                <header class="wrapper wrapper-container content">
                     <section class="content-wrp">
                         <span class="content-wrp-title"><span class="content-wrp-title-first">reggae</span>
-                            universe</span>
+                            <span class="content-wrp-title-second">universe</span></span>
                     </section>
                     <span class="content-description" id="content-description"></span>
                     <article class="content-cards">
@@ -332,215 +336,215 @@
                             </figure>
                         </section>
                     </article>
-                </section>
-            </header>
+                </header>
 
-            <!--Основная часть-->
-            <main class="wrapper wrapper-container">
-                <!--Слайдер-->
-                <article class="sliders">
-                    <section class="slider-side">
-                        <img class="slider-side-img" src="./img/error-slider.png" alt="picture" id="slider-img-1">
-                        <section class="slider-side-modal">
-                            <span class="slider-side-modal-title" id="slider-title-1"></span>
-                            <a class="slider-side-modal-link" href="#" target="_blank" id="slider-link-1"></a>
+                <!--Основная часть-->
+                <main class="wrapper wrapper-container front-end">
+                    <!--Слайдер-->
+                    <article class="sliders">
+                        <section class="slider-side">
+                            <img class="slider-side-img" src="./img/error-slider.png" alt="picture" id="slider-img-1">
+                            <section class="slider-side-modal">
+                                <span class="slider-side-modal-title" id="slider-title-1"></span>
+                                <a class="slider-side-modal-link" href="#" target="_blank" id="slider-link-1"></a>
+                            </section>
                         </section>
-                    </section>
-                    <section class="slider">
-                        <img class="slider-img" src="./img/error-slider.png" alt="picture" id="slider-img">
-                        <section class="slider-switch">
-                            <button class="slider-switch-btn" id="slider-back">
-                                <svg class="slider-switch-btn-svg" viewbox="0 0 306 306">
-                                    <polygon
-                                        points="247.35,35.7 211.65,0 58.65,153 211.65,306 247.35,270.3 130.05,153" />
-                                </svg>
-                            </button>
-                            <div class="slider-switch-modal">
-                                <span class="slider-switch-modal-title" id="slider-title"></span>
-                                <span class="slider-switch-modal-text" id="slider-text"></span>
-                                <a class="slider-switch-modal-link" href="#" target="_blank" id="slider-link"></a>
-                                <span class="slider-switch-modal-data" id="slider-data"></span>
-                            </div>
-                            <button class="slider-switch-btn" id="slider-forward">
-                                <svg class="slider-switch-btn-svg" viewbox="0 0 306 306">
-                                    <polygon points="58.65,267.75 175.95,153 58.65,35.7 94.35,0 247.35,153 94.35,306" />
-                                </svg>
-                            </button>
-                        </section>
-                    </section>
-                    <section class="slider-side">
-                        <img class="slider-side-img" src="./img/error-slider.png" alt="picture" id="slider-img-3">
-                        <section class="slider-side-modal">
-                            <span class="slider-side-modal-title" id="slider-title-3"></span>
-                            <a class="slider-side-modal-link" href="#" target="_blank" id="slider-link-3"></a>
-                        </section>
-                    </section>
-                </article>
-                <!--Плеер-->
-                <section class="player">
-                    <figure class="player-equalizer" id="equalizer"></figure>
-                    <audio id="audioElem" crossorigin></audio>
-                    <ul class="player-controls">
-                        <li class="player-volume"></li>
-                        <li>
-                            <button class="player-controls-play" id="control-play">
-                                <!-- svg play -->
-                                <svg class="player-controls-play-svg" viewbox="0 0 400 400">
-                                    <g transform="matrix(14.29 0 0 14.29 200 200)">
+                        <section class="slider">
+                            <img class="slider-img" src="./img/error-slider.png" alt="picture" id="slider-img">
+                            <section class="slider-switch">
+                                <button class="slider-switch-btn" id="slider-back">
+                                    <svg class="slider-switch-btn-svg" viewbox="0 0 306 306">
                                         <polygon
-                                            style="stroke-width: 2; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill-rule: nonzero; opacity: 1;"
-                                            points="-7,-9 7,0 -7,9 -7,-9 " />
-                                    </g>
-                                </svg>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="player-controls-stop" id="control-stop">
-                                <!-- svg pause -->
-                                <svg class="player-controls-stop-svg" viewbox="0 0 32 32">
-                                    <g>
-                                        <path
-                                            d="M4,28a4,4,0,0,1-4-4V8A4,4,0,0,1,4,4,4.06,4.06,0,0,1,6.83,5.17,4.06,4.06,0,0,1,8,8V24A4,4,0,0,1,4,28ZM4,6A2,2,0,0,0,2,8V24a2,2,0,0,0,4,0V8A2,2,0,0,0,4,6Z" />
-                                        <path
-                                            d="M16,28a4,4,0,0,1-4-4V8a4,4,0,0,1,4-4,4,4,0,0,1,4,4V24A4,4,0,0,1,16,28ZM16,6a2,2,0,0,0-2,2V24a2,2,0,0,0,4,0V8a2,2,0,0,0-2-2Z" />
-                                    </g>
-                                </svg>
-                            </button>
-                        </li>
-                    </ul>
-                </section>
-                <section class="playlist">
-                    <article class="playlist-cover">
-                        <span class="playlist-cover-title" id="playlist-title"></span>
-                        <!-- RadioBOSS Cloud NowPlaying Widget (Start) -->
-                        <div class="playlist-cover-track" id="rbcloud_nowplaying279"></div>
-                        <script src="https://c18.radioboss.fm/w/nowplaying.js?u=66&amp;wid=279"></script>
-                        <!-- RadioBOSS Cloud NowPlaying Widget (End) -->
-                        <!-- RadioBOSS Cloud Artwork Widget (Start) -->
-                        <img class="playlist-cover-img" id="rbcloud_cover19748"
-                            src="https://c18.radioboss.fm/w/artwork/66.png" alt="cover art">
-                        <script src="https://c18.radioboss.fm/w/cover.js?u=66&amp;wid=19748"></script>
-                        <!-- RadioBOSS Cloud Artwork Widget (End) -->
+                                            points="247.35,35.7 211.65,0 58.65,153 211.65,306 247.35,270.3 130.05,153" />
+                                    </svg>
+                                </button>
+                                <div class="slider-switch-modal">
+                                    <span class="slider-switch-modal-title" id="slider-title"></span>
+                                    <span class="slider-switch-modal-text" id="slider-text"></span>
+                                    <a class="slider-switch-modal-link" href="#" target="_blank" id="slider-link"></a>
+                                    <span class="slider-switch-modal-data" id="slider-data"></span>
+                                </div>
+                                <button class="slider-switch-btn" id="slider-forward">
+                                    <svg class="slider-switch-btn-svg" viewbox="0 0 306 306">
+                                        <polygon
+                                            points="58.65,267.75 175.95,153 58.65,35.7 94.35,0 247.35,153 94.35,306" />
+                                    </svg>
+                                </button>
+                            </section>
+                        </section>
+                        <section class="slider-side">
+                            <img class="slider-side-img" src="./img/error-slider.png" alt="picture" id="slider-img-3">
+                            <section class="slider-side-modal">
+                                <span class="slider-side-modal-title" id="slider-title-3"></span>
+                                <a class="slider-side-modal-link" href="#" target="_blank" id="slider-link-3"></a>
+                            </section>
+                        </section>
                     </article>
-                    <article class="playlist-list">
-                        <span class="playlist-list-title" id="playlist-list"></span>
-                        <!-- RadioBOSS Cloud Recent Tracks Widget (Start) -->
-                        <div class="playlist-list-el" id="rbcloud_recent9786"></div>
-                        <script src="https://c18.radioboss.fm/w/recent.js?u=66&amp;wid=9786"></script>
-                        <!-- RadioBOSS Cloud Recent Tracks Widget (End) -->
-                    </article>
-                </section>
-                <!-- Наши проекты -->
-                <aside class="projects">
-                    <span class="projects-title" id="project-title"></span>
-                    <ul class="projects-list">
-                        <li class="projects-list-li">
-                            <a href="https://vk.com/vibes_addict" target="_blank">
-                                <img class="projects-list-li-img" src="./img/vibes.jpg" alt="vibes">
-                            </a>
-                            <span class="projects-list-li-title" id="project-title-one"></span>
-                            <span class="projects-list-li-description" id="project-description-one"></span>
-                            <a class="projects-list-li-details" href="https://vk.com/vibes_addict" target="_blank"
-                                id="project-details-one"></a>
-                            <button class="projects-list-li-btn" id="project-btn-one">
-                                <svg class="projects-list-li-btn-svg" viewbox="0 0 16 16">
-                                    <g>
-                                        <path d="M8,13l8-10H0L8,13z" />
-                                    </g>
-                                </svg>
-                            </button>
-                        </li>
-                        <li class="projects-list-li">
-                            <a href="https://vk.com/dembow" target="_blank">
-                                <img class="projects-list-li-img-two" src="./img/dembow.jpg" alt="dembow">
-                            </a>
-                            <span class="projects-list-li-title" id="project-title-two"></span>
-                            <span class="projects-list-li-description" id="project-description-two"></span>
-                            <a class="projects-list-li-details" href="https://vk.com/dembow" target="_blank"
-                                id="project-details-two"></a>
-                            <button class="projects-list-li-btn" id="project-btn-two">
-                                <svg class="projects-list-li-btn-svg" viewbox="0 0 16 16">
-                                    <g>
-                                        <path d="M8,13l8-10H0L8,13z" />
-                                    </g>
-                                </svg>
-                            </button>
-                        </li>
-                        <li class="projects-list-li">
-                            <a href="https://vk.com/reggae_universe" target="_blank">
-                                <img class="projects-list-li-img-three" src="./img/reggae_universe.jpg"
-                                    alt="reggae-universe">
-                            </a>
-                            <span class="projects-list-li-title" id="project-title-three"></span>
-                            <span class="projects-list-li-description" id="project-description-three"></span>
-                            <a class="projects-list-li-details" href="https://vk.com/reggae_universe" target="_blank"
-                                id="project-details-three"></a>
-                            <button class="projects-list-li-btn" id="project-btn-three">
-                                <svg class="projects-list-li-btn-svg" viewbox="0 0 16 16">
-                                    <g>
-                                        <path d="M8,13l8-10H0L8,13z" />
-                                    </g>
-                                </svg>
-                            </button>
-                        </li>
-                        <li class="projects-list-li">
-                            <a href="https://vk.com/female_reggae" target="_blank">
-                                <img class="projects-list-li-img" src="./img/female_reggae.jpg" alt="female-reggae">
-                            </a>
-                            <span class="projects-list-li-title" id="project-title-four"></span>
-                            <span class="projects-list-li-description" id="project-description-four"></span>
-                            <a class="projects-list-li-details" href="https://vk.com/female_reggae" target="_blank"
-                                id="project-details-four"></a>
-                            <button class="projects-list-li-btn" id="project-btn-four">
-                                <svg class="projects-list-li-btn-svg" viewbox="0 0 16 16">
-                                    <g>
-                                        <path d="M8,13l8-10H0L8,13z" />
-                                    </g>
-                                </svg>
-                            </button>
-                        </li>
-                    </ul>
-                </aside>
-                <!-- Нас вещают -->
-                <aside class="broadcast">
-                    <span class="broadcast-title" id="broadcast-title"></span>
-                    <figure class="broadcast-images">
-                        <a href="https://radiovolna.net/420382-reggae-universe.html" target="_blank"><img
-                                class="broadcast-images-volna" src="./img/volna.png" alt="volna"></a>
-                        <a href="https://onlineradiobox.com/ru/reggaeuniverse/?cs=ru.reggaeuniverse"
-                            target="_blank"><img class="broadcast-images-box" src="./img/radio-box.png"
-                                alt="radio box"></a>
-                        <a href="http://the-radio.ru/radio/reggae-universe-r1195" target="_blank"><img
-                                class="broadcast-images-radio" src="./img/the-radio.png" alt="the radio"></a>
+                    <!--Плеер-->
+                    <section class="player">
+                        <figure class="player-equalizer" id="equalizer"></figure>
+                        <audio id="audioElem" crossorigin></audio>
+                        <ul class="player-controls">
+                            <li class="player-volume"></li>
+                            <li>
+                                <button class="player-controls-play" id="control-play">
+                                    <!-- svg play -->
+                                    <svg class="player-controls-play-svg" viewbox="0 0 400 400">
+                                        <g transform="matrix(14.29 0 0 14.29 200 200)">
+                                            <polygon
+                                                style="stroke-width: 2; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill-rule: nonzero; opacity: 1;"
+                                                points="-7,-9 7,0 -7,9 -7,-9 " />
+                                        </g>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="player-controls-stop" id="control-stop">
+                                    <!-- svg pause -->
+                                    <svg class="player-controls-stop-svg" viewbox="0 0 32 32">
+                                        <g>
+                                            <path
+                                                d="M4,28a4,4,0,0,1-4-4V8A4,4,0,0,1,4,4,4.06,4.06,0,0,1,6.83,5.17,4.06,4.06,0,0,1,8,8V24A4,4,0,0,1,4,28ZM4,6A2,2,0,0,0,2,8V24a2,2,0,0,0,4,0V8A2,2,0,0,0,4,6Z" />
+                                            <path
+                                                d="M16,28a4,4,0,0,1-4-4V8a4,4,0,0,1,4-4,4,4,0,0,1,4,4V24A4,4,0,0,1,16,28ZM16,6a2,2,0,0,0-2,2V24a2,2,0,0,0,4,0V8a2,2,0,0,0-2-2Z" />
+                                        </g>
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="playlist">
+                        <article class="playlist-cover">
+                            <span class="playlist-cover-title" id="playlist-title"></span>
+                            <!-- RadioBOSS Cloud NowPlaying Widget (Start) -->
+                            <div class="playlist-cover-track" id="rbcloud_nowplaying279"></div>
+                            <script src="https://c18.radioboss.fm/w/nowplaying.js?u=66&amp;wid=279"></script>
+                            <!-- RadioBOSS Cloud NowPlaying Widget (End) -->
+                            <!-- RadioBOSS Cloud Artwork Widget (Start) -->
+                            <img class="playlist-cover-img" id="rbcloud_cover19748"
+                                src="https://c18.radioboss.fm/w/artwork/66.png" alt="cover art">
+                            <script src="https://c18.radioboss.fm/w/cover.js?u=66&amp;wid=19748"></script>
+                            <!-- RadioBOSS Cloud Artwork Widget (End) -->
+                        </article>
+                        <article class="playlist-list">
+                            <span class="playlist-list-title" id="playlist-list"></span>
+                            <!-- RadioBOSS Cloud Recent Tracks Widget (Start) -->
+                            <div class="playlist-list-el" id="rbcloud_recent9786"></div>
+                            <script src="https://c18.radioboss.fm/w/recent.js?u=66&amp;wid=9786"></script>
+                            <!-- RadioBOSS Cloud Recent Tracks Widget (End) -->
+                        </article>
+                    </section>
+                    <!-- Наши проекты -->
+                    <aside class="projects">
+                        <span class="projects-title" id="project-title"></span>
+                        <ul class="projects-list">
+                            <li class="projects-list-li">
+                                <a href="https://vk.com/vibes_addict" target="_blank">
+                                    <img class="projects-list-li-img" src="./img/vibes.jpg" alt="vibes">
+                                </a>
+                                <span class="projects-list-li-title" id="project-title-one"></span>
+                                <span class="projects-list-li-description" id="project-description-one"></span>
+                                <a class="projects-list-li-details" href="https://vk.com/vibes_addict" target="_blank"
+                                    id="project-details-one"></a>
+                                <button class="projects-list-li-btn" id="project-btn-one">
+                                    <svg class="projects-list-li-btn-svg" viewbox="0 0 16 16">
+                                        <g>
+                                            <path d="M8,13l8-10H0L8,13z" />
+                                        </g>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="projects-list-li">
+                                <a href="https://vk.com/dembow" target="_blank">
+                                    <img class="projects-list-li-img-two" src="./img/dembow.jpg" alt="dembow">
+                                </a>
+                                <span class="projects-list-li-title" id="project-title-two"></span>
+                                <span class="projects-list-li-description" id="project-description-two"></span>
+                                <a class="projects-list-li-details" href="https://vk.com/dembow" target="_blank"
+                                    id="project-details-two"></a>
+                                <button class="projects-list-li-btn" id="project-btn-two">
+                                    <svg class="projects-list-li-btn-svg" viewbox="0 0 16 16">
+                                        <g>
+                                            <path d="M8,13l8-10H0L8,13z" />
+                                        </g>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="projects-list-li">
+                                <a href="https://vk.com/reggae_universe" target="_blank">
+                                    <img class="projects-list-li-img-three" src="./img/reggae_universe.jpg"
+                                        alt="reggae-universe">
+                                </a>
+                                <span class="projects-list-li-title" id="project-title-three"></span>
+                                <span class="projects-list-li-description" id="project-description-three"></span>
+                                <a class="projects-list-li-details" href="https://vk.com/reggae_universe"
+                                    target="_blank" id="project-details-three"></a>
+                                <button class="projects-list-li-btn" id="project-btn-three">
+                                    <svg class="projects-list-li-btn-svg" viewbox="0 0 16 16">
+                                        <g>
+                                            <path d="M8,13l8-10H0L8,13z" />
+                                        </g>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="projects-list-li">
+                                <a href="https://vk.com/female_reggae" target="_blank">
+                                    <img class="projects-list-li-img" src="./img/female_reggae.jpg" alt="female-reggae">
+                                </a>
+                                <span class="projects-list-li-title" id="project-title-four"></span>
+                                <span class="projects-list-li-description" id="project-description-four"></span>
+                                <a class="projects-list-li-details" href="https://vk.com/female_reggae" target="_blank"
+                                    id="project-details-four"></a>
+                                <button class="projects-list-li-btn" id="project-btn-four">
+                                    <svg class="projects-list-li-btn-svg" viewbox="0 0 16 16">
+                                        <g>
+                                            <path d="M8,13l8-10H0L8,13z" />
+                                        </g>
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </aside>
+                    <!-- Нас вещают -->
+                    <aside class="broadcast">
+                        <span class="broadcast-title" id="broadcast-title"></span>
+                        <figure class="broadcast-images">
+                            <a href="https://radiovolna.net/420382-reggae-universe.html" target="_blank"><img
+                                    class="broadcast-images-volna" src="./img/volna.png" alt="volna"></a>
+                            <a href="https://onlineradiobox.com/ru/reggaeuniverse/?cs=ru.reggaeuniverse"
+                                target="_blank"><img class="broadcast-images-box" src="./img/radio-box.png"
+                                    alt="radio box"></a>
+                            <a href="http://the-radio.ru/radio/reggae-universe-r1195" target="_blank"><img
+                                    class="broadcast-images-radio" src="./img/the-radio.png" alt="the radio"></a>
+                        </figure>
+                        <figure class="broadcast-images">
+                            <a href="http://www.old-rock.ru/radio-reggae.html" target="_blank"><img
+                                    class="broadcast-images-oldrock" src="./img/old-rock.png" alt="old-rock"></a>
+                            <a href="https://www.lxproject.ru/radio-reggae.html" target="_blank"><img
+                                    class="broadcast-images-lx" src="./img/lx.png" alt="lx"></a>
+                            <a href="https://all-radio.online/radio/reggaeuniverse" target="_blank"><img
+                                    class="broadcast-images-allradio" src="./img/allradio.png" alt="all-radio"></a>
+                        </figure>
+                    </aside>
+                    <!-- Форма обратной связи -->
+                    <figure class="feedback">
+                        <form action="" method="post" class="feedback-form" novalidate>
+                            <span class="feedback-form-title"></span>
+                            <label class="feedback-form-subtitle" for="email">email</label>
+                            <input type="email" id="email" name="email" class="feedback-form-inp"
+                                aria-describedby="email-notes" required="required">
+                            <label class="feedback-form-subtitle" for="author"></label>
+                            <input type="text" name="author" id="author" class="feedback-form-inp" required="required">
+                            <label class="feedback-form-subtitle" for="comment"></label>
+                            <textarea id="comment" name="comment" class="feedback-form-textarea"
+                                required="required"></textarea>
+                            <span class="feedback-form-proposal"></span>
+                            <button type="submit" class="feedback-form-btn"></button>
+                        </form>
+                        <p class="feedback-explanations"></p>
                     </figure>
-                    <figure class="broadcast-images">
-                        <a href="http://www.old-rock.ru/radio-reggae.html" target="_blank"><img
-                                class="broadcast-images-oldrock" src="./img/old-rock.png" alt="old-rock"></a>
-                        <a href="https://www.lxproject.ru/radio-reggae.html" target="_blank"><img
-                                class="broadcast-images-lx" src="./img/lx.png" alt="lx"></a>
-                        <a href="https://all-radio.online/radio/reggaeuniverse" target="_blank"><img
-                                class="broadcast-images-allradio" src="./img/allradio.png" alt="all-radio"></a>
-                    </figure>
-                </aside>
-                <!-- Форма обратной связи -->
-                <figure class="feedback">
-                    <form action="https://reggaeuniverse.ru/blog/wp-comments-post.php" method="post"
-                        class="feedback-form" novalidate>
-                        <span class="feedback-form-title"></span>
-                        <label class="feedback-form-subtitle" for="email">email</label>
-                        <input type="email" id="email" name="email" class="feedback-form-inp"
-                            aria-describedby="email-notes" required="required">
-                        <label class="feedback-form-subtitle" for="author"></label>
-                        <input type="text" name="author" id="author" class="feedback-form-inp" required="required">
-                        <label class="feedback-form-subtitle" for="comment"></label>
-                        <textarea id="comment" name="comment" class="feedback-form-textarea"
-                            required="required"></textarea>
-                        <span class="feedback-form-proposal"></span>
-                        <button type="submit" class="feedback-form-btn"></button>
-                    </form>
-                    <p class="feedback-explanations"></p>
-                </figure>
-            </main>
+                </main>
+            </div>
         </div>
 
         <!--Подвал сайта-->

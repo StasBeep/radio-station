@@ -13,6 +13,8 @@
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
 
     &-icon {
         width: 82px;
@@ -134,8 +136,32 @@
     }
 }
 
+.front {
+    position: relative;
+
+    &-astronaut {
+        width: 550px;
+        height: 746px;
+        position: fixed;
+        z-index: 0;
+        top: 23%;
+        left: 20%;
+        background-image: url(../img/reggi-gotovye.png);
+        background-position: -8px -303px;
+        background-size: 190%;
+        background-repeat: no-repeat;
+    }
+
+    &-end {
+        border-bottom-left-radius: 60px;
+        border-bottom-right-radius: 60px;
+    }
+}
+
 .content {
-    margin-top: 113px;
+    margin-top: 112px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
 
     &-wrp {
         padding: 0 65px;
@@ -168,6 +194,10 @@
 
             border-bottom: .25rem solid $whcolor;
 
+            &-first {
+                margin-left: 118px;
+            }
+
             &::before {
                 content: "";
                 position: absolute;
@@ -193,6 +223,7 @@
     }
 
     &-description {
+        position: relative;
         display: block;
         text-align: center;
         padding: 0 275px 17px;
@@ -295,6 +326,7 @@
 .sliders {
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .slider {
@@ -321,6 +353,7 @@
             &-title {
                 @include font-open-regular(400, 17px, 40px);
                 align-self: center;
+                color: $main-text;
             }
 
             &-link {
@@ -420,10 +453,12 @@
             &-title {
                 @include font-open-regular(400, 25px, 40px);
                 align-self: center;
+                color: $rear-panel;
             }
 
             &-text {
                 @include font-open-regular(400, 20px, 20px);
+                color: $rear-panel;
             }
 
             &-link {
@@ -439,6 +474,7 @@
                 @include font-open-regular(400, 20px, 5px);
                 align-self: flex-end;
                 margin-top: 5px;
+                color: $rear-panel;
             }
         }
     }
@@ -448,6 +484,7 @@
 .player {
     padding: 0 0 20px;
     box-sizing: border-box;
+    position: relative;
 
     &-equalizer {
         width: 750px;
@@ -463,19 +500,22 @@
         margin: 0 auto;
         padding: 15px 0;
         box-sizing: border-box;
+        position: relative;
 
         &-play {
-            width: 10px;
-            height: 10px;
-            background: transparent;
+            margin-top: 7px;
+            width: 130px;
+            height: 140px;
             position: relative;
             border: none;
+            background-image: url(../img/bg-play.gif);
+            border-radius: 45px;
 
             &-svg {
                 width: 180px;
                 height: 170px;
                 position: absolute;
-                left: -55px;
+                left: -16px;
                 top: -15px;
 
                 stroke: $rear-panel;
@@ -492,17 +532,21 @@
 
         &-stop {
             display: none;
-            width: 10px;
-            height: 10px;
-            background: transparent;
-            position: relative;
+            margin-top: 7px;
+            width: 130px;
+            height: 140px;
+            position: absolute;
             border: none;
+            left: 220px;
+            top: 16px;
+            border-radius: 45px;
+            background-image: url(../img/bg-play.gif);
 
             &-svg {
                 width: 160px;
                 height: 160px;
                 position: absolute;
-                left: -151px;
+                left: 14px;
                 top: -10px;
 
                 fill: $rear-panel;
@@ -569,6 +613,7 @@
     justify-content: center;
     padding: 0;
     box-sizing: border-box;
+    position: relative;
 
     &-cover {
         width: 300px;
@@ -633,6 +678,7 @@
     text-align: center;
     padding: 15px 0;
     box-sizing: border-box;
+    position: relative;
 
     &-title {
         @include font-open-bold(700, 25px, 25px);
@@ -733,6 +779,7 @@
     border-bottom: 2px solid $rear-panel;
     padding: 15px 25px;
     box-sizing: border-box;
+    position: relative;
 
     &-title {
         @include font-open-bold(700, 25px, 25px);
@@ -788,6 +835,8 @@
     margin: 0;
     padding: 15px 25px;
     box-sizing: border-box;
+    border-bottom-left-radius: 7%;
+    position: relative;
 
     &-form {
         width: 478px;
@@ -907,6 +956,9 @@
     background-color: $rear-panel;
     display: flex;
     justify-content: space-between;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    z-index: 2;
 
     &-icon {
         width: 60px;

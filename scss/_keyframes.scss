@@ -58,7 +58,7 @@ $play-four: #c63d7c;
 // Анимация кнопки паузы
 @keyframes stroke-play {
     0% {
-        stroke: $rear-panel;
+        stroke: $front-panel;
     }
 
     100% {
