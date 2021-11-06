@@ -39,6 +39,8 @@ export function sideSliders(left, right) {
 
     availabilityLink(sliderLink1, left.link);
     availabilityLink(sliderLink3, right.link);
+
+    animationElement();
 }
 
 /**
@@ -76,4 +78,26 @@ export function checkCondition(condition, length) {
         condition = 0;
     }
     return condition;
+}
+
+function animationElement() {
+    sliderImg.classList.toggle('animate__flipInY');
+    sliderImg1.classList.toggle('animate__bounceIn');
+    sliderImg3.classList.toggle('animate__bounceIn');
+    sliderTitle1.classList.toggle('animate__bounceOut');
+    sliderTitle3.classList.toggle('animate__bounceOut');
+    sliderText.classList.toggle('animate__flipInX');
+    sliderData.classList.toggle('animate__zoomOut');
+    sliderTitle.classList.toggle('animate__flipInY');
+
+    setTimeout(() => {
+        sliderImg.classList.toggle('animate__flipInY');
+        sliderImg1.classList.toggle('animate__bounceIn');
+        sliderImg3.classList.toggle('animate__bounceIn');
+        sliderTitle1.classList.toggle('animate__bounceOut');
+        sliderTitle3.classList.toggle('animate__bounceOut');
+        sliderText.classList.toggle('animate__flipInX');
+        sliderData.classList.toggle('animate__zoomOut');
+        sliderTitle.classList.toggle('animate__flipInY');
+    }, 500);
 }
