@@ -19,6 +19,7 @@
   "homepage": "https://github.com/StasBeep/radio-station#readme",
   "dependencies": {
     "animate.css": "^4.1.1",
-    "audiomotion-analyzer": "^3.6.0"
+    "audiomotion-analyzer": "^3.6.0",
+    "wowjs": "^1.1.3"
   }
 }
