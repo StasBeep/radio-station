@@ -69,7 +69,7 @@ $play-four: #c63d7c;
 // Анимация кнопки паузы
 @keyframes fill-stop {
     0% {
-        fill: $rear-panel;
+        fill: $front-panel;
     }
 
     100% {
