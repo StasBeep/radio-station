@@ -271,6 +271,9 @@
             }
 
             &-point {
+                display: inline;
+                width: 14px;
+                height: 14px;
                 fill: #a5a5a5;
                 position: absolute;
                 top: 95px;
