@@ -26,6 +26,7 @@ const contentRu = {
     feedProposal: "Ваш адрес email не будет опубликован. Обязательные поля помечены",
     feedBtn: "Отправить",
     feedExpl: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aspernatur quidem officia assumenda cumque labore eligendi nobis quo veniam quam, omnis facere repellat sequi minus enim! Qui dignissimos aut quis?",
+    feedFile: "Прикрепить файл"
 };
 
 const contentEn = {
@@ -56,6 +57,7 @@ const contentEn = {
     feedProposal: "Your email address will not be published. Required fields are marked",
     feedBtn: "Send",
     feedExpl: "Lorem ipsum dolor. Accusamus aspernatur quidem officia assumenda cumque labore eligendi nobis quo veniam quam, omnis facere repellat sequi minus enim! Qui dignissimos aut quis?",
+    feedFile: "Attach a file"
 };
 
 export {
