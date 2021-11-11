@@ -28,7 +28,8 @@ import {
     feedProposal,
     feedLabel,
     feedExp,
-    feedBtn
+    feedBtn,
+    feedFile
 } from './_variables.js'
 
 import {
@@ -86,4 +87,6 @@ function arrangeOfElement(content) {
     feedProposal[0].textContent = content.feedProposal;
     feedBtn[0].textContent = content.feedBtn;
     feedExp[0].textContent = content.feedExpl;
+    console.log(feedFile);
+    feedFile.textContent = content.feedFile;
 }
