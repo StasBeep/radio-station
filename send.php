@@ -5,15 +5,15 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
-$name = $_POST['name'];
+$name = $_POST['author'];
 $email = $_POST['email'];
-$text = $_POST['text'];
+$text = $_POST['comment'];
 $file = $_FILES['myfile'];
 
 // Формирование самого письма
-$title = "Заголовок письма";
+$title = "Reggae Universe Radio";
 $body = "
-<h2>Новое письмо</h2>
+<h2>Письмо с reggae universe radio</h2>
 <b>Имя:</b> $name<br>
 <b>Почта:</b> $email<br><br>
 <b>Сообщение:</b><br>$text

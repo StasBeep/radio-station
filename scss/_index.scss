@@ -923,16 +923,20 @@
 
         &-file {
             @include font-open-regular(400, 15px, 20px);
-            width: 200px;
+            width: 175px;
+            text-align: center;
+            padding: 7px 10px;
             border: 1px solid $rear-panel;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            box-sizing: border-box;
             color: $front-panel;
-            background: $rear-panel;
-            margin: 0 auto 5px;
+            background-color: $rear-panel;
+            margin: 0 auto 7px;
             transition: background-color 1s ease,
                 color 1s ease;
+            box-sizing: border-box;     
+
+            &-inp {
+                display: none;
+            }
 
             &:hover {
                 color: $rear-panel;

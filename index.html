@@ -14,6 +14,8 @@
     <!-- jquery -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="./src/index.js" type="module" defer></script>
+    <!-- скрипт для отправки формы (модуль не поддерживается) -->
+    <script src="./src/send-message.js" defer></script>
 </head>
 
 <body>
@@ -564,7 +566,8 @@
                             <label class="feedback-form-subtitle" for="comment"></label>
                             <textarea id="comment" name="comment" class="feedback-form-textarea"
                                 required="required"></textarea>
-                            <button class="feedback-form-file" type="file" name="myfile[]" multiple></button>
+                            <label for="form-file" class="feedback-form-file"></label>
+                            <input class="feedback-form-file-inp" type="file" name="myfile[]" id="form-file" multiple>
                             <span class="feedback-form-proposal"></span>
                             <button type="submit" class="feedback-form-btn"></button>
                         </form>
