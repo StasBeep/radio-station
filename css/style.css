@@ -1208,6 +1208,39 @@
   color: #283673;
 }
 
+.feedback-form-file {
+  font-family: OpenSans-Regular;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 20px;
+  width: 175px;
+  text-align: center;
+  padding: 7px 10px;
+  border: 1px solid #283673;
+  color: #ffff33;
+  background-color: #283673;
+  margin: 0 auto 7px;
+  -webkit-transition: background-color 1s ease, color 1s ease;
+  transition: background-color 1s ease, color 1s ease;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.feedback-form-file-inp {
+  display: none;
+}
+
+.feedback-form-file:hover {
+  color: #283673;
+  background-color: #00cc00;
+}
+
+.feedback-form-file:active {
+  color: #283673;
+  background-color: #ff0000;
+}
+
 .feedback-form-proposal {
   font-family: OpenSans-Regular;
   font-weight: 400;
@@ -1250,6 +1283,10 @@
 .feedback-form-btn:active {
   color: #283673;
   background-color: #ff0000;
+}
+
+.feedback-form-status {
+  text-align: center;
 }
 
 .feedback-explanations {

@@ -921,6 +921,34 @@
             color: $rear-panel;
         }
 
+        &-file {
+            @include font-open-regular(400, 15px, 20px);
+            width: 175px;
+            text-align: center;
+            padding: 7px 10px;
+            border: 1px solid $rear-panel;
+            color: $front-panel;
+            background-color: $rear-panel;
+            margin: 0 auto 7px;
+            transition: background-color 1s ease,
+                color 1s ease;
+            box-sizing: border-box;     
+
+            &-inp {
+                display: none;
+            }
+
+            &:hover {
+                color: $rear-panel;
+                background-color: $contour;
+            }
+
+            &:active {
+                color: $rear-panel;
+                background-color: $cursor-color;
+            }
+        }
+
         &-proposal {
             @include font-open-regular(400, 15px, 20px);
             text-align: center;
@@ -955,6 +983,10 @@
                 color: $rear-panel;
                 background-color: $cursor-color;
             }
+        }
+
+        &-status {
+            text-align: center;
         }
     }
 
