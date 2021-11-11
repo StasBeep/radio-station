@@ -984,6 +984,10 @@
                 background-color: $cursor-color;
             }
         }
+
+        &-status {
+            text-align: center;
+        }
     }
 
     &-explanations {

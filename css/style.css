@@ -1285,6 +1285,10 @@
   background-color: #ff0000;
 }
 
+.feedback-form-status {
+  text-align: center;
+}
+
 .feedback-explanations {
   font-family: OpenSans-Regular;
   font-weight: 400;

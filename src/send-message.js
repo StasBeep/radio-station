@@ -1,6 +1,6 @@
 // Отправка данных на сервер
 function send(event, php) {
-    console.log("Отправка запроса");
+    //console.log("Отправка запроса");
     event.preventDefault ? event.preventDefault() : event.returnValue = false;
     const req = new XMLHttpRequest();
     req.open('POST', php, true);
