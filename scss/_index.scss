@@ -932,7 +932,7 @@
             margin: 0 auto 7px;
             transition: background-color 1s ease,
                 color 1s ease;
-            box-sizing: border-box;     
+            box-sizing: border-box;
 
             &-inp {
                 display: none;
@@ -960,9 +960,27 @@
                 content: '\1F7BD';
                 font-size: 10px;
                 position: absolute;
-                left: 281px;
-                top: 21px;
+                left: 355px;
+                top: 0;
             }
+        }
+
+        &-politics {
+            text-align: center;
+            @include font-open-regular(400, 15px, 18px);
+            color: $rear-panel;
+            margin-bottom: 15px;
+            cursor: pointer;
+
+            &-link {
+                color: $rear-panel;
+                padding-left: 5px;
+            }
+        }
+        
+        &-checkbox {
+            margin-right: 5px;
+            cursor: pointer;
         }
 
         &-btn {
@@ -983,10 +1001,11 @@
                 color: $rear-panel;
                 background-color: $cursor-color;
             }
-        }
 
-        &-status {
-            text-align: center;
+            &:disabled {
+                background-color: grey;
+                color: $whcolor;
+            }
         }
     }
 

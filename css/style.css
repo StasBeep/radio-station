@@ -1257,8 +1257,30 @@
   content: '\1F7BD';
   font-size: 10px;
   position: absolute;
-  left: 281px;
-  top: 21px;
+  left: 355px;
+  top: 0;
+}
+
+.feedback-form-politics {
+  text-align: center;
+  font-family: OpenSans-Regular;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #283673;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.feedback-form-politics-link {
+  color: #283673;
+  padding-left: 5px;
+}
+
+.feedback-form-checkbox {
+  margin-right: 5px;
+  cursor: pointer;
 }
 
 .feedback-form-btn {
@@ -1285,8 +1307,9 @@
   background-color: #ff0000;
 }
 
-.feedback-form-status {
-  text-align: center;
+.feedback-form-btn:disabled {
+  background-color: grey;
+  color: #ffffff;
 }
 
 .feedback-explanations {
