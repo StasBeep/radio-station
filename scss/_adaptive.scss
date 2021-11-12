@@ -93,3 +93,52 @@
         margin-right: 35px;
     }
 }
+
+// * Ширина 1024px
+@media (max-width: 1024px) {
+    .wrapper {
+        max-width: 950px;
+
+        &-container {
+            padding: 10px 45px;
+        }
+    }
+
+    .fixed-menu {
+        &-icon {
+            width: 65px;
+        }
+
+        &-list {
+            margin-top: 30px;
+
+            &-li-link {
+                font-size: 20px;
+            }
+        }
+
+        &-social-el-icon {
+            width: 45px;
+        }
+
+        &-btn {
+            margin-top: 12px;
+        }
+    }
+
+    .content {
+        margin-top: 101px;
+
+        &-description {
+            padding: 0 135px 17px;
+        }
+    }
+
+    .slider {
+        margin: 0 auto;
+
+        &-side {
+            display: none;
+        }
+    }
+}

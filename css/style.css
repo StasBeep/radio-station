@@ -1660,4 +1660,40 @@
     margin-right: 35px;
   }
 }
+
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 950px;
+  }
+  .wrapper-container {
+    padding: 10px 45px;
+  }
+  .fixed-menu-icon {
+    width: 65px;
+  }
+  .fixed-menu-list {
+    margin-top: 30px;
+  }
+  .fixed-menu-list-li-link {
+    font-size: 20px;
+  }
+  .fixed-menu-social-el-icon {
+    width: 45px;
+  }
+  .fixed-menu-btn {
+    margin-top: 12px;
+  }
+  .content {
+    margin-top: 101px;
+  }
+  .content-description {
+    padding: 0 135px 17px;
+  }
+  .slider {
+    margin: 0 auto;
+  }
+  .slider-side {
+    display: none;
+  }
+}
 /*# sourceMappingURL=style.css.map */
