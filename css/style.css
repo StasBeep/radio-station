@@ -1896,4 +1896,91 @@
     margin-left: 5px;
   }
 }
+
+@media (max-width: 600px) {
+  .wrapper {
+    max-width: 560px;
+  }
+  .wrapper-container {
+    padding: 10px 20px;
+  }
+  .front-astronaut {
+    width: 419px;
+    height: 568px;
+    top: 44%;
+    left: 7%;
+    background-position: -3px -245px;
+  }
+  .player-equalizer {
+    width: 520px;
+  }
+  .playlist-cover-title {
+    font-size: 20px;
+  }
+  .playlist-cover-track {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .playlist-cover-img {
+    width: 185px;
+    height: 185px;
+  }
+  .playlist-list-title {
+    font-size: 20px;
+  }
+  .playlist-list-el {
+    width: 270px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .projects-list-li-img {
+    height: 200px;
+  }
+  .projects-list-li-img-two {
+    width: 100px;
+  }
+  .projects-list-li-img-three {
+    width: 160px;
+  }
+  .projects-list-li-title {
+    font-size: 15px;
+  }
+  .broadcast-images-volna {
+    width: 150px;
+    height: 44px;
+  }
+  .broadcast-images-box {
+    margin-top: 8px;
+    width: 100px;
+    height: 41px;
+  }
+  .broadcast-images-radio {
+    width: 140px;
+    margin-top: -6px;
+  }
+  .broadcast-images-oldrock {
+    width: 150px;
+    height: 40px;
+  }
+  .broadcast-images-lx {
+    width: 165px;
+    height: 40px;
+  }
+  .broadcast-images-allradio {
+    width: 140px;
+    height: 45px;
+  }
+  .feedback-form-inp {
+    width: 220px;
+  }
+  .feedback-form-textarea {
+    width: 220px;
+  }
+  .feedback-form-proposal::after {
+    left: 230px;
+  }
+  .footer-icon {
+    width: 91px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

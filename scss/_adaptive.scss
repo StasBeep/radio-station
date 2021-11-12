@@ -302,3 +302,128 @@
         }
     }
 }
+
+// * Ширина 600px
+@media (max-width: 600px) {
+    .wrapper {
+        max-width: 560px;
+
+        &-container {
+            padding: 10px 20px;
+        }
+    }
+
+    .front-astronaut {
+        width: 419px;
+        height: 568px;
+        top: 44%;
+        left: 7%;
+        background-position: -3px -245px;
+    }
+
+    .player-equalizer {
+        width: 520px;
+    }
+
+    .playlist {
+        &-cover {
+
+            &-title {
+                font-size: 20px;
+            }
+
+            &-track {
+                font-size: 15px;
+                line-height: 25px;
+            }
+
+            &-img {
+                width: 185px;
+                height: 185px;
+            }
+        }
+
+        &-list {
+
+            &-title {
+                font-size: 20px;
+            }
+
+            &-el {
+                width: 270px;
+                font-size: 14px;
+                line-height: 25px;
+            }
+        }
+    }
+
+    .projects-list-li {
+
+        &-img {
+            height: 200px;
+
+            &-two {
+                width: 100px;
+            }
+
+            &-three {
+                width: 160px;
+            }
+        }
+
+        &-title {
+            font-size: 15px;
+        }
+    }
+
+    .broadcast-images {
+        &-volna {
+            width: 150px;
+            height: 44px;
+        }
+
+        &-box {
+            margin-top: 8px;
+            width: 100px;
+            height: 41px;
+        }
+
+        &-radio {
+            width: 140px;
+            margin-top: -6px;
+        }
+
+        &-oldrock {
+            width: 150px;
+            height: 40px;
+        }
+
+        &-lx {
+            width: 165px;
+            height: 40px;
+        }
+
+        &-allradio {
+            width: 140px;
+            height: 45px;
+        }
+    }
+
+    .feedback-form {
+        &-inp {
+            width: 220px;
+        }
+
+        &-textarea {
+            width: 220px;
+        }
+
+        &-proposal::after {
+            left: 230px;
+        }
+    }
+
+    .footer-icon {
+        width: 91px;
+    }
+}
