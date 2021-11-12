@@ -65,7 +65,7 @@
 
                 &:nth-child(7) {
                     top: 184px;
-                    left: 77px;
+                    left: 85px;
                 }
 
                 &:nth-child(8) {
@@ -150,6 +150,155 @@
 
         &-container {
             padding: 10px 30px;
+        }
+    }
+
+    .fixed-menu {
+        &-list {
+            display: none;
+            position: absolute;
+            top: 63px;
+            left: 182px;
+            background-color: $rear-panel;
+            padding: 18px 0;
+        }
+
+        &-social {
+            display: none;
+            position: absolute;
+            top: 130px;
+            left: 182px;
+            background: $rear-panel;
+            padding: 0 47px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        &-btn {
+            margin-top: 6px;
+        }
+    }
+
+    .mobile-menu__icon {
+        display: block;
+        margin-top: 10px;
+        display: block;
+        margin-top: 35px;
+    }
+
+    .content {
+        margin-top: 93px;
+
+        &-description {
+            padding: 0 45px 20px;
+        }
+
+        &-cards {
+            justify-content: center;
+            padding-bottom: 30px;
+
+            &-el {
+                &:first-child {
+                    display: none;
+                }
+
+                &:nth-child(2) {
+                    margin-left: 65px;
+                }
+
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+
+            &-img {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .player-equalizer {
+        width: 655px;
+    }
+
+    .playlist-list {
+        margin-left: 10px;
+    }
+
+    .broadcast-images {
+        &-volna {
+            width: 190px;
+        }
+
+        &-radio {
+            width: 160px;
+        }
+
+        &-oldrock {
+            width: 190px;
+        }
+
+        &-lx {
+            width: 210px;
+        }
+
+        &-allradio {
+            width: 165px;
+        }
+    }
+
+    .feedback {
+        &-form {
+            width: 312px;
+
+            &-inp {
+                width: 300px;
+            }
+
+            &-textarea {
+                width: 300px;
+            }
+
+            &-proposal:after {
+                left: 276px;
+            }
+
+            &-politics {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+
+        &-explanations {
+            font-size: 14px;
+            margin-top: 122px;
+            margin-right: 0px;
+            margin-left: 45px;
+        }
+    }
+
+    .footer {
+        &-description-year {
+            font-size: 15px;
+            line-height: 16px;
+        }
+
+        &-contacts-link {
+            &-svg {
+                width: 45px;
+            }
+
+            &-contact {
+                margin-left: 1px;
+            }
+
+            &-market {
+                text-align: center;
+            }
+
+            &-git {
+                margin-left: 5px;
+            }
         }
     }
 }

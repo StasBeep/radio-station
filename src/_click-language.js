@@ -31,7 +31,9 @@ import {
     feedBtn,
     feedFile,
     feedAgree,
-    feedPolicyLink
+    feedPolicyLink,
+    menuLink,
+    menuSocial
 } from './_variables.js'
 
 import {
@@ -92,4 +94,32 @@ function arrangeOfElement(content) {
     feedFile.textContent = content.feedFile;
     feedAgree.textContent = content.feedPolitical;
     feedPolicyLink.textContent = content.feedPoliticalLink;
+
+    if (window.innerWidth <= 768) {
+        styleChange(toggle);
+    }
+}
+
+/**
+ * Определение стилей при изменении языка
+ * на маленьком расширении
+ * @param {bool} language 
+ */
+function styleChange(language) {
+    if (language) {
+        menuLink.style.top = '63px';
+        menuLink.style.left = '182px';
+        menuLink.style.padding = '18px 0';
+
+        menuSocial.style.top = '130px';
+        menuSocial.style.left = '182px';
+        menuSocial.style.padding = '0 47px';
+    } else {
+        menuLink.style.left = '155px';
+        menuLink.style.padding = '18px 0';
+
+        menuSocial.style.top = '130px';
+        menuSocial.style.left = '155px';
+        menuSocial.style.padding = '0 73px';
+    }
 }

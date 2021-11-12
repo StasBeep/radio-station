@@ -74,6 +74,11 @@ const feedCheckBox = document.getElementById('politics');
 // * Переменные блока footer
 const footerYear = document.getElementById('footer-year');
 
+// * Мобильное меню
+const menuLink = document.getElementsByClassName('fixed-menu-list')[0];
+const menuSocial = document.getElementsByClassName('fixed-menu-social')[0];
+const checkEl = document.getElementById('checkbox');
+
 export {
     numPlay,
     numStop,
@@ -131,5 +136,8 @@ export {
     feedAgree,
     feedPolicyLink,
     feedCheckBox,
-    footerYear
+    footerYear,
+    menuLink,
+    menuSocial,
+    checkEl
 }

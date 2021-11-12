@@ -296,7 +296,7 @@
   /* Позиционирование relative для того, чтобы привязать палочку сверху и снизу к этому
     родительскому блоку*/
   position: relative;
-  background: white;
+  background: #feec92;
   /* Размер палочек внутри блока*/
   width: 90%;
   /* Резмер по вертикали средней палочки*/
@@ -318,7 +318,7 @@
   content: "";
   display: block;
   position: absolute;
-  background: white;
+  background: #feec92;
   width: 100%;
   height: 4px;
   -webkit-transition: 0.4s;
@@ -1720,7 +1720,7 @@
   }
   .content-cards-el-point:nth-child(7) {
     top: 184px;
-    left: 77px;
+    left: 85px;
   }
   .content-cards-el-point:nth-child(8) {
     top: 154px;
@@ -1784,6 +1784,116 @@
   }
   .wrapper-container {
     padding: 10px 30px;
+  }
+  .fixed-menu-list {
+    display: none;
+    position: absolute;
+    top: 63px;
+    left: 182px;
+    background-color: #283673;
+    padding: 18px 0;
+  }
+  .fixed-menu-social {
+    display: none;
+    position: absolute;
+    top: 130px;
+    left: 182px;
+    background: #283673;
+    padding: 0 47px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .fixed-menu-btn {
+    margin-top: 6px;
+  }
+  .mobile-menu__icon {
+    display: block;
+    margin-top: 10px;
+    display: block;
+    margin-top: 35px;
+  }
+  .content {
+    margin-top: 93px;
+  }
+  .content-description {
+    padding: 0 45px 20px;
+  }
+  .content-cards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 30px;
+  }
+  .content-cards-el:first-child {
+    display: none;
+  }
+  .content-cards-el:nth-child(2) {
+    margin-left: 65px;
+  }
+  .content-cards-el:nth-child(3) {
+    display: none;
+  }
+  .content-cards-img {
+    margin-top: 0;
+  }
+  .player-equalizer {
+    width: 655px;
+  }
+  .playlist-list {
+    margin-left: 10px;
+  }
+  .broadcast-images-volna {
+    width: 190px;
+  }
+  .broadcast-images-radio {
+    width: 160px;
+  }
+  .broadcast-images-oldrock {
+    width: 190px;
+  }
+  .broadcast-images-lx {
+    width: 210px;
+  }
+  .broadcast-images-allradio {
+    width: 165px;
+  }
+  .feedback-form {
+    width: 312px;
+  }
+  .feedback-form-inp {
+    width: 300px;
+  }
+  .feedback-form-textarea {
+    width: 300px;
+  }
+  .feedback-form-proposal:after {
+    left: 276px;
+  }
+  .feedback-form-politics {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .feedback-explanations {
+    font-size: 14px;
+    margin-top: 122px;
+    margin-right: 0px;
+    margin-left: 45px;
+  }
+  .footer-description-year {
+    font-size: 15px;
+    line-height: 16px;
+  }
+  .footer-contacts-link-svg {
+    width: 45px;
+  }
+  .footer-contacts-link-contact {
+    margin-left: 1px;
+  }
+  .footer-contacts-link-market {
+    text-align: center;
+  }
+  .footer-contacts-link-git {
+    margin-left: 5px;
   }
 }
 /*# sourceMappingURL=style.css.map */
