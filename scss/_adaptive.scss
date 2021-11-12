@@ -1,0 +1,95 @@
+// * Ширина 1280px
+@media (max-width: 1280px) {
+    .wrapper {
+        max-width: 1170px;
+
+        &-container {
+            padding: 10px 90px;
+        }
+    }
+
+    .front-astronaut {
+        width: 546px;
+        height: 773px;
+        top: 16%;
+        left: 12%;
+    }
+
+    .content {
+        &-wrp {
+            padding: 0;
+
+            &-title-first {
+                display: block;
+                margin: 0 0 45px;
+            }
+        }
+
+        &-description {
+            padding: 0 185px 17px;
+        }
+
+        &-cards-el {
+            width: 180px;
+            height: 180px;
+            border: 22px solid #4a4a4a;
+
+            &-point {
+                top: 87px;
+                left: 184px;
+
+                &:nth-child(2) {
+                    top: 90px;
+                    left: -17px;
+                }
+
+                &:nth-child(3) {
+                    top: 14px;
+                    left: 10px;
+                }
+
+                &:nth-child(4) {
+                    top: -17px;
+                    left: 86px;
+                }
+
+                &:nth-child(5) {
+                    top: 18px;
+                    left: 160px;
+                }
+
+                &:nth-child(6) {
+                    top: 154px;
+                    left: 11px;
+                }
+
+                &:nth-child(7) {
+                    top: 184px;
+                    left: 77px;
+                }
+
+                &:nth-child(8) {
+                    top: 154px;
+                    left: 154px;
+                }
+            }
+
+            &-svg {
+                width: 75px;
+                height: 72px;
+                top: 7px;
+                left: 51px;
+            }
+
+            &-words {
+                top: 89px;
+                left: 51px;
+            }
+        }
+    }
+
+    .feedback-explanations {
+        margin-top: 125px;
+        margin-right: 35px;
+    }
+}
