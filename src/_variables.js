@@ -68,6 +68,9 @@ const linkTwo = document.getElementById('project-details-two');
 const linkThree = document.getElementById('project-details-three');
 const linkFour = document.getElementById('project-details-four');
 
+// * Переменные form -> checkbox
+const feedCheckBox = document.getElementById('politics');
+
 // * Переменные блока footer
 const footerYear = document.getElementById('footer-year');
 
@@ -127,5 +130,6 @@ export {
     feedFile,
     feedAgree,
     feedPolicyLink,
+    feedCheckBox,
     footerYear
 }
