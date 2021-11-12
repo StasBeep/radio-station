@@ -142,3 +142,14 @@
         }
     }
 }
+
+// * Ширина 768px
+@media (max-width: 768px) {
+    .wrapper {
+        max-width: 725px;
+
+        &-container {
+            padding: 10px 30px;
+        }
+    }
+}
