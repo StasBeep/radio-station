@@ -29,7 +29,9 @@ import {
     feedLabel,
     feedExp,
     feedBtn,
-    feedFile
+    feedFile,
+    feedAgree,
+    feedPolicyLink
 } from './_variables.js'
 
 import {
@@ -88,4 +90,6 @@ function arrangeOfElement(content) {
     feedBtn[0].textContent = content.feedBtn;
     feedExp[0].textContent = content.feedExpl;
     feedFile.textContent = content.feedFile;
+    feedAgree.textContent = content.feedPolitical;
+    feedPolicyLink.textContent = content.feedPoliticalLink;
 }

@@ -19,6 +19,8 @@ const feedProposal = document.getElementsByClassName('feedback-form-proposal');
 const feedBtn = document.getElementsByClassName('feedback-form-btn');
 const feedExp = document.getElementsByClassName('feedback-explanations');
 const feedFile = document.getElementsByClassName('feedback-form-file')[0];
+const feedAgree = document.getElementById('politics-agree');
+const feedPolicyLink = document.getElementById('politics-link');
 
 // * Переменные player
 const playlistTitle = document.getElementById('playlist-title');
@@ -123,5 +125,7 @@ export {
     feedTitle,
     feedProposal,
     feedFile,
+    feedAgree,
+    feedPolicyLink,
     footerYear
 }
