@@ -4,6 +4,10 @@ import {
     checkEl
 } from './_variables.js';
 
+import {
+    toggle
+} from './_click-language.js'
+
 let status = true;
 
 checkEl.addEventListener('click', () => {
@@ -11,7 +15,7 @@ checkEl.addEventListener('click', () => {
         menuLink.style.display = 'flex';
         menuSocial.style.display = 'flex';
         status = !status;
-        sizeMenu();
+        sizeMenu(toggle);
     } else {
         menuLink.style.display = 'none';
         menuSocial.style.display = 'none';
@@ -19,11 +23,13 @@ checkEl.addEventListener('click', () => {
     }
 });
 
-export function sizeMenu(toggle) {
+export function sizeMenu() {
     if (window.innerWidth <= 768 && window.innerWidth > 600) {
         styleChange768(toggle);
-    } else if (window.innerWidth <= 600) {
+    } else if (window.innerWidth <= 600 && window.innerWidth > 480) {
         styleChange600(toggle);
+    } else if (window.innerWidth <= 480) {
+        styleChange480(toggle);
     }
 }
 
@@ -65,6 +71,26 @@ function styleChange600(language) {
     } else {
         menuLink.style.left = '65px';
         menuSocial.style.left = '65px';
+        menuSocial.style.padding = '0 74.5px';
+    }
+}
+
+/**
+ * Определение стилей при изменении языка
+ * на маленьком расширении
+ * @param {bool} language 
+ */
+function styleChange480(language) {
+    if (language) {
+        menuLink.style.left = '40px';
+        menuLink.style.padding = '18px 1px';
+        menuLink.classList.add('menu480');
+        menuSocial.style.left = '40px';
+        menuSocial.style.padding = '0 48.5px';
+    } else {
+        menuLink.style.left = '10px';
+        menuLink.classList.add('menu480');
+        menuSocial.style.left = '10px';
         menuSocial.style.padding = '0 74.5px';
     }
 }

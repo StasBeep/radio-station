@@ -45,7 +45,7 @@ import {
     contentEn
 } from './_language-content.js'
 
-let toggle = true;
+export let toggle = true;
 
 document.addEventListener('DOMContentLoaded', langVariation(toggle));
 
@@ -99,5 +99,5 @@ function arrangeOfElement(content) {
     feedAgree.textContent = content.feedPolitical;
     feedPolicyLink.textContent = content.feedPoliticalLink;
 
-    sizeMenu(toggle);
+    sizeMenu();
 }

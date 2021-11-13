@@ -1991,5 +1991,142 @@
   .wrapper-container {
     padding: 10px 20px;
   }
+  .fixed-menu {
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+  }
+  .fixed-menu-icon {
+    width: 65px;
+  }
+  .fixed-menu-list-li {
+    text-align: center;
+  }
+  .menu480 {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
+  .front-astronaut {
+    width: 325px;
+    height: 440px;
+    top: 57%;
+    background-position: -3px -180px;
+  }
+  .content-wrp-title {
+    font-family: OpenSans-Bold;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 47px;
+    line-height: 10px;
+  }
+  .content-description {
+    font-family: OpenSans-Regular;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 0 20px;
+  }
+  .slider-img {
+    width: 410px;
+    height: 300px;
+  }
+  .slider-switch-modal-title {
+    font-size: 22px;
+  }
+  .slider-switch-modal-text {
+    font-family: OpenSans-Regular;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 17px;
+  }
+  .player-equalizer {
+    width: 410px;
+  }
+  .player-volume {
+    margin-left: 25px;
+  }
+  .player-controls-stop {
+    left: 243px;
+  }
+  .playlist-cover-title {
+    font-size: 18px;
+  }
+  .playlist-cover-track {
+    margin: 15px 0;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .playlist-cover-img {
+    width: 130px;
+    height: 130px;
+  }
+  .playlist-list-title {
+    font-size: 18px;
+  }
+  .playlist-list-el {
+    width: 250px;
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .projects-title {
+    font-family: OpenSans-Bold;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .projects-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects-list-li {
+    margin: 0 auto;
+  }
+  .projects-list-li:nth-child(2) {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .projects-list-li:nth-child(3) {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .broadcast {
+    display: none;
+  }
+  .feedback {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .feedback-form {
+    width: 235px;
+    margin: 0 auto;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .feedback-explanations {
+    margin: 10px auto;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .footer-icon {
+    display: none;
+  }
+  .footer-description {
+    margin: 0;
+    padding: 15px 5px;
+  }
+  .footer-description-year {
+    font-size: 12px;
+  }
+  .footer-contacts-link-market {
+    margin-left: -3px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

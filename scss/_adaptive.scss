@@ -437,4 +437,165 @@
             padding: 10px 20px;
         }
     }
+
+    .fixed-menu {
+        border-bottom-left-radius: 45px;
+        border-bottom-right-radius: 45px;
+
+        &-icon {
+            width: 65px;
+        }
+
+        &-list-li {
+            text-align: center;
+        }
+    }
+
+    .menu480 {
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+
+    .front-astronaut {
+        width: 325px;
+        height: 440px;
+        top: 57%;
+        background-position: -3px -180px;
+    }
+
+    .content {
+        &-wrp-title {
+            @include font-open-bold(700, 47px, 10px);
+
+        }
+
+        &-description {
+            @include font-open-regular (400, 15px, 22px);
+            padding: 0 20px;
+        }
+    }
+
+    .slider {
+        &-img {
+            width: 410px;
+            height: 300px;
+        }
+
+        &-switch-modal {
+            &-title {
+                font-size: 22px;
+            }
+
+            &-text {
+                @include font-open-regular(400, 15px, 17px);
+            }
+        }
+    }
+
+    .player {
+        &-equalizer {
+            width: 410px;
+        }
+
+        &-volume {
+            margin-left: 25px;
+        }
+
+        &-controls-stop {
+            left: 243px;
+        }
+    }
+
+    .playlist {
+        &-cover {
+            &-title {
+                font-size: 18px;
+            }
+
+            &-track {
+                margin: 15px 0;
+                font-size: 12px;
+                line-height: 20px;
+            }
+
+            &-img {
+                width: 130px;
+                height: 130px;
+            }
+        }
+
+        &-list {
+            &-title {
+                font-size: 18px;
+            }
+
+            &-el {
+                width: 250px;
+                font-size: 12px;
+                line-height: 17px;
+            }
+        }
+    }
+
+    .projects {
+        &-title {
+            @include font-open-bold (700, 20px, 20px);
+        }
+
+        &-list {
+            flex-direction: column;
+
+            &-li {
+                margin: 0 auto;
+
+                &:nth-child(2) {
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                }
+
+                &:nth-child(3) {
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    .broadcast {
+        display: none;
+    }
+
+    .feedback {
+        flex-direction: column;
+
+        &-form {
+            width: 235px;
+            margin: 0 auto;
+            order: 2;
+        }
+
+        &-explanations {
+            margin: 10px auto;
+            order: 1;
+        }
+    }
+
+    .footer {
+        &-icon {
+            display: none;
+        }
+
+        &-description {
+            margin: 0;
+            padding: 15px 5px;
+
+            &-year {
+                font-size: 12px;
+            }
+        }
+
+        &-contacts-link-market {
+            margin-left: -3px;
+        }
+    }
 }

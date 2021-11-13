@@ -48,6 +48,8 @@ btnFour.addEventListener('click', () => {
     clickFour = definitionData('4', clickFour);
 });
 
+deleteAnimation();
+
 function definitionData(data, condition) {
     switch (data) {
         case '1':
@@ -78,18 +80,24 @@ function openingInformation(btn, descr, link, condition) {
     }
 }
 
-setInterval(() => {
-    if (shift) {
-        ulProjects[0].style.order = '4';
-        ulProjects[1].style.order = '3';
-        ulProjects[2].style.order = '2';
-        ulProjects[3].style.order = '1';
-        shift = !shift;
+function deleteAnimation() {
+    if (window.innerWidth.toString() > '599') {
+        setInterval(() => {
+            if (shift) {
+                ulProjects[0].style.order = '4';
+                ulProjects[1].style.order = '3';
+                ulProjects[2].style.order = '2';
+                ulProjects[3].style.order = '1';
+                shift = !shift;
+            } else {
+                ulProjects[0].style.order = '1';
+                ulProjects[1].style.order = '2';
+                ulProjects[2].style.order = '3';
+                ulProjects[3].style.order = '4';
+                shift = !shift;
+            }
+        }, 30000);
     } else {
-        ulProjects[0].style.order = '1';
-        ulProjects[1].style.order = '2';
-        ulProjects[2].style.order = '3';
-        ulProjects[3].style.order = '4';
-        shift = !shift;
+        console.log('10');
     }
-}, 30000);
+}
