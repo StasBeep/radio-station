@@ -427,3 +427,14 @@
         width: 91px;
     }
 }
+
+// * Ширина 480px
+@media (max-width: 480px) {
+    .wrapper {
+        max-width: 450px;
+
+        &-container {
+            padding: 10px 20px;
+        }
+    }
+}

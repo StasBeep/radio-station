@@ -1983,4 +1983,13 @@
     width: 91px;
   }
 }
+
+@media (max-width: 480px) {
+  .wrapper {
+    max-width: 450px;
+  }
+  .wrapper-container {
+    padding: 10px 20px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
