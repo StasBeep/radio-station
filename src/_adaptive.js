@@ -28,8 +28,10 @@ export function sizeMenu() {
         styleChange768(toggle);
     } else if (window.innerWidth <= 600 && window.innerWidth > 480) {
         styleChange600(toggle);
-    } else if (window.innerWidth <= 480) {
+    } else if (window.innerWidth <= 480 && window.innerWidth > 375) {
         styleChange480(toggle);
+    } else if (window.innerWidth <= 375) {
+        styleChange375(toggle);
     }
 }
 
@@ -92,5 +94,30 @@ function styleChange480(language) {
         menuLink.classList.add('menu480');
         menuSocial.style.left = '10px';
         menuSocial.style.padding = '0 74.5px';
+    }
+}
+
+/**
+ * Определение стилей при изменении языка
+ * на маленьком расширении
+ * @param {bool} language 
+ */
+function styleChange375(language) {
+    if (language) {
+        menuLink.style.top = '51px';
+        menuLink.style.left = '2px';
+        menuLink.style.padding = '18px 20px';
+        menuLink.classList.add('menu480');
+        menuSocial.style.left = '2px';
+        menuSocial.style.top = '119px';
+        menuSocial.style.padding = '5px 36px';
+    } else {
+        menuLink.style.top = '51px';
+        menuLink.style.left = '1px';
+        menuLink.style.padding = '18px 0';
+        menuLink.classList.add('menu480');
+        menuSocial.style.top = '119px';
+        menuSocial.style.left = '1px';
+        menuSocial.style.padding = '0 35.5px';
     }
 }

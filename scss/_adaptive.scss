@@ -599,3 +599,125 @@
         }
     }
 }
+
+// * Ширина 375px
+@media (max-width: 375px) {
+    .wrapper {
+        max-width: 350px;
+
+        &-container {
+            padding: 10px 10px;
+        }
+    }
+
+    .fixed-menu {
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+
+        &-icon {
+            width: 55px;
+        }
+
+        &-list-li-link {
+            font-size: 15px;
+        }
+    }
+
+    .front {
+        &-astronaut {
+            left: 5%;
+        }
+
+        &-end {
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+        }
+    }
+
+    .content {
+        margin-top: 82px;
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+
+        &-wrp-title {
+            padding-top: 25px;
+            font-size: 39px;
+        }
+    }
+
+    .slider {
+        &-switch-modal {
+            max-height: 450px;
+        }
+
+        &-img {
+            width: 330px;
+            height: 210px;
+        }
+    }
+
+    .player {
+        margin-bottom: 130px;
+
+        &-equalizer {
+            width: 330px;
+        }
+
+        &-volume {
+            display: none;
+        }
+
+        &-controls {
+            &-play {
+                position: absolute;
+                left: 105px;
+            }
+
+            &-stop {
+                left: 105px;
+            }
+
+            &>li:nth-child(2) {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .playlist {
+        flex-direction: column;
+
+        &-cover {
+            width: 330px;
+        }
+
+        &-list-el {
+            margin: 10px 35px;
+        }
+    }
+
+    .feedback-form-title {
+        text-align: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+
+        &-description {
+            order: 2;
+            padding-bottom: 0;
+
+            &-year {
+                margin-top: 0;
+            }
+        }
+
+        &-contacts {
+            margin: 10px auto 0;
+        }
+    }
+}
+
+// * Ширина 320px
+@media (max-width: 320px) {}
