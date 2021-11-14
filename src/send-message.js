@@ -11,8 +11,14 @@ function send(event, php) {
 
             // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
             if (json.result == "success") {
+                const elForm = document.getElementById('send-form');
                 // Если сообщение отправлено
                 alert("Сообщение отправлено");
+                // Отключаем событие по умолчанию 
+                elForm[0].value = '';
+                elForm[1].value = '';
+                elForm[2].value = '';
+                elForm[3].value = null;
             } else {
                 // Если произошла ошибка
                 alert("Ошибка. Сообщение не отправлено");

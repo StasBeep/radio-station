@@ -29,15 +29,23 @@ import {
     feedLabel,
     feedExp,
     feedBtn,
-    feedFile
+    feedFile,
+    feedAgree,
+    feedPolicyLink,
+    menuLink,
+    menuSocial
 } from './_variables.js'
+
+import {
+    sizeMenu
+} from './_adaptive.js';
 
 import {
     contentRu,
     contentEn
 } from './_language-content.js'
 
-let toggle = true;
+export let toggle = true;
 
 document.addEventListener('DOMContentLoaded', langVariation(toggle));
 
@@ -88,4 +96,8 @@ function arrangeOfElement(content) {
     feedBtn[0].textContent = content.feedBtn;
     feedExp[0].textContent = content.feedExpl;
     feedFile.textContent = content.feedFile;
+    feedAgree.textContent = content.feedPolitical;
+    feedPolicyLink.textContent = content.feedPoliticalLink;
+
+    sizeMenu();
 }

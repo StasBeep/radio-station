@@ -136,6 +136,79 @@
     }
 }
 
+/* Спрятать квадратик */
+.mobile-menu__checkbox {
+    display: none;
+
+    &:checked~.mobile-menu__btn .mobile-menu__icon::before,
+    &:checked~.mobile-menu__btn .mobile-menu__icon::after {
+        top: 0;
+    }
+
+    &:checked~.mobile-menu__btn .mobile-menu__icon {
+        background: transparent;
+    }
+
+    &:checked~.mobile-menu__btn .mobile-menu__icon::after {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
+
+    &:checked~.mobile-menu__btn .mobile-menu__icon::before {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+.mobile-menu__btn {
+    position: relative;
+    /* Строчка ниже играничивает по горизонтали размер палочек*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Размер блока с палочками по горизонтали */
+    width: 35px;
+    /* Перемещение блока с палочками по вертикали */
+    height: 30px;
+    /* При наведение на меню изменяется стрелочка на руку */
+    cursor: pointer;
+    /* Скорость изменения, но почему-то разницы нет */
+    transition: 0.4s;
+}
+
+.mobile-menu__icon {
+    display: none;
+    /* Позиционирование relative для того, чтобы привязать палочку сверху и снизу к этому
+    родительскому блоку*/
+    position: relative;
+    background: $main-color;
+    /* Размер палочек внутри блока*/
+    width: 90%;
+    /* Резмер по вертикали средней палочки*/
+    height: 4px;
+    /* Скорость анимации изменения значка*/
+    transition: 0.4s;
+
+    &::after {
+        top: 8px;
+    }
+
+    &::before {
+        top: -8px;
+    }
+
+    &::after,
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background: $main-color;
+        width: 100%;
+        height: 4px;
+        transition: 0.4s;
+    }
+}
+
 .front {
     position: relative;
 
@@ -932,7 +1005,7 @@
             margin: 0 auto 7px;
             transition: background-color 1s ease,
                 color 1s ease;
-            box-sizing: border-box;     
+            box-sizing: border-box;
 
             &-inp {
                 display: none;
@@ -960,9 +1033,27 @@
                 content: '\1F7BD';
                 font-size: 10px;
                 position: absolute;
-                left: 281px;
-                top: 21px;
+                left: 355px;
+                top: 0;
             }
+        }
+
+        &-politics {
+            text-align: center;
+            @include font-open-regular(400, 15px, 18px);
+            color: $rear-panel;
+            margin-bottom: 15px;
+            cursor: pointer;
+
+            &-link {
+                color: $rear-panel;
+                padding-left: 5px;
+            }
+        }
+
+        &-checkbox {
+            margin-right: 5px;
+            cursor: pointer;
         }
 
         &-btn {
@@ -983,10 +1074,11 @@
                 color: $rear-panel;
                 background-color: $cursor-color;
             }
-        }
 
-        &-status {
-            text-align: center;
+            &:disabled {
+                background-color: grey;
+                color: $whcolor;
+            }
         }
     }
 
