@@ -1666,9 +1666,21 @@
   }
 }
 
+@media (max-width: 1412px) {
+  .wrapper {
+    max-width: 1280px;
+  }
+  .wrapper-container {
+    padding: 10px 90px;
+  }
+  .content-wrp-title-first {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 1280px) {
   .wrapper {
-    max-width: 1170px;
+    max-width: 1024px;
   }
   .wrapper-container {
     padding: 10px 90px;
