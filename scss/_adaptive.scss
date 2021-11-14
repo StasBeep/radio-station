@@ -720,4 +720,97 @@
 }
 
 // * Ширина 320px
-@media (max-width: 320px) {}
+@media (max-width: 320px) {
+    .wrapper {
+        max-width: 300px;
+
+        &-container {
+            padding: 10px 10px;
+        }
+    }
+
+    .fixed-menu-list-li {
+        align-self: center;
+    }
+
+    .front-astronaut {
+        top: 0;
+        width: 276px;
+        top: 63%;
+        background-position: -1px -151px;
+    }
+
+    .content {
+        &-wrp-title {
+            padding-top: 15px;
+            font-size: 27px;
+
+            &-first {
+                margin: 0 0 34px;
+            }
+        }
+
+        &-cards {
+            &-img {
+                position: relative;
+                width: 310px;
+                height: 130px;
+                margin-top: 30px;
+            }
+
+            &-el:nth-child(2) {
+                margin-left: 45px;
+            }
+        }
+    }
+
+    .slider {
+        &-img {
+            width: 280px;
+            height: 180px;
+        }
+
+        &-switch-btn-svg {
+            width: 30px;
+        }
+    }
+
+    .player {
+        &-equalizer {
+            width: 280px;
+
+        }
+
+        &-controls {
+            &-play {
+                left: 82px;
+            }
+
+            &-stop {
+                left: 82px;
+            }
+        }
+    }
+
+    .playlist {
+        &-cover {
+            width: 280px;
+        }
+
+        &-list-el {
+            margin: 7px 10px;
+        }
+    }
+
+    .projects-list-li-img {
+        height: 170px;
+
+        &-three {
+            width: 135px;
+        }
+    }
+
+    .feedback-explanations {
+        width: 225px;
+    }
+}

@@ -2225,4 +2225,71 @@
     margin: 10px auto 0;
   }
 }
+
+@media (max-width: 320px) {
+  .wrapper {
+    max-width: 300px;
+  }
+  .wrapper-container {
+    padding: 10px 10px;
+  }
+  .fixed-menu-list-li {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .front-astronaut {
+    top: 0;
+    width: 276px;
+    top: 63%;
+    background-position: -1px -151px;
+  }
+  .content-wrp-title {
+    padding-top: 15px;
+    font-size: 27px;
+  }
+  .content-wrp-title-first {
+    margin: 0 0 34px;
+  }
+  .content-cards-img {
+    position: relative;
+    width: 310px;
+    height: 130px;
+    margin-top: 30px;
+  }
+  .content-cards-el:nth-child(2) {
+    margin-left: 45px;
+  }
+  .slider-img {
+    width: 280px;
+    height: 180px;
+  }
+  .slider-switch-btn-svg {
+    width: 30px;
+  }
+  .player-equalizer {
+    width: 280px;
+  }
+  .player-controls-play {
+    left: 82px;
+  }
+  .player-controls-stop {
+    left: 82px;
+  }
+  .playlist-cover {
+    width: 280px;
+  }
+  .playlist-list-el {
+    margin: 7px 10px;
+  }
+  .projects-list-li-img {
+    height: 170px;
+  }
+  .projects-list-li-img-three {
+    width: 135px;
+  }
+  .feedback-explanations {
+    width: 225px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
