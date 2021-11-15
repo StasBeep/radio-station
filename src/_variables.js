@@ -32,7 +32,7 @@ const audioEl = document.getElementById('audioElem');
 
 // * Переменные slider
 // Ссылка положение json-файла на gitub
-const API_slider = 'https://raw.githubusercontent.com/StasBeep/radio-station/slider-click/sliderObj.json';
+const API_slider = 'https://raw.githubusercontent.com/StasBeep/radio-station/main/sliderObj.json';
 
 const sliderImg = document.getElementById('slider-img');
 const sliderTitle = document.getElementById('slider-title');
