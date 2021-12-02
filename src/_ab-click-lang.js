@@ -21,8 +21,6 @@ import {
     linkTwo,
     linkThree,
     linkFour,
-    playlistTitle,
-    playlistList,
     broadcastTitle,
     feedTitle,
     feedProposal,
@@ -36,7 +34,7 @@ import {
 
 import {
     sizeMenu
-} from './_adaptive.js';
+} from './_ab-adaptive.js';
 
 import {
     contentRu,
@@ -71,8 +69,6 @@ function arrangeOfElement(content) {
     contCard1.textContent = content.card1;
     contCard2.textContent = content.card2;
     contCard3.textContent = content.card3;
-    playlistTitle.textContent = content.playlistTitle;
-    playlistList.textContent = content.playlistList;
     projectTitle.textContent = content.project;
     descrOne.textContent = content.projectOne;
     descrTwo.textContent = content.projectTwo;
