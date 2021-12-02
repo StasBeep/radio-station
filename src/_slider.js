@@ -56,11 +56,11 @@ sliderForward.addEventListener('click', () => {
     sideSliders(arrObjSlider[sideLeft], arrObjSlider[sideRight]);
 });
 
-// События изменения слайдера автоматически (10 секунд)
+// События изменения слайдера автоматически (30 секунд)
 setInterval(() => {
     condition = checkCondition(condition + 1, arrObjSlider.length);
     sideLeft = checkCondition(sideLeft + 1, arrObjSlider.length);
     sideRight = checkCondition(sideRight + 1, arrObjSlider.length);
     elementLoaded(arrObjSlider[condition]);
     sideSliders(arrObjSlider[sideLeft], arrObjSlider[sideRight]);
-}, 10000)
+}, 30000)

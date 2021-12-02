@@ -50,15 +50,15 @@
     font-style: normal;
 }*/
 @font-face {
-  font-family: OpenSans-Bold;
-  src: url(../fonts/OpenSans-Bold.ttf);
+  font-family: Roboto-Bold;
+  src: url(../fonts/robotobold.ttf);
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: OpenSans-Regular;
-  src: url(../fonts/OpenSans-Regular.ttf);
+  font-family: Roboto-Regular;
+  src: url(../fonts/roboto.ttf);
   font-weight: 400;
   font-style: normal;
 }
@@ -130,7 +130,7 @@
 }
 
 .fixed-menu-list-li-link {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 25px;
@@ -210,7 +210,7 @@
 }
 
 .fixed-menu-btn {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
@@ -362,13 +362,13 @@
 
 .content-wrp-title {
   display: block;
-  font-family: OpenSans-Bold;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-style: normal;
   font-size: 70px;
   line-height: 20px;
   margin: 0 0 40px;
-  padding: 45px 10px 35px;
+  padding: 45px 10px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   letter-spacing: 18px;
@@ -377,7 +377,7 @@
   -webkit-animation-play-state: running;
           animation-play-state: running;
   color: transparent;
-  background: url(../img/bg-title.png);
+  background: url(../img/bg-title.jpg);
   background-size: cover;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
@@ -390,6 +390,17 @@
 
 .content-wrp-title-first {
   margin-left: 118px;
+}
+
+.content-wrp-title-third {
+  display: block;
+  font-family: Roboto-Bold;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 37px;
+  line-height: 33px;
+  padding: 30px 101px 10px;
+  margin-left: 75px;
 }
 
 .content-wrp-title::before {
@@ -420,10 +431,10 @@
   position: relative;
   display: block;
   text-align: center;
-  padding: 0 275px 17px;
+  padding: 0 140px 17px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
@@ -450,34 +461,37 @@
   position: relative;
   border: 30px solid #4a4a4a;
   border-radius: 50%;
-  background-image: url(../img/bg_card.jpg);
+  background-image: url(../img/bg-rear.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: -134px 0;
 }
 
 .content-cards-el-svg {
-  width: 100px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   position: absolute;
-  top: 17px;
-  left: 49px;
+  top: 10px;
+  left: 30px;
   fill: #ffffff;
 }
 
 .content-cards-el-words {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 20px;
   color: #ffffff;
-  max-width: 80px;
+  max-width: 140px;
   display: block;
   text-align: center;
   position: absolute;
-  top: 116px;
-  left: 60px;
+  top: 85px;
+  left: 30px;
+}
+
+.content-cards-el-words:hover {
+  color: #ff0000;
 }
 
 .content-cards-el-point {
@@ -584,10 +598,10 @@
 }
 
 .slider-side-modal-title {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 40px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -596,7 +610,7 @@
 }
 
 .slider-side-modal-link {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 12px;
@@ -713,7 +727,7 @@
 }
 
 .slider-switch-modal-title {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 25px;
@@ -725,7 +739,7 @@
 }
 
 .slider-switch-modal-text {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
@@ -734,7 +748,7 @@
 }
 
 .slider-switch-modal-link {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
@@ -748,7 +762,7 @@
 }
 
 .slider-switch-modal-data {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
@@ -854,7 +868,7 @@
 }
 
 .player-volume-correction {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 13px;
@@ -926,7 +940,7 @@
 }
 
 .playlist-cover-title {
-  font-family: OpenSans-Bold;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-style: normal;
   font-size: 25px;
@@ -935,7 +949,7 @@
 }
 
 .playlist-cover-track {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
@@ -965,7 +979,7 @@
 }
 
 .playlist-list-title {
-  font-family: OpenSans-Bold;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-style: normal;
   font-size: 25px;
@@ -974,7 +988,7 @@
 }
 
 .playlist-list-el {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
@@ -1005,7 +1019,7 @@
 }
 
 .projects-title {
-  font-family: OpenSans-Bold;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-style: normal;
   font-size: 25px;
@@ -1051,7 +1065,7 @@
 }
 
 .projects-list-li-title {
-  font-family: OpenSans-Bold;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-style: normal;
   font-size: 20px;
@@ -1062,10 +1076,10 @@
 }
 
 .projects-list-li-description {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
-  font-size: 11px;
+  font-size: 16px;
   line-height: 15px;
   color: #283673;
   margin-bottom: 5px;
@@ -1073,7 +1087,7 @@
 }
 
 .projects-list-li-details {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 12px;
@@ -1136,7 +1150,7 @@
 }
 
 .broadcast-title {
-  font-family: OpenSans-Bold;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-style: normal;
   font-size: 25px;
@@ -1218,7 +1232,7 @@
 }
 
 .feedback-form-title {
-  font-family: OpenSans-Bold;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-style: normal;
   font-size: 20px;
@@ -1228,7 +1242,7 @@
 }
 
 .feedback-form-subtitle {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
@@ -1240,7 +1254,7 @@
 }
 
 .feedback-form-subtitle::after {
-  content: '\1F7BD';
+  content: '\2737';
   font-size: 10px;
   position: absolute;
   left: 47px;
@@ -1258,7 +1272,7 @@
 }
 
 .feedback-form-inp {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
@@ -1274,7 +1288,7 @@
 }
 
 .feedback-form-textarea {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
@@ -1290,7 +1304,7 @@
 }
 
 .feedback-form-file {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
@@ -1323,7 +1337,7 @@
 }
 
 .feedback-form-proposal {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
@@ -1344,7 +1358,7 @@
 
 .feedback-form-politics {
   text-align: center;
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
@@ -1365,7 +1379,7 @@
 }
 
 .feedback-form-btn {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
@@ -1394,7 +1408,7 @@
 }
 
 .feedback-explanations {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
@@ -1404,6 +1418,180 @@
   color: #283673;
   margin-top: 100px;
   margin-right: 120px;
+}
+
+ul.vc-controls {
+  list-style: none;
+  padding: 0;
+  width: 440px;
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  margin: 0 0 0 -170px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(170, 170, 170, 0.35)), color-stop(50%, rgba(255, 255, 255, 0.44)), to(rgba(255, 255, 255, 0.53)));
+  background: linear-gradient(to bottom, rgba(170, 170, 170, 0.35) 0%, rgba(255, 255, 255, 0.44) 50%, rgba(255, 255, 255, 0.53) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#59aaaaaa', endColorstr='#87ffffff', GradientType=0);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.6);
+  padding: 8px;
+  height: 54px;
+  -webkit-box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.8), 0 -1px 0 rgba(255, 255, 255, 0.4), inset 0 2px 19px rgba(0, 0, 0, 0.05), 0 2px 1px rgba(0, 0, 0, 0.06);
+          box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.8), 0 -1px 0 rgba(255, 255, 255, 0.4), inset 0 2px 19px rgba(0, 0, 0, 0.05), 0 2px 1px rgba(0, 0, 0, 0.06);
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  border-radius: 12px;
+}
+
+ul.vc-controls li {
+  display: block;
+  float: left;
+  width: 80px;
+  height: 50px;
+  line-height: 55px;
+  text-align: left;
+  padding: 10px;
+  margin: 0;
+  cursor: pointer;
+  background: #ddd no-repeat center top;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 0 1px 2px rgba(255, 255, 255, 0.9), inset 0 -6px 5px rgba(0, 0, 0, 0.1), 0 6px 7px rgba(0, 0, 0, 0.3), 0 4px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 0 1px 2px rgba(255, 255, 255, 0.9), inset 0 -6px 5px rgba(0, 0, 0, 0.1), 0 6px 7px rgba(0, 0, 0, 0.3), 0 4px 1px rgba(0, 0, 0, 0.5);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul.vc-controls li span:before {
+  font-size: 16px;
+  line-height: 50px;
+  text-align: center;
+  color: #444;
+  font-family: 'playericons';
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9);
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+}
+
+li.vc-control-fforward span:before {
+  content: '\23e9';
+}
+
+li.vc-control-rewind span:before {
+  content: '\23ea';
+}
+
+li.vc-control-stop span:before {
+  content: '\25aa';
+}
+
+li.vc-control-play span:before {
+  content: '\70';
+}
+
+/* Pressed (active) */
+ul.vc-controls li.vc-control-active {
+  height: 50px;
+  margin-top: 2px;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.18), inset 0 0 1px 2px rgba(255, 255, 255, 0.5), inset 0 -6px 5px rgba(0, 0, 0, 0.1), 0 6px 7px rgba(0, 0, 0, 0.3), 0 2px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.18), inset 0 0 1px 2px rgba(255, 255, 255, 0.5), inset 0 -6px 5px rgba(0, 0, 0, 0.1), 0 6px 7px rgba(0, 0, 0, 0.3), 0 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.vc-volume-wrap {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  margin-left: -288px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(170, 170, 170, 0.35)), color-stop(50%, rgba(255, 255, 255, 0.44)), to(rgba(255, 255, 255, 0.53)));
+  background: linear-gradient(to bottom, rgba(170, 170, 170, 0.35) 0%, rgba(255, 255, 255, 0.44) 50%, rgba(255, 255, 255, 0.53) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#59aaaaaa', endColorstr='#87ffffff', GradientType=0);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 8px;
+  -webkit-box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.6), 0 -1px 0 rgba(255, 255, 255, 0.4), inset 0 2px 19px rgba(0, 0, 0, 0.05), 0 2px 1px rgba(0, 0, 0, 0.06);
+          box-shadow: inset 0 1px 0px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.6), 0 -1px 0 rgba(255, 255, 255, 0.4), inset 0 2px 19px rgba(0, 0, 0, 0.05), 0 2px 1px rgba(0, 0, 0, 0.06);
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.vc-volume-wrap:after {
+  content: 'Volume';
+  margin-top: 15px;
+  display: block;
+}
+
+/* Text style for controls */
+ul.vc-controls li,
+.vc-volume-wrap:after {
+  font-family: 'Aldrich';
+  font-size: 10px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+ul.vc-controls {
+  position: relative;
+  margin: 30px 0 0 -110px;
+  width: 360px;
+}
+
+.vc-volume-wrap {
+  position: relative;
+  margin-top: -100px;
+}
+
+.knob {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.knob .top {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: no-repeat center center;
+  z-index: 10;
+  cursor: default !important;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 0 3px 2px rgba(255, 255, 255, 0.6);
+          box-shadow: inset 0 0 3px 2px rgba(255, 255, 255, 0.6);
+}
+
+.knob .base {
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0 5px 0 #555, 0px 5px 5px black;
+          box-shadow: 0 5px 0 #555, 0px 5px 5px black;
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.knob .top:after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background-color: #666;
+  position: absolute;
+  top: 50%;
+  margin-top: -2px;
+  left: 4px;
+  border-radius: 50%;
+  cursor: default !important;
+  -webkit-box-shadow: 0 0 1px #5a5a5a inset, 1px -1px 1px rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 1px #5a5a5a inset, 1px -1px 1px rgba(255, 255, 255, 0.5);
 }
 
 /* end main end */
@@ -1453,7 +1641,7 @@
 }
 
 .footer-description-year {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
@@ -1469,7 +1657,7 @@
 }
 
 .footer-description-version {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 12px;
@@ -1513,7 +1701,7 @@
 }
 
 .footer-contacts-link-contact {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 12px;
@@ -1523,7 +1711,7 @@
 }
 
 .footer-contacts-link-market {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 9px;
@@ -1533,7 +1721,7 @@
 }
 
 .footer-contacts-link-git {
-  font-family: OpenSans-Regular;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-style: normal;
   font-size: 12px;
@@ -2024,14 +2212,14 @@
     background-position: -3px -180px;
   }
   .content-wrp-title {
-    font-family: OpenSans-Bold;
+    font-family: Roboto-Bold;
     font-weight: 700;
     font-style: normal;
     font-size: 47px;
     line-height: 10px;
   }
   .content-description {
-    font-family: OpenSans-Regular;
+    font-family: Roboto-Regular;
     font-weight: 400;
     font-style: normal;
     font-size: 15px;
@@ -2046,7 +2234,7 @@
     font-size: 22px;
   }
   .slider-switch-modal-text {
-    font-family: OpenSans-Regular;
+    font-family: Roboto-Regular;
     font-weight: 400;
     font-style: normal;
     font-size: 15px;
@@ -2082,7 +2270,7 @@
     line-height: 17px;
   }
   .projects-title {
-    font-family: OpenSans-Bold;
+    font-family: Roboto-Bold;
     font-weight: 700;
     font-style: normal;
     font-size: 20px;
