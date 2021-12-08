@@ -2033,6 +2033,9 @@ ul.vc-controls {
     top: 77px;
     left: 20px;
   }
+  .content-cards-el:nth-child(2) {
+    margin-left: 63px;
+  }
   .content-cards-el:nth-child(3) .content-cards-el-words {
     font-family: Roboto-Regular;
     font-weight: 400;
@@ -2066,7 +2069,7 @@ ul.vc-controls {
     width: 65px;
   }
   .fixed-menu-list {
-    margin-top: 30px;
+    margin-top: 15px;
   }
   .fixed-menu-list-li-link {
     font-size: 20px;
@@ -2088,6 +2091,73 @@ ul.vc-controls {
   }
   .slider-side {
     display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .wrapper {
+    max-width: 768px;
+  }
+  .fixed-menu-icon {
+    width: 118px;
+  }
+  .fixed-menu-list-li-link {
+    font-size: 15px;
+  }
+  .fixed-menu-btn {
+    font-size: 17px;
+  }
+  .content-description {
+    padding: 0 30px 17px;
+  }
+  .content-cards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 30px;
+  }
+  .content-cards-el:first-child {
+    display: none;
+  }
+  .content-cards-el:nth-child(3) {
+    display: none;
+  }
+  .content-cards-img {
+    margin-top: 0;
+  }
+  .player-equalizer {
+    width: 678px;
+  }
+  .playlist-list {
+    margin-left: 0;
+  }
+  .broadcast-images-volna {
+    width: 180px;
+  }
+  .broadcast-images-oldrock {
+    width: 195px;
+  }
+  .broadcast-images-lx {
+    width: 200px;
+  }
+  .feedback-form {
+    width: 400px;
+  }
+  .feedback-form-inp {
+    width: 386px;
+  }
+  .feedback-form-textarea {
+    width: 386px;
+  }
+  .feedback-form-proposal::after {
+    left: 312px;
+  }
+  .feedback-explanations {
+    width: 200px;
+    margin-top: 60px;
+  }
+  .footer-description-year {
+    font-size: 18px;
   }
 }
 
@@ -2137,14 +2207,8 @@ ul.vc-controls {
             justify-content: center;
     padding-bottom: 30px;
   }
-  .content-cards-el:first-child {
-    display: none;
-  }
   .content-cards-el:nth-child(2) {
     margin-left: 65px;
-  }
-  .content-cards-el:nth-child(3) {
-    display: none;
   }
   .content-cards-img {
     margin-top: 0;
