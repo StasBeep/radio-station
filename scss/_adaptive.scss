@@ -24,6 +24,13 @@
             margin-left: 0;
         }
     }
+
+    .cards-el:nth-child(2),
+    .cards-el:nth-child(3) {
+        & .cards-el-svg {
+            margin-left: 10px;
+        }
+    }
 }
 
 // * Ширина 1280px
@@ -159,6 +166,24 @@
         width: 270px;
         margin-top: 125px;
         margin-right: 0;
+    }
+
+    .cards {
+        flex-direction: column;
+
+        &-el {
+            margin: 0 auto;
+            width: 525px;
+            border: 2px solid $rear-panel;
+
+            &-description {
+                margin-bottom: 10px;
+            }
+
+            &:nth-child(3) {
+                border-right: 2px solid $rear-panel;
+            }
+        }
     }
 }
 
@@ -547,6 +572,10 @@
     .footer-description-year {
         font-size: 12px;
     }
+
+    .cards-el {
+        width: 450px;
+    }
 }
 
 // * Ширина 600px
@@ -833,6 +862,10 @@
             margin-left: -3px;
         }
     }
+
+    .cards-el {
+        width: 380px;
+    }
 }
 
 // * Ширина 480px
@@ -943,6 +976,33 @@
             }
         }
     }
+
+    .cards-el {
+        width: 330px;
+
+        &-description {
+            font-size: 15px;
+            line-height: 15px;
+        }
+
+
+        &-svg {
+            width: 500px;
+            height: 130px;
+        }
+
+        &:nth-child(2) {
+            & .cards-el-svg {
+                width: 670px;
+            }
+        }
+
+        &:nth-child(3) {
+            & .cards-el-svg {
+                width: 550px;
+            }
+        }
+    }
 }
 
 // * Ширина 450px
@@ -1037,6 +1097,10 @@
         &-contacts {
             margin: 10px auto 0;
         }
+    }
+
+    .cards-el {
+        width: 270px;
     }
 }
 
@@ -1179,5 +1243,9 @@
 
     .feedback-explanations {
         width: 225px;
+    }
+
+    .cards-el {
+        width: 220px;
     }
 }
