@@ -2463,13 +2463,13 @@ ul.vc-controls {
     height: 45px;
   }
   .feedback-form-inp {
-    width: 220px;
+    width: 250px;
   }
   .feedback-form-textarea {
-    width: 220px;
+    width: 250px;
   }
   .feedback-form-proposal::after {
-    left: 230px;
+    left: 240px;
   }
   .footer-icon {
     width: 91px;
