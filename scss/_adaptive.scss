@@ -1,4 +1,11 @@
-// * Ширина 1280px
+//* Ширина 1440px
+@media (max-width: 1440px) {
+    .wrapper {
+        max-width: 1400px;
+    }
+}
+
+// * Ширина 1412px
 @media (max-width: 1412px) {
     .wrapper {
         max-width: 1280px;
@@ -8,8 +15,14 @@
         }
     }
 
-    .content-wrp-title-first {
-        margin-left: 0;
+    .content-wrp-title {
+        &-first {
+            margin-left: 0;
+        }
+
+        &-third {
+            margin-left: 0;
+        }
     }
 }
 
@@ -23,6 +36,16 @@
         }
     }
 
+    .fixed-menu-list {
+        text-align: center;
+        margin-top: 15px;
+        align-items: center;
+
+        &-li-link {
+            @include font-open-regular(400, 23px, 17px);
+        }
+    }
+
     .front-astronaut {
         width: 546px;
         height: 773px;
@@ -31,17 +54,26 @@
     }
 
     .content {
+        margin-top: 106px;
+
         &-wrp {
             padding: 0;
 
-            &-title-first {
-                display: block;
-                margin: 0 0 45px;
+            &-title {
+
+                &-first {
+                    display: block;
+                    margin: 0 0 45px;
+                }
+
+                &-third {
+                    padding: 30px 40px 10px;
+                }
             }
         }
 
         &-description {
-            padding: 0 185px 17px;
+            padding: 0 112px 17px;
         }
 
         &-cards-el {
@@ -90,22 +122,39 @@
             }
 
             &-svg {
-                width: 75px;
-                height: 72px;
-                top: 7px;
-                left: 51px;
+                width: 60px;
+                height: 55px;
+                top: 14px;
+                left: 38px;
             }
 
             &-words {
-                top: 89px;
-                left: 51px;
+                @include font-open-regular(400, 17px, 18px);
+                top: 77px;
+                left: 20px;
+            }
+
+            &:nth-child(3) {
+
+                & .content-cards-el-words {
+                    @include font-open-regular(400, 16px, 15px);
+                }
             }
         }
     }
 
+    .sliders {
+        justify-content: center;
+    }
+
+    .slider-side {
+        display: none;
+    }
+
     .feedback-explanations {
+        width: 270px;
         margin-top: 125px;
-        margin-right: 35px;
+        margin-right: 0;
     }
 }
 

@@ -1917,6 +1917,12 @@ ul.vc-controls {
   }
 }
 
+@media (max-width: 1440px) {
+  .wrapper {
+    max-width: 1400px;
+  }
+}
+
 @media (max-width: 1412px) {
   .wrapper {
     max-width: 1280px;
@@ -1925,6 +1931,9 @@ ul.vc-controls {
     padding: 10px 90px;
   }
   .content-wrp-title-first {
+    margin-left: 0;
+  }
+  .content-wrp-title-third {
     margin-left: 0;
   }
 }
@@ -1936,11 +1945,28 @@ ul.vc-controls {
   .wrapper-container {
     padding: 10px 90px;
   }
+  .fixed-menu-list {
+    text-align: center;
+    margin-top: 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .fixed-menu-list-li-link {
+    font-family: Roboto-Regular;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 23px;
+    line-height: 17px;
+  }
   .front-astronaut {
     width: 546px;
     height: 773px;
     top: 16%;
     left: 12%;
+  }
+  .content {
+    margin-top: 106px;
   }
   .content-wrp {
     padding: 0;
@@ -1949,8 +1975,11 @@ ul.vc-controls {
     display: block;
     margin: 0 0 45px;
   }
+  .content-wrp-title-third {
+    padding: 30px 40px 10px;
+  }
   .content-description {
-    padding: 0 185px 17px;
+    padding: 0 112px 17px;
   }
   .content-cards-el {
     width: 180px;
@@ -1990,18 +2019,39 @@ ul.vc-controls {
     left: 154px;
   }
   .content-cards-el-svg {
-    width: 75px;
-    height: 72px;
-    top: 7px;
-    left: 51px;
+    width: 60px;
+    height: 55px;
+    top: 14px;
+    left: 38px;
   }
   .content-cards-el-words {
-    top: 89px;
-    left: 51px;
+    font-family: Roboto-Regular;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 18px;
+    top: 77px;
+    left: 20px;
+  }
+  .content-cards-el:nth-child(3) .content-cards-el-words {
+    font-family: Roboto-Regular;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 15px;
+  }
+  .sliders {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .slider-side {
+    display: none;
   }
   .feedback-explanations {
+    width: 270px;
     margin-top: 125px;
-    margin-right: 35px;
+    margin-right: 0;
   }
 }
 
