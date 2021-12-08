@@ -401,6 +401,13 @@
             &:nth-child(2) {
                 margin-left: 45px;
             }
+
+            &:nth-child(3) {
+
+                & .content-cards-el-words {
+                    @include font-open-regular(400, 17px, 17px);
+                }
+            }
         }
 
         &-img {
