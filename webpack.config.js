@@ -10,9 +10,9 @@ module.exports = {
     mode: 'development',
     // Подключение map к сборке
     devtool: 'source-map',
-    entry: path.resolve(__dirname, 'src', 'index.js'),
+    entry: path.resolve(__dirname, 'src', 'about-us.js'),
     output: {
-        filename: 'main.bundle.js',
+        filename: 'aboutus.bundle.js',
     },
 
     experiments: {
