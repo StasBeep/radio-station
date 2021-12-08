@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <!-- подключение для анимации (отключить при сборке) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script type="module" src="./src/about-us.js" defer></script>
+    <script src="./dist/aboutus.bundle.js" defer></script>
     <!-- скрипт для отправки формы (модуль не поддерживается) -->
     <script src="./src/send-message.js" defer></script>
 </head>
@@ -64,13 +64,17 @@
                     </svg>
                     <ul class="fixed-menu-list animate__animated animate__bounceIn">
                         <li class="fixed-menu-list-li">
-                            <a class="fixed-menu-list-li-link" href="#" id="el-menu-1"></a></li>
+                            <a class="fixed-menu-list-li-link" href="https://reggaeuniverse.ru/blog/donatation/"
+                                id="el-menu-1" target="_blank"></a></li>
                         <li class="fixed-menu-list-li">
-                            <a class="fixed-menu-list-li-link" href="#" id="el-menu-2"></a></li>
+                            <a class="fixed-menu-list-li-link" href="https://reggaeuniverse.ru/blog/" id="el-menu-2"
+                                target="_blank"></a></li>
                         <li class="fixed-menu-list-li">
-                            <a class="fixed-menu-list-li-link" href="#" id="el-menu-3"></a></li>
+                            <a class="fixed-menu-list-li-link" href="https://reggaeuniverse.ru/blog/contacts/"
+                                id="el-menu-3" target="_blank"></a></li>
                         <li class="fixed-menu-list-li">
-                            <a class="fixed-menu-list-li-link" href="#" id="el-menu-4"></a></li>
+                            <a class="fixed-menu-list-li-link" href="#" id="el-menu-4"></a>
+                        </li>
                     </ul>
                     <ul class="fixed-menu-social animate__animated animate__bounceInRight">
                         <li class="fixed-menu-social-el"><a href="#">
@@ -212,7 +216,7 @@
                             <svg class="cards-el-svg" viewbox="0 0 20 20">
                                 <path
                                     d="M15.75 8l-3.74-3.75a3.99 3.99 0 0 1 6.82-3.08A4 4 0 0 1 15.75 8zM1.85 15.3l9.2-9.19 2.83 2.83-9.2 9.2-2.82-2.84zm-1.4 2.83l2.11-2.12 1.42 1.42-2.12 2.12-1.42-1.42zM10 15l2-2v7h-2v-5z" />
-                                </svg>
+                            </svg>
                             <span class="cards-el-description" id="card2-description"></span>
                         </section>
                     </article>
@@ -386,7 +390,7 @@
                 <span class="footer-description-version">version 1.0.0</span>
             </figure>
             <figure class="footer-contacts">
-                <a class="footer-contacts-link" href="#">
+                <a class="footer-contacts-link" href="https://reggaeuniverse.ru/blog/contacts/" target="_blank">
                     <svg class="footer-contacts-link-svg" viewbox="0 0 512 512">
                         <path
                             d="M257.2,509c-74.3,0-148.6,0-222.9,0C15.1,509,3,497,3,477.9C3,330.6,3,183.3,3,36C3,17.2,15.1,5,33.8,5   c148.8,0,297.6,0,446.4,0C498.7,5,511,17.2,511,35.6c0,147.6,0,295.3,0,442.9c0,18.3-12.3,30.5-30.8,30.5   C405.9,509,331.5,509,257.2,509z M256.6,495c74.2,0,148.3,0,222.5,0c12.2,0,17.9-5.8,17.9-18.1c0-146.7,0-293.3,0-440   c0-12.2-5.8-17.9-18.1-17.9c-148,0-296,0-444,0C22.7,19,17,24.7,17,37.1c0,146.7,0,293.3,0,440c0,12.2,5.7,17.9,18.1,17.9   C108.9,495,182.7,495,256.6,495z" />
@@ -401,7 +405,8 @@
                     </svg>
                     <span class="footer-contacts-link-contact">contact</span>
                 </a>
-                <a class="footer-contacts-link" href="#">
+                <a class="footer-contacts-link"
+                    href="https://play.google.com/store/apps/details?id=eu.ctwoon.reggaeuniverse" target="_blank">
                     <svg class="footer-contacts-link-svg" viewbox="0 0 512 512">
                         <g>
                             <path
@@ -414,7 +419,7 @@
                     </svg>
                     <span class="footer-contacts-link-market">play market</span>
                 </a>
-                <a class="footer-contacts-link" href="#">
+                <a class="footer-contacts-link" href="https://github.com/StasBeep" target="_blank">
                     <svg class="footer-contacts-link-svg" viewbox="0 0 512 512">
                         <g>
                             <path
