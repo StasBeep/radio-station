@@ -8,6 +8,9 @@ const contDesc = document.getElementById('content-description');
 const contCard1 = document.getElementById('card-words-1');
 const contCard2 = document.getElementById('card-words-2');
 const contCard3 = document.getElementById('card-words-3');
+const contCard1Desc = document.getElementById('card1-description');
+const contCard2Desc = document.getElementById('card2-description');
+const contCard3Desc = document.getElementById('card3-description');
 const projectTitleOne = document.getElementById('project-title-one');
 const projectTitleTwo = document.getElementById('project-title-two');
 const projectTitleThree = document.getElementById('project-title-three');
@@ -108,6 +111,9 @@ export {
     contCard1,
     contCard2,
     contCard3,
+    contCard1Desc,
+    contCard2Desc,
+    contCard3Desc,
     ulProjects,
     projectTitle,
     btnOne,

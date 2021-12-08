@@ -6,7 +6,7 @@ import {
 
 import {
     toggle
-} from './_click-language.js';
+} from './_ab-click-lang.js';
 
 let status = true;
 
