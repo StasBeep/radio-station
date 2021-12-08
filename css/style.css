@@ -2310,23 +2310,13 @@ ul.vc-controls {
     padding: 10px 20px;
   }
   .fixed-menu-list {
-    display: none;
-    position: absolute;
     top: 63px;
     left: 125px;
-    background-color: #283673;
     padding: 18px 0.5px;
-    margin-top: 30px;
-  }
-  .fixed-menu-list-li-link {
-    font-size: 17px;
   }
   .fixed-menu-social {
-    display: none;
-    position: absolute;
     top: 63px;
     left: 112px;
-    background: #283673;
     padding: 0 51px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -2375,26 +2365,14 @@ ul.vc-controls {
     padding: 10px 20px;
   }
   .fixed-menu-list {
-    display: none;
-    position: absolute;
     top: 63px;
     left: 125px;
-    background-color: #283673;
     padding: 18px 0.5px;
-    margin-top: 30px;
-  }
-  .fixed-menu-list-li-link {
-    font-size: 17px;
   }
   .fixed-menu-social {
-    display: none;
-    position: absolute;
     top: 131px;
     left: 112px;
-    background: #283673;
     padding: 0 52px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
   }
   .front-astronaut {
     width: 419px;
@@ -2487,26 +2465,14 @@ ul.vc-controls {
     margin-left: 7px;
   }
   .fixed-menu-list {
-    display: none;
-    position: absolute;
     top: 62px;
     left: 49px;
-    background-color: #283673;
     padding: 18px 0.5px;
-    margin-top: 30px;
-  }
-  .fixed-menu-list-li-link {
-    font-size: 17px;
   }
   .fixed-menu-social {
-    display: none;
-    position: absolute;
     top: 129px;
     left: 49px;
-    background: #283673;
     padding: 0 52px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
   }
   .content-wrp-title {
     font-size: 60px;

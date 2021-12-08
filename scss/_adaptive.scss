@@ -505,25 +505,14 @@
     .fixed-menu {
 
         &-list {
-            display: none;
-            position: absolute;
             top: 63px;
             left: 125px;
-            background-color: $rear-panel;
             padding: 18px 0.5px;
-            margin-top: 30px;
-
-            &-li-link {
-                font-size: 17px;
-            }
         }
 
         &-social {
-            display: none;
-            position: absolute;
             top: 63px;
             left: 112px;
-            background: $rear-panel;
             padding: 0 51px;
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
@@ -591,28 +580,15 @@
     .fixed-menu {
 
         &-list {
-            display: none;
-            position: absolute;
             top: 63px;
             left: 125px;
-            background-color: $rear-panel;
             padding: 18px 0.5px;
-            margin-top: 30px;
-
-            &-li-link {
-                font-size: 17px;
-            }
         }
 
         &-social {
-            display: none;
-            position: absolute;
             top: 131px;
             left: 112px;
-            background: $rear-panel;
             padding: 0 52px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
         }
     }
 
@@ -747,28 +723,15 @@
         }
 
         &-list {
-            display: none;
-            position: absolute;
             top: 62px;
             left: 49px;
-            background-color: $rear-panel;
             padding: 18px 0.5px;
-            margin-top: 30px;
-
-            &-li-link {
-                font-size: 17px;
-            }
         }
 
         &-social {
-            display: none;
-            position: absolute;
             top: 129px;
             left: 49px;
-            background: $rear-panel;
             padding: 0 52px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
         }
     }
 
