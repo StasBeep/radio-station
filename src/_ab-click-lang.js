@@ -5,9 +5,9 @@ import {
     menuEl4,
     langBtn,
     contDesc,
-    contCard1,
-    contCard2,
-    contCard3,
+    contCard1Desc,
+    contCard2Desc,
+    contCard3Desc,
     projectTitle,
     descrOne,
     descrTwo,
@@ -66,9 +66,9 @@ function arrangeOfElement(content) {
     menuEl3.textContent = content.elMenu3;
     menuEl4.textContent = content.elMenu4;
     contDesc.textContent = content.contentDes;
-    contCard1.textContent = content.card1;
-    contCard2.textContent = content.card2;
-    contCard3.textContent = content.card3;
+    contCard1Desc.textContent = content.card1Description;
+    contCard2Desc.textContent = content.card2Description;
+    contCard3Desc.textContent = content.card3Description;
     projectTitle.textContent = content.project;
     descrOne.textContent = content.projectOne;
     descrTwo.textContent = content.projectTwo;
