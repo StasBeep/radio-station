@@ -9,7 +9,7 @@
 }*/
 
 @mixin font-open-bold($size-format: 700, $fonts: 14px, $linehe: 17px) {
-    font-family: OpenSans-Bold;
+    font-family: Roboto-Bold;
     font-weight: $size-format;
     font-style: normal;
     font-size: $fonts;
@@ -17,7 +17,7 @@
 }
 
 @mixin font-open-regular($size-format: 400, $fonts: 20px, $linehe: 25px) {
-    font-family: OpenSans-Regular;
+    font-family: Roboto-Regular;
     font-weight: $size-format;
     font-style: normal;
     font-size: $fonts;

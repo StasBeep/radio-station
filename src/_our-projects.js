@@ -81,7 +81,7 @@ function openingInformation(btn, descr, link, condition) {
 }
 
 function deleteAnimation() {
-    if (window.innerWidth.toString() > '599') {
+    if (window.innerWidth > '599') {
         setInterval(() => {
             if (shift) {
                 ulProjects[0].style.order = '4';

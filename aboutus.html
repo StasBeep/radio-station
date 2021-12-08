@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <!-- подключение для анимации (отключить при сборке) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- jquery -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="./dist/main.bundle.js" defer></script>
+    <script type="module" src="./src/about-us.js" defer></script>
     <!-- скрипт для отправки формы (модуль не поддерживается) -->
     <script src="./src/send-message.js" defer></script>
 </head>
@@ -186,283 +184,42 @@
                     </section>
                     <span class="content-description animate__animated animate__bounceInUp"
                         id="content-description"></span>
-                    <article class="content-cards">
-                        <section class="content-cards-el animate__animated animate__backInUp">
-                            <svg class="content-cards-el-svg" viewbox="0 0 96 96">
+                    <article class="cards">
+                        <section class="cards-el animate__animated animate__backInUp">
+                            <svg class="cards-el-svg" viewbox="0 0 96 96">
                                 <path
                                     d="m48.39,5.343c-16.113,0-24.57,12.708-24.57,24.27 0,12.972 12.072,21.129 12.072,42.342h12.225c0,0 11.481,.054 11.829,.054 .348-21.369 12.234-29.775 12.234-42.498 .003-10.857-7.677-24.168-23.79-24.168zm10.032,69.75h-21c-.828,0-1.5,.672-1.5,1.5s.672,1.5 1.5,1.5h21c.825,0 1.5-.672 1.5-1.5s-.675-1.5-1.5-1.5zm0,6h-21c-.828,0-1.5,.672-1.5,1.5s.672,1.5 1.5,1.5h21c.825,0 1.5-.672 1.5-1.5s-.675-1.5-1.5-1.5zm-19.5,6c0,0 0,1.341 0,3 0,1.656 1.341,3 3,3h12.042c1.659,0 3-1.344 3-3 0-1.659 0-3 0-3h-18.042z" />
                             </svg>
-                            <a href="#" class="content-cards-el-words" id="card-words-1"></a>
-                            <figure>
-                                <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                    <g>
-                                        <circle cx="6.711" cy="6.711" r="6.711" />
-                                    </g>
-                                </svg>
-                                <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                    <g>
-                                        <circle cx="6.711" cy="6.711" r="6.711" />
-                                    </g>
-                                </svg>
-                                <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                    <g>
-                                        <circle cx="6.711" cy="6.711" r="6.711" />
-                                    </g>
-                                </svg>
-                                <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                    <g>
-                                        <circle cx="6.711" cy="6.711" r="6.711" />
-                                    </g>
-                                </svg>
-                                <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                    <g>
-                                        <circle cx="6.711" cy="6.711" r="6.711" />
-                                    </g>
-                                </svg>
-                                <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                    <g>
-                                        <circle cx="6.711" cy="6.711" r="6.711" />
-                                    </g>
-                                </svg>
-                                <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                    <g>
-                                        <circle cx="6.711" cy="6.711" r="6.711" />
-                                    </g>
-                                </svg>
-                                <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                    <g>
-                                        <circle cx="6.711" cy="6.711" r="6.711" />
-                                    </g>
-                                </svg>
-                            </figure>
+                            <span class="cards-el-description" id="card1-description"></span>
                         </section>
-                        <section class="animate__animated animate__bounceInUp">
-                            <a href="https://play.google.com/store/apps/details?id=eu.ctwoon.reggaeuniverse"
-                                target="_blank">
-                                <img class="content-cards-img" src="./img/play-market-app.png" alt="play-market"
-                                    width="350" height="150">
-                            </a>
-                            <section class="content-cards-el">
-                                <svg class="content-cards-el-svg" viewbox="0 0 612 612">
-                                    <path d="M535.5,153.093h-40.162L293.875,40.638c-9.142-5.068-20.846-2.065-26.125,6.713s-2.142,20.005,7,25.073l145.521,80.65
-                    H76.5c-42.247,0-76.5,34.253-76.5,76.5v267.75c0,42.247,34.253,76.5,76.5,76.5h459c42.247,0,76.5-34.253,76.5-76.5v-267.75
-                    C612,187.346,577.747,153.093,535.5,153.093z M210.375,459.093H95.625c-10.557,0-19.125-8.568-19.125-19.125
-                    s8.568-19.125,19.125-19.125h114.75c10.557,0,19.125,8.568,19.125,19.125S220.932,459.093,210.375,459.093z M210.375,382.593
-                    H95.625c-10.557,0-19.125-8.568-19.125-19.125s8.568-19.125,19.125-19.125h114.75c10.557,0,19.125,8.568,19.125,19.125
-                    S220.932,382.593,210.375,382.593z M210.375,306.093H95.625c-10.557,0-19.125-8.568-19.125-19.125
-                    c0-10.557,8.568-19.125,19.125-19.125h114.75c10.557,0,19.125,8.568,19.125,19.125
-                    C229.5,297.525,220.932,306.093,210.375,306.093z M401.625,478.218c-63.38,0-114.75-51.369-114.75-114.75
-                    c0-63.38,51.37-114.75,114.75-114.75s114.75,51.389,114.75,114.75C516.375,426.849,465.005,478.218,401.625,478.218z
-                    M401.625,286.968c-42.247,0-76.5,34.253-76.5,76.5s34.253,76.5,76.5,76.5s76.5-34.253,76.5-76.5
-                    S443.872,286.968,401.625,286.968z" />
-                                </svg>
-                                <a href="#" class="content-cards-el-words" id="card-words-2"></a>
-                                <figure>
-                                    <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                        <g>
-                                            <circle cx="6.711" cy="6.711" r="6.711" />
-                                        </g>
-                                    </svg>
-                                    <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                        <g>
-                                            <circle cx="6.711" cy="6.711" r="6.711" />
-                                        </g>
-                                    </svg>
-                                    <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                        <g>
-                                            <circle cx="6.711" cy="6.711" r="6.711" />
-                                        </g>
-                                    </svg>
-                                    <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                        <g>
-                                            <circle cx="6.711" cy="6.711" r="6.711" />
-                                        </g>
-                                    </svg>
-                                    <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                        <g>
-                                            <circle cx="6.711" cy="6.711" r="6.711" />
-                                        </g>
-                                    </svg>
-                                    <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                        <g>
-                                            <circle cx="6.711" cy="6.711" r="6.711" />
-                                        </g>
-                                    </svg>
-                                    <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                        <g>
-                                            <circle cx="6.711" cy="6.711" r="6.711" />
-                                        </g>
-                                    </svg>
-                                    <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                        <g>
-                                            <circle cx="6.711" cy="6.711" r="6.711" />
-                                        </g>
-                                    </svg>
-                                </figure>
-                            </section>
+                        <section class="cards-el">
+                            <svg class="cards-el-svg" viewbox="0 0 612 612">
+                                <path d="M535.5,153.093h-40.162L293.875,40.638c-9.142-5.068-20.846-2.065-26.125,6.713s-2.142,20.005,7,25.073l145.521,80.65
+				H76.5c-42.247,0-76.5,34.253-76.5,76.5v267.75c0,42.247,34.253,76.5,76.5,76.5h459c42.247,0,76.5-34.253,76.5-76.5v-267.75
+				C612,187.346,577.747,153.093,535.5,153.093z M210.375,459.093H95.625c-10.557,0-19.125-8.568-19.125-19.125
+				s8.568-19.125,19.125-19.125h114.75c10.557,0,19.125,8.568,19.125,19.125S220.932,459.093,210.375,459.093z M210.375,382.593
+				H95.625c-10.557,0-19.125-8.568-19.125-19.125s8.568-19.125,19.125-19.125h114.75c10.557,0,19.125,8.568,19.125,19.125
+				S220.932,382.593,210.375,382.593z M210.375,306.093H95.625c-10.557,0-19.125-8.568-19.125-19.125
+				c0-10.557,8.568-19.125,19.125-19.125h114.75c10.557,0,19.125,8.568,19.125,19.125
+				C229.5,297.525,220.932,306.093,210.375,306.093z M401.625,478.218c-63.38,0-114.75-51.369-114.75-114.75
+				c0-63.38,51.37-114.75,114.75-114.75s114.75,51.389,114.75,114.75C516.375,426.849,465.005,478.218,401.625,478.218z
+				M401.625,286.968c-42.247,0-76.5,34.253-76.5,76.5s34.253,76.5,76.5,76.5s76.5-34.253,76.5-76.5
+				S443.872,286.968,401.625,286.968z" />
+                            </svg>
+                            <span class="cards-el-description" id="card3-description"></span>
                         </section>
-                        <section class="content-cards-el animate__animated animate__backInUp">
-                            <svg class="content-cards-el-svg" viewbox="0 0 20 20">
+                        <section class="cards-el animate__animated animate__backInUp">
+                            <svg class="cards-el-svg" viewbox="0 0 20 20">
                                 <path
                                     d="M15.75 8l-3.74-3.75a3.99 3.99 0 0 1 6.82-3.08A4 4 0 0 1 15.75 8zM1.85 15.3l9.2-9.19 2.83 2.83-9.2 9.2-2.82-2.84zm-1.4 2.83l2.11-2.12 1.42 1.42-2.12 2.12-1.42-1.42zM10 15l2-2v7h-2v-5z" />
-                            </svg>
-                            <a href="#" class="content-cards-el-words" id="card-words-3"></a>
-                            <figure>
-                                <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                    <g>
-                                        <circle cx="6.711" cy="6.711" r="6.711" />
-                                    </g>
                                 </svg>
-                                <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                    <g>
-                                        <circle cx="6.711" cy="6.711" r="6.711" />
-                                    </g>
-                                </svg>
-                                <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                    <g>
-                                        <circle cx="6.711" cy="6.711" r="6.711" />
-                                    </g>
-                                </svg>
-                                <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                    <g>
-                                        <circle cx="6.711" cy="6.711" r="6.711" />
-                                    </g>
-                                </svg>
-                                <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                    <g>
-                                        <circle cx="6.711" cy="6.711" r="6.711" />
-                                    </g>
-                                </svg>
-                                <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                    <g>
-                                        <circle cx="6.711" cy="6.711" r="6.711" />
-                                    </g>
-                                </svg>
-                                <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                    <g>
-                                        <circle cx="6.711" cy="6.711" r="6.711" />
-                                    </g>
-                                </svg>
-                                <svg class="content-cards-el-point" viewиox="0 0 14 14">
-                                    <g>
-                                        <circle cx="6.711" cy="6.711" r="6.711" />
-                                    </g>
-                                </svg>
-                            </figure>
+                            <span class="cards-el-description" id="card2-description"></span>
                         </section>
                     </article>
                 </header>
 
                 <!--Основная часть-->
                 <main class="wrapper wrapper-container front-end">
-                    <!--Слайдер-->
-                    <article class="sliders">
-                        <section class="slider-side wow animate__animated animate__fadeInBottomLeft">
-                            <img class="slider-side-img wow animate__animated" src="./img/error-slider.png"
-                                alt="picture" id="slider-img-1">
-                            <section class="slider-side-modal">
-                                <span class="slider-side-modal-title wow animate__animated" id="slider-title-1"></span>
-                                <a class="slider-side-modal-link" href="#" target="_blank" id="slider-link-1"></a>
-                            </section>
-                        </section>
-                        <section class="slider wow animate__animated animate__zoomIn">
-                            <img class="slider-img wow animate__animated" src="./img/error-slider.png" alt="picture"
-                                id="slider-img">
-                            <section class="slider-switch">
-                                <button class="slider-switch-btn" id="slider-back">
-                                    <svg class="slider-switch-btn-svg" viewbox="0 0 306 306">
-                                        <polygon
-                                            points="247.35,35.7 211.65,0 58.65,153 211.65,306 247.35,270.3 130.05,153" />
-                                    </svg>
-                                </button>
-                                <div class="slider-switch-modal">
-                                    <span class="slider-switch-modal-title wow animate__animated"
-                                        id="slider-title"></span>
-                                    <span class="slider-switch-modal-text wow animate__animated"
-                                        id="slider-text"></span>
-                                    <a class="slider-switch-modal-link wow animate__animated" href="#" target="_blank"
-                                        id="slider-link"></a>
-                                    <span class="slider-switch-modal-data wow animate__animated"
-                                        id="slider-data"></span>
-                                </div>
-                                <button class="slider-switch-btn" id="slider-forward">
-                                    <svg class="slider-switch-btn-svg" viewbox="0 0 306 306">
-                                        <polygon
-                                            points="58.65,267.75 175.95,153 58.65,35.7 94.35,0 247.35,153 94.35,306" />
-                                    </svg>
-                                </button>
-                            </section>
-                        </section>
-                        <section class="slider-side wow animate__animated animate__fadeInBottomRight">
-                            <img class="slider-side-img wow animate__animated" src="./img/error-slider.png"
-                                alt="picture" id="slider-img-3">
-                            <section class="slider-side-modal">
-                                <span class="slider-side-modal-title wow animate__animated" id="slider-title-3"></span>
-                                <a class="slider-side-modal-link" href="#" target="_blank" id="slider-link-3"></a>
-                            </section>
-                        </section>
-                    </article>
-                    <!--Плеер-->
-                    <section class="player">
-                        <figure class="player-equalizer wow animate__animated animate__fadeIn" id="equalizer"></figure>
-                        <audio id="audioElem" crossorigin></audio>
-                        <ul class="player-controls">
-                            <li class="player-volume wow animate__animated animate__zoomInLeft">
-                                <span class="player-volume-correction">volume</span>
-                            </li>
-                            <li>
-                                <button class="player-controls-play wow animate__animated animate__zoomInRight"
-                                    id="control-play">
-                                    <!-- svg play -->
-                                    <svg class="player-controls-play-svg" viewbox="0 0 400 400">
-                                        <g transform="matrix(14.29 0 0 14.29 200 200)">
-                                            <polygon
-                                                style="stroke-width: 2; stroke-dasharray: none; stroke-linecap: round; stroke-dashoffset: 0; stroke-linejoin: round; stroke-miterlimit: 4; fill-rule: nonzero; opacity: 1;"
-                                                points="-7,-9 7,0 -7,9 -7,-9 " />
-                                        </g>
-                                    </svg>
-                                </button>
-                            </li>
-                            <li>
-                                <button class="player-controls-stop" id="control-stop">
-                                    <!-- svg pause -->
-                                    <svg class="player-controls-stop-svg" viewbox="0 0 32 32">
-                                        <g>
-                                            <path
-                                                d="M4,28a4,4,0,0,1-4-4V8A4,4,0,0,1,4,4,4.06,4.06,0,0,1,6.83,5.17,4.06,4.06,0,0,1,8,8V24A4,4,0,0,1,4,28ZM4,6A2,2,0,0,0,2,8V24a2,2,0,0,0,4,0V8A2,2,0,0,0,4,6Z" />
-                                            <path
-                                                d="M16,28a4,4,0,0,1-4-4V8a4,4,0,0,1,4-4,4,4,0,0,1,4,4V24A4,4,0,0,1,16,28ZM16,6a2,2,0,0,0-2,2V24a2,2,0,0,0,4,0V8a2,2,0,0,0-2-2Z" />
-                                        </g>
-                                    </svg>
-                                </button>
-                            </li>
-                        </ul>
-                    </section>
-                    <section class="playlist">
-                        <article class="playlist-cover">
-                            <span class="playlist-cover-title wow animate__animated animate__zoomInLeft"
-                                id="playlist-title"></span>
-                            <!-- RadioBOSS Cloud NowPlaying Widget (Start) -->
-                            <div class="playlist-cover-track wow animate__animated animate__zoomInLeft"
-                                id="rbcloud_nowplaying279"></div>
-                            <script src="https://c18.radioboss.fm/w/nowplaying.js?u=66&amp;wid=279"></script>
-                            <!-- RadioBOSS Cloud NowPlaying Widget (End) -->
-                            <!-- RadioBOSS Cloud Artwork Widget (Start) -->
-                            <img class="playlist-cover-img" id="rbcloud_cover19748"
-                                src="https://c18.radioboss.fm/w/artwork/66.png" alt="cover art">
-                            <script src="https://c18.radioboss.fm/w/cover.js?u=66&amp;wid=19748"></script>
-                            <!-- RadioBOSS Cloud Artwork Widget (End) -->
-                        </article>
-                        <article class="playlist-list">
-                            <span class="playlist-list-title wow animate__animated animate__zoomInRight"
-                                id="playlist-list"></span>
-                            <!-- RadioBOSS Cloud Recent Tracks Widget (Start) -->
-                            <div class="playlist-list-el wow animate__animated animate__zoomInRight"
-                                id="rbcloud_recent9786"></div>
-                            <script src="https://c18.radioboss.fm/w/recent.js?u=66&amp;wid=9786"></script>
-                            <!-- RadioBOSS Cloud Recent Tracks Widget (End) -->
-                        </article>
-                    </section>
                     <!-- Наши проекты -->
                     <aside class="projects wow animate__animated animate__bounceIn">
                         <span class="projects-title" id="project-title"></span>
@@ -669,9 +426,6 @@
             </figure>
         </footer>
     </div>
-    <!-- скрипты запуска/перемотки/остановки/звука -->
-    <script src="./src/knobknob.jquery.js"></script>
-    <script type="text/javascript" src="./src/jquery.cassette.js"></script>
 </body>
 
 </html>
