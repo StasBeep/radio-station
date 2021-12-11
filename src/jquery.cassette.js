@@ -13,9 +13,6 @@
 // Ссылка на стрим сервера
 const listen_link = 'https://c18.radioboss.fm:18066/stream';
 
-
-// текущая сторона ленты
-let currentSide = 1;
 // текущее время игровой стороны
 let cntTime = 0;
 // текущая позиция
@@ -60,8 +57,6 @@ $('#control-stop').on('mousedown', function (event) {
 // При изменении положения звука -> отображение текущего положения
 $('#audioElem').on('timeupdate', function (event) {
     cntTime = audio.currentTime;
-    let wheelVal = getWheelValues(cntTime);
-    updateWheelValue(wheelVal);
 });
 
 // событие ended происходит, когда аудио/видео достиг конца
@@ -87,18 +82,10 @@ function updateButtons(button) {
     // удаяется класс "control-active"
     $('div.control-play').removeClass(pressedClass);
     $('div.control-stop').removeClass(pressedClass);
-    $('div.control-rewind').removeClass(pressedClass);
-    $('div.control-fforward').removeClass(pressedClass);
     // запуск определённой кнопки
     switch (button) {
         case 'play':
             $('div.control-play').addClass(pressedClass);
-            break;
-        case 'rewind':
-            $('div.control-rewind').addClass(pressedClass);
-            break;
-        case 'forward':
-            $('div.control-fforward').addClass(pressedClass);
             break;
     }
 }
@@ -167,7 +154,6 @@ function stop(buttons) {
     isMoving = false;
     // stopWheels();
     audio.pause();
-    stopTimer();
 }
 
 // функция статуса и положения аудиодорожки
@@ -185,70 +171,6 @@ function getWheelValues(x) {
     return val;
 }
 
-// playlist
-function updateWheelValue(wheelVal) {
-    this.$('div.vc-tape-wheel-left').data('wheel', wheelVal.left).css({
-        'box-shadow': '0 0 0 ' + wheelVal.left + 'px black'
-    });
-    this.$('div.vc-tape-wheel-right').data('wheel', wheelVal.right).css({
-        'box-shadow': '0 0 0 ' + wheelVal.right + 'px black'
-    });
-}
-
-// credits: http://www.sitepoint.com/creating-accurate-timers-in-javascript/
-// функция запоминания времени нужная для перемотки вперёд и назад
-function timer() {
-    let start = new Date().getTime(),
-        time = 0;
-    resetElapsed();
-    isSeeking = true;
-    setSidesPosStatus('middle');
-    if (isSeeking) {
-        clearTimeout(timertimeout);
-        timertimeout = setTimeout(function () {
-            timerinstance(start, time);
-        }, 100);
-    }
-}
-
-// подфункция timer() для обработки времени
-function timerinstance(start, time) {
-    time += 100;
-    elapsed = Math.floor(time / 20) / 1;
-    if (Math.round(elapsed) == elapsed) {
-        this.elapsed += 0.0;
-    }
-    // stop if it reaches the end of the cassette / side
-    // or if it reaches the beginning
-    let posTime = cntTime;
-    if (lastaction === 'forward') {
-        posTime += elapsed;
-    } else if (lastaction === 'rewind') {
-        posTime -= elapsed;
-    }
-    let wheelVal = getWheelValues(posTime);
-    updateWheelValue(wheelVal);
-    if (posTime >= audio.duration || posTime <= 0) {
-        stop();
-        (posTime <= 0) ? cntTime = 0: cntTime = posTime;
-        resetElapsed();
-        (posTime <= 0) ? setSidesPosStatus('start'): setSidesPosStatus('end');
-        return false;
-    }
-    let diff = (new Date().getTime() - start) - time;
-    if (isSeeking) {
-        clearTimeout(timertimeout);
-        timertimeout = setTimeout(function () {
-            timerinstance(start, time);
-        }, (100 - diff));
-    }
-}
-
-// остановка таймера при нажатии на кнопку stop
-function stopTimer() {
-    clearTimeout(timertimeout);
-    isSeeking = false;
-}
 
 // функция обработки времени звуковой дорожки
 function resetElapsed() {
@@ -276,6 +198,7 @@ function playSE(seName, isLoop) {
         }, 500);
     });
 }
+
 // регулятор громкости
 $('li.player-volume').knobKnob({
     snap: 10,

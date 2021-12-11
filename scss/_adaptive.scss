@@ -31,6 +31,10 @@
             margin-left: 10px;
         }
     }
+
+    .footer {
+        height: 105px;
+    }
 }
 
 // * Ширина 1280px
@@ -43,13 +47,17 @@
         }
     }
 
-    .fixed-menu-list {
-        text-align: center;
-        margin-top: 15px;
-        align-items: center;
+    .fixed-menu {
+        height: 106px;
 
-        &-li-link {
-            @include font-open-regular(400, 23px, 17px);
+        &-list {
+            text-align: center;
+            margin-top: 15px;
+            align-items: center;
+
+            &-li-link {
+                @include font-open-regular(400, 23px, 17px);
+            }
         }
     }
 
@@ -198,6 +206,8 @@
     }
 
     .fixed-menu {
+        height: 101px;
+
         &-icon {
             width: 65px;
         }
@@ -342,6 +352,8 @@
     }
 
     .fixed-menu {
+        height: 93px;
+
         &-icon {
             width: 65px;
         }
@@ -503,6 +515,10 @@
     }
 
     .fixed-menu {
+
+        &-icon {
+            margin-left: 10px;
+        }
 
         &-list {
             top: 63px;
@@ -1044,6 +1060,7 @@
     }
 
     .footer {
+        height: 135px;
         flex-direction: column;
         border-top-left-radius: 35px;
         border-top-right-radius: 35px;
@@ -1078,6 +1095,7 @@
     }
 
     .fixed-menu {
+        height: 82px;
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
 
@@ -1204,8 +1222,24 @@
         }
     }
 
-    .feedback-explanations {
-        width: 225px;
+    .feedback {
+        &-form {
+            &-inp {
+                width: 230px;
+            }
+
+            &-textarea {
+                width: 230px;
+            }
+
+            &-proposal::after {
+                left: 230px;
+            }
+        }
+
+        &-explanations {
+            width: 225px;
+        }
     }
 
     .cards-el {
