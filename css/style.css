@@ -486,6 +486,7 @@
   max-width: 140px;
   display: block;
   text-align: center;
+  text-decoration: none;
   position: absolute;
   top: 85px;
   left: 30px;
@@ -1919,6 +1920,12 @@ ul.vc-controls {
   }
 }
 
+@media (max-width: 1920px) {
+  .front-astronaut {
+    top: 50%;
+  }
+}
+
 @media (max-width: 1440px) {
   .wrapper {
     max-width: 1400px;
@@ -2034,7 +2041,7 @@ ul.vc-controls {
     width: 60px;
     height: 55px;
     top: 14px;
-    left: 38px;
+    left: 60px;
   }
   .content-cards-el-words {
     font-family: Roboto-Regular;

@@ -1,4 +1,11 @@
-//* Ширина 1440px
+// * Ширина 1920px
+@media (max-width: 1920px) {
+    .front-astronaut {
+        top: 50%;
+    }
+}
+
+// * Ширина 1440px
 @media (max-width: 1440px) {
     .wrapper {
         max-width: 1400px;
@@ -140,7 +147,7 @@
                 width: 60px;
                 height: 55px;
                 top: 14px;
-                left: 38px;
+                left: 60px;
             }
 
             &-words {
