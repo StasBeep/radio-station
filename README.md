@@ -67,4 +67,4 @@
     Плавность адаптива происходит с расширения 1920px до 375px
 
 # Подпись
-<img src="" alt="logo" width="100%" height="400">
+<img src="https://github.com/StasBeep/radio-station/blob/main/Oskol%20Stanislav.png" alt="logo" width="421" height="206">
