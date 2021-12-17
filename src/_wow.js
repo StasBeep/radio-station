@@ -1,3 +1,4 @@
+// * Библиотека с анимацией
 /*The MIT License (MIT)
 
 Copyright (c) 2016 Thomas Grainger.

@@ -1,3 +1,5 @@
+// Библиотека для эквалайзера
+
 /**!
  * audioMotion-analyzer
  * High-resolution real-time graphic audio spectrum analyzer JS module

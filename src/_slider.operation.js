@@ -71,6 +71,12 @@ function availabilityData(data) {
     }
 }
 
+/**
+ * Функция проверки выхода счётчика за диапазон
+ * @param {int} condition 
+ * @param {int} length 
+ * @returns 
+ */
 export function checkCondition(condition, length) {
     if (condition === -1) {
         condition = --length;
@@ -80,6 +86,9 @@ export function checkCondition(condition, length) {
     return condition;
 }
 
+/**
+ * Анимация переключения слайдера
+ */
 function animationElement() {
     sliderImg.classList.toggle('animate__flipInY');
     sliderImg1.classList.toggle('animate__bounceIn');

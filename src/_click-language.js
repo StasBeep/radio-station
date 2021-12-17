@@ -1,3 +1,4 @@
+// Изменение content на странице index в зависимости от языка
 import {
     menuEl1,
     menuEl2,
@@ -52,6 +53,10 @@ langBtn.addEventListener('click', () => {
     langVariation(toggle);
 });
 
+/**
+ * Функция запускающая изменение контента от языка
+ * @param {bool} language 
+ */
 function langVariation(language) {
     if (language) {
         langBtn.textContent = 'en';
@@ -62,6 +67,10 @@ function langVariation(language) {
     }
 }
 
+/**
+ * Функция изменяющая текст в тегах
+ * @param {array} content 
+ */
 function arrangeOfElement(content) {
     menuEl1.textContent = content.elMenu1;
     menuEl2.textContent = content.elMenu2;

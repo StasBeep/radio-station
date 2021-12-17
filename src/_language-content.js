@@ -1,3 +1,5 @@
+// Языковой content
+// * Русский
 const contentRu = {
     elMenu1: "Донат",
     elMenu2: "Регги Блог",
@@ -34,6 +36,7 @@ const contentRu = {
     feedPoliticalLink: "Политикой в отношении обработки персональных данных",
 };
 
+// * Английский
 const contentEn = {
     elMenu1: "Donat",
     elMenu2: "Reggae Blog",
