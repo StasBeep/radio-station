@@ -486,6 +486,7 @@
   max-width: 140px;
   display: block;
   text-align: center;
+  text-decoration: none;
   position: absolute;
   top: 85px;
   left: 30px;
@@ -1916,6 +1917,12 @@ ul.vc-controls {
   }
   100% {
     fill: #ff0000;
+  }
+}
+
+@media (max-width: 1920px) {
+  .front-astronaut {
+    top: 50%;
   }
 }
 
