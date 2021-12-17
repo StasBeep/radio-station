@@ -97,7 +97,5 @@ function deleteAnimation() {
                 shift = !shift;
             }
         }, 30000);
-    } else {
-        console.log('10');
     }
 }

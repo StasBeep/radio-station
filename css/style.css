@@ -80,6 +80,7 @@
   right: 0px;
   left: 0px;
   width: 100%;
+  height: 113px;
   z-index: 10;
   padding: 10px 120px;
   background-color: #283673;
@@ -471,7 +472,7 @@
   height: 70px;
   position: absolute;
   top: 10px;
-  left: 30px;
+  left: 65px;
   fill: #ffffff;
 }
 
@@ -485,6 +486,7 @@
   max-width: 140px;
   display: block;
   text-align: center;
+  text-decoration: none;
   position: absolute;
   top: 85px;
   left: 30px;
@@ -1357,7 +1359,7 @@
 }
 
 .feedback-form-proposal::after {
-  content: '\1F7BD';
+  content: '\2737';
   font-size: 10px;
   position: absolute;
   left: 355px;
@@ -1606,6 +1608,7 @@ ul.vc-controls {
 /* footer */
 .footer {
   width: 1440px;
+  height: 117px;
   padding: 20px 120px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1917,6 +1920,12 @@ ul.vc-controls {
   }
 }
 
+@media (max-width: 1920px) {
+  .front-astronaut {
+    top: 50%;
+  }
+}
+
 @media (max-width: 1440px) {
   .wrapper {
     max-width: 1400px;
@@ -1940,6 +1949,9 @@ ul.vc-controls {
   .cards-el:nth-child(3) .cards-el-svg {
     margin-left: 10px;
   }
+  .footer {
+    height: 105px;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -1948,6 +1960,9 @@ ul.vc-controls {
   }
   .wrapper-container {
     padding: 10px 90px;
+  }
+  .fixed-menu {
+    height: 106px;
   }
   .fixed-menu-list {
     text-align: center;
@@ -2026,7 +2041,7 @@ ul.vc-controls {
     width: 60px;
     height: 55px;
     top: 14px;
-    left: 38px;
+    left: 60px;
   }
   .content-cards-el-words {
     font-family: Roboto-Regular;
@@ -2085,6 +2100,9 @@ ul.vc-controls {
   }
   .wrapper-container {
     padding: 10px 45px;
+  }
+  .fixed-menu {
+    height: 101px;
   }
   .fixed-menu-icon {
     width: 65px;
@@ -2188,6 +2206,9 @@ ul.vc-controls {
   }
   .wrapper-container {
     padding: 10px 30px;
+  }
+  .fixed-menu {
+    height: 93px;
   }
   .fixed-menu-icon {
     width: 65px;
@@ -2308,6 +2329,9 @@ ul.vc-controls {
   }
   .wrapper-container {
     padding: 10px 20px;
+  }
+  .fixed-menu-icon {
+    margin-left: 10px;
   }
   .fixed-menu-list {
     top: 63px;
@@ -2721,6 +2745,7 @@ ul.vc-controls {
     text-align: center;
   }
   .footer {
+    height: 135px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2753,6 +2778,7 @@ ul.vc-controls {
     padding: 10px 10px;
   }
   .fixed-menu {
+    height: 82px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
   }
@@ -2841,6 +2867,15 @@ ul.vc-controls {
   }
   .projects-list-li-img-three {
     width: 135px;
+  }
+  .feedback-form-inp {
+    width: 230px;
+  }
+  .feedback-form-textarea {
+    width: 230px;
+  }
+  .feedback-form-proposal::after {
+    left: 230px;
   }
   .feedback-explanations {
     width: 225px;
