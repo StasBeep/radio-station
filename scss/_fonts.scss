@@ -1,8 +1,49 @@
 /* Шрифты */
-/* example: 
+
+// * Druk Wide Bold
 @font-face {
-    font-family: lato;
-    src: url(../fonts/lato-light.ttf);
-    font-weight: 300;
+    font-family: druk;
+    src: url(../fonts/druk-wide-bold.ttf);
+    font-weight: 700;
     font-style: normal;
-}*/
+}
+
+// * Montserrat 400
+@font-face {
+    font-family: mont-400;
+    src: url(../fonts/montserrat-regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+// * Montserrat 500
+@font-face {
+    font-family: mont-500;
+    src: url(../fonts/montserrat-medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+// * Montserrat 600
+@font-face {
+    font-family: mont-600;
+    src: url(../fonts/montserrat-semibold.ttf);
+    font-weight: 600;
+    font-style: normal;
+}
+
+// * Montserrat 700
+@font-face {
+    font-family: mont-700;
+    src: url(../fonts/montserrat-bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+// * Montserrat 800
+@font-face {
+    font-family: mont-800;
+    src: url(../fonts/montserrat-extrabold.ttf);
+    font-weight: 800;
+    font-style: normal;
+}
