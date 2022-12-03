@@ -5,6 +5,9 @@
     * 0.0.0
     * 1.0.0
 
+### Ссылка на макет
+<a href="https://www.figma.com/file/9Klkmmg8D4sEvHnLQd9BRW/Untitled?node-id=0%3A1">Ссылка на макет версии 2.0.0</a>
+
 ### Для сборки версии 1.0.0 нужны две ветки `section-about-us` и ветка `build-site`
     Сайт содержит две страницы `index.html` и `aboutus.html`
     Сборка осуществляется webpack:
@@ -65,6 +68,14 @@
     * 320px
 
     Плавность адаптива происходит с расширения 1920px до 375px
+
+###  Шрифты
+    * Montserrat 400
+    * Montserrat 500
+    * Montserrat 600
+    * Montserrat 700
+    * Montserrat 800
+    * Druk Wide Bold (Бесплатный шрифт, но нужнос оставить вводный знак на сайте, dispalay: none;)
 
 # Подпись
 <img src="https://github.com/StasBeep/radio-station/blob/main/Oskol%20Stanislav.png" alt="logo" width="421" height="206">
