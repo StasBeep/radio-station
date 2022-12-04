@@ -82,4 +82,137 @@
 }
 
 /* mixin */
+.footer {
+  padding: 50px 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.footer-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 50px;
+  margin: 0;
+}
+
+.footer-up-left {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+}
+
+.footer-up-left-channels {
+  margin-right: 120px;
+}
+
+.footer-up-left-channels-title {
+  font-family: mont-600;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+
+.footer-up-left-channels-li {
+  font-family: mont-400;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+
+.footer-up-left-channels-li-link {
+  text-decoration: none;
+}
+
+.footer-up-left-channels-li:nth-child(6) > a {
+  text-transform: uppercase;
+}
+
+.footer-up-left-channels-li:last-child {
+  margin-bottom: 0;
+}
+
+.footer-up-left-projects-title {
+  font-family: mont-600;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+
+.footer-up-left-projects-li {
+  font-family: mont-400;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+
+.footer-up-left-projects-li-link {
+  text-decoration: none;
+}
+
+.footer-up-right {
+  width: 120px;
+  height: 120px;
+  border: 2px solid gray;
+  border-radius: 100%;
+  margin-top: 49px;
+}
+
+.footer-up-right-svg {
+  padding: 45px;
+}
+
+.footer-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 50px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #181818;
+}
+
+.footer-down-years {
+  font-family: mont-400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.footer-down-social-link {
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.footer-down-social-link-svg {
+  -webkit-transition: fill 0.5s ease;
+  transition: fill 0.5s ease;
+}
+
+.footer-down-social-link:hover > svg {
+  fill: #35d2ab;
+}
+
+.footer-down-social-link:nth-child(2) > svg:hover {
+  fill: #597da3;
+}
+
+.footer-down-social-link:last-child {
+  margin-right: 0;
+}
+
+.footer-down-social-link:last-child > svg:hover {
+  fill: #1faee9;
+}
 /*# sourceMappingURL=style.css.map */
