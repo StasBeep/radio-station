@@ -272,20 +272,24 @@
     &-figure {
         list-style-type: none;
         display: flex;
-        justify-content: space-between;
 
         &-li {
-            width: 380px;
+            width: 190px;
             height: 435px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             background-image: url(../img/template-bg-slider.jpg);
             background-repeat: no-repeat;
+            margin-right: 55px;
+            transition: width 0.5s ease-in;
 
             &-wrapper {
                 padding-top: 30px;
                 padding-left: 30px;
+                opacity: 0;
+                transition: opacity 0.8s ease-in,
+                    opacity 0.6s ease-out;
             }
 
             &-title {
@@ -304,13 +308,35 @@
             }
 
             &-link {
+                visibility: hidden;
                 @include font-family-normal-size-line(mont-800, 16px, 20px);
                 text-decoration: none;
                 text-transform: uppercase;
                 color: $color-main;
                 background-color: $color-bg-light;
                 text-align: center;
-                padding: 20px 153px;
+                padding: 20px;
+                transition: background-color 0.6s ease,
+                    color 0.6s ease,
+                    visibility 0.5s ease;
+
+                &:hover {
+                    background-color: $color-inactive;
+                    color: $color-bg-light;
+                }
+            }
+
+            &:hover {
+                width: 380px;
+
+                &> div {
+                    opacity: 1;
+                }
+
+                &> a {
+                    padding: 20px 153px;
+                    visibility:visible;
+                }
             }
         }
     }
