@@ -218,6 +218,46 @@
     }
 }
 
+.advantages {
+    padding: 109px 0 200px;
+    box-sizing: border-box;
+
+    &-title {
+        display: block;
+        @include font-family-normal-size-line(mont-800, 34px, 42px);
+        text-transform: uppercase;
+        color: $color-bg-black;
+        padding-bottom: 50px;
+    }
+
+    &-ol {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+
+        &-li {
+            @include font-family-normal-size-line(mont-500, 18px, 24px);
+            color: $color-hover;
+
+            &:first-child {
+                width: 206px;
+            }
+
+            &:nth-child(2) {
+                width: 260px;
+            }
+
+            &:last-child {
+                width: 320px;
+            }
+
+            &::marker {
+                @include font-family-normal-size-line(mont-800, 18px, 24px);
+            }
+        }
+    }
+}
+
 .footer {
     padding: 0;
     background-color: $color-bg-light;
