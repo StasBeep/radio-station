@@ -258,6 +258,64 @@
     }
 }
 
+.slider {
+    margin-bottom: 200px;
+
+    &-title {
+        display: block;
+        @include font-family-normal-size-line(mont-800, 34px, 42px);
+        color: $color-bg-black;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+
+    &-figure {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+
+        &-li {
+            width: 380px;
+            height: 435px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-image: url(../img/template-bg-slider.jpg);
+            background-repeat: no-repeat;
+
+            &-wrapper {
+                padding-top: 30px;
+                padding-left: 30px;
+            }
+
+            &-title {
+                display: block;
+                width: 275px;
+                @include font-family-normal-size-line(mont-800, 17px, 22px);
+                color: $color-main;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+
+            &-date {
+                display: block;
+                @include font-family-normal-size-line(mont-400, 16px, 20px);
+                color: $color-main;
+            }
+
+            &-link {
+                @include font-family-normal-size-line(mont-800, 16px, 20px);
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $color-main;
+                background-color: $color-bg-light;
+                text-align: center;
+                padding: 20px 153px;
+            }
+        }
+    }
+}
+
 .projects {
     padding-bottom: 200px;
     box-sizing: border-box;
