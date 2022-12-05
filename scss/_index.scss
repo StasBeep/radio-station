@@ -189,28 +189,28 @@
             animation: animation-circle-forward 15s infinite;
         }
 
-        &> svg:first-child {
+        & > svg:first-child {
             top: 85px;
             left: 175px;
             animation: animation-circle-forward 2s infinite;
         }
 
-        &> svg:nth-child(2) {
+        & > svg:nth-child(2) {
             top: 160px;
             left: 70px;
         }
 
-        &> svg:nth-child(3) {
+        & > svg:nth-child(3) {
             top: 165px;
             left: 205px;
         }
 
-        &> svg:nth-child(4) {
+        & > svg:nth-child(4) {
             top: 155px;
             left: 305px;
         }
 
-        &> svg:nth-child(6) {
+        & > svg:nth-child(6) {
             top: 0px;
             left: 245px;
             animation: animation-circle-back 30s infinite;
