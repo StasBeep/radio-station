@@ -316,9 +316,11 @@
                 background-color: $color-bg-light;
                 text-align: center;
                 padding: 20px;
+                opacity: 0;
                 transition: background-color 0.6s ease,
                     color 0.6s ease,
-                    visibility 0.5s ease;
+                    visibility 0.5s ease,
+                    opacity 1.8s ease;
 
                 &:hover {
                     background-color: $color-inactive;
@@ -335,7 +337,8 @@
 
                 &> a {
                     padding: 20px 153px;
-                    visibility:visible;
+                    visibility: visible;
+                    opacity: 1;
                 }
             }
         }

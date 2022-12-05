@@ -657,8 +657,9 @@
   background-color: #181818;
   text-align: center;
   padding: 20px;
-  -webkit-transition: background-color 0.6s ease, color 0.6s ease, visibility 0.5s ease;
-  transition: background-color 0.6s ease, color 0.6s ease, visibility 0.5s ease;
+  opacity: 0;
+  -webkit-transition: background-color 0.6s ease, color 0.6s ease, visibility 0.5s ease, opacity 1.8s ease;
+  transition: background-color 0.6s ease, color 0.6s ease, visibility 0.5s ease, opacity 1.8s ease;
 }
 
 .slider-figure-li-link:hover {
@@ -677,6 +678,7 @@
 .slider-figure-li:hover > a {
   padding: 20px 153px;
   visibility: visible;
+  opacity: 1;
 }
 
 .projects {
