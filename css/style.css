@@ -64,6 +64,76 @@
   font-style: normal;
 }
 /* mixin */
+@keyframes animation-circle-forward {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(36deg);
+  }
+  20% {
+    transform: rotate(72deg);
+  }
+  30% {
+    transform: rotate(108deg);
+  }
+  40% {
+    transform: rotate(144deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(216deg);
+  }
+  70% {
+    transform: rotate(252deg);
+  }
+  80% {
+    transform: rotate(288deg);
+  }
+  90% {
+    transform: rotate(327deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animation-circle-back {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-36deg);
+  }
+  20% {
+    transform: rotate(-72deg);
+  }
+  30% {
+    transform: rotate(-108deg);
+  }
+  40% {
+    transform: rotate(-144deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  60% {
+    transform: rotate(-216deg);
+  }
+  70% {
+    transform: rotate(-252deg);
+  }
+  80% {
+    transform: rotate(-288deg);
+  }
+  90% {
+    transform: rotate(-327deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -170,6 +240,99 @@
 .header-btn:hover {
   color: #000000;
   background-color: #ffffff;
+}
+
+.main {
+  background-color: #fffdf4;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  padding: 120px 0;
+  box-sizing: border-box;
+}
+.about-us {
+  width: 430px;
+}
+.about-us-title {
+  display: block;
+  font-family: mont-800;
+  font-size: 34px;
+  line-height: 42px;
+  color: #111111;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.about-us-description {
+  font-family: mont-500;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 50px;
+  color: #000000;
+}
+.about-us-info {
+  display: flex;
+  justify-content: space-between;
+  width: 379px;
+  padding-top: 20px;
+  border-top: 1px solid #888888;
+}
+.about-us-info-figura-number {
+  display: block;
+  font-family: mont-700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #111111;
+}
+.about-us-info-figura-explanations {
+  font-family: mont-400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #111111;
+}
+.about-circle {
+  width: 417px;
+  position: relative;
+}
+.about-circle-simple {
+  position: absolute;
+  fill: #fdfdfd;
+  stroke: #222222;
+}
+.about-circle-circleincircle {
+  position: absolute;
+  fill: #fdfdfd;
+  stroke: #222222;
+  animation: animation-circle-forward 10s infinite;
+}
+.about-circle-point {
+  position: absolute;
+  fill: #fdfdfd;
+  stroke: #222222;
+  animation: animation-circle-forward 15s infinite;
+}
+.about-circle > svg:first-child {
+  top: 85px;
+  left: 175px;
+  animation: animation-circle-forward 2s infinite;
+}
+.about-circle > svg:nth-child(2) {
+  top: 160px;
+  left: 70px;
+}
+.about-circle > svg:nth-child(3) {
+  top: 165px;
+  left: 205px;
+}
+.about-circle > svg:nth-child(4) {
+  top: 155px;
+  left: 305px;
+}
+.about-circle > svg:nth-child(6) {
+  top: 0px;
+  left: 245px;
+  animation: animation-circle-back 30s infinite;
 }
 
 .footer {

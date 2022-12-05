@@ -116,6 +116,108 @@
     }
 }
 
+.main {
+    background-color: $background-main;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding: 120px 0;
+    box-sizing: border-box;
+
+    &-us {
+        width: 430px;
+
+        &-title {
+            display: block;
+            @include font-family-normal-size-line(mont-800, 34px, 42px);
+            color: $color-bg-black;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        &-description {
+            @include font-family-normal-size-line(mont-500, 18px, 24px);
+            margin-bottom: 50px;
+            color: $color-hover;
+        }
+
+        &-info {
+            display: flex;
+            justify-content: space-between;
+            width: 379px;
+            padding-top: 20px;
+            border-top: 1px solid $color-inactive;
+
+            &-figura {
+                &-number {
+                    display: block;
+                    @include font-family-normal-size-line(mont-700, 24px, 32px);
+                    color: $color-bg-black;
+                }
+
+                &-explanations {
+                    @include font-family-normal-size-line(mont-400, 16px, 20px);
+                    color: $color-bg-black;
+                }
+            }
+        }
+    }
+
+    &-circle {
+        width: 417px;
+        position: relative;
+
+        &-simple {
+            position: absolute;
+            fill: $bg-circle;
+            stroke: $color-stroke-circle;
+        }
+
+        &-circleincircle {
+            position: absolute;
+            fill: $bg-circle;
+            stroke: $color-stroke-circle;
+            animation: animation-circle-forward 10s infinite;
+        }
+
+        &-point {
+            position: absolute;
+            fill: $bg-circle;
+            stroke: $color-stroke-circle;
+            animation: animation-circle-forward 15s infinite;
+        }
+
+        &> svg:first-child {
+            top: 85px;
+            left: 175px;
+            animation: animation-circle-forward 2s infinite;
+        }
+
+        &> svg:nth-child(2) {
+            top: 160px;
+            left: 70px;
+        }
+
+        &> svg:nth-child(3) {
+            top: 165px;
+            left: 205px;
+        }
+
+        &> svg:nth-child(4) {
+            top: 155px;
+            left: 305px;
+        }
+
+        &> svg:nth-child(6) {
+            top: 0px;
+            left: 245px;
+            animation: animation-circle-back 30s infinite;
+        }
+    }
+}
+
 .footer {
     padding: 0;
     background-color: $color-bg-light;
@@ -208,7 +310,7 @@
             &:hover {
                 border: 2px solid $color-main;
 
-                &> svg {
+                & > svg {
                     fill: $color-main;
                 }
             }
