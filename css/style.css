@@ -578,6 +578,49 @@
   line-height: 24px;
 }
 
+.projects {
+  padding-bottom: 200px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.projects-title {
+  display: block;
+  font-family: mont-800;
+  font-size: 34px;
+  line-height: 42px;
+  color: #111111;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.projects-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.projects-links-link {
+  text-decoration: none;
+  text-underline-offset: 4px;
+}
+
+.projects-links-link-title {
+  display: block;
+  font-family: mont-600;
+  font-size: 20px;
+  line-height: 25px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.projects-links-link:hover {
+  text-decoration: underline;
+}
+
 .footer {
   padding: 0;
   background-color: #181818;

@@ -258,6 +258,40 @@
     }
 }
 
+.projects {
+    padding-bottom: 200px;
+    box-sizing: border-box;
+
+    &-title {
+        display: block;
+        @include font-family-normal-size-line(mont-800, 34px, 42px);
+        color: $color-bg-black;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+
+    &-links {
+        display: flex;
+        justify-content: space-between;
+
+        &-link {
+            text-decoration: none;
+            text-underline-offset: 4px;
+
+            &-title {
+                display: block;
+                @include font-family-normal-size-line(mont-600, 20px, 25px);
+                color: $color-hover;
+                margin-bottom: 40px;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
 .footer {
     padding: 0;
     background-color: $color-bg-light;
