@@ -10,7 +10,6 @@
     <meta name="description" content="You are listening Radio REGGAE UNIVERSE">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./src/send.js" defer></script>
 </head>
 
 <body>
@@ -160,17 +159,29 @@
                     </figure>
                 </article>
                 <!--Седьмая секция-->
-                <form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
-                    <p>Имя</p>
-                    <input placeholder="Представьтесь" name="name" type="text">
-                    <p>Email</p>
-                    <input placeholder="Укажите почту" name="email" type="text">
-                    <p>Сообщение</p>
-                    <textarea name="text"></textarea>
-                    <p>Прикрепить файлы</p>
-                    <input type="file" name="myfile[]" multiple id="myfile">
-                    <p><input value="Отправить" type="submit"></p>
-                </form>
+                <article>
+                    <div>
+                        <span>
+                            обратная связь
+                        </span>
+                        <form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
+                            <input placeholder="Ваше имя*" name="name" type="text">
+                            <input placeholder="Электронная почта*" name="email" type="text">
+                            <textarea placeholder="Сообщение" name="text"></textarea>
+                            <span>Прекрепить файл</span>
+                            <input type="file" name="myfile[]" multiple id="myfile">
+                            <span>Заполняя форму, я соглашаюсь на 
+                                <a href="#">обработку персональных данных</a>
+                            </span>
+                            <input value="Отправить" type="submit">
+                        </form>
+                    </div>
+                    <p>Если Вы артист, музыкант или продюсер, выпускающий музыку нашего формата, будем рады получить от
+                        Вас Ваши новые песни
+                        и пустить их в эфир, а в случае дабплейтов будут даны анонсы и дополнительная инфо-поддержка по
+                        всем соцсетям, в блоге
+                        и в разделе новостей на сайте радио.</p>
+                </article>
             </main>
         </div>
 
