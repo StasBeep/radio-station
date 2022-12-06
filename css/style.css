@@ -621,6 +621,152 @@
   text-decoration: underline;
 }
 
+.connection {
+  margin-bottom: 140px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.connection-foundation-title {
+  display: block;
+  font-family: mont-800;
+  font-size: 34px;
+  line-height: 42px;
+  color: #111111;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.connection-foundation-form {
+  width: 400px;
+}
+
+.connection-foundation-form-name {
+  width: 400px;
+  font-family: mont-500;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #ffffff;
+  padding: 16px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #888888;
+  border-radius: 3px;
+  margin-bottom: 25px;
+}
+
+.connection-foundation-form-email {
+  width: 400px;
+  font-family: mont-500;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #ffffff;
+  padding: 16px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #888888;
+  border-radius: 3px;
+  margin-bottom: 25px;
+}
+
+.connection-foundation-form-text {
+  max-width: 400px;
+  min-width: 400px;
+  min-height: 75px;
+  font-family: mont-500;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 16px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #888888;
+  border-radius: 3px;
+  margin-bottom: 30px;
+}
+
+.connection-foundation-form-explanation {
+  display: block;
+  font-family: mont-400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  margin-left: 40px;
+  cursor: pointer;
+  margin-bottom: 45px;
+  position: relative;
+}
+
+.connection-foundation-form-explanation::before {
+  content: url(../img/clip.svg);
+  position: absolute;
+  top: -3px;
+  left: -36px;
+}
+
+.connection-foundation-form-file {
+  display: none;
+  font-family: mont-400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  cursor: pointer;
+  margin-bottom: 45px;
+}
+
+.connection-foundation-form-data {
+  display: block;
+  width: 302px;
+  font-family: mont-400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.connection-foundation-form-data-link {
+  font-family: mont-500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.connection-foundation-form-btn {
+  font-family: mont-800;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  padding: 20px 65px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: uppercase;
+  background-color: #181818;
+  border-radius: 555px;
+  border: 1px solid #181818;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease;
+}
+
+.connection-foundation-form-btn:hover {
+  background-color: #ffffff;
+  color: #181818;
+}
+
+.connection-description {
+  width: 455px;
+  font-family: mont-500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #111111;
+  margin-top: 75px;
+}
+
 .footer {
   padding: 0;
   background-color: #181818;

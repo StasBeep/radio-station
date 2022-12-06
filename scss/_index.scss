@@ -292,6 +292,125 @@
     }
 }
 
+.connection {
+    margin-bottom: 140px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+
+    &-foundation {
+        &-title {
+            display: block;
+            @include font-family-normal-size-line(mont-800, 34px, 42px);
+            color: $color-bg-black;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+        }
+
+        &-form {
+            width: 400px;
+
+            &-name {
+                width: 400px;
+                @include font-family-normal-size-line(mont-500);
+                background-color: $color-main;
+                padding: 16px 20px;
+                box-sizing: border-box;
+                border: 1px solid $color-inactive;
+                border-radius: 3px;
+                margin-bottom: 25px;
+            }
+
+            &-email {
+                width: 400px;
+                @include font-family-normal-size-line(mont-500);
+                background-color: $color-main;
+                padding: 16px 20px;
+                box-sizing: border-box;
+                border: 1px solid $color-inactive;
+                border-radius: 3px;
+                margin-bottom: 25px;
+            }
+
+            &-text {
+                max-width: 400px;
+                min-width: 400px;
+                min-height: 75px;
+                @include font-family-normal-size-line(mont-500);
+                padding: 16px 20px;
+                box-sizing: border-box;
+                border: 1px solid $color-inactive;
+                border-radius: 3px;
+                margin-bottom: 30px;
+            }
+
+            &-explanation {
+                display: block;
+                @include font-family-normal-size-line(mont-400);
+                color: $color-hover;
+                margin-left: 40px;
+                cursor: pointer;
+                margin-bottom: 45px;
+                position: relative;
+
+                &::before {
+                    content: url(../img/clip.svg);
+                    position: absolute;
+                    top: -3px;
+                    left: -36px;
+                }
+            }
+
+            &-file {
+                display: none;
+                @include font-family-normal-size-line(mont-400);
+                color: $color-hover;
+                cursor: pointer;
+                margin-bottom: 45px;
+            }
+
+            &-data {
+                display: block;
+                width: 302px;
+                @include font-family-normal-size-line(mont-400);
+                color: $color-hover;
+                margin-bottom: 40px;
+
+                &-link {
+                    @include font-family-normal-size-line(mont-500);
+                    color: $color-hover;
+                }
+            }
+
+            &-btn {
+                @include font-family-normal-size-line(mont-800);
+                color: $color-main;
+                padding: 20px 65px;
+                box-sizing: border-box;
+                text-transform: uppercase;
+                background-color: $color-bg-light;
+                border-radius: 555px;
+                border: 1px solid $color-bg-light;
+                cursor: pointer;
+                transition: background-color 0.3s ease-in-out,
+                    color 0.3s ease;
+
+                &:hover {
+                    background-color: $color-main;
+                    color: $color-bg-light;
+                }
+            }
+        }
+    }
+
+    &-description {
+        width: 455px;
+        @include font-family-normal-size-line(mont-500, 18px, 24px);
+        color: $color-bg-black;
+        margin-top: 75px;
+    }
+}
+
 .footer {
     padding: 0;
     background-color: $color-bg-light;
