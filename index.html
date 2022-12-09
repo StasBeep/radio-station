@@ -10,6 +10,7 @@
     <meta name="description" content="You are listening Radio REGGAE UNIVERSE">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./src/index.js" type="module" defer></script>
 </head>
 
 <body>
@@ -157,27 +158,30 @@
                             </button>
                         </li>
                         <li class="ether-control-li">
-                            <input class="ether-control-li-level" type="range" name="" id="">
+                            <input class="ether-control-li-level" type="range" name="volume" id="volume" min="0"
+                                max="100" value="100" step="10">
                         </li>
                     </ul>
                     <div class="ether-down">
                         <figure class="ether-down-nowplay">
                             <span class="ether-down-nowplay-title">Сейчас играет</span>
+                            <span class="ether-down-nowplay-unity">Unity</span>
                             <!-- RadioBOSS Cloud NowPlaying Widget (Start) -->
-                            <div class="ether-down-nowplay-track" id='rbcloud_nowplaying17194'></div>
+                            <div class="ether-down-nowplay-track" id='rbcloud_nowplaying17772'></div>
                             <script
-                                src='https://c18.radioboss.fm/w/nowplaying.js?u=66&amp;wid=17194&amp;nl=1&amp;nnt=1'></script>
+                                src='https://c18.radioboss.fm/w/nowplaying.js?u=66&amp;wid=17772&amp;nnt=1'></script>
                             <!-- RadioBOSS Cloud NowPlaying Widget (End) -->
                             <!-- RadioBOSS Cloud Artwork Widget (Start) -->
-                            <img class="ether-down-nowplay-img" id='rbcloud_cover5789' src='https://c18.radioboss.fm/w/artwork/66.png' width='150'
-                                height='150' alt='cover art'>
+                            <img class="ether-down-nowplay-img" id='rbcloud_cover5789'
+                                src='https://c18.radioboss.fm/w/artwork/66.png' width='250' height='250'
+                                alt='cover art'>
                             <script src='https://c18.radioboss.fm/w/cover.js?u=66&amp;wid=5789'></script>
                             <!-- RadioBOSS Cloud Artwork Widget (End) -->
                         </figure>
                         <figure class="ether-down-past">
                             <span class="ether-down-past-title">Проигранные треки</span>
                             <!-- RadioBOSS Cloud Recent Tracks Widget (Start) -->
-                            <div class="ether-down-past-tracks" id='rbcloud_recent5458' data-cnt='10'></div>
+                            <div class="ether-down-past-tracks" id='rbcloud_recent5458' data-cnt='5'></div>
                             <script src='https://c18.radioboss.fm/w/recent.js?u=66&amp;wid=5458'></script>
                             <!-- RadioBOSS Cloud Recent Tracks Widget (End) -->
                         </figure>
