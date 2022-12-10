@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    // плавная прокрутка для всех переходов
+    scroll-behavior: smooth;
 }
 
 .header {
