@@ -407,6 +407,138 @@
   text-decoration: underline;
 }
 
+.donat {
+  padding-bottom: 200px;
+  box-sizing: border-box;
+}
+.donat-title {
+  display: block;
+  font-family: mont-800;
+  font-size: 34px;
+  line-height: 42px;
+  color: #111111;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.donat-content {
+  display: flex;
+  justify-content: space-between;
+}
+.donat-content-form {
+  width: 480px;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: #ecebe6;
+  position: relative;
+}
+.donat-content-form-title {
+  display: block;
+  font-family: mont-800;
+  font-size: 24px;
+  line-height: 30px;
+  color: #111111;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.donat-content-form-text {
+  display: block;
+  font-family: mont-500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  letter-spacing: 0.03em;
+  margin-bottom: 40px;
+}
+.donat-content-form-comment {
+  display: block;
+  font-family: mont-700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #111111;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.donat-content-form-comment-text {
+  max-width: 400px;
+  min-width: 400px;
+  padding: 5px;
+  margin-bottom: 30px;
+  background-color: #ecebe6;
+  border: 1px solid #888888;
+  color: #111111;
+  font-family: mont-700;
+  font-size: 16px;
+  line-height: 20px;
+}
+.donat-content-form-sum {
+  display: block;
+  font-family: mont-700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #111111;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.donat-content-form-sum-inp {
+  width: 140px;
+  padding: 5px;
+  background-color: #ecebe6;
+  border: 1px solid #888888;
+  color: #111111;
+  font-family: mont-700;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 60px;
+}
+.donat-content-form-sum-reset {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 292px;
+  left: 164px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.donat-content-form-sum-reset-svg {
+  stroke: #181818;
+}
+.donat-content-form-transition {
+  width: 228px;
+  display: block;
+  font-family: mont-800;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+  background-color: #181818;
+  padding: 18px 37px;
+  box-sizing: border-box;
+  border: 1px solid #181818;
+  transition: color 0.5s ease, background-color 0.5s ease;
+}
+.donat-content-form-transition:hover {
+  color: #181818;
+  background-color: #ffffff;
+}
+.donat-picture {
+  margin-top: 84px;
+}
+.donat-picture-title {
+  display: block;
+  text-transform: uppercase;
+  font-family: mont-800;
+  font-size: 16px;
+  line-height: 20px;
+  color: #181818;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
 .footer {
   padding: 0;
   background-color: #181818;
