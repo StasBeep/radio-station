@@ -1,7 +1,0 @@
-/* mixin */
-
-@mixin font-family-normal-size-line($family: mont-400, $fonts:16px, $linehe: 20px) {
-    font-family: $family;
-    font-size: $fonts;
-    line-height: $linehe;
-}
