@@ -260,6 +260,111 @@
     }
 }
 
+.slider {
+    margin-bottom: 200px;
+
+    &-title {
+        display: block;
+        @include font-family-normal-size-line(mont-800, 34px, 42px);
+        color: $color-bg-black;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+
+    &-figure {
+        list-style-type: none;
+        display: flex;
+
+        &-li {
+            width: 190px;
+            height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-image: url(../img/template-bg-slider.jpg);
+            background-repeat: no-repeat;
+            margin-right: 55px;
+            transition: width 0.8s ease,
+                height 0.8s ease;
+            background-size: cover;
+
+            &-wrapper {
+                padding-top: 30px;
+                padding-left: 30px;
+                opacity: 0;
+                transition: opacity 0.8s ease-in,
+                    opacity 0.6s ease-out;
+            }
+
+            &-title {
+                display: block;
+                width: 275px;
+                @include font-family-normal-size-line(mont-800, 17px, 22px);
+                color: $color-main;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+
+            &-date {
+                display: block;
+                @include font-family-normal-size-line(mont-400, 16px, 20px);
+                color: $color-main;
+            }
+
+            &-link {
+                visibility: hidden;
+                @include font-family-normal-size-line(mont-800, 16px, 20px);
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $color-main;
+                background-color: $color-bg-light;
+                text-align: center;
+                padding: 20px;
+                opacity: 0;
+                transition: background-color 0.6s ease,
+                    color 0.6s ease,
+                    visibility 0.5s ease,
+                    opacity 1.8s ease;
+
+                &:hover {
+                    background-color: $color-inactive;
+                    color: $color-bg-light;
+                }
+            }
+
+            &:first-child {
+                width: 435px;
+                height: 435px;
+
+                &> div {
+                    opacity: 1;
+                }
+
+                &> a {
+                    padding: 20px 153px;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+            &:hover {
+                width: 435px;
+                height: 435px;
+
+                &> div {
+                    opacity: 1;
+                }
+
+                &> a {
+                    padding: 20px 153px;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
 .ether {
     padding-bottom: 200px;
     box-sizing: border-box;
