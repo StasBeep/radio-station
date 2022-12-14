@@ -1,7 +1,4 @@
-const API_slider = 'https://raw.githubusercontent.com/StasBeep/radio-station/alteration-content/arrObjSlider.json';
-const sliderElement = document.getElementsByClassName('slider-figure')[0].children;
-
-console.log(sliderElement);
+import { sliderElement, API_slider } from "./_variables.js";
 
 let contentSlider = [];
 
@@ -42,5 +39,5 @@ sliderElement[1].addEventListener('mouseout', () => {
 });
 
 sliderElement[0].addEventListener('wheel', (event) => {
-       console.log(event);
+    console.log(event);
 });
