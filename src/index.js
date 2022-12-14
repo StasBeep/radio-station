@@ -1,8 +1,6 @@
 "use strict";
+
 import './_slider.js';
-
-let content  = document.querySelectorAll('.slider-figure-li-title')[3];
-
-console.log(content.innerText.length);
+import './_player.js';
 
 // ! 265 символов текста без ...
