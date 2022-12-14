@@ -275,14 +275,16 @@
 
         &-li {
             width: 190px;
-            height: 435px;
+            height: 380px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             background-image: url(../img/template-bg-slider.jpg);
             background-repeat: no-repeat;
             margin-right: 55px;
-            transition: width 0.5s ease-in;
+            transition: width 0.8s ease,
+                height 0.8s ease;
+            background-size: cover;
 
             &-wrapper {
                 padding-top: 30px;
@@ -328,8 +330,24 @@
                 }
             }
 
+            &:first-child {
+                width: 435px;
+                height: 435px;
+
+                &> div {
+                    opacity: 1;
+                }
+
+                &> a {
+                    padding: 20px 153px;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
             &:hover {
-                width: 380px;
+                width: 435px;
+                height: 435px;
 
                 &> div {
                     opacity: 1;
