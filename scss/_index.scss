@@ -594,6 +594,136 @@
     }
 }
 
+.donat {
+    padding-bottom: 200px;
+    box-sizing: border-box;
+
+    &-title {
+        display: block;
+        @include font-family-normal-size-line(mont-800, 34px, 42px);
+        color: $color-bg-black;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+
+        &-form {
+            width: 480px;
+            padding: 40px;
+            box-sizing: border-box;
+            background-color: $color-light-gray;
+            position: relative;
+
+            &-title {
+                display: block;
+                @include font-family-normal-size-line(mont-800, 24px, 30px);
+                color: $color-bg-black;
+                letter-spacing: 0.03em;
+                text-transform: uppercase;
+                margin-bottom: 8px;
+            }
+
+            &-text {
+                display: block;
+                @include font-family-normal-size-line(mont-500, 18px, 22px);
+                color: $color-hover;
+                letter-spacing: 0.03em;
+                margin-bottom: 40px;
+            }
+
+            &-comment {
+                display: block;
+                @include font-family-normal-size-line(mont-700, 16px, 20px);
+                color: $color-bg-black;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+
+                &-text {
+                    max-width: 400px;
+                    min-width: 400px;
+                    padding: 5px;
+                    margin-bottom: 30px;
+                    background-color: $color-light-gray;
+                    border: 1px solid $color-inactive;
+                    color: $color-bg-black;
+                    @include font-family-normal-size-line(mont-700, 16px, 20px);
+                }
+            }
+
+            &-sum {
+                display: block;
+                @include font-family-normal-size-line(mont-700, 16px, 20px);
+                color: $color-bg-black;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+
+                &-inp {
+                    width: 140px;
+                    padding: 5px;
+                    background-color: $color-light-gray;
+                    border: 1px solid $color-inactive;
+                    color: $color-bg-black;
+                    @include font-family-normal-size-line(mont-700, 16px, 20px);
+                    margin-bottom: 60px;
+                }
+
+                &-reset {
+                    width: 25px;
+                    height: 25px;
+                    position: absolute;
+                    top: 292px;
+                    left: 164px;
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+
+                    &-svg {
+                        stroke: $color-bg-light;
+                    }
+                }
+            }
+
+            &-transition {
+                width: 228px;
+                display: block;
+                @include font-family-normal-size-line(mont-800);
+                text-decoration: none;
+                text-transform: uppercase;
+                color: $color-main;
+                letter-spacing: 0.03em;
+                background-color: $color-bg-light;
+                padding: 18px 37px;
+                box-sizing: border-box;
+                border: 1px solid $color-bg-light;
+                transition: color 0.5s ease,
+                    background-color 0.5s ease;
+
+                &:hover {
+                    color: $color-bg-light;
+                    background-color: $color-main;
+                }
+            }
+        }
+    }
+
+    &-picture {
+        margin-top: 84px;
+
+        &-title {
+            display: block;
+            text-transform: uppercase;
+            @include font-family-normal-size-line(mont-800);
+            color: $color-bg-light;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+    }
+}
+
 .footer {
     padding: 0;
     background-color: $color-bg-light;
