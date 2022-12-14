@@ -10,7 +10,7 @@
     <meta name="description" content="You are listening Radio REGGAE UNIVERSE">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./src/index.js" type="module" defer></script>
+    <script type="module" src="./src/index.js" defer></script>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         <div class="content-without-footer">
 
             <!--Шапка сайта-->
-            <header class="wrapper-container header">
+            <header class="wrapper-container header" id="header">
                 <figure class="header-transitions">
                     <ul class="header-transitions-menu">
                         <li class="header-transitions-menu-li">
@@ -125,6 +125,120 @@
                             треки</li>
                     </ol>
                 </article>
+<!--Третья секция-->
+                <article class="slider">
+                    <span class="slider-title">
+                        регги блог
+                    </span>
+                    <ul class="slider-figure">
+                        <li class="slider-figure-li">
+                            <div class="slider-figure-li-wrapper">
+                                <span class="slider-figure-li-title">
+                                    интервью с регги-ветераном, который на ямайке был популярнее боба марли
+                                </span>
+                                <span class="slider-figure-li-date">
+                                    06.12.2021
+                                </span>
+                            </div>
+                            <a class="slider-figure-li-link" href="#" target="_blank">читать</a>
+                        </li>
+                        <li class="slider-figure-li">
+                            <div class="slider-figure-li-wrapper">
+                                <span class="slider-figure-li-title">
+                                    интервью с регги-ветераном, который на ямайке был популярнее боба марли
+                                </span>
+                                <span class="slider-figure-li-date">
+                                    06.12.2021
+                                </span>
+                            </div>
+                            <a class="slider-figure-li-link" href="#" target="_blank">читать</a>
+                        </li>
+                        <li class="slider-figure-li">
+                            <div class="slider-figure-li-wrapper">
+                                <span class="slider-figure-li-title">
+                                    интервью с регги-ветераном, который на ямайке был популярнее боба марли
+                                </span>
+                                <span class="slider-figure-li-date">
+                                    06.12.2021
+                                </span>
+                            </div>
+                            <a class="slider-figure-li-link" href="#" target="_blank">читать</a>
+                        </li>
+                        <li class="slider-figure-li">
+                            <div class="slider-figure-li-wrapper">
+                                <span class="slider-figure-li-title">
+                                    интервью с регги-ветераном, который на ямайке был популярнее боба марли
+                                </span>
+                                <span class="slider-figure-li-date">
+                                    06.12.2021
+                                </span>
+                            </div>
+                            <a class="slider-figure-li-link" href="#" target="_blank">читать</a>
+                        </li>
+                    </ul>
+                </article>
+                <!--Четвёртая секция-->
+                <article class="ether">
+                    <span class="ether-title">
+                        эфир
+                    </span>
+                    <ul class="ether-control">
+                        <li class="ether-control-li">
+                            <audio class="ether-control-li-music" crossorigin id="music"></audio>
+                        </li>
+                        <li class="ether-control-li">
+                            <button class="ether-control-li-play">
+                                <svg class="ether-control-li-play-svg" width="19" height="23" viewbox="0 0 19 23">
+                                    <path d="M19 11.5L0.249999 22.3253L0.25 0.674682L19 11.5Z" />
+                                </svg>
+                                <svg class="ether-control-li-play-svg" width="17" height="20" viewbox="0 0 17 20">
+                                    <path d="M0 0H4V20H0V0Z" />
+                                    <path d="M13 0H17V20H13V0Z" />
+                                </svg>
+                            </button>
+                        </li>
+                        <li class="ether-control-li">
+                            <button class="ether-control-li-sound">
+                                <svg class="ether-control-li-sound-svg" width="25" height="21" viewbox="0 0 25 21">
+                                    <path
+                                        d="M9.3329 2.38952L5.47135 6.2502H1.04167C0.466146 6.2502 0 6.71635 0 7.29187V13.5419C0 14.117 0.466146 14.5835 1.04167 14.5835H5.47135L9.3329 18.4442C9.98524 19.0966 11.1111 18.6382 11.1111 17.7077V3.12607C11.1111 2.19465 9.98438 1.73805 9.3329 2.38952ZM19.4596 0.17251C18.9748 -0.145632 18.3233 -0.0115176 18.0052 0.474159C17.6866 0.958969 17.822 1.61044 18.3069 1.92859C21.1832 3.81617 22.8997 6.98935 22.8997 10.4173C22.8997 13.8453 21.1832 17.0184 18.3069 18.906C17.822 19.2237 17.6866 19.8756 18.0052 20.36C18.3108 20.8249 18.957 20.992 19.4596 20.6617C22.9284 18.3848 25 14.5545 25 10.4169C25 6.27928 22.9284 2.44942 19.4596 0.17251ZM20.8333 10.4169C20.8333 7.65949 19.4418 5.12433 17.1107 3.63562C16.625 3.32572 15.9809 3.46982 15.6732 3.9594C15.3654 4.44899 15.5091 5.09699 15.9948 5.40732C17.7201 6.50932 18.75 8.38171 18.75 10.4169C18.75 12.452 17.7201 14.3244 15.9948 15.4264C15.5091 15.7363 15.3654 16.3843 15.6732 16.8743C15.9557 17.324 16.5898 17.5315 17.1107 17.1981C19.4418 15.7094 20.8333 13.1747 20.8333 10.4169ZM14.6801 7.0805C14.1775 6.80576 13.5434 6.98675 13.2648 7.49065C12.9874 7.99456 13.171 8.62781 13.6749 8.90602C14.2352 9.21374 14.5833 9.79317 14.5833 10.4169C14.5833 11.041 14.2352 11.62 13.6753 11.9277C13.1714 12.2059 12.9878 12.8392 13.2652 13.3431C13.5443 13.8492 14.1788 14.0288 14.6806 13.7532C15.9058 13.0783 16.6671 11.8001 16.6671 10.4164C16.6671 9.03275 15.9058 7.75498 14.6801 7.0805Z" />
+                                </svg>
+                                <svg class="ether-control-li-sound-svg" width="22" height="17" viewbox="0 0 22 17">
+                                    <path
+                                        d="M9.23948 0.302748L5.41659 4.12478H1.03124C0.46148 4.12478 0 4.58626 0 5.15602V11.3435C0 11.9128 0.46148 12.3747 1.03124 12.3747H5.41659L9.23948 16.1967C9.88529 16.8425 10.9999 16.3888 10.9999 15.4676V1.03192C10.9999 0.10982 9.88443 -0.342206 9.23948 0.302748ZM19.8359 8.24974L21.797 6.28867C22.0677 6.01797 22.0677 5.57883 21.797 5.30813L20.8164 4.32759C20.5457 4.05689 20.1066 4.05689 19.8359 4.32759L17.8748 6.28867L15.9137 4.32759C15.643 4.05689 15.2039 4.05689 14.9332 4.32759L13.9527 5.30813C13.682 5.57883 13.682 6.01797 13.9527 6.28867L15.9137 8.24974L13.9531 10.2104C13.6824 10.4811 13.6824 10.9202 13.9531 11.1909L14.9336 12.1715C15.2043 12.4422 15.6435 12.4422 15.9142 12.1715L17.8748 10.2108L19.8359 12.1719C20.1066 12.4426 20.5457 12.4426 20.8164 12.1719L21.797 11.1914C22.0677 10.9207 22.0677 10.4815 21.797 10.2108L19.8359 8.24974Z" />
+                                </svg>
+                            </button>
+                        </li>
+                        <li class="ether-control-li">
+                            <input class="ether-control-li-level" type="range" name="volume" id="volume" min="0"
+                                max="100" value="100" step="10">
+                        </li>
+                    </ul>
+                    <div class="ether-down">
+                        <figure class="ether-down-nowplay">
+                            <span class="ether-down-nowplay-title">Сейчас играет</span>
+                            <span class="ether-down-nowplay-unity">Unity</span>
+                            <!-- RadioBOSS Cloud NowPlaying Widget (Start) -->
+                            <div class="ether-down-nowplay-track" id='rbcloud_nowplaying17772'></div>
+                            <script
+                                src='https://c18.radioboss.fm/w/nowplaying.js?u=66&amp;wid=17772&amp;nnt=1'></script>
+                            <!-- RadioBOSS Cloud NowPlaying Widget (End) -->
+                            <!-- RadioBOSS Cloud Artwork Widget (Start) -->
+                            <img class="ether-down-nowplay-img" id='rbcloud_cover5789'
+                                src='https://c18.radioboss.fm/w/artwork/66.png' width='250' height='250'
+                                alt='cover art'>
+                            <script src='https://c18.radioboss.fm/w/cover.js?u=66&amp;wid=5789'></script>
+                            <!-- RadioBOSS Cloud Artwork Widget (End) -->
+                        </figure>
+                        <figure class="ether-down-past">
+                            <span class="ether-down-past-title">Проигранные треки</span>
+                            <!-- RadioBOSS Cloud Recent Tracks Widget (Start) -->
+                            <div class="ether-down-past-tracks" id='rbcloud_recent5458' data-cnt='5'></div>
+                            <script src='https://c18.radioboss.fm/w/recent.js?u=66&amp;wid=5458'></script>
+                            <!-- RadioBOSS Cloud Recent Tracks Widget (End) -->
+                        </figure>
+                    </div>
+                </article>
                 <!--Пятая секция-->
                 <article class="projects">
                     <span class="projects-title">проекты</span>
@@ -159,7 +273,33 @@
                         </a>
                     </figure>
                 </article>
-                <!--Седьмая секция-->
+                <!--Шестая секция-->
+                <article class="donat">
+                    <span class="donat-title">донат</span>
+                    <div class="donat-content">
+                        <aside class="donat-content-form">
+                            <span class="donat-content-form-title">donat</span>
+                            <span class="donat-content-form-text">На поддержку радиостанции</span>
+                            <span class="donat-content-form-comment">комментарий</span>
+                            <textarea class="donat-content-form-comment-text" name="text"></textarea>
+                            <span class="donat-content-form-sum">сумма</span>
+                            <input class="donat-content-form-sum-inp" type="text">
+                            <button class="donat-content-form-sum-reset">
+                                <svg class="donat-content-form-sum-reset-svg" width="10" height="10"
+                                    viewbox="0 0 12 12">
+                                    <path d="M1 1L11 11"/>
+                                    <path d="M11 1L0.999999 11"/>
+                                </svg>
+                            </button>
+                            <a class="donat-content-form-transition" href="#" target="_blank">пожертвовать</a>
+                        </aside>
+                        <figure class="donat-picture">
+                            <span class="donat-picture-title">кинь денежку =)</span>
+                            <img class="donat-picture-img" src="./img/donat-cat.png" alt="donat-cat" width="226" height="296">
+                        </figure>
+                    </div>
+                </article>
+                 <!--Седьмая секция-->
                 <article class="connection">
                     <div class="connection-foundation">
                         <span class="connection-foundation-title">
@@ -251,7 +391,7 @@
                         </li>
                     </nav>
                 </figure>
-                <a href="#" class="footer-up-right">
+                <a href="#header" class="footer-up-right">
                     <svg class="footer-up-right-svg" width="31" height="30" viewbox="0 0 31 30">
                         <path
                             d="M17.125 29.7498H13.375V7.2498L3.06252 17.5623L0.400024 14.8998L15.25 0.0498047L30.1 14.8998L27.4375 17.5623L17.125 7.2498V29.7498Z" />
