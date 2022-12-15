@@ -160,6 +160,8 @@
                 }
 
                 &-explanations {
+                    display: block;
+                    width: 107px;
                     @include font-family-normal-size-line(mont-400, 16px, 20px);
                     color: $color-bg-black;
                 }
@@ -686,6 +688,7 @@
                 width: 228px;
                 display: block;
                 @include font-family-normal-size-line(mont-800);
+                text-align: center;
                 text-decoration: none;
                 text-transform: uppercase;
                 color: $color-main;
@@ -706,6 +709,7 @@
 
     &-picture {
         margin-top: 84px;
+        margin-right: 150px;
 
         &-title {
             display: block;
