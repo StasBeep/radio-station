@@ -1,10 +1,114 @@
 {
-  "language":[{
-    "ru": {
-      
-    },
-    "en": {
-      
+  "language": [
+    {
+      "ru": {
+        "menu": {
+          "main": "главная",
+          "blog": "блог",
+          "aboutUs": "о нас"
+        },
+        "titleDescription": "Слушай эфир онлайн - регги музыка",
+        "headings": {
+          "aboutUs": "о нас",
+          "advantages": "преимущества",
+          "blog": "регги блог",
+          "ether": "эфир",
+          "project": "проекты",
+          "donat": "донат",
+          "connection": "обратная связь"
+        },
+        "chapterAboutUs": {
+          "description": "Рэгги-Вселенная - первое и единственное интернет-радио в России, которое вещает Рэгги, Даб и Дансхол.",
+          "ether": "Эфир с",
+          "counterProject": "Проекта",
+          "broadcast": "Нас вещают"
+        },
+        "chapterAdvantages": {
+          "first": "Проект запущен в 2014, а радио в эфире с 2018",
+          "second": "Регулярно пополняем программу вещания новой музыкой",
+          "third": "Эксклюзив! - артисты и продюсеры со всего света присылают нам свои треки"
+        },
+        "chapterEther": {
+          "nowPlaying": "Сейчас играет",
+          "lostPlaiyng": "Проигранные треки"
+        },
+        "chapterProject": {
+          "vibes": "Зависимые от вайба",
+          "woman": "Женщины в Рэгги",
+          "dembow": "Дембоу",
+          "reggae": "Вселенная Рэгги"
+        },
+        "chapterDonat": {
+          "support": "На поддержку радиостанции",
+          "comment": "комментарий",
+          "sending": "пожертвовать",
+          "fun": "кинь денежку =)"
+        },
+        "characterConnection": {
+          "name": "Ваше имя*",
+          "email": "Электронная почта*",
+          "message": "Сообщение",
+          "file": "Прикрепить файл",
+          "safety": "Заполняя форму, я соглашаюсь на",
+          "safetyLink": "обработку персональных данных",
+          "send": "отправить",
+          "description": "Если Вы артист, музыкант или продюсер, выпускающий музыку нашего формата, будем рады получить от Вас Ваши новые песни и пустить их в эфир, а в случае дабплейтов будут даны анонсы и дополнительная инфо-поддержка по всем соцсетям, в блоге и в разделе новостей на сайте радио."
+        }
+      },
+      "en": {
+        "menu": {
+          "main": "main",
+          "blog": "blog",
+          "aboutUs": "about us"
+        },
+        "titleDescription": "Listen to the broadcast online - reggae music",
+        "headings": {
+          "aboutUs": "about us",
+          "advantages": "advantages",
+          "blog": "reggae blog",
+          "ether": "ether",
+          "project": "projects",
+          "donat": "donat",
+          "connection": "feedback"
+        },
+        "chapterAboutUs": {
+          "description": "Reggae Universe is the first and only Internet radio in Russia that broadcasts Reggae, Dub and Dancehall.",
+          "ether": "Ether with",
+          "counterProject": "Project",
+          "broadcast": "We are being broadcast"
+        },
+        "chapterAdvantages": {
+          "first": "The project was launched in 2014, and the radio has been on the air since 2018",
+          "second": "We regularly update the broadcast program with new music",
+          "third": "Exclusive! - artists and producers from all over the world send us their tracks"
+        },
+        "chapterEther": {
+          "nowPlaying": "Now playing",
+          "lostPlaiyng": "Lost tracks"
+        },
+        "chapterProject": {
+          "vibes": "Dependent on vibe",
+          "woman": "Women in Reggae",
+          "dembow": "Dembow",
+          "reggae": "The Reggae Universe"
+        },
+        "chapterDonat": {
+          "support": "To support the radio station",
+          "comment": "comment",
+          "sending": "donate",
+          "fun": "throw the money =)"
+        },
+        "characterConnection": {
+          "name": "Your name*",
+          "email": "Email*",
+          "message": "Message",
+          "file": "Attach a file",
+          "safety": "By filling out the form, I agree to",
+          "safetyLink": "processing of personal data",
+          "send": "to send",
+          "description": "If you are an artist, musician or producer who produces music of our format, we will be glad to receive your new songs from you and put them on the air, and in the case of dubplates, announcements and additional info support will be given on all social networks, in the blog and in the news section on the radio website."
+        }
+      }
     }
-  }]
+  ]
 }
