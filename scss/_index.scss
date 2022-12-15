@@ -946,6 +946,7 @@
         &-years {
             @include font-family-normal-size-line(mont-400);
             color: $color-inactive;
+            align-self: center;
         }
 
         &-social {

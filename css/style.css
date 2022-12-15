@@ -1019,6 +1019,7 @@
   font-size: 16px;
   line-height: 20px;
   color: #888888;
+  align-self: center;
 }
 .footer-down-social-link {
   text-decoration: none;

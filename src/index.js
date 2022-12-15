@@ -1,5 +1,5 @@
 "use strict";
-
+import './_language.js';
 import './_slider.js';
 import './_player.js';
 import './_send.js';
