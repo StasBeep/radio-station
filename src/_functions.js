@@ -23,9 +23,6 @@ import {
  * @param { Object } language 
  */
 function languageChange(language) {
-    console.log(language);
-    console.log(connectForm.children[6]);
-
     //* Изменение меню
     _changeTextBlock(menuLang[0], language.menu.main);
     _changeTextBlock(menuLang[1], language.menu.blog);

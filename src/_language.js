@@ -22,9 +22,6 @@ if (response.ok) {
     console.log("Ошибка HTTP: " + response.status);
 }
 
-// TODO: Удалить
-console.log(languagesArrayContent.en);
-
 // Переменная для эффекта наведения
 let vision = true;
 
@@ -41,6 +38,8 @@ languageBtn[1].addEventListener('click', () => {
     languageBtn[1].style.color = '#ffffff';
     languageBtn[0].style.color = '#888888';
     vision = !vision;
+
+    languageChange(languagesArrayContent.ru);
 });
 
 // Эффект наведения (сохранение этих свойств)
@@ -65,6 +64,7 @@ languageBtn[1].addEventListener('mouseout', () => {
 });
 
 
+// Обнуление массива с текстом взятого с API
 window.addEventListener('unload', () => {
     languagesArrayContent = null;
 });
