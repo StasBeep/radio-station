@@ -5,6 +5,8 @@ const radioDescription = document.getElementsByClassName('header-description')[0
 const sectionMain = document.getElementsByClassName('main')[0].children;
 const advantagesList = document.getElementsByClassName('advantages-ol')[0];
 const sliderElement = document.getElementsByClassName('slider-figure')[0].children; // элемент слайдера
+const sliderBtnRight = document.getElementsByClassName('slider-figure-li-right')[0];
+const sliderBtnLeft = document.getElementsByClassName('slider-figure-li-left')[0];
 const etherBlock = document.getElementsByClassName('ether-down')[0];
 const audioMusic = document.querySelector('#music'); // элемент аудио
 const btnPlayPause = document.querySelector('.ether-control-li-play'); // кнопка пуска и паузы потока
@@ -31,6 +33,8 @@ export {
     sectionMain,
     advantagesList,
     sliderElement,
+    sliderBtnRight,
+    sliderBtnLeft,
     etherBlock,
     audioMusic,
     btnPlayPause,

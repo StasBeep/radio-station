@@ -1,5 +1,14 @@
-import { sliderContent, elementStyleHoverHidden, elementStyleHoverVisible } from "./_functions.js";
-import { sliderElement, API_slider } from "./_variables.js";
+import {
+    sliderContent,
+    elementStyleHoverHidden,
+    elementStyleHoverVisible
+} from "./_functions.js";
+import {
+    sliderElement,
+    sliderBtnRight,
+    sliderBtnLeft,
+    API_slider
+} from "./_variables.js";
 
 let contentSlider = [];
 let numberContent = 0;
@@ -18,6 +27,14 @@ if (response.ok) {
 }
 
 numberContent = sliderContent(numberContent, contentSlider);
+
+sliderBtnRight.addEventListener('click', () => {
+    numberContent = sliderContent(numberContent + 1, contentSlider);
+});
+
+sliderBtnLeft.addEventListener('click', () => {
+    numberContent = sliderContent(numberContent - 1, contentSlider);
+});
 
 // Эффект наведения на дополнительные блоки слайдера
 sliderElement[1].addEventListener('mouseover', () => {

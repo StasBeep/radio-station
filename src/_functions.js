@@ -74,7 +74,7 @@ function languageChange(language) {
     _changeTextBlock(connectForm.children[3], language.characterConnection.file);
     // TODO: Не забудь вставить ссылку  на переход
     _changeTextBlock(connectForm.children[5], language.characterConnection.safety);
-    
+
     let linkSafety = document.createElement('a');
     linkSafety.href = '#';
     linkSafety.classList.add('connection-foundation-form-data-link');
@@ -112,11 +112,18 @@ function _changeTextBlock(block, text) {
  * @returns { Number } состояние отображения контента объекта
  */
 function sliderContent(j, content) {
-    let counter = j;
-    _populateContentElement(0, j, content);
-    _populateContentElement(1, j+1, content);
-    _populateContentElement(2, j+2, content);
-    _populateContentElement(3, j+3, content);
+    // Проверка на выходы из границ массива
+    let counter = _sizeContentSlider(j, content);
+
+    let subordinateElement = counter;
+
+    _populateContentElement(0, counter, content);
+    subordinateElement = _sizeContentSlider(subordinateElement + 1, content);
+    _populateContentElement(1, subordinateElement, content);
+    subordinateElement = _sizeContentSlider(subordinateElement + 1, content);
+    _populateContentElement(2, subordinateElement, content);
+    subordinateElement = _sizeContentSlider(subordinateElement + 1, content);
+    _populateContentElement(3, subordinateElement, content);
 
     return counter;
 }
@@ -136,6 +143,17 @@ function _populateContentElement(i, j, contentSlider) {
     // Измение цвета текста в слайдере
     sliderElement[i].children[0].children[0].style.color = `${contentSlider[j].color}`;
     sliderElement[i].children[0].children[1].style.color = `${contentSlider[j].color}`;
+}
+
+function _sizeContentSlider(j, contentSlider) {
+    let sizeObjSlider = contentSlider.length;
+
+    if (j < 0) {
+        return --sizeObjSlider;
+    } else if (j == sizeObjSlider) {
+        return 0;
+    }
+    return j
 }
 
 /**

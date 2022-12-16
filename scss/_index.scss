@@ -329,9 +329,54 @@
                 }
             }
 
+            &-right {
+                position: absolute;
+                padding: 25px 15px;
+                box-sizing: border-box;
+                font-size: 50px;
+                color: $color-main;
+                background-color: $color-bg-light;
+                border: 1px solid $color-bg-light;
+                border-top-left-radius: 50px;
+                top: 264.5px;
+                left: 322px;    
+                opacity: 0;
+                transition: opacity 1s ease,
+                    background-color 0.6s ease,
+                    color 0.6s ease;
+
+                &:hover {
+                    background-color: $color-inactive;
+                    color: $color-bg-light;
+                }
+            }
+
+            &-left {
+                position: absolute;
+                padding: 25px 15px;
+                box-sizing: border-box;
+                font-size: 50px;
+                color: $color-main;
+                background-color: $color-bg-light;
+                border: 1px solid $color-bg-light;
+                border-top-right-radius: 50px;
+                top: 264.5px;
+                left: 0;
+                opacity: 0;
+                transition: opacity 1s ease,
+                    background-color 0.6s ease,
+                    color 0.6s ease;
+
+                &:hover {
+                    background-color: $color-inactive;
+                    color: $color-bg-light;
+                }
+            }
+
             &:first-child {
-                width: 435px;
+                width: 380px;
                 height: 435px;
+                position: relative;
 
                 & > div {
                     opacity: 1;
@@ -342,10 +387,22 @@
                     visibility: visible;
                     opacity: 1;
                 }
+
+                &:hover {
+                    &> .slider-figure-li-right {
+                        display: block;
+                        opacity: 1;
+                    }
+
+                    &> .slider-figure-li-left {
+                        display: block;
+                        opacity: 1;
+                    }
+                }
             }
 
             &:hover {
-                width: 435px;
+                width: 380px;
                 height: 435px;
 
                 & > div {

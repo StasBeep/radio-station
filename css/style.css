@@ -671,9 +671,54 @@
   color: #181818;
 }
 
+.slider-figure-li-right {
+  position: absolute;
+  padding: 25px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 50px;
+  color: #ffffff;
+  background-color: #181818;
+  border: 1px solid #181818;
+  border-top-left-radius: 50px;
+  top: 264.5px;
+  left: 322px;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease, background-color 0.6s ease, color 0.6s ease;
+  transition: opacity 1s ease, background-color 0.6s ease, color 0.6s ease;
+}
+
+.slider-figure-li-right:hover {
+  background-color: #888888;
+  color: #181818;
+}
+
+.slider-figure-li-left {
+  position: absolute;
+  padding: 25px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 50px;
+  color: #ffffff;
+  background-color: #181818;
+  border: 1px solid #181818;
+  border-top-right-radius: 50px;
+  top: 264.5px;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease, background-color 0.6s ease, color 0.6s ease;
+  transition: opacity 1s ease, background-color 0.6s ease, color 0.6s ease;
+}
+
+.slider-figure-li-left:hover {
+  background-color: #888888;
+  color: #181818;
+}
+
 .slider-figure-li:first-child {
-  width: 435px;
+  width: 380px;
   height: 435px;
+  position: relative;
 }
 
 .slider-figure-li:first-child > div {
@@ -686,8 +731,18 @@
   opacity: 1;
 }
 
+.slider-figure-li:first-child:hover > .slider-figure-li-right {
+  display: block;
+  opacity: 1;
+}
+
+.slider-figure-li:first-child:hover > .slider-figure-li-left {
+  display: block;
+  opacity: 1;
+}
+
 .slider-figure-li:hover {
-  width: 435px;
+  width: 380px;
   height: 435px;
 }
 
