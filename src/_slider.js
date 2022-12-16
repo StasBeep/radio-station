@@ -1,6 +1,8 @@
+import { sliderContent, elementStyleHoverHidden, elementStyleHoverVisible } from "./_functions.js";
 import { sliderElement, API_slider } from "./_variables.js";
 
 let contentSlider = [];
+let numberContent = 0;
 
 // Пока не выполнится промис через API (ожидание)
 let response = await fetch(`${API_slider}`);
@@ -15,29 +17,34 @@ if (response.ok) {
     console.log("Ошибка HTTP: " + response.status);
 }
 
-sliderElement[0].children[0].children[0].textContent = `${contentSlider[0].title}`;
-sliderElement[0].children[0].children[1].textContent = `${contentSlider[0].data}`;
-sliderElement[0].children[1].href = `${contentSlider[0].link}`;
-sliderElement[0].style.backgroundImage = `url("${contentSlider[0].image}")`;
+numberContent = sliderContent(numberContent, contentSlider);
 
+// Эффект наведения на дополнительные блоки слайдера
 sliderElement[1].addEventListener('mouseover', () => {
-    sliderElement[0].style.width = '190px';
-    sliderElement[0].style.height = '380px';
-    sliderElement[0].children[0].style.opacity = '0';
-    sliderElement[0].children[1].style.visibility = 'hidden';
-    sliderElement[0].children[1].style.opacity = '0';
-    sliderElement[0].children[1].style.padding = '0';
+    elementStyleHoverHidden();
 });
 
 sliderElement[1].addEventListener('mouseout', () => {
-    sliderElement[0].style.width = '380px';
-    sliderElement[0].style.height = '435px';
-    sliderElement[0].children[0].style.opacity = '1';
-    sliderElement[0].children[1].style.padding = '20px 153px';
-    sliderElement[0].children[1].style.visibility = 'visible';
-    sliderElement[0].children[1].style.opacity = '1';
+    elementStyleHoverVisible();
 });
 
-sliderElement[0].addEventListener('wheel', (event) => {
-    console.log(event);
+sliderElement[2].addEventListener('mouseover', () => {
+    elementStyleHoverHidden();
+});
+
+sliderElement[2].addEventListener('mouseout', () => {
+    elementStyleHoverVisible();
+});
+
+sliderElement[3].addEventListener('mouseover', () => {
+    elementStyleHoverHidden();
+});
+
+sliderElement[3].addEventListener('mouseout', () => {
+    elementStyleHoverVisible();
+});
+
+// Обнуление массива слайдера взятого с API
+window.addEventListener('unload', () => {
+    contentSlider = null;
 });

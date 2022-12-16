@@ -10,6 +10,7 @@ import {
     connectDescription,
     footerBroadcast,
     footerProject,
+    sliderElement,
     btnPlayPause,
     btnSound,
     audioMusic,
@@ -102,6 +103,63 @@ function languageChange(language) {
  */
 function _changeTextBlock(block, text) {
     block.textContent = `${text}`;
+}
+
+/**
+ * Заполнение слайдера в начале отображения страницы
+ * @param { Number } j номер контента массива отображаемого на элементе
+ * @param { Object } content Объект с контентом слайдера
+ * @returns { Number } состояние отображения контента объекта
+ */
+function sliderContent(j, content) {
+    let counter = j;
+    _populateContentElement(0, j, content);
+    _populateContentElement(1, j+1, content);
+    _populateContentElement(2, j+2, content);
+    _populateContentElement(3, j+3, content);
+
+    return counter;
+}
+
+/**
+ * Размещение на элементах слайдера
+ * @param { Number } i номер элемента
+ * @param { Number } j номер объекта слайдера
+ * @param { Object } contentSlider Объект контента
+ */
+function _populateContentElement(i, j, contentSlider) {
+    sliderElement[i].children[0].children[0].textContent = `${contentSlider[j].title}`;
+    sliderElement[i].children[0].children[1].textContent = `${contentSlider[j].data}`;
+    sliderElement[i].children[1].href = `${contentSlider[j].link}`;
+    sliderElement[i].style.backgroundImage = `url("${contentSlider[j].image}")`;
+
+    // Измение цвета текста в слайдере
+    sliderElement[i].children[0].children[0].style.color = `${contentSlider[j].color}`;
+    sliderElement[i].children[0].children[1].style.color = `${contentSlider[j].color}`;
+}
+
+/**
+ * Эффект скрытия первого элемента
+ */
+function elementStyleHoverHidden() {
+    sliderElement[0].style.width = '190px';
+    sliderElement[0].style.height = '380px';
+    sliderElement[0].children[0].style.opacity = '0';
+    sliderElement[0].children[1].style.visibility = 'hidden';
+    sliderElement[0].children[1].style.opacity = '0';
+    sliderElement[0].children[1].style.padding = '0';
+}
+
+/**
+ * Эффект появления первого элемента
+ */
+function elementStyleHoverVisible() {
+    sliderElement[0].style.width = '380px';
+    sliderElement[0].style.height = '435px';
+    sliderElement[0].children[0].style.opacity = '1';
+    sliderElement[0].children[1].style.padding = '20px 153px';
+    sliderElement[0].children[1].style.visibility = 'visible';
+    sliderElement[0].children[1].style.opacity = '1';
 }
 
 /**
@@ -219,6 +277,9 @@ function _changeColorInp(value) {
 
 export {
     languageChange,
+    sliderContent,
+    elementStyleHoverHidden,
+    elementStyleHoverVisible,
     playMusic,
     clickChangesVolume,
     changeLevelVolume
