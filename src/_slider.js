@@ -29,10 +29,12 @@ if (response.ok) {
 numberContent = sliderContent(numberContent, contentSlider);
 
 sliderBtnRight.addEventListener('click', () => {
+    clearInterval(intervalSlider);
     numberContent = sliderContent(numberContent + 1, contentSlider);
 });
 
 sliderBtnLeft.addEventListener('click', () => {
+    clearInterval(intervalSlider);
     numberContent = sliderContent(numberContent - 1, contentSlider);
 });
 
@@ -65,3 +67,7 @@ sliderElement[3].addEventListener('mouseout', () => {
 window.addEventListener('unload', () => {
     contentSlider = null;
 });
+
+let intervalSlider = setInterval(() => {
+    numberContent = sliderContent(numberContent + 1, contentSlider);
+}, 10000);
