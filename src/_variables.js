@@ -20,6 +20,7 @@ const connectForm = document.getElementsByClassName('connection-foundation-form'
 const connectDescription = document.getElementsByClassName('connection-description')[0];
 const footerBroadcast = document.querySelector('.footer-up-left-channels-title');
 const footerProject = document.getElementsByClassName('footer-up-left-projects');
+const footerYearContent = document.getElementsByClassName('footer-down-years')[0];
 
 // Ссылки
 const API_language = 'https://raw.githubusercontent.com/StasBeep/radio-station/alteration-content/languageBlog.json';
@@ -48,6 +49,7 @@ export {
     connectDescription,
     footerBroadcast,
     footerProject,
+    footerYearContent,
     API_language,
     API_slider,
     listenLink,

@@ -68,6 +68,7 @@ window.addEventListener('unload', () => {
     contentSlider = null;
 });
 
+// Через каждые 10 секунд смена контента слайдера
 let intervalSlider = setInterval(() => {
     numberContent = sliderContent(numberContent + 1, contentSlider);
 }, 10000);
