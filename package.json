@@ -19,8 +19,7 @@
   },
   "homepage": "https://github.com/StasBeep/radio-station#readme",
   "dependencies": {
-    "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.2"
+    "webpack": "^5.38.1"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -39,6 +38,7 @@
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.1.4",
     "webpack-bundle-analyzer": "^4.4.2",
+    "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^3.11.2"
   }
 }

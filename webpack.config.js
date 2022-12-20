@@ -30,6 +30,11 @@ module.exports = {
         port: 9000,
     },
 
+    // Для асинхронных запросов, чтобы не вызывалась ошибка при сборке
+    experiments: {
+        topLevelAwait: true
+    },
+
     // https://github.com/webpack-contrib/terser-webpack-plugin
     optimization: {
         minimize: true,
@@ -69,6 +74,13 @@ module.exports = {
                     name: '[path][name].[ext]',
                     context: ''
                 }
+            },
+            {
+                test: /\.(eot|ttf|woff|woff2)$/,
+                loader: "file-loader",
+                options: {
+                    name: "[path][name].[ext]",
+                }
             }
         ]
     },
@@ -84,5 +96,12 @@ module.exports = {
         // new BundleAnalyzerPlugin(),
         // Очистка перед каждой сборкой
         new CleanWebpackPlugin(),
-    ]
+    ],
+
+    // Пересборка, так как CleanWebpackPlugin() не работает
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+        clean: true,
+    },
 }

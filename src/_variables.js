@@ -16,6 +16,7 @@ const projectList = document.getElementsByClassName('projects-links')[0];
 const explanation = document.querySelector('.connection-foundation-form-explanation'); // элемент "прикрепить файл"
 const explFile = document.querySelector('.connection-foundation-form-file'); // элемент "прикрепить файл"
 const donatblock = document.getElementsByClassName('donat-content')[0];
+const donatLink = document.querySelector('#donat-link');
 const connectForm = document.getElementsByClassName('connection-foundation-form')[0];
 const connectDescription = document.getElementsByClassName('connection-description')[0];
 const footerBroadcast = document.querySelector('.footer-up-left-channels-title');
@@ -45,6 +46,7 @@ export {
     explanation,
     explFile,
     donatblock,
+    donatLink,
     connectForm,
     connectDescription,
     footerBroadcast,

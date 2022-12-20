@@ -8,9 +8,7 @@
     <link rel="icon" href="./img/project-reggae.jpg">
     <title>Reggae Universe Radio</title>
     <meta name="description" content="You are listening Radio REGGAE UNIVERSE">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <script type="module" src="./src/index.js" defer></script>
+    <script src="./src/send.js" defer></script>
 </head>
 
 <body>
@@ -144,7 +142,7 @@
                             <button class="slider-figure-li-right">&#10095</button>
                             <button class="slider-figure-li-left">&#10094</button>
                         </li>
-                        <li class="slider-figure-li">       
+                        <li class="slider-figure-li">
                             <div class="slider-figure-li-wrapper">
                                 <span class="slider-figure-li-title">
                                     интервью с регги-ветераном, который на ямайке был популярнее боба марли
@@ -279,8 +277,8 @@
                 <article class="donat">
                     <span class="donat-title">донат</span>
                     <div class="donat-content">
-                        <form class="donat-content-form" enctype="multipart/form-data" method="post" id="form"
-                        onsubmit="send(event, 'donatcomment.php')">
+                        <form class="donat-content-form" enctype="multipart/form-data" method="post"
+                            onsubmit="send(event, 'donatcomment.php')">
                             <span class="donat-content-form-title">donat</span>
                             <span class="donat-content-form-text">На поддержку радиостанции</span>
                             <span class="donat-content-form-comment">комментарий</span>
@@ -294,7 +292,8 @@
                                     <path d="M11 1L0.999999 11" />
                                 </svg>
                             </button>
-                            <a class="donat-content-form-transition" href="#" target="_blank" type="submit">пожертвовать</a>
+                            <input class="donat-content-form-transition" value="пожертвовать" type="submit"
+                                id="donat-link">
                         </form>
                         <figure class="donat-picture">
                             <span class="donat-picture-title">кинь денежку =)</span>
