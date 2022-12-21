@@ -1,0 +1,505 @@
+//* Ширина 768px
+@media (max-width: 768px) {
+    .wrapper {
+        max-width: 768px;
+
+        &-container {
+            padding: 0 82px 165px;
+        }
+    }
+
+    .main {
+        padding-bottom: 0;
+    }
+
+    .about {
+        flex-direction: column;
+        padding-top: 100px;
+        padding-bottom: 0;
+
+        &-circle {
+            margin-top: 70px;
+        }
+    }
+
+    .advantages {
+        padding-top: 390px;
+        padding-bottom: 120px;
+
+        &-title {
+            padding-bottom: 40px;
+        }
+
+        &-ol {
+            flex-direction: column;
+
+            &-li {
+                padding-bottom: 40px;
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .slider {
+        margin-bottom: 120px;
+
+        &-figure {
+            &-li {
+                margin-right: 0;
+
+                &:nth-child(2) {
+                    display: none;
+                }
+
+                &:nth-child(3) {
+                    display: none;
+                }
+
+                &:nth-child(4) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .ether {
+        padding-bottom: 120px;
+
+        &-down {
+            flex-direction: column;
+
+            &-nowplay {
+                margin-right: 0;
+                margin-bottom: 70px;
+            }
+        }
+    }
+
+    .projects {
+        padding-bottom: 120px;
+
+        &-links {
+            justify-content: flex-start;
+
+            &-link {
+                &:first-child {
+                    margin-right: 84px;
+                    margin-bottom: 80px;
+                }
+
+                &:nth-child(3) {
+                    margin-right: 182px;
+                }
+            }
+        }
+    }
+
+    .donat {
+        padding-bottom: 120px;
+
+        &-picture {
+            display: none;
+        }
+    }
+
+    .connection {
+        padding-bottom: 120px;
+
+        &-description {
+            display: none;
+        }
+    }
+
+    .footer {
+        padding: 0;
+
+        &-up {
+            padding: 50px 82px;
+
+            &-right {
+                display: none;
+            }
+        }
+
+        &-down {
+            padding: 50px 82px;
+        }
+    }
+}
+
+//* Ширина 360px
+@media (max-width: 360px) {
+    .wrapper {
+        max-width: 360px;
+
+        &-container {
+            padding: 0 30px 100px;
+        }
+    }
+
+    .header {
+        &-transitions {
+            &-mobile-menu {
+                &-checkbox {
+                    &:checked ~ .header-transitions-menu {
+                        display: block;
+                    }
+                }
+
+                &-btn {
+                    display: block;
+                }
+
+                &-icon {
+                    display: block;
+                }
+            }
+
+            &-menu {
+                display: none;
+                position: absolute;
+                flex-direction: column;
+                top: 100px;
+                left: 40%;
+
+                &-li {
+                    margin-bottom: 20px;
+                    text-align: center;
+
+                    &-link {
+                        margin: 0 auto;
+                    }
+
+                    &::before {
+                        content: "";
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        &-title {
+            width: 298px;
+            text-align: center;
+            @include font-family-normal-size-line(druk, 38px, 50px);
+        }
+
+        &-description {
+            width: 222px;
+            @include font-family-normal-size-line(mont-600, 18px, 24px);
+            text-align: center;
+            margin: 0 auto 40px;
+        }
+
+        &-btn {
+            margin: 0 auto;
+        }
+    }
+
+    .about {
+        padding-top: 80px;
+
+        &-us {
+            width: auto;
+
+            &-title {
+                @include font-family-normal-size-line(mont-800, 28px, 34px);
+                text-align: center;
+            }
+
+            &-description {
+                width: 300px;
+                @include font-family-normal-size-line(mont-500, 16px, 21px);
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            &-info {
+                display: none;
+            }
+        }
+
+        &-circle {
+            width: 275px;
+            margin: 70px auto 0;
+
+            &-simple {
+                width: 72px;
+                height: 72px;
+
+                &:first-child {
+                    width: 61px;
+                    height: 61px;
+                }
+            }
+
+            &-circleincircle {
+                width: 67px;
+                height: 67px;
+            }
+
+            &-point {
+                width: 111px;
+                height: 111px;
+            }
+
+            & > svg:nth-child(1) {
+                top: 59px;
+                left: 110px;
+            }
+
+            & > svg:nth-child(2) {
+                top: 99px;
+                left: 40px;
+            }
+
+            & > svg:nth-child(3) {
+                top: 110px;
+                left: 125px;
+            }
+
+            & > svg:nth-child(4) {
+                top: 106px;
+                left: 191px;
+            }
+
+            & > svg:nth-child(6) {
+                left: 155px;
+            }
+        }
+    }
+
+    .advantages {
+        padding-top: 290px;
+
+        &-title {
+            @include font-family-normal-size-line(mont-800, 28px, 34px);
+            text-align: center;
+        }
+
+        &-ol {
+            margin-left: 40px;
+
+            &-li {
+                &:last-child {
+                    width: 250px;
+                }
+            }
+        }
+    }
+
+    .slider {
+        &-title {
+            @include font-family-normal-size-line(mont-800, 28px, 34px);
+            text-align: center;
+        }
+
+        &-figure {
+            &-li {
+                &-title {
+                    width: 240px;
+                }
+
+                &-right {
+                    left: 242px;
+                }
+
+                &:first-child {
+                    width: 300px;
+
+                    & > .slider-figure-li-link {
+                        padding: 20px 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    .ether {
+        padding-bottom: 80px;
+
+        &-title {
+            @include font-family-normal-size-line(mont-800, 28px, 34px);
+            text-align: center;
+        }
+
+        &-control {
+            flex-wrap: wrap;
+
+            &-li {
+                &:nth-child(2) {
+                    margin: 0 115px;
+                }
+
+                &:nth-child(3) {
+                    margin-left: 65px;
+                }
+            }
+        }
+
+        &-down {
+            margin: 0;
+
+            &-nowplay {
+                margin-bottom: 0;
+
+                &-title {
+                    width: 300px;
+                    display: block;
+                    text-align: center;
+                }
+
+                &-unity {
+                    width: 300px;
+                    display: block;
+                    text-align: center;
+                }
+
+                &-track {
+                    width: 300px;
+                    display: block;
+                    text-align: center;
+                }
+
+                &-img {
+                    margin: 0 25px;
+                }
+            }
+
+            &-past {
+                display: none;
+            }
+        }
+    }
+
+    .projects {
+        padding-bottom: 80px;
+
+        &-title {
+            @include font-family-normal-size-line(mont-800, 28px, 34px);
+            text-align: center;
+        }
+
+        &-links {
+            &-link {
+                margin: 0 auto 70px;
+
+                &-title {
+                    text-align: center;
+                }
+
+                &-img {
+                    display: block;
+                    margin: 0 auto;
+                }
+
+                &:first-child {
+                    margin: 0 auto 70px;
+                }
+
+                &:nth-child(3) {
+                    margin: 0 auto 70px;
+                }
+            }
+        }
+    }
+
+    .donat {
+        &-title {
+            @include font-family-normal-size-line(mont-800, 28px, 34px);
+            text-align: center;
+        }
+
+        &-content {
+            &-form {
+                width: 300px;
+
+                &-comment-text {
+                    max-width: 214px;
+                    min-width: 214px;
+                }
+            }
+        }
+    }
+
+    .connection {
+        padding-bottom: 0;
+
+        &-foundation {
+            &-title {
+                @include font-family-normal-size-line(mont-800, 28px, 34px);
+                text-align: center;
+            }
+
+            &-form {
+                width: 300px;
+
+                &-name {
+                    width: 300px;
+                }
+
+                &-email {
+                    width: 300px;
+                }
+
+                &-text {
+                    max-width: 300px;
+                    min-width: 300px;
+                }
+
+                &-btn {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .footer {
+        padding: 0;
+
+        &-up {
+            padding: 50px 30px;
+            justify-content: center;
+
+            &-left {
+                flex-direction: column;
+
+                &-channels {
+                    margin-right: 0;
+                    margin-bottom: 40px;
+
+                    &-title {
+                        text-align: center;
+                    }
+
+                    &-li {
+                        text-align: center;
+                    }
+                }
+
+                &-projects {
+                    &-title {
+                        text-align: center;
+                    }
+
+                    &-li {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        &-down {
+            padding: 50px 30px;
+            justify-content: center;
+
+            &-years {
+                display: none;
+            }
+        }
+    }
+}
