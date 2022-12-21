@@ -1,6 +1,7 @@
 import {
     menuLang,
     radioDescription,
+    btnGo,
     sectionMain,
     advantagesList,
     etherBlock,
@@ -30,6 +31,7 @@ function languageChange(language) {
     _changeTextBlock(menuLang[2], language.menu.aboutUs);
 
     _changeTextBlock(radioDescription, language.titleDescription);
+    _changeTextBlock(btnGo, language.go);
 
     // Изменение заголовков у блоков
     _changeTextBlock(sectionMain[0].children[0].children[0], language.headings.aboutUs);
@@ -64,7 +66,7 @@ function languageChange(language) {
     //* Донат
     _changeTextBlock(donatblock.children[0].children[1], language.chapterDonat.support);
     _changeTextBlock(donatblock.children[0].children[2], language.chapterDonat.comment);
-    _changeTextBlock(donatblock.children[0].children[7], language.chapterDonat.sending);
+    _changeTextBlock(donatblock.children[0].children[4], language.chapterDonat.sending);
     _changeTextBlock(donatblock.children[1].children[0], language.chapterDonat.fun);
 
     //* Обратная связь

@@ -16,6 +16,82 @@
         justify-content: space-between;
         padding-top: 60px;
 
+        &-mobile-menu {
+            display: none;
+
+            &-checkbox {
+                display: none;
+
+                &:checked ~ .header-transitions-mobile-menu-btn .header-transitions-mobile-menu-icon::before,
+                &:checked ~ .header-transitions-mobile-menu-btn .header-transitions-mobile-menu-icon::after {
+                    top: 0;
+                }
+
+                &:checked ~ .header-transitions-mobile-menu-btn .header-transitions-mobile-menu-icon {
+                    background: transparent;
+                }
+
+                &:checked ~ .header-transitions-mobile-menu-btn .header-transitions-mobile-menu-icon::after {
+                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                }
+
+                &:checked ~ .header-transitions-mobile-menu-btn .header-transitions-mobile-menu-icon::before {
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                }
+            }
+
+            &-btn {
+                position: relative;
+                /* Строчка ниже играничивает по горизонтали размер палочек*/
+                // TODO: Нужно flex прописать
+                display: none;
+                align-items: center;
+                justify-content: center;
+                /* Размер блока с палочками по горизонтали */
+                width: 35px;
+                /* Перемещение блока с палочками по вертикали */
+                height: 30px;
+                /* При наведение на меню изменяется стрелочка на руку */
+                cursor: pointer;
+                /* Скорость изменения, но почему-то разницы нет */
+                transition: 0.4s;
+            }
+
+            &-icon {
+                // TODO: Удаление при адаптиве
+                display: none;
+                position: relative;
+                background: $color-main;
+                /* Размер палочек внутри блока*/
+                width: 90%;
+                /* Резмер по вертикали средней палочки*/
+                height: 4px;
+                /* Скорость анимации изменения значка*/
+                transition: 0.4s;
+
+                &::after {
+                    top: 8px;
+                }
+
+                &::before {
+                    top: -8px;
+                }
+
+                &::after,
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    background: $color-main;
+                    width: 100%;
+                    height: 4px;
+                    transition: 0.4s;
+                }
+            }
+        }
+
         &-menu {
             display: flex;
             justify-content: space-between;
@@ -91,6 +167,7 @@
         box-sizing: border-box;
         text-transform: uppercase;
         color: $color-main;
+        margin: 0;
     }
 
     &-description {
@@ -101,6 +178,8 @@
     }
 
     &-btn {
+        display: block;
+        width: 213px;
         @include font-family-normal-size-line(mont-800, 16px, 20px);
         background-color: transparent;
         text-transform: uppercase;
@@ -110,6 +189,8 @@
         border: 1px solid $color-main;
         border-radius: 76px;
         transition: color 0.5s ease, background-color 0.5s ease;
+        text-decoration: none;
+        text-align: center;
 
         &:hover {
             color: $color-hover;
@@ -339,11 +420,9 @@
                 border: 1px solid $color-bg-light;
                 border-top-left-radius: 50px;
                 top: 264.5px;
-                left: 322px;    
+                left: 322px;
                 opacity: 0;
-                transition: opacity 1s ease,
-                    background-color 0.6s ease,
-                    color 0.6s ease;
+                transition: opacity 1s ease, background-color 0.6s ease, color 0.6s ease;
 
                 &:hover {
                     background-color: $color-inactive;
@@ -363,9 +442,7 @@
                 top: 264.5px;
                 left: 0;
                 opacity: 0;
-                transition: opacity 1s ease,
-                    background-color 0.6s ease,
-                    color 0.6s ease;
+                transition: opacity 1s ease, background-color 0.6s ease, color 0.6s ease;
 
                 &:hover {
                     background-color: $color-inactive;
@@ -389,12 +466,12 @@
                 }
 
                 &:hover {
-                    &> .slider-figure-li-right {
+                    & > .slider-figure-li-right {
                         display: block;
                         opacity: 1;
                     }
 
-                    &> .slider-figure-li-left {
+                    & > .slider-figure-li-left {
                         display: block;
                         opacity: 1;
                     }
@@ -666,7 +743,7 @@
         justify-content: space-between;
 
         &-form {
-            width: 480px;
+            width: 490px;
             padding: 40px;
             box-sizing: border-box;
             background-color: $color-light-gray;
@@ -708,39 +785,6 @@
                 }
             }
 
-            &-sum {
-                display: block;
-                @include font-family-normal-size-line(mont-700, 16px, 20px);
-                color: $color-bg-black;
-                text-transform: uppercase;
-                margin-bottom: 10px;
-
-                &-inp {
-                    width: 140px;
-                    padding: 5px;
-                    background-color: $color-light-gray;
-                    border: 1px solid $color-inactive;
-                    color: $color-bg-black;
-                    @include font-family-normal-size-line(mont-700, 16px, 20px);
-                    margin-bottom: 60px;
-                }
-
-                &-reset {
-                    width: 25px;
-                    height: 25px;
-                    position: absolute;
-                    top: 292px;
-                    left: 164px;
-                    border: none;
-                    background-color: transparent;
-                    cursor: pointer;
-
-                    &-svg {
-                        stroke: $color-bg-light;
-                    }
-                }
-            }
-
             &-transition {
                 width: 228px;
                 display: block;
@@ -765,7 +809,7 @@
     }
 
     &-picture {
-        margin-top: 84px;
+        margin-top: 35px;
         margin-right: 150px;
 
         &-title {

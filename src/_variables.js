@@ -2,6 +2,7 @@
 const languageBtn = document.getElementsByClassName('header-languages')[0].children;
 const menuLang = document.getElementsByClassName('header-transitions-menu-li-link');
 const radioDescription = document.getElementsByClassName('header-description')[0];
+const btnGo = document.getElementsByClassName('header-btn')[0];
 const sectionMain = document.getElementsByClassName('main')[0].children;
 const advantagesList = document.getElementsByClassName('advantages-ol')[0];
 const sliderElement = document.getElementsByClassName('slider-figure')[0].children; // элемент слайдера
@@ -32,6 +33,7 @@ export {
     languageBtn,
     menuLang,
     radioDescription,
+    btnGo,
     sectionMain,
     advantagesList,
     sliderElement,
