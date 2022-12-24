@@ -74,11 +74,11 @@ function languageChange(language) {
     connectForm.children[1].placeholder = `${language.characterConnection.email}`;
     connectForm.children[2].placeholder = `${language.characterConnection.message}`;
     _changeTextBlock(connectForm.children[3], language.characterConnection.file);
-    // TODO: Не забудь вставить ссылку  на переход
     _changeTextBlock(connectForm.children[5], language.characterConnection.safety);
 
     let linkSafety = document.createElement('a');
-    linkSafety.href = '#';
+    linkSafety.href = 'https://reggaeuniverse.ru/blog/privacy/';
+    linkSafety.target = '_blank';
     linkSafety.classList.add('connection-foundation-form-data-link');
     connectForm.children[5].insertAdjacentElement('beforeend', linkSafety);
     _changeTextBlock(linkSafety, ` ${language.characterConnection.safetyLink}`);
