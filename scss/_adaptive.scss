@@ -1,85 +1,92 @@
-//* Ширина 1425px
-@media (max-width: 1425px) {
+//* Ширина 1400
+@media (max-width: 1400px) {
     .wrapper {
-        max-width: 1425px;
+        max-width: 1400px;
+
+        .about {
+            &-us {
+                margin-right: 150px;
+            }
+        }
+    }
+}
+
+//* Ширина 1360
+@media (max-width: 1360px) {
+    .wrapper {
+        max-width: 1360px;
     }
 
-    .slider {
-        &-figure {
-            &-li {
-                &:nth-child(3) {
-                    margin-right: 0;
-                }
+    .advantages {
+        &-list {
+            flex-direction: column;
 
-                &:nth-child(4) {
-                    display: none;
+            &-left {
+                & > .advantages-list-li {
+                    &:nth-child(1) {
+                        border: none;
+                        padding: 25px 0;
+                    }
+
+                    &:nth-child(2) {
+                        border: none;
+                        padding: 25px 0;
+                    }
+
+                    &:nth-child(3) {
+                        border: none;
+                        padding: 25px 0;
+                    }
+                }
+            }
+
+            &-right {
+                & > .advantages-list-li {
+                    &:nth-child(1) {
+                        border: none;
+                        padding: 25px 0;
+                    }
+
+                    &:nth-child(2) {
+                        border: none;
+                        padding: 25px 0;
+                    }
                 }
             }
         }
     }
 }
 
-//* Ширина 1295px
-@media (max-width: 1295px) {
+//* Ширина 1195
+@media (max-width: 1195px) {
     .wrapper {
-        max-width: 1295px;
-
-        &-container {
-            padding: 0 100px 80px;
-        }
+        max-width: 1195px;
     }
 
     .about {
+        flex-direction: column;
+
         &-us {
-            margin-right: 50px;
+            margin-right: 0;
         }
     }
 
-    .slider {
-        &-figure {
-            &-li {
-                &:nth-child(2) {
-                    margin-right: 0;
-                }
-
-                &:nth-child(3) {
-                    display: none;
-                }
-            }
-        }
+    .advantages {
+        padding-top: 340px;
     }
+}
 
-    .ether {
-        &-down {
-            &-nowplay {
-                margin-right: 200px;
-            }
-        }
-    }
-
-    .donat {
-        &-content {
-            &-form {
-                margin-right: 100px;
-            }
-        }
-    }
-
-    .connection {
-        &-foundation {
-            margin-right: 100px;
-        }
+//* Ширина 1000
+@media (max-width: 1000px) {
+    .wrapper {
+        max-width: 1000px;
     }
 
     .footer {
-        padding: 0;
-
         &-up {
-            padding: 50px 100px;
-        }
-
-        &-down {
-            padding: 50px 100px;
+            &-right {
+                display: none;
+            }
         }
     }
 }
@@ -121,43 +128,16 @@
         }
     }
 
-    .projects {
-        padding-bottom: 120px;
-
-        &-links {
-            justify-content: flex-start;
-
-            &-link {
-                &:first-child {
-                    margin-right: 84px;
-                    margin-bottom: 80px;
-                }
-
-                &:nth-child(3) {
-                    margin-right: 182px;
-                }
-            }
-        }
-    }
-
-    .donat {
-        padding-bottom: 120px;
-
-        &-picture {
-            display: none;
-        }
-    }
-
-    .connection {
-        padding-bottom: 120px;
-
-        &-description {
-            display: none;
-        }
-    }
-
     .footer {
         padding: 0;
+
+        &-up {
+            padding: 80px 100px;
+        }
+
+        &-down {
+            padding: 80px 100px;
+        }
     }
 }
 
@@ -167,34 +147,7 @@
         max-width: 840px;
 
         &-container {
-            padding: 0 100px 80px;
-        }
-    }
-
-    .slider {
-        margin-bottom: 120px;
-
-        &-figure {
-            &-li {
-                margin-right: 0;
-
-                &:nth-child(2) {
-                    display: none;
-                }
-            }
-        }
-    }
-
-    .ether {
-        padding-bottom: 120px;
-
-        &-down {
-            flex-direction: column;
-
-            &-nowplay {
-                margin-right: 0;
-                margin-bottom: 70px;
-            }
+            padding: 0 100px;
         }
     }
 
@@ -217,15 +170,13 @@
         padding-bottom: 0;
     }
 
+    .about {
+        padding-top: 0;
+    }
+
     .advantages {
         &-title {
             padding-bottom: 40px;
-        }
-    }
-
-    .connection {
-        &-foundation {
-            margin-right: 0;
         }
     }
 
@@ -278,43 +229,6 @@
         max-width: 585px;
     }
 
-    .ether {
-        padding-bottom: 80px;
-
-        &-down {
-            &-past {
-                display: none;
-            }
-        }
-    }
-
-    .projects {
-        padding-bottom: 80px;
-
-        &-links {
-            &-link {
-                margin: 0 auto 70px;
-
-                &-title {
-                    text-align: center;
-                }
-
-                &-img {
-                    display: block;
-                    margin: 0 auto;
-                }
-
-                &:first-child {
-                    margin: 0 auto 30px;
-                }
-
-                &:nth-child(3) {
-                    margin: 0 auto 70px;
-                }
-            }
-        }
-    }
-
     .footer {
         padding: 0;
 
@@ -329,13 +243,29 @@
     }
 }
 
+//* Ширина 560px
+@media (max-width: 560px) {
+    .wrapper {
+        max-width: 560px;
+    }
+
+    .about {
+        &-us {
+            &-description {
+                width: auto;
+                @include font-family-normal-size-line(mont-500, 17px, 22px);
+            }
+        }
+    }
+}
+
 //* Ширина 510px
 @media (max-width: 510px) {
     .wrapper {
         max-width: 510px;
 
         &-container {
-            padding: 0 10px 100px;
+            padding: 0 10px 120px;
         }
     }
 
@@ -379,57 +309,14 @@
                 }
             }
         }
-
-        &-title {
-            width: 298px;
-            @include font-family-normal-size-line(druk, 38px, 50px);
-        }
     }
 
-    .donat {
-        &-content {
-            &-form {
-                width: 360px;
-
-                &-comment-text {
-                    max-width: 280px;
-                    min-width: 280px;
-                }
-            }
-        }
-    }
-
-    .projects {
-        padding-bottom: 80px;
-
-        &-links {
-            &-link {
-                margin: 0 auto 70px;
-
-                &-title {
-                    text-align: center;
-                }
-
-                &-img {
-                    display: block;
-                    margin: 0 auto;
-                }
-
-                &:first-child {
-                    margin: 0 auto 70px;
-                }
-
-                &:nth-child(3) {
-                    margin: 0 auto 70px;
-                }
-            }
-        }
-    }
-
-    .connection {
-        &-foundation {
-            &-form {
-                margin-left: 25px;
+    .advantages {
+        &-list {
+            &-li {
+                width: auto;
+                height: auto;
+                @include font-family-normal-size-line(mont-500, 17px, 22px);
             }
         }
     }
@@ -453,17 +340,14 @@
         max-width: 440px;
 
         &-container {
-            padding: 0 10px 100px;
+            padding: 0 10px 120px;
         }
     }
 
     .about {
         &-us {
             width: 350px;
-
-            &-info {
-                display: none;
-            }
+            margin-right: 0;
         }
 
         &-circle {
@@ -516,91 +400,8 @@
         }
     }
 
-    .slider {
-        &-figure {
-            &-li {
-                &-title {
-                    width: 240px;
-                }
-
-                &-right {
-                    left: 242px;
-                }
-
-                &:first-child {
-                    width: 300px;
-
-                    & > .slider-figure-li-link {
-                        padding: 20px 50px;
-                    }
-                }
-            }
-        }
-    }
-
-    .projects {
-        padding-bottom: 80px;
-
-        &-links {
-            flex-direction: column;
-
-            &-link {
-                margin: 0 auto 70px;
-
-                &-title {
-                    text-align: center;
-                }
-
-                &-img {
-                    display: block;
-                    margin: 0 auto;
-                }
-
-                &:first-child {
-                    margin: 0 auto 70px;
-                }
-
-                &:nth-child(3) {
-                    margin: 0 auto 70px;
-                }
-            }
-        }
-    }
-
-    .donat {
-        &-content {
-            &-form {
-                width: 340px;
-            }
-        }
-    }
-
-    .connection {
+    .advantages {
         padding-bottom: 0;
-
-        &-foundation {
-            &-form {
-                width: 300px;
-
-                &-name {
-                    width: 300px;
-                }
-
-                &-email {
-                    width: 300px;
-                }
-
-                &-text {
-                    max-width: 300px;
-                    min-width: 300px;
-                }
-
-                &-btn {
-                    display: block;
-                    margin: 0 auto;
-                }
-            }
-        }
     }
 
     .footer {
@@ -646,190 +447,27 @@
         max-width: 360px;
 
         &-container {
-            padding: 0 30px 100px;
-        }
-    }
-
-    .header {
-        &-title {
-            text-align: center;
-        }
-
-        &-description {
-            width: 222px;
-            @include font-family-normal-size-line(mont-600, 18px, 24px);
-            text-align: center;
-            margin: 0 auto 40px;
-        }
-
-        &-btn {
-            margin: 0 auto;
+            padding: 0 30px 120px;
         }
     }
 
     .about {
-        padding-top: 80px;
 
         &-us {
-            width: auto;
+            width: 300px;
 
             &-title {
-                @include font-family-normal-size-line(mont-800, 28px, 34px);
                 text-align: center;
-            }
-
-            &-description {
-                width: 300px;
-                @include font-family-normal-size-line(mont-500, 16px, 21px);
-                text-align: center;
-                margin: 0 auto;
             }
         }
     }
 
     .advantages {
-        padding-top: 290px;
-
-        &-title {
-            @include font-family-normal-size-line(mont-800, 28px, 34px);
-            text-align: center;
-        }
-
-        &-ol {
-            margin-left: 40px;
-
-            &-li {
-                &:last-child {
-                    width: 250px;
-                }
-            }
-        }
-    }
-
-    .slider {
-        &-title {
-            @include font-family-normal-size-line(mont-800, 28px, 34px);
-            text-align: center;
-        }
-
-        &-figure {
-            width: 300px;
-        }
-    }
-
-    .ether {
-        &-title {
-            @include font-family-normal-size-line(mont-800, 28px, 34px);
-            text-align: center;
-        }
-
-        &-control {
-            flex-wrap: wrap;
-
-            &-li {
-                &:nth-child(2) {
-                    margin: 0 115px;
-                }
-
-                &:nth-child(3) {
-                    margin-left: 65px;
-                }
-            }
-        }
-
-        &-down {
-            margin: 0;
-
-            &-nowplay {
-                margin-bottom: 0;
-
-                &-title {
-                    width: 300px;
-                    display: block;
-                    text-align: center;
-                }
-
-                &-unity {
-                    width: 300px;
-                    display: block;
-                    text-align: center;
-                }
-
-                &-track {
-                    width: 300px;
-                    display: block;
-                    text-align: center;
-                }
-
-                &-img {
-                    margin: 0 25px;
-                }
-            }
-        }
-    }
-
-    .projects {
-        padding-bottom: 80px;
-
-        &-title {
-            @include font-family-normal-size-line(mont-800, 28px, 34px);
-            text-align: center;
-        }
-
-        &-links {
-            &-link {
-                margin: 0 auto 70px;
-
-                &-title {
-                    text-align: center;
-                }
-
-                &-img {
-                    display: block;
-                    margin: 0 auto;
-                }
-
-                &:first-child {
-                    margin: 0 auto 70px;
-                }
-
-                &:nth-child(3) {
-                    margin: 0 auto 70px;
-                }
-            }
-        }
-    }
-
-    .donat {
-        &-title {
-            @include font-family-normal-size-line(mont-800, 28px, 34px);
-            text-align: center;
-        }
-
-        &-content {
-            &-form {
-                width: 300px;
-
-                &-comment-text {
-                    max-width: 214px;
-                    min-width: 214px;
-                }
-            }
-        }
-    }
-
-    .connection {
         padding-bottom: 0;
 
-        &-foundation {
-            &-title {
-                @include font-family-normal-size-line(mont-800, 28px, 34px);
-                text-align: center;
-            }
-
-            &-form {
-                margin-left: 0;
-            }
+        &-title {
+            @include font-family-normal-size-line(mont-800, 28px, 34px);
+            text-align: center;
         }
     }
 
@@ -852,13 +490,6 @@
 
         &-container {
             padding: 0 10px 80px;
-        }
-    }
-
-    .header {
-        &-title {
-            width: 300px;
-            @include font-family-normal-size-line(druk, 35px, 42px);
         }
     }
 

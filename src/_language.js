@@ -1,5 +1,5 @@
 import {
-    languageBtn,
+    languageBtnAbout,
     API_language
 } from "./_variables.js";
 

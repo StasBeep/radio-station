@@ -22,7 +22,7 @@ module.exports = {
     devtool: 'source-map',
     entry: path.resolve(__dirname, 'src', 'index.js'),
     output: {
-        filename: 'main.bundle.js',
+        filename: 'about.bundle.js',
     },
 
     // Настройка порта
@@ -87,10 +87,10 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'index.html'),
+            template: path.resolve(__dirname, 'about.html'),
         }),
         new MiniCssExtractPlugin({
-            filename: 'main.bundle.css',
+            filename: 'about.bundle.css',
         }),
         // Анализатор занятости места
         // new BundleAnalyzerPlugin(),
