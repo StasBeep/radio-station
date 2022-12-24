@@ -1,15 +1,97 @@
-//* Ширина 768px
-@media (max-width: 768px) {
+//* Ширина 1425px
+@media (max-width: 1425px) {
     .wrapper {
-        max-width: 768px;
+        max-width: 1425px;
+    }
+
+    .slider {
+        &-figure {
+            &-li {
+                &:nth-child(3) {
+                    margin-right: 0;
+                }
+
+                &:nth-child(4) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+//* Ширина 1295px
+@media (max-width: 1295px) {
+    .wrapper {
+        max-width: 1295px;
 
         &-container {
-            padding: 0 82px 165px;
+            padding: 0 100px 80px;
         }
     }
 
-    .main {
-        padding-bottom: 0;
+    .about {
+        &-us {
+            margin-right: 50px;
+        }
+    }
+
+    .slider {
+        &-figure {
+            &-li {
+                &:nth-child(2) {
+                    margin-right: 0;
+                }
+
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .ether {
+        &-down {
+            &-nowplay {
+                margin-right: 200px;
+            }
+        }
+    }
+
+    .donat {
+        &-content {
+            &-form {
+                margin-right: 100px;
+            }
+        }
+    }
+
+    .connection {
+        &-foundation {
+            margin-right: 100px;
+        }
+    }
+
+    .footer {
+        padding: 0;
+
+        &-up {
+            padding: 50px 100px;
+        }
+
+        &-down {
+            padding: 50px 100px;
+        }
+    }
+}
+
+//* Ширина 975px
+@media (max-width: 975px) {
+    .wrapper {
+        max-width: 975px;
+
+        &-container {
+            padding: 0 100px 80px;
+        }
     }
 
     .about {
@@ -26,10 +108,6 @@
         padding-top: 390px;
         padding-bottom: 120px;
 
-        &-title {
-            padding-bottom: 40px;
-        }
-
         &-ol {
             flex-direction: column;
 
@@ -39,41 +117,6 @@
                 &:last-child {
                     padding-bottom: 0;
                 }
-            }
-        }
-    }
-
-    .slider {
-        margin-bottom: 120px;
-
-        &-figure {
-            &-li {
-                margin-right: 0;
-
-                &:nth-child(2) {
-                    display: none;
-                }
-
-                &:nth-child(3) {
-                    display: none;
-                }
-
-                &:nth-child(4) {
-                    display: none;
-                }
-            }
-        }
-    }
-
-    .ether {
-        padding-bottom: 120px;
-
-        &-down {
-            flex-direction: column;
-
-            &-nowplay {
-                margin-right: 0;
-                margin-bottom: 70px;
             }
         }
     }
@@ -110,6 +153,79 @@
 
         &-description {
             display: none;
+        }
+    }
+
+    .footer {
+        padding: 0;
+    }
+}
+
+//* Ширина 840px
+@media (max-width: 840px) {
+    .wrapper {
+        max-width: 840px;
+
+        &-container {
+            padding: 0 100px 80px;
+        }
+    }
+
+    .slider {
+        margin-bottom: 120px;
+
+        &-figure {
+            &-li {
+                margin-right: 0;
+
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .ether {
+        padding-bottom: 120px;
+
+        &-down {
+            flex-direction: column;
+
+            &-nowplay {
+                margin-right: 0;
+                margin-bottom: 70px;
+            }
+        }
+    }
+
+    .footer {
+        padding: 0;
+    }
+}
+
+//* Ширина 768px
+@media (max-width: 768px) {
+    .wrapper {
+        max-width: 768px;
+
+        &-container {
+            padding: 0 82px 165px;
+        }
+    }
+
+    .main {
+        padding-bottom: 0;
+    }
+
+    .advantages {
+        &-title {
+            padding-bottom: 40px;
+        }
+    }
+
+    .connection {
+        &-foundation {
+            margin-right: 0;
         }
     }
 
@@ -266,7 +382,6 @@
 
         &-title {
             width: 298px;
-            text-align: center;
             @include font-family-normal-size-line(druk, 38px, 50px);
         }
     }
@@ -307,6 +422,14 @@
                 &:nth-child(3) {
                     margin: 0 auto 70px;
                 }
+            }
+        }
+    }
+
+    .connection {
+        &-foundation {
+            &-form {
+                margin-left: 25px;
             }
         }
     }
@@ -528,6 +651,10 @@
     }
 
     .header {
+        &-title {
+            text-align: center;
+        }
+
         &-description {
             width: 222px;
             @include font-family-normal-size-line(mont-600, 18px, 24px);
@@ -583,6 +710,10 @@
         &-title {
             @include font-family-normal-size-line(mont-800, 28px, 34px);
             text-align: center;
+        }
+
+        &-figure {
+            width: 300px;
         }
     }
 
@@ -695,11 +826,22 @@
                 @include font-family-normal-size-line(mont-800, 28px, 34px);
                 text-align: center;
             }
+
+            &-form {
+                margin-left: 0;
+            }
         }
     }
 
     .footer {
         padding: 0;
+    }
+}
+
+//* Ширина 335px
+@media (max-width: 335px) {
+    .wrapper {
+        max-width: 335px;
     }
 }
 
