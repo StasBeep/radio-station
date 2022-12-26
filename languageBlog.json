@@ -25,6 +25,16 @@
           "counterProject": "Проекта",
           "broadcast": "Нас вещают"
         },
+        "pageAboutUs": {
+          "description": "Рэгги-Вселенная - первое и единственное интернет-радио в России, которое вещает Рэгги, Даб и Дансхол. Мы стартовали как публичная страница в соцсети vk с целью способствовать популяризации любимой нами музыки там, где её почти никто не слушал. Со временем пришла шальная идея запустить онлайн-радио, в успех которого даже мы сами до конца толком не верили. Сегодня же нас слушает уже вся планета! Во многом потому, что мы верим в универсальный, вселенский характер Рэгги - зародившаяся на Ямайке музыка давно перешагнула все границы и стала глобальным феноменом. В нашем эфире Вы можете слушать Регги со всех уголков света и на всех языках - бесплатно и безо всякой рекламы в эфире. Только музыка!",
+          "info": {
+            "project": "1. Проект запущен в 2014, а радио в эфире с 2018. Сегодня нас слушает свыше 6000+ слушателей ежемесячно на всех континентах. Вещание ведётся онлайн на сайте, а также в мобильном приложении.",
+            "ourFormat": "2. Наш формат: Рэгги, Даб и Дансхол, а также все другие родственные им стили музыки - со всего мира и на всех языках.",
+            "regular": "3. Регулярно пополняем программу вещания новой музыкой с учётом вкусов подписчиков. На основе голосований, а также по ежемесячному рейтингу: постим в блог рецензии на альбомы и сборники и ежемесячно считаем лайки. Что нравится подписчикам - идёт в эфир.",
+            "exclusive": "4. Эксклюзив! - артисты и продюсеры со всего света присылают нам свои треки, иногда задолго до официального релиза.",
+            "artists": "5. Уже более 30 артистов прислали приветствия радиослушателям (нескольких ямайцев даже обучили фразам на русском). Среди них Buckey Ranks, Kimmy Gold, Original Uman, Anthony John, Aza Lineage, JAH Niceness, Ginja, Ras Oney, Mr. Spaulding и другие. Из полученного материала мы миксуем специальные радио-дабплейты. Услышать их можно только в эфире и нигде больше в интернете. Впрочем, иногда мы играем их на вечеринках, в которых принимаем участие или организовываем."
+          }
+        },
         "chapterAdvantages": {
           "first": "Проект запущен в 2014, а радио в эфире с 2018",
           "second": "Регулярно пополняем программу вещания новой музыкой",
@@ -80,6 +90,16 @@
           "ether": "Ether with",
           "counterProject": "Project",
           "broadcast": "We are being broadcast"
+        },
+        "pageAboutUs": {
+          "description": "Reggae Universe is the first and only Internet radio in Russia that broadcasts Reggae, Dub and Dancehall. We started as a public page on the vk social network in order to promote the popularization of our favorite music where almost no one listened to it. Over time, a crazy idea came to launch an online radio, in the success of which even we ourselves did not really believe until the end. Today, the whole planet is already listening to us! Largely because we believe in the universal, universal character of Reggae - the music that originated in Jamaica has long crossed all boundaries and has become a global phenomenon. On our air you can listen to Reggae from all corners of the world and in all languages - for free and without any advertising on the air. Only music!",
+          "info": {
+            "project": "1. The project was launched in 2014, and the radio has been on the air since 2018. Today, over 6000+ listeners listen to us every month on all continents. Broadcasting is carried out online on the website, as well as in the mobile application.",
+            "ourFormat": "2. Our format: Reggae, Dub and Dancehall, as well as all other related styles of music - from all over the world and in all languages.",
+            "regular": "3. We regularly update the broadcast program with new music, taking into account the tastes of subscribers. Based on votes, as well as on a monthly rating: we post reviews of albums and compilations to the blog and count likes monthly. What subscribers like goes on the air.",
+            "exclusive": "4. Exclusive! - artists and producers from all over the world send us their tracks, sometimes long before the official release.",
+            "artists": "5. More than 30 artists have already sent greetings to radio listeners (several Jamaicans have even been taught phrases in Russian). Among them are Buckey Ranks, Kimmy Gold, Original Man, Anthony John, Aka Lineage, JAH Niceness, Ginja, Ras Only, Mr. Spaulding and others. From the resulting material, we mix special radio dubplates. You can hear them only on the air and nowhere else on the Internet. However, sometimes we play them at parties in which we take part or organize."
+          }
         },
         "chapterAdvantages": {
           "first": "The project was launched in 2014, and the radio has been on the air since 2018",
