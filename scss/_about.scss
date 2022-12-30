@@ -336,6 +336,7 @@
 
             &-channels {
                 margin-right: 120px;
+                list-style-type: none;
 
                 &-title {
                     @include font-family-normal-size-line(mont-600, 18px, 22px);
@@ -369,6 +370,8 @@
             }
 
             &-projects {
+                list-style-type: none;
+
                 &-title {
                     @include font-family-normal-size-line(mont-600, 18px, 22px);
                     margin-bottom: 15px;
