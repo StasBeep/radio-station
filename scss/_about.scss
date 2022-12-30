@@ -8,6 +8,7 @@
 .header {
     padding-bottom: 120px;
     box-sizing: border-box;
+    background-color: $background-main;
 
     &-transitions {
         display: flex;
@@ -61,7 +62,7 @@
                 // TODO: Удаление при адаптиве
                 display: none;
                 position: relative;
-                background: $color-main;
+                background: $color-hover;
                 /* Размер палочек внутри блока*/
                 width: 90%;
                 /* Резмер по вертикали средней палочки*/
@@ -82,7 +83,7 @@
                     content: "";
                     display: block;
                     position: absolute;
-                    background: $color-main;
+                    background: $color-hover;
                     width: 100%;
                     height: 4px;
                     transition: 0.4s;

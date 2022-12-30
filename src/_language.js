@@ -1,11 +1,10 @@
 import {
-    languageBtnAbout,
+    languageBtn,
     API_language
 } from "./_variables.js";
-
 import {
     languageChange
-} from "./_functions.js";
+} from './_functions.js';
 
 let languagesArrayContent = [];
 
@@ -22,12 +21,14 @@ if (response.ok) {
     console.log("Ошибка HTTP: " + response.status);
 }
 
+console.log(languagesArrayContent);
+
 // Переменная для эффекта наведения
 let vision = true;
 
 // Нажатие кнопки смены языка (en)
 languageBtn[0].addEventListener('click', () => {
-    languageBtn[0].style.color = '#ffffff';
+    languageBtn[0].style.color = '#000000';
     languageBtn[1].style.color = '#888888';
     vision = !vision;
 
@@ -35,7 +36,7 @@ languageBtn[0].addEventListener('click', () => {
 });
 
 languageBtn[1].addEventListener('click', () => {
-    languageBtn[1].style.color = '#ffffff';
+    languageBtn[1].style.color = '#000000';
     languageBtn[0].style.color = '#888888';
     vision = !vision;
 
@@ -45,12 +46,12 @@ languageBtn[1].addEventListener('click', () => {
 // Эффект наведения (сохранение этих свойств)
 languageBtn[0].addEventListener('mouseover', () => {
     if (vision)
-        languageBtn[0].style.color = '#ffffff';
+        languageBtn[0].style.color = '#000000';
 });
 
 languageBtn[1].addEventListener('mouseover', () => {
     if (!vision)
-        languageBtn[1].style.color = '#ffffff';
+        languageBtn[1].style.color = '#000000';
 });
 
 languageBtn[0].addEventListener('mouseout', () => {
