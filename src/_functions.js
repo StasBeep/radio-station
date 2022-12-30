@@ -44,9 +44,6 @@ function languageChange(language) {
 
     //* Нас вещают
     _changeTextBlock(sectionMain[0].children[0].children[1], language.chapterAboutUs.description);
-    _changeTextBlock(sectionMain[0].children[0].children[2].children[0].children[1], language.chapterAboutUs.ether);
-    _changeTextBlock(sectionMain[0].children[0].children[2].children[1].children[1], language.chapterAboutUs.counterProject);
-    _changeTextBlock(sectionMain[0].children[0].children[2].children[2].children[1], language.chapterAboutUs.broadcast);
 
     //* Преимущества
     _changeTextBlock(advantagesList.children[0], language.chapterAdvantages.first);

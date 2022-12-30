@@ -178,6 +178,14 @@
             &-li {
                 margin-right: 0;
 
+                &-right {
+                    opacity: 1;
+                }
+
+                &-left {
+                    opacity: 1;
+                }
+
                 &:nth-child(2) {
                     display: none;
                 }
@@ -280,12 +288,6 @@
 
     .ether {
         padding-bottom: 80px;
-
-        &-down {
-            &-past {
-                display: none;
-            }
-        }
     }
 
     .projects {
@@ -383,6 +385,14 @@
         &-title {
             width: 298px;
             @include font-family-normal-size-line(druk, 38px, 50px);
+        }
+    }
+
+    .ether {
+        &-down {
+            &-past {
+                width: 320px;
+            }
         }
     }
 
@@ -765,6 +775,11 @@
                     margin: 0 25px;
                 }
             }
+
+            &-past {
+                width: 300px;
+                margin-top: 50px;
+            }
         }
     }
 
@@ -842,6 +857,12 @@
 @media (max-width: 335px) {
     .wrapper {
         max-width: 335px;
+    }
+
+    .about {
+        &-us {
+            width: 300px;
+        }
     }
 }
 
