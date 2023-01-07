@@ -1,6 +1,6 @@
 {
   "name": "radio-station",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "РАДИОСТАНЦИЯ \"Reggae Universe\"",
   "main": "index.js",
   "scripts": {

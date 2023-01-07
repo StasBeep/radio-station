@@ -15,9 +15,9 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     // Готовый продукт
-    // mode: 'production',
+    mode: 'production',
     // Сборка для разработки
-    mode: 'development',
+    // mode: 'development',
     // Подключение map к сборке
     devtool: 'source-map',
     entry: path.resolve(__dirname, 'src', 'index.js'),
