@@ -1,3 +1,4 @@
+// Для изменения года в конце страницы автоматически
 import {
     footerYear
 } from "./_variables.js";

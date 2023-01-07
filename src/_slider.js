@@ -10,7 +10,7 @@ import {
     sideSliders
 } from './_slider.operation.js'
 
-
+// ! API
 // в объектах в разделе text не больше 450 символов
 let arrObjSlider = [];
 

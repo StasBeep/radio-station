@@ -50,6 +50,12 @@ btnFour.addEventListener('click', () => {
 
 deleteAnimation();
 
+/**
+ * Функция откртытия или закртия того или иной карточки
+ * @param {string} data Номер положения
+ * @param {bool} condition Открыт - закрыт
+ * @returns состояние
+ */
 function definitionData(data, condition) {
     switch (data) {
         case '1':
@@ -68,6 +74,13 @@ function definitionData(data, condition) {
     return !condition;
 }
 
+/**
+ * Функция отображения svg стрелки и пояснений
+ * @param {svg} btn кнопка (тег) 
+ * @param {btn} descr 
+ * @param {string} link 
+ * @param {description} condition 
+ */
 function openingInformation(btn, descr, link, condition) {
     if (condition) {
         btn.innerHTML = `${open}`;
@@ -80,6 +93,10 @@ function openingInformation(btn, descr, link, condition) {
     }
 }
 
+/**
+ * Функция изменения положения карточек (наши проекты)
+ * При диапазоне меньше 600px функция не отрабатывает
+ */
 function deleteAnimation() {
     if (window.innerWidth > '599') {
         setInterval(() => {

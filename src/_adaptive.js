@@ -1,3 +1,4 @@
+// Адаптив меню для страницы index.html
 import {
     menuSocial,
     menuLink,
@@ -23,6 +24,9 @@ checkEl.addEventListener('click', () => {
     }
 });
 
+/**
+ * Функция выравнивающая меню по центру в зависимости от расширения экрана
+ */
 export function sizeMenu() {
     if (window.innerWidth <= 768 && window.innerWidth > 725) {
         styleChange768(toggle);
@@ -45,10 +49,10 @@ export function sizeMenu() {
 
 /**
  * Определение стилей при изменении языка
- * на маленьком расширении
+ * на маленьком расширении 768px
  * @param {bool} language 
  */
-function styleChange768(language) {
+ function styleChange768(language) {
     if (language) {
         menuLink.style.top = '63px';
         menuLink.style.left = '178px';
@@ -69,7 +73,7 @@ function styleChange768(language) {
 
 /**
  * Определение стилей при изменении языка
- * на маленьком расширении
+ * на маленьком расширении 725px
  * @param {bool} language 
  */
 function styleChange725(language) {
@@ -93,7 +97,7 @@ function styleChange725(language) {
 
 /**
  * Определение стилей при изменении языка
- * на маленьком расширении
+ * на маленьком расширении 600px
  * @param {bool} language 
  */
 function styleChange600(language) {
@@ -112,7 +116,7 @@ function styleChange600(language) {
 
 /**
  * Определение стилей при изменении языка
- * на маленьком расширении
+ * на маленьком расширении 560px
  * @param {bool} language 
  */
 function styleChange560(language) {
@@ -131,7 +135,7 @@ function styleChange560(language) {
 
 /**
  * Определение стилей при изменении языка
- * на маленьком расширении
+ * на маленьком расширении 480px
  * @param {bool} language 
  */
 function styleChange480(language) {
@@ -151,7 +155,7 @@ function styleChange480(language) {
 
 /**
  * Определение стилей при изменении языка
- * на маленьком расширении
+ * на маленьком расширении 450px
  * @param {bool} language 
  */
 function styleChange450(language) {
@@ -171,7 +175,7 @@ function styleChange450(language) {
 
 /**
  * Определение стилей при изменении языка
- * на маленьком расширении
+ * на маленьком расширении 375px
  * @param {bool} language 
  */
 function styleChange375(language) {
@@ -196,7 +200,7 @@ function styleChange375(language) {
 
 /**
  * Определение стилей при изменении языка
- * на маленьком расширении
+ * на маленьком расширении 320px
  * @param {bool} language 
  */
 function styleChange320(language) {
