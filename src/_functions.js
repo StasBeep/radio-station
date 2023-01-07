@@ -35,7 +35,6 @@ function languageChange(language) {
 
     // Изменение заголовков у блоков
     _changeTextBlock(sectionMain[0].children[0].children[0], language.headings.aboutUs);
-    _changeTextBlock(sectionMain[1].children[0], language.headings.advantages);
     _changeTextBlock(sectionMain[2].children[0], language.headings.blog);
     _changeTextBlock(sectionMain[3].children[0], language.headings.ether);
     _changeTextBlock(sectionMain[4].children[0], language.headings.project);
