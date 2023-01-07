@@ -15,15 +15,12 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     // Готовый продукт
-    // mode: 'production',
+    mode: 'production',
     // Сборка для разработки
-    mode: 'development',
+    // mode: 'development',
     // Подключение map к сборке
     devtool: 'source-map',
     entry: path.resolve(__dirname, 'src', 'index.js'),
-    output: {
-        filename: 'about.bundle.js',
-    },
 
     // Настройка порта
     devServer: {
@@ -65,7 +62,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader']
+                use: [MiniCssExtractPlugin.loader, 'css-loader'],
             },
             {
                 test: /\.(png|svg|jpg|gif|mp3)$/,
@@ -88,6 +85,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'about.html'),
+            filename: 'about.html'
         }),
         new MiniCssExtractPlugin({
             filename: 'about.bundle.css',
@@ -100,7 +98,7 @@ module.exports = {
 
     // Пересборка, так как CleanWebpackPlugin() не работает
     output: {
-        filename: '[name].bundle.js',
+        filename: 'about.bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
