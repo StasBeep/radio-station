@@ -1,13 +1,23 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// Нужен для анализа, при финальной сборке проверить на память
+const {
+    BundleAnalyzerPlugin
+} = require('webpack-bundle-analyzer');
 const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin');
 
+
+// Оптимизация
+const TerserPlugin = require('terser-webpack-plugin');
+
 module.exports = {
     // Готовый продукт
-    // mode: 'production',
+    mode: 'production',
     // Сборка для разработки
-    mode: 'development',
+    // mode: 'development',
     // Подключение map к сборке
     devtool: 'source-map',
     entry: path.resolve(__dirname, 'src', 'index.js'),
@@ -15,8 +25,20 @@ module.exports = {
         filename: 'main.bundle.js',
     },
 
+    // Настройка порта
+    devServer: {
+        port: 9000,
+    },
+
+    // Для асинхронных запросов, чтобы не вызывалась ошибка при сборке
     experiments: {
-        topLevelAwait: true,
+        topLevelAwait: true
+    },
+
+    // https://github.com/webpack-contrib/terser-webpack-plugin
+    optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin()],
     },
 
     module: {
@@ -36,12 +58,50 @@ module.exports = {
                         }],
                     }
                 },
+            },
+            {
+                test: /\.s[ca]ss$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+            },
+            {
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
+            },
+            {
+                test: /\.(png|svg|jpg|gif|mp3)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]',
+                    context: ''
+                }
+            },
+            {
+                test: /\.(eot|ttf|woff|woff2)$/,
+                loader: "file-loader",
+                options: {
+                    name: "[path][name].[ext]",
+                }
             }
         ]
     },
 
     plugins: [
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'index.html'),
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'main.bundle.css',
+        }),
+        // Анализатор занятости места
+        // new BundleAnalyzerPlugin(),
         // Очистка перед каждой сборкой
         new CleanWebpackPlugin(),
-    ]
+    ],
+
+    // Пересборка, так как CleanWebpackPlugin() не работает
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+        clean: true,
+    },
 }

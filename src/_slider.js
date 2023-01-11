@@ -1,18 +1,17 @@
 import {
-    sliderBack,
-    sliderForward,
-    API_slider
-} from './_variables.js';
-
+    sliderContent,
+    elementStyleHoverHidden,
+    elementStyleHoverVisible
+} from "./_functions.js";
 import {
-    elementLoaded,
-    checkCondition,
-    sideSliders
-} from './_slider.operation.js'
+    sliderElement,
+    sliderBtnRight,
+    sliderBtnLeft,
+    API_slider
+} from "./_variables.js";
 
-// ! API
-// в объектах в разделе text не больше 450 символов
-let arrObjSlider = [];
+let contentSlider = [];
+let numberContent = 0;
 
 // Пока не выполнится промис через API (ожидание)
 let response = await fetch(`${API_slider}`);
@@ -21,46 +20,55 @@ if (response.ok) {
     // ожидание загрузки .json файла
     let json = await response.json();
     // перемещение содержимого в переменную слайдера
-    arrObjSlider = json.arrObjSlider;
+    contentSlider = json.contentSlider;
 } else {
     // В случае ошибки
     console.log("Ошибка HTTP: " + response.status);
 }
 
+numberContent = sliderContent(numberContent, contentSlider);
 
-// первоначальное состояние
-let condition = 0;
-
-// состояние боковых элементов слайдера
-let sideLeft = arrObjSlider.length - 1;
-let sideRight = 1;
-
-// События выгрузки контента слайдера в первый момент времени
-document.addEventListener('DOMContentLoaded', elementLoaded(arrObjSlider[condition]));
-document.addEventListener('DOMContentLoaded', sideSliders(arrObjSlider[sideLeft], arrObjSlider[sideRight]));
-
-// События нажатия на перелистывание слайдера
-sliderBack.addEventListener('click', () => {
-    condition = checkCondition(condition - 1, arrObjSlider.length);
-    sideLeft = checkCondition(sideLeft - 1, arrObjSlider.length);
-    sideRight = checkCondition(sideRight - 1, arrObjSlider.length);
-    elementLoaded(arrObjSlider[condition]);
-    sideSliders(arrObjSlider[sideLeft], arrObjSlider[sideRight]);
+sliderBtnRight.addEventListener('click', () => {
+    clearInterval(intervalSlider);
+    numberContent = sliderContent(numberContent + 1, contentSlider);
 });
 
-sliderForward.addEventListener('click', () => {
-    condition = checkCondition(condition + 1, arrObjSlider.length);
-    sideLeft = checkCondition(sideLeft + 1, arrObjSlider.length);
-    sideRight = checkCondition(sideRight + 1, arrObjSlider.length);
-    elementLoaded(arrObjSlider[condition]);
-    sideSliders(arrObjSlider[sideLeft], arrObjSlider[sideRight]);
+sliderBtnLeft.addEventListener('click', () => {
+    clearInterval(intervalSlider);
+    numberContent = sliderContent(numberContent - 1, contentSlider);
 });
 
-// События изменения слайдера автоматически (30 секунд)
-setInterval(() => {
-    condition = checkCondition(condition + 1, arrObjSlider.length);
-    sideLeft = checkCondition(sideLeft + 1, arrObjSlider.length);
-    sideRight = checkCondition(sideRight + 1, arrObjSlider.length);
-    elementLoaded(arrObjSlider[condition]);
-    sideSliders(arrObjSlider[sideLeft], arrObjSlider[sideRight]);
-}, 30000)
+// Эффект наведения на дополнительные блоки слайдера
+sliderElement[1].addEventListener('mouseover', () => {
+    elementStyleHoverHidden();
+});
+
+sliderElement[1].addEventListener('mouseout', () => {
+    elementStyleHoverVisible();
+});
+
+sliderElement[2].addEventListener('mouseover', () => {
+    elementStyleHoverHidden();
+});
+
+sliderElement[2].addEventListener('mouseout', () => {
+    elementStyleHoverVisible();
+});
+
+sliderElement[3].addEventListener('mouseover', () => {
+    elementStyleHoverHidden();
+});
+
+sliderElement[3].addEventListener('mouseout', () => {
+    elementStyleHoverVisible();
+});
+
+// Обнуление массива слайдера взятого с API
+window.addEventListener('unload', () => {
+    contentSlider = null;
+});
+
+// Через каждые 10 секунд смена контента слайдера
+let intervalSlider = setInterval(() => {
+    numberContent = sliderContent(numberContent + 1, contentSlider);
+}, 10000);

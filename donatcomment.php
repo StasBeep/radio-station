@@ -5,18 +5,13 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
-$name = $_POST['name'];
-$email = $_POST['email'];
-$text = $_POST['text'];
-$file = $_FILES['myfile'];
+$comment = $_POST['comment'];
 
 // Формирование самого письма
-$title = "Reggae Universe";
+$title = "Reggae Universe Donat";
 $body = "
-<h2>Reggae Universe</h2>
-<b>Имя:</b> $name<br>
-<b>Почта:</b> $email<br><br>
-<b>Сообщение:</b><br>$text
+<h2>Reggae Universe click donat</h2>
+<b>Комментарий:</b> $comment<br>
 ";
 
 // Настройки PHPMailer
@@ -40,19 +35,6 @@ try {
     $mail->addAddress('youremail@yandex.ru');  
     $mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
 
-    // Прикрипление файлов к письму
-if (!empty($file['name'][0])) {
-    for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
-        $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
-        $filename = $file['name'][$ct];
-        if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
-            $mail->addAttachment($uploadfile, $filename);
-            $rfile[] = "Файл $filename прикреплён";
-        } else {
-            $rfile[] = "Не удалось прикрепить файл $filename";
-        }
-    }   
-}
 // Отправка сообщения
 $mail->isHTML(true);
 $mail->Subject = $title;

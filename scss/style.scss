@@ -1,7 +1,7 @@
-@import "_variables";
-@import "_fonts";
-@import "_mix";
-@import "_index";
-@import "_aboutus";
-@import "_keyframes";
-@import '_adaptive';
+@import "../css/normalize.css";
+@import "./variables";
+@import "./fonts";
+@import "./mix";
+@import "./animations";
+@import "./index";
+@import "./adaptive";

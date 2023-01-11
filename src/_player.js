@@ -1,38 +1,32 @@
-/**
- * Элементы контроля плеера
- * 1. изменение состояния кнопок при нажатии
- * 2. изменение эквалайзера (gif)
- */
 import {
-    numPlay,
-    numStop,
-    audioEl
-} from './_variables.js';
+    btnPlayPause,
+    btnSound,
+    inpVolume
+} from "./_variables.js";
+import {
+    playMusic,
+    clickChangesVolume,
+    changeLevelVolume
+} from "./_functions.js";
 
-/**
- * Подключение библиотеки эквалайзера
- * for documentation and more demos,
- * visit https://audiomotion.dev
- * подробнее: https://jsfiddle.net/Stanislav_Osk/ebpk9uox/3/
- */
-import AudioMotionAnalyzer from './_audioMotion-analyzer.js';
+// Ключ отображения работы звукового потока
+let audioStream = false;
+let statusVolume = {
+    sound: true,
+    saveLevelVolume: Number(inpVolume.value)
+}; // статус on/off звука
 
-new AudioMotionAnalyzer(
-    document.getElementById('equalizer'), {
-        source: audioEl,
-        height: 300,
-        mode: 3,
-        barSpace: .6,
-        showLeds: true
-    }
-);
-
-numPlay.addEventListener('click', () => {
-    numPlay.style.display = 'none';
-    numStop.style.display = 'block';
+// Запуск/остановка звукового потока
+btnPlayPause.addEventListener('click', () => {
+    audioStream = playMusic(audioStream);
 });
 
-numStop.addEventListener('click', () => {
-    numStop.style.display = 'none';
-    numPlay.style.display = 'block';
+// Отключение/включение звука у потока
+btnSound.addEventListener('click', () => {
+    statusVolume = clickChangesVolume(statusVolume);
+});
+
+// Состояние изменения цвета ползунка
+inpVolume.addEventListener('input', () => {
+    statusVolume.saveLevelVolume = changeLevelVolume(inpVolume.value);
 });

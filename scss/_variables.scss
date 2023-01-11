@@ -1,53 +1,43 @@
 /* Переменные (через $) */
-$whcolor: #ffffff;
-$rear-panel: #283673;
-$front-panel: #FFFF66;
-$main-color: #feec92;
-$main-text: #5537ae;
-$fill-logo: #7f2da9;
-$fill-shadow: #ad60d4;
-$cursor-color: #ff0000;
-$contour: #00cc00;
-$social-face: #3b5998;
-$instagram: #dd2a7b;
-$social-vk: #597da3;
-$twitter: #00acee;
+$color-main: #ffffff;
+$background-main: #fffdf4;
+$color-inactive: #888888;
+$color-hover: #000000;
+$color-bg-black: #111111;
+$color-stroke-circle: #222222;
+$color-bg-light: #181818;
+$color-border: #b3b3b3;
+$twitter: #1faee9;
+$play-market: #35d2ab;
+$vkontakte: #597da3;
+$color-light-gray: #ecebe6;
+$bg-circle: #fdfdfd;
 
 /* === wrapper === */
 /* Обёртки - отдельный блок */
 .wrapper {
     /*Максимальная ширина страницы и выравнивание содержимого по центру*/
-    max-width: 1440px;
+    max-width: 1600px;
     margin: 0 auto;
-    background-color: $front-panel;
 
     //Отступы по краям
     &-container {
-        padding: 0 120px;
+        padding: 0 200px;
         box-sizing: border-box;
     }
 
     /* Обёртка для прижатия подвала к нижней части */
     &-forcontent {
-        min-height: 100vh;
-        /* 100 видимых высот */
+        min-height: 100vh; /* 100 видимых высот */
         display: flex;
         flex-direction: column;
-        //background-color: $rear-panel;
-        background: url(../img/bg-rear.jpg);
-        background-size: contain;
     }
 }
-
 /* end === wrapper === end */
-
-
 
 /* === content-without-footer === */
 /* Основная часть без footer */
 .content-without-footer {
-    flex-grow: 1;
-    /* Отношение блоков */
+    flex-grow: 1; /* Отношение блоков */
 }
-
 /* end === content-without-footer === end */

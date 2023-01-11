@@ -1,8 +1,7 @@
-// Для изменения года в конце страницы автоматически
 import {
-    footerYear
+    footerYearContent
 } from "./_variables.js";
 
 const now = new Date().getFullYear();
 
-footerYear.textContent = `2019-${now} by reggaeuniverse.ru`;
+footerYearContent.textContent = `2014-${now} Ⓒ — Reggae Universe`;
