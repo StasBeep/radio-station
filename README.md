@@ -91,4 +91,4 @@
 Изменяется только разработчиком (изменять content аккуратно для других пользователей, кроме разработчика)
 
 # Подпись
-<img src="https://github.com/StasBeep/radio-station/blob/main/Oskol%20Stanislav.png" alt="logo" width="421" height="206">
+<img src="https://github.com/StasBeep/StasBeep/blob/main/Stanislav%20Oskol.jpg" alt="logo" width="421" height="206">
