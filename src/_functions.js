@@ -29,6 +29,7 @@ function languageChange(language) {
     _changeTextBlock(menuLang[0], language.menu.main);
     _changeTextBlock(menuLang[1], language.menu.blog);
     _changeTextBlock(menuLang[2], language.menu.aboutUs);
+    _changeTextBlock(menuLang[3], language.menu.donat);
 
     _changeTextBlock(radioDescription, language.titleDescription);
     _changeTextBlock(btnGo, language.go);

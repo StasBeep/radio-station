@@ -254,6 +254,56 @@
     }
 }
 
+//* Ширина 735px
+@media (max-width: 735px) {
+    .header {
+        &-transitions {
+            &-mobile-menu {
+                &-checkbox {
+                    &:checked ~ .header-transitions-menu {
+                        display: block;
+                    }
+                }
+
+                &-btn {
+                    display: block;
+                }
+
+                &-icon {
+                    display: block;
+                }
+            }
+
+            &-menu {
+                display: none;
+                position: absolute;
+                flex-direction: column;
+                top: 100px;
+                left: 47%;
+
+                &-li {
+                    margin-bottom: 20px;
+                    text-align: center;
+
+                    &-link {
+                        margin: 0 auto;
+                    }
+
+                    &::before {
+                        content: "";
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        &-title {
+            width: 298px;
+            @include font-family-normal-size-line(druk, 38px, 50px);
+        }
+    }
+}
+
 //* Ширина 630px
 @media (max-width: 630px) {
     .wrapper {
@@ -341,53 +391,6 @@
         }
     }
 
-    .header {
-        &-transitions {
-            &-mobile-menu {
-                &-checkbox {
-                    &:checked ~ .header-transitions-menu {
-                        display: block;
-                    }
-                }
-
-                &-btn {
-                    display: block;
-                }
-
-                &-icon {
-                    display: block;
-                }
-            }
-
-            &-menu {
-                display: none;
-                position: absolute;
-                flex-direction: column;
-                top: 100px;
-                left: 40%;
-
-                &-li {
-                    margin-bottom: 20px;
-                    text-align: center;
-
-                    &-link {
-                        margin: 0 auto;
-                    }
-
-                    &::before {
-                        content: "";
-                        margin-right: 0;
-                    }
-                }
-            }
-        }
-
-        &-title {
-            width: 298px;
-            @include font-family-normal-size-line(druk, 38px, 50px);
-        }
-    }
-
     .ether {
         &-down {
             &-past {
@@ -464,6 +467,18 @@
 
         &-container {
             padding: 0 10px 100px;
+        }
+    }
+
+    .header {
+        &-transitions {
+            &-menu {
+                left: 40%;
+            }
+        }
+
+        &-title {
+            padding-top: 160px;
         }
     }
 
