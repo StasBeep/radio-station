@@ -5,7 +5,8 @@
         "menu": {
           "main": "главная",
           "blog": "блог",
-          "aboutUs": "о нас"
+          "aboutUs": "о нас",
+          "donat": "донат"
         },
         "titleDescription": "Слушай эфир онлайн - регги музыка",
         "go": "слушать",
@@ -71,7 +72,8 @@
         "menu": {
           "main": "main",
           "blog": "blog",
-          "aboutUs": "about us"
+          "aboutUs": "about us",
+          "donat": "donat"
         },
         "titleDescription": "Listen to the broadcast online - reggae music",
         "go": "listen",
