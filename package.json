@@ -127,8 +127,7 @@
       "!**/vue.config.js/**",
       "!**/node_modules/**",
       "!**/e2e/**",
-      "!**/coverage/**",
-      "!**/scripts/**"
+      "!**/coverage/**"
     ]
   }
 }

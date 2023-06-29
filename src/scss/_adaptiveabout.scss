@@ -1,0 +1,508 @@
+//* Ширина 1400
+@media (max-width: 1400px) {
+    .wrapper {
+        max-width: 1400px;
+
+        .aboutview {
+            &-us {
+                margin-right: 150px;
+            }
+        }
+    }
+}
+
+//* Ширина 1360
+@media (max-width: 1360px) {
+    .wrapper {
+        max-width: 1360px;
+    }
+
+    .advantagesabout {
+        &-list {
+            flex-direction: column;
+
+            &-left {
+                & > .advantagesabout-list-li {
+                    &:nth-child(1) {
+                        border: none;
+                        padding: 25px 0;
+                    }
+
+                    &:nth-child(2) {
+                        border: none;
+                        padding: 25px 0;
+                    }
+
+                    &:nth-child(3) {
+                        border: none;
+                        padding: 25px 0;
+                    }
+                }
+            }
+
+            &-right {
+                & > .advantagesabout-list-li {
+                    &:nth-child(1) {
+                        border: none;
+                        padding: 25px 0;
+                    }
+
+                    &:nth-child(2) {
+                        border: none;
+                        padding: 25px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//* Ширина 1195
+@media (max-width: 1195px) {
+    .wrapper {
+        max-width: 1195px;
+    }
+
+    .aboutview {
+        flex-direction: column;
+
+        &-us {
+            margin-right: 0;
+        }
+    }
+
+    .advantagesabout {
+        padding-top: 340px;
+    }
+}
+
+//* Ширина 1000
+@media (max-width: 1000px) {
+    .wrapper {
+        max-width: 1000px;
+    }
+
+    .footer {
+        &-up {
+            &-right {
+                display: none;
+            }
+        }
+    }
+}
+
+//* Ширина 975px
+@media (max-width: 975px) {
+    .wrapper {
+        max-width: 975px;
+
+        &-container {
+            padding: 0 100px 80px;
+        }
+    }
+
+    .aboutview {
+        flex-direction: column;
+        padding-top: 100px;
+        padding-bottom: 0;
+
+        &-circle {
+            margin-top: 70px;
+        }
+    }
+
+    .advantagesabout {
+        padding-top: 390px;
+        padding-bottom: 120px;
+
+        &-ol {
+            flex-direction: column;
+
+            &-li {
+                padding-bottom: 40px;
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .footer {
+        padding: 0;
+
+        &-up {
+            padding: 80px 100px;
+        }
+
+        &-down {
+            padding: 80px 100px;
+        }
+    }
+}
+
+//* Ширина 840px
+@media (max-width: 840px) {
+    .wrapper {
+        max-width: 840px;
+
+        &-container {
+            padding: 0 100px;
+        }
+    }
+
+    .footer {
+        padding: 0;
+    }
+}
+
+//* Ширина 768px
+@media (max-width: 768px) {
+    .wrapper {
+        max-width: 768px;
+
+        &-container {
+            padding: 0 82px 165px;
+        }
+    }
+
+    .main {
+        padding-bottom: 0;
+    }
+
+    .aboutview {
+        padding-top: 0;
+    }
+
+    .advantagesabout {
+        &-title {
+            padding-bottom: 40px;
+        }
+    }
+
+    .footer {
+        padding: 0;
+
+        &-up {
+            padding: 50px 82px;
+
+            &-right {
+                display: none;
+            }
+        }
+
+        &-down {
+            padding: 50px 82px;
+        }
+    }
+}
+
+//* Ширина 630px
+@media (max-width: 630px) {
+    .wrapper {
+        max-width: 630px;
+
+        &-container {
+            padding: 0 10px 80px;
+        }
+    }
+
+    .footer {
+        padding: 0;
+    }
+}
+
+//* Ширина 600px
+@media (max-width: 600px) {
+    .wrapper {
+        max-width: 600px;
+    }
+
+    .footer {
+        padding: 0;
+    }
+}
+
+//* Ширина 585px
+@media (max-width: 585px) {
+    .wrapper {
+        max-width: 585px;
+    }
+
+    .footer {
+        padding: 0;
+
+        &-down {
+            padding: 50px 30px;
+            justify-content: center;
+
+            &-years {
+                display: none;
+            }
+        }
+    }
+}
+
+//* Ширина 560px
+@media (max-width: 560px) {
+    .wrapper {
+        max-width: 560px;
+    }
+
+    .aboutview {
+        &-us {
+            &-description {
+                width: auto;
+                @include font-family-normal-size-line(mont-500, 17px, 22px);
+            }
+        }
+    }
+}
+
+//* Ширина 510px
+@media (max-width: 510px) {
+    .wrapper {
+        max-width: 510px;
+
+        &-container {
+            padding: 0 10px 120px;
+        }
+    }
+
+    .headerabout {
+        &-transitions {
+            &-mobile-menu {
+                &-checkbox {
+                    &:checked ~ .headerabout-transitions-menu {
+                        display: block;
+                    }
+                }
+
+                &-btn {
+                    display: block;
+                }
+
+                &-icon {
+                    display: block;
+                }
+            }
+
+            &-menu {
+                display: none;
+                position: absolute;
+                flex-direction: column;
+                top: 100px;
+                left: 40%;
+
+                &-li {
+                    margin-bottom: 20px;
+                    text-align: center;
+
+                    &-link {
+                        margin: 0 auto;
+                    }
+
+                    &::before {
+                        content: "";
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .advantagesabout {
+        &-list {
+            &-li {
+                width: auto;
+                height: auto;
+                @include font-family-normal-size-line(mont-500, 17px, 22px);
+            }
+        }
+    }
+
+    .footer {
+        padding: 0;
+
+        &-up {
+            padding: 25px 10px;
+        }
+
+        &-down {
+            padding: 25px 10px;
+        }
+    }
+}
+
+//* Ширина 440px
+@media (max-width: 440px) {
+    .wrapper {
+        max-width: 440px;
+
+        &-container {
+            padding: 0 10px 120px;
+        }
+    }
+
+    .aboutview {
+        &-us {
+            width: 350px;
+            margin-right: 0;
+        }
+
+        &-circle {
+            display: none;
+            width: 275px;
+            margin: 70px auto 0;
+
+            &-simple {
+                width: 72px;
+                height: 72px;
+
+                &:first-child {
+                    width: 61px;
+                    height: 61px;
+                }
+            }
+
+            &-circleincircle {
+                width: 67px;
+                height: 67px;
+            }
+
+            &-point {
+                width: 111px;
+                height: 111px;
+            }
+
+            & > svg:nth-child(1) {
+                top: 59px;
+                left: 110px;
+            }
+
+            & > svg:nth-child(2) {
+                top: 99px;
+                left: 40px;
+            }
+
+            & > svg:nth-child(3) {
+                top: 110px;
+                left: 125px;
+            }
+
+            & > svg:nth-child(4) {
+                top: 106px;
+                left: 191px;
+            }
+
+            & > svg:nth-child(6) {
+                left: 155px;
+            }
+        }
+    }
+
+    .advantagesabout {
+        padding-top: 0;
+    }
+
+    .footer {
+        padding: 0;
+
+        &-up {
+            padding: 50px 30px;
+            justify-content: center;
+
+            &-left {
+                flex-direction: column;
+
+                &-channels {
+                    margin-right: 0;
+                    margin-bottom: 40px;
+
+                    &-title {
+                        text-align: center;
+                    }
+
+                    &-li {
+                        text-align: center;
+                    }
+                }
+
+                &-projects {
+                    &-title {
+                        text-align: center;
+                    }
+
+                    &-li {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//* Ширина 360px
+@media (max-width: 360px) {
+    .wrapper {
+        max-width: 360px;
+
+        &-container {
+            padding: 0 30px 120px;
+        }
+    }
+
+    .aboutview {
+
+        &-us {
+            width: 300px;
+
+            &-title {
+                text-align: center;
+            }
+        }
+    }
+
+    .advantagesabout {
+        padding-bottom: 0;
+
+        &-title {
+            @include font-family-normal-size-line(mont-800, 28px, 34px);
+            text-align: center;
+        }
+    }
+
+    .footer {
+        padding: 0;
+    }
+}
+
+//* Ширина 335px
+@media (max-width: 335px) {
+    .wrapper {
+        max-width: 335px;
+    }
+}
+
+//* Ширина 320px
+@media (max-width: 320px) {
+    .wrapper {
+        max-width: 320px;
+
+        &-container {
+            padding: 0 10px 120px;
+        }
+    }
+
+    .footer {
+        padding: 0;
+
+        &-up {
+            padding: 25px 10px;
+        }
+
+        &-down {
+            padding: 25px 10px;
+        }
+    }
+}

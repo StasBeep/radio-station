@@ -1,0 +1,312 @@
+.headerabout {
+    padding-bottom: 120px;
+    box-sizing: border-box;
+    background-color: $background-main;
+
+    &-transitions {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 60px;
+
+        &-mobile-menu {
+            display: none;
+
+            &-checkbox {
+                display: none;
+
+                &:checked ~ .headerabout-transitions-mobile-menu-btn .headerabout-transitions-mobile-menu-icon::before,
+                &:checked ~ .headerabout-transitions-mobile-menu-btn .headerabout-transitions-mobile-menu-icon::after {
+                    top: 0;
+                }
+
+                &:checked ~ .headerabout-transitions-mobile-menu-btn .headerabout-transitions-mobile-menu-icon {
+                    background: transparent;
+                }
+
+                &:checked ~ .headerabout-transitions-mobile-menu-btn .headerabout-transitions-mobile-menu-icon::after {
+                    transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                }
+
+                &:checked ~ .headerabout-transitions-mobile-menu-btn .headerabout-transitions-mobile-menu-icon::before {
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                }
+            }
+
+            &-btn {
+                position: relative;
+                /* Строчка ниже играничивает по горизонтали размер палочек*/
+                // TODO: Нужно flex прописать
+                display: none;
+                align-items: center;
+                justify-content: center;
+                /* Размер блока с палочками по горизонтали */
+                width: 35px;
+                /* Перемещение блока с палочками по вертикали */
+                height: 30px;
+                /* При наведение на меню изменяется стрелочка на руку */
+                cursor: pointer;
+                /* Скорость изменения, но почему-то разницы нет */
+                transition: 0.4s;
+            }
+
+            &-icon {
+                // TODO: Удаление при адаптиве
+                display: none;
+                position: relative;
+                background: $color-hover;
+                /* Размер палочек внутри блока*/
+                width: 90%;
+                /* Резмер по вертикали средней палочки*/
+                height: 4px;
+                /* Скорость анимации изменения значка*/
+                transition: 0.4s;
+
+                &::after {
+                    top: 8px;
+                }
+
+                &::before {
+                    top: -8px;
+                }
+
+                &::after,
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    background: $color-hover;
+                    width: 100%;
+                    height: 4px;
+                    transition: 0.4s;
+                }
+            }
+        }
+
+        &-menu {
+            display: flex;
+            justify-content: space-between;
+
+            &-li {
+                list-style-type: none;
+
+                &-link {
+                    @include font-family-normal-size-line(mont-700, 16px, 20px);
+                    color: $color-hover;
+                    text-transform: uppercase;
+                    margin-right: 35px;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                        text-underline-offset: 4px;
+                        border-bottom: 3px solid $color-hover;
+                    }
+                }
+
+                &::before {
+                    content: url(../assets/img/elipseabout.svg);
+                    margin-right: 35px;
+                }
+
+                &:first-child {
+                    &::before {
+                        content: "";
+                        margin-right: 0;
+                    }
+                }
+
+                &:last-child {
+                    & > .headerabout-transitions-menu-li-link {
+                        text-decoration: underline;
+                        text-underline-offset: 4px;
+                        border-bottom: 3px solid $color-hover;
+                    }
+                }
+
+                &:last-child > .headerabout-transitions-menu-li-link {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &-languages {
+        &-lang {
+            @include font-family-normal-size-line(mont-700, 16px, 20px);
+            background-color: transparent;
+            text-transform: uppercase;
+            color: $color-hover;
+            border: none;
+            cursor: pointer;
+            transition: color 0.4s ease;
+
+            &:first-child {
+                color: $color-inactive;
+                margin-right: 15px;
+            }
+
+            &:hover {
+                color: $color-hover;
+            }
+        }
+    }
+}
+
+.mainabout {
+    background-color: $background-main;
+}
+
+.aboutview {
+    display: flex;
+    justify-content: space-between;
+    &-us {
+        width: 430px;
+
+        &-title {
+            display: block;
+            @include font-family-normal-size-line(mont-800, 34px, 42px);
+            color: $color-bg-black;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        &-description {
+            width: 550px;
+            @include font-family-normal-size-line(mont-500, 18px, 24px);
+            margin-bottom: 50px;
+            color: $color-hover;
+        }
+    }
+
+    &-circle {
+        width: 417px;
+        position: relative;
+
+        &-simple {
+            position: absolute;
+            fill: $bg-circle;
+            stroke: $color-stroke-circle;
+        }
+
+        &-circleincircle {
+            position: absolute;
+            fill: $bg-circle;
+            stroke: $color-stroke-circle;
+            animation: animation-circle-forward 10s infinite;
+        }
+
+        &-point {
+            position: absolute;
+            fill: $bg-circle;
+            stroke: $color-stroke-circle;
+            animation: animation-circle-forward 15s infinite;
+        }
+
+        & > svg:first-child {
+            top: 85px;
+            left: 175px;
+            animation: animation-circle-forward 2s infinite;
+        }
+
+        & > svg:nth-child(2) {
+            top: 160px;
+            left: 70px;
+        }
+
+        & > svg:nth-child(3) {
+            top: 165px;
+            left: 205px;
+        }
+
+        & > svg:nth-child(4) {
+            top: 155px;
+            left: 305px;
+        }
+
+        & > svg:nth-child(6) {
+            top: 0px;
+            left: 245px;
+            animation: animation-circle-back 30s infinite;
+        }
+    }
+}
+
+.advantagesabout {
+    padding: 109px 0 200px;
+    box-sizing: border-box;
+
+    &-title {
+        display: block;
+        @include font-family-normal-size-line(mont-800, 34px, 42px);
+        text-transform: uppercase;
+        color: $color-bg-black;
+        padding-bottom: 50px;
+    }
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        &-left {
+            list-style-type: none;
+
+            & > .advantagesabout-list-li {
+                &:nth-child(1) {
+                    padding-top: 0;
+                    padding-left: 0;
+                    border-top: none;
+                    border-left: none;
+                }
+
+                &:nth-child(2) {
+                    padding-left: 0;
+                    border-top: none;
+                    border-left: none;
+                }
+
+                &:nth-child(3) {
+                    padding-left: 0;
+                    padding-bottom: 0;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: none;
+                }
+            }
+        }
+
+        &-right {
+            list-style-type: none;
+
+            & > .advantagesabout-list-li {
+                &:nth-child(1) {
+                    padding-top: 0;
+                    padding-right: 0;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                }
+
+                &:nth-child(2) {
+                    padding-right: 0;
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: none;
+                    border-right: none;
+                }
+            }
+        }
+
+        &-li {
+            width: 430px;
+            padding: 25px 50px;
+            border: 0.5px solid $color-bg-light;
+            @include font-family-normal-size-line(mont-500, 18px, 24px);
+
+            &-number {
+                @include font-family-normal-size-line(mont-800, 18px, 24px);
+            }
+        }
+    }
+}

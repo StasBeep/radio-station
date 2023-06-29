@@ -491,7 +491,15 @@
             }
         }
 
+        &-elipse-play {
+            display: block;
+            width: 268px;
+            height: 180px;
+            margin: 20px 20px 50px;
+        }
+
         &-circle {
+            display: none;
             width: 275px;
             margin: 70px auto 0;
 
@@ -539,6 +547,10 @@
                 left: 155px;
             }
         }
+    }
+
+    .advantages {
+        padding-top: 0;
     }
 
     .slider {
@@ -710,10 +722,13 @@
                 margin: 0 auto;
             }
         }
+
+        &-elipse-play {
+            margin: 40px auto 70px;
+        }
     }
 
     .advantages {
-        padding-top: 290px;
 
         &-title {
             @include font-family-normal-size-line(mont-800, 28px, 34px);
