@@ -78,7 +78,7 @@
       </a>
     </figure>
     <figure class="footer-down">
-      <span class="footer-down-years">2014-2021 &#9400; &#8212; Reggae Universe</span>
+      <span class="footer-down-years">2014-{{ nowYear }} &#9400; &#8212; Reggae Universe</span>
       <nav class="footer-down-social">
         <a href="https://play.google.com/store/apps/details?id=eu.ctwoon.reggaeuniverse" target="_blank" rel="nofollow"
           class="footer-down-social-link">
@@ -106,7 +106,16 @@
 
 <script>
 export default {
-  name: 'FooterBlock'
+  name: 'FooterBlock',
+
+  computed: {
+    /**
+     * Вычисление текущего года
+     */
+    nowYear () {
+      return new Date().getFullYear()
+    }
+  }
 }
 </script>
 
