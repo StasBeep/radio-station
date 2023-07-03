@@ -13,7 +13,7 @@
           </label>
           <ul class="header-transitions-menu">
             <li class="header-transitions-menu-li">
-              <a class="header-transitions-menu-li-link" href="#">главная</a>
+              <router-link class="header-transitions-menu-li-link" to="/">главная</router-link>
             </li>
             <li class="header-transitions-menu-li">
               <a class="header-transitions-menu-li-link" href="https://reggaeuniverse.ru/blog/" target="_blank"
@@ -27,10 +27,10 @@
             </li>
           </ul>
           <figure class="header-languages">
-            <button class="header-languages-lang">
+            <button @click="changeLang('en')" class="header-languages-lang">
               en
             </button>
-            <button class="header-languages-lang">
+            <button @click="changeLang('ru')" class="header-languages-lang">
               ru
             </button>
           </figure>
@@ -281,11 +281,13 @@
     </div>
 
     <!--Подвал сайта-->
-    <FooterBlock />
+    <FooterBlock :lang="langFooter"/>
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 import FooterBlock from '../components/FooterBlock.vue'
 
 export default {
@@ -295,8 +297,42 @@ export default {
     FooterBlock
   },
 
-  methods: {
+  data: () => ({
+    langFooter: 'ru' // язык демонстрации (по умолчанию russian)
+  }),
 
+  methods: {
+    ...mapActions('aboutpage', {
+      fetchLang: 'fetchLang'
+    }),
+
+    /**
+     * Изменение цвета кнопки языка на странице about
+     * @param { String } lang язык включения
+     */
+    changeLang (lang) {
+      const btnsLang = this.$el.querySelectorAll('.header-languages-lang')
+      if (lang === 'en') {
+        btnsLang[0].style.color = '#ffffff'
+        btnsLang[1].style.color = '#888888'
+
+        // Метод перезаписи данных
+        this.$children[2].definitionLang()
+
+        this.langFooter = 'en'
+      } else {
+        btnsLang[1].style.color = '#ffffff'
+        btnsLang[0].style.color = '#888888'
+
+        this.$children[2].definitionLang()
+
+        this.langFooter = 'ru'
+      }
+    }
+  },
+
+  mounted () {
+    this.fetchLang()
   }
 }
 </script>

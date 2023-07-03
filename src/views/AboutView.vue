@@ -20,14 +20,14 @@
                 rel="nofollow">блог</a>
             </li>
             <li class="headerabout-transitions-menu-li">
-              <a class="headerabout-transitions-menu-li-link" href="#">о нас</a>
+              <router-link class="headerabout-transitions-menu-li-link" to="/about">о нас</router-link>
             </li>
           </ul>
           <figure class="headerabout-languages">
-            <button class="headerabout-languages-lang">
+            <button @click="changeLang('en')" class="headerabout-languages-lang">
               en
             </button>
-            <button class="headerabout-languages-lang">
+            <button @click="changeLang('ru')" class="headerabout-languages-lang">
               ru
             </button>
           </figure>
@@ -124,22 +124,57 @@
     </div>
 
     <!--Подвал сайта-->
-    <FooterBlock />
+    <FooterBlock :lang="langFooter"/>
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 import FooterBlock from '../components/FooterBlock.vue'
 
 export default {
   name: 'AboutView',
+
+  data: () => ({
+    langFooter: 'ru' // язык демонстрации (по умолчанию russian)
+  }),
 
   components: {
     FooterBlock
   },
 
   methods: {
+    ...mapActions('aboutpage', {
+      fetchLang: 'fetchLang'
+    }),
 
+    /**
+     * Изменение цвета кнопки языка на странице about
+     * @param { String } lang язык включения
+     */
+    changeLang (lang) {
+      const btnsLang = this.$el.querySelectorAll('.headerabout-languages-lang')
+      if (lang === 'en') {
+        btnsLang[0].style.color = '#000000'
+        btnsLang[1].style.color = '#888888'
+
+        this.$children[2].definitionLang()
+
+        this.langFooter = 'en'
+      } else {
+        btnsLang[1].style.color = '#000000'
+        btnsLang[0].style.color = '#888888'
+
+        this.$children[2].definitionLang()
+
+        this.langFooter = 'ru'
+      }
+    }
+  },
+
+  mounted () {
+    this.fetchLang()
   }
 }
 </script>

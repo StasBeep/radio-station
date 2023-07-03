@@ -105,16 +105,85 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+
 export default {
   name: 'FooterBlock',
 
+  props: {
+    lang: String
+  },
+
+  methods: {
+    ...mapActions('aboutpage', {
+      fetchLang: 'fetchLang'
+    }),
+
+    /**
+     * Функция parent при нажатии
+     */
+    definitionLang () {
+      if (this.lang === 'ru') {
+        this._changeLangContent(this.getLang.en)
+      } else if (this.lang === 'en') {
+        this._changeLangContent(this.getLang.ru)
+      }
+    },
+
+    /**
+     * Изменение языка в блоках
+     * @param { String } language язык
+     */
+    _changeLangContent (language) {
+      //* footer
+      const footerBroadcast = this.$el.querySelector('.footer-up-left-channels-title')
+      const footerProject = this.$el.getElementsByClassName('footer-up-left-projects')
+
+      this._changeTextBlock(footerBroadcast, language.chapterAboutUs.broadcast)
+      this._changeTextBlock(footerProject[0].children[0], language.headings.footerProject)
+      this._changeTextBlock(footerProject[0].children[1].children[0], language.chapterProject.vibes)
+      this._changeTextBlock(footerProject[0].children[2].children[0], language.chapterProject.woman)
+      this._changeTextBlock(footerProject[0].children[3].children[0], language.chapterProject.dembow)
+      this._changeTextBlock(footerProject[0].children[4].children[0], language.chapterProject.reggae)
+    },
+
+    /**
+     * Изменение самого текста в индивидульных блоках
+     * @param { Btn } block блок замены
+     * @param { String } text текст
+     */
+    _changeTextBlock (block, text) {
+      block.textContent = `${text}`
+    }
+  },
+
   computed: {
+    ...mapGetters('aboutpage', {
+      getLang: 'getLang'
+    }),
+
     /**
      * Вычисление текущего года
      */
     nowYear () {
       return new Date().getFullYear()
+    },
+
+    /**
+     * Данный язык
+     */
+    nowLangProp () {
+      this.definitionLang()
+      return this.lang
     }
+  },
+
+  mounted () {
+    this.fetchLang()
+  },
+
+  beforeUnmount () {
+    this.getLang = []
   }
 }
 </script>

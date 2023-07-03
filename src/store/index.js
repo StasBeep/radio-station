@@ -7,55 +7,59 @@ Vue.use(Vuex)
 Vue.use(VueAxios, axios)
 
 // Модули должны быть сверху
-const moduleA = {
-  state: () => ({ }),
+const homeContent = {
+  namespaced: true,
+  state: { },
   mutations: { },
   actions: { },
   getters: { }
 }
 
-const moduleB = {
-  state: () => ({ }),
-  mutations: { },
-  actions: { }
+const aboutContent = {
+  namespaced: true,
+  state: {
+    language: []
+  },
+  mutations: {
+    setLang (state, payload) {
+      state.language = payload
+    }
+  },
+  actions: {
+    fetchLang ({ commit }) {
+      return new Promise((resolve) => {
+        axios
+          .get('https://raw.githubusercontent.com/StasBeep/radio-station/alteration-content/languageBlog.json')
+          .then(response => {
+            resolve(response.data.language[0])
+            console.log(response.data.language[0])
+          })
+          .catch(error => console.log(error))
+      }).then(res => {
+        commit('setLang', res)
+      })
+    }
+  },
+  getters: {
+    getLang: state => state.language
+  }
 }
 
 export default new Vuex.Store({
   // Начальная точка отсчёта (состояние)
-  state: {
-    offers: []
-  },
+  state: { },
   // "Выдача" данных
   // Возвращает значения state или других состояний
   // Преобразовать данные и вернуть
-  getters: {
-    getOffers: state => state.offers
-  },
+  getters: { },
   // Изменение данных
-  mutations: {
-    setOffers (state, payload) {
-      state.offers = payload
-    }
-  },
+  mutations: { },
   // Запускают mutations
   // Запрос -> получение -> вызов действий mutations
-  actions: {
-    fetchOffers ({ commit }) {
-      return new Promise((resolve) => {
-        axios
-          .get('https://raw.githubusercontent.com/StasBeep/diving/content-line/content.json')
-          .then(response => {
-            resolve(response.data.offers)
-          })
-          .catch(error => console.log(error))
-      }).then(res => {
-        commit('setOffers', res)
-      })
-    }
-  },
+  actions: { },
   // Модули (для каждой страницы своё хранилище)
   modules: {
-    a: moduleA,
-    b: moduleB
+    homepage: homeContent,
+    aboutpage: aboutContent
   }
 })
