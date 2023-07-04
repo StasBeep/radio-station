@@ -36,6 +36,35 @@ const homeContent = {
   }
 }
 
+const sliderContent = {
+  namespaced: true,
+  state: {
+    slider: []
+  },
+  mutations: {
+    setSlider (state, payload) {
+      state.slider = payload
+    }
+  },
+  actions: {
+    fetchSlider ({ commit }) {
+      return new Promise((resolve) => {
+        axios
+          .get('https://raw.githubusercontent.com/StasBeep/radio-station/alteration-content/arrObjSlider.json')
+          .then(response => {
+            resolve(response.data.contentSlider)
+          })
+          .catch(error => console.log(error))
+      }).then(res => {
+        commit('setSlider', res)
+      })
+    }
+  },
+  getters: {
+    getSlider: state => state.slider
+  }
+}
+
 const aboutContent = {
   namespaced: true,
   state: {
@@ -80,6 +109,7 @@ export default new Vuex.Store({
   // Модули (для каждой страницы своё хранилище)
   modules: {
     homepage: homeContent,
+    slider: sliderContent,
     aboutpage: aboutContent
   }
 })

@@ -100,6 +100,7 @@
           <h2 class="slider-title">
             регги блог
           </h2>
+          <SliderBlock />
         </article>
         <!--Четвёртая секция-->
         <article class="ether" id="ether">
@@ -240,12 +241,14 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 
+import SliderBlock from '../components/SliderBlock.vue'
 import FooterBlock from '../components/FooterBlock.vue'
 
 export default {
   name: 'HomeView',
 
   components: {
+    SliderBlock,
     FooterBlock
   },
 
@@ -271,7 +274,7 @@ export default {
         this._changeLangContent(this.getLang.en)
 
         // Метод перезаписи данных
-        this.$children[2].definitionLang()
+        this.$children[3].definitionLang()
 
         this.langFooter = 'en'
       } else {
@@ -280,7 +283,7 @@ export default {
 
         this._changeLangContent(this.getLang.ru)
 
-        this.$children[2].definitionLang()
+        this.$children[3].definitionLang()
 
         this.langFooter = 'ru'
       }
