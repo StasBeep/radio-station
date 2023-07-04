@@ -245,7 +245,7 @@ export default {
         this._changeLangContent(this.getLang.en)
 
         // Метод перезаписи данных
-        this.$children[3].definitionLang()
+        this.$children[4].definitionLang()
 
         this.langFooter = 'en'
       } else {
@@ -254,7 +254,7 @@ export default {
 
         this._changeLangContent(this.getLang.ru)
 
-        this.$children[3].definitionLang()
+        this.$children[4].definitionLang()
 
         this.langFooter = 'ru'
       }
