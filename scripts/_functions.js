@@ -65,6 +65,7 @@ function languageChange(language) {
     _changeTextBlock(donatblock.children[0].children[2], language.chapterDonat.comment);
     _changeTextBlock(donatblock.children[0].children[4], language.chapterDonat.sending);
     _changeTextBlock(donatblock.children[1].children[0], language.chapterDonat.fun);
+    donatblock.children[0].children[4].value = `${language.chapterDonat.sending}`
 
     //* Обратная связь
     connectForm.children[0].placeholder = `${language.characterConnection.name}`;
