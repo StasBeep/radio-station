@@ -286,7 +286,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 import FooterBlock from '../components/FooterBlock.vue'
 
@@ -302,7 +302,7 @@ export default {
   }),
 
   methods: {
-    ...mapActions('aboutpage', {
+    ...mapActions('homepage', {
       fetchLang: 'fetchLang'
     }),
 
@@ -316,6 +316,8 @@ export default {
         btnsLang[0].style.color = '#ffffff'
         btnsLang[1].style.color = '#888888'
 
+        this._changeLangContent(this.getLang.en)
+
         // Метод перезаписи данных
         this.$children[2].definitionLang()
 
@@ -324,15 +326,113 @@ export default {
         btnsLang[1].style.color = '#ffffff'
         btnsLang[0].style.color = '#888888'
 
+        this._changeLangContent(this.getLang.ru)
+
         this.$children[2].definitionLang()
 
         this.langFooter = 'ru'
       }
+    },
+
+    /**
+     * Изменение языка в блоках
+     * @param { String } language язык
+     */
+    _changeLangContent (language) {
+      // Переменные для смены языка
+      const menuLang = this.$el.getElementsByClassName('header-transitions-menu-li-link')
+      const radioDescription = this.$el.getElementsByClassName('header-description')[0]
+      const btnGo = this.$el.getElementsByClassName('header-btn')[0]
+      const sectionMain = this.$el.getElementsByClassName('main')[0].children
+      const advantagesList = this.$el.getElementsByClassName('advantages-ol')[0]
+      const etherBlock = this.$el.getElementsByClassName('ether-down')[0]
+      const projectList = this.$el.getElementsByClassName('projects-links')[0]
+      const donatblock = this.$el.getElementsByClassName('donat-content')[0]
+      const connectForm = this.$el.getElementsByClassName('connection-foundation-form')[0]
+      const connectDescription = this.$el.getElementsByClassName('connection-description')[0]
+
+      //* Изменение меню
+      this._changeTextBlock(menuLang[0], language.menu.main)
+      this._changeTextBlock(menuLang[1], language.menu.blog)
+      this._changeTextBlock(menuLang[2], language.menu.aboutUs)
+      this._changeTextBlock(menuLang[3], language.menu.donat)
+
+      this._changeTextBlock(radioDescription, language.titleDescription)
+      this._changeTextBlock(btnGo, language.go)
+
+      // Изменение заголовков у блоков
+      this._changeTextBlock(sectionMain[0].children[0].children[0], language.headings.aboutUs)
+      this._changeTextBlock(sectionMain[2].children[0], language.headings.blog)
+      this._changeTextBlock(sectionMain[3].children[0], language.headings.ether)
+      this._changeTextBlock(sectionMain[4].children[0], language.headings.project)
+      this._changeTextBlock(sectionMain[5].children[0], language.headings.donat)
+      this._changeTextBlock(sectionMain[6].children[0].children[0], language.headings.connection)
+
+      //* Нас вещают
+      this._changeTextBlock(sectionMain[0].children[0].children[1], language.chapterAboutUs.description)
+
+      //* Преимущества
+      this._changeTextBlock(advantagesList.children[0], language.chapterAdvantages.first)
+      this._changeTextBlock(advantagesList.children[1], language.chapterAdvantages.second)
+      this._changeTextBlock(advantagesList.children[2], language.chapterAdvantages.third)
+
+      //* Эфир
+      this._changeTextBlock(etherBlock.children[0].children[0], language.chapterEther.nowPlaying)
+      this._changeTextBlock(etherBlock.children[1].children[0], language.chapterEther.lostPlaiyng)
+
+      //* Проекты
+      this._changeTextBlock(projectList.children[0].children[0], language.chapterProject.vibes)
+      this._changeTextBlock(projectList.children[1].children[0], language.chapterProject.woman)
+      this._changeTextBlock(projectList.children[2].children[0], language.chapterProject.dembow)
+      this._changeTextBlock(projectList.children[3].children[0], language.chapterProject.reggae)
+
+      //* Донат
+      this._changeTextBlock(donatblock.children[0].children[1], language.chapterDonat.support)
+      this._changeTextBlock(donatblock.children[0].children[2], language.chapterDonat.comment)
+      this._changeTextBlock(donatblock.children[0].children[4], language.chapterDonat.sending)
+      this._changeTextBlock(donatblock.children[1].children[0], language.chapterDonat.fun)
+      donatblock.children[0].children[4].value = `${language.chapterDonat.sending}`
+
+      //* Обратная связь
+      connectForm.children[0].placeholder = `${language.characterConnection.name}`
+      connectForm.children[1].placeholder = `${language.characterConnection.email}`
+      connectForm.children[2].placeholder = `${language.characterConnection.message}`
+      this._changeTextBlock(connectForm.children[3], language.characterConnection.file)
+      this._changeTextBlock(connectForm.children[5], language.characterConnection.safety)
+
+      const linkSafety = document.createElement('a')
+      linkSafety.href = 'https://reggaeuniverse.ru/blog/privacy/'
+      linkSafety.target = '_blank'
+      linkSafety.classList.add('connection-foundation-form-data-link')
+      connectForm.children[5].insertAdjacentElement('beforeend', linkSafety)
+      this._changeTextBlock(linkSafety, ` ${language.characterConnection.safetyLink}`)
+
+      connectForm.children[6].value = `${language.characterConnection.send}`
+      this._changeTextBlock(connectDescription, language.characterConnection.description)
+    },
+
+    /**
+     * Изменение в теге контента
+     * @param { Element } block Тег, который изменяет текст внутри себя
+     * @param { String } text Содержимое объекта языка
+     */
+    _changeTextBlock (block, text) {
+      block.textContent = `${text}`
     }
+  },
+
+  computed: {
+    ...mapGetters('homepage', {
+      getLang: 'getLang'
+    })
   },
 
   mounted () {
     this.fetchLang()
+  },
+
+  beforeUnmount () {
+    this.getLang = []
   }
 }
 </script>

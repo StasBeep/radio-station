@@ -9,10 +9,31 @@ Vue.use(VueAxios, axios)
 // Модули должны быть сверху
 const homeContent = {
   namespaced: true,
-  state: { },
-  mutations: { },
-  actions: { },
-  getters: { }
+  state: {
+    language: []
+  },
+  mutations: {
+    setLang (state, payload) {
+      state.language = payload
+    }
+  },
+  actions: {
+    fetchLang ({ commit }) {
+      return new Promise((resolve) => {
+        axios
+          .get('https://raw.githubusercontent.com/StasBeep/radio-station/alteration-content/languageBlog.json')
+          .then(response => {
+            resolve(response.data.language[0])
+          })
+          .catch(error => console.log(error))
+      }).then(res => {
+        commit('setLang', res)
+      })
+    }
+  },
+  getters: {
+    getLang: state => state.language
+  }
 }
 
 const aboutContent = {
@@ -32,7 +53,6 @@ const aboutContent = {
           .get('https://raw.githubusercontent.com/StasBeep/radio-station/alteration-content/languageBlog.json')
           .then(response => {
             resolve(response.data.language[0])
-            console.log(response.data.language[0])
           })
           .catch(error => console.log(error))
       }).then(res => {

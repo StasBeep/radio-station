@@ -129,7 +129,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 import FooterBlock from '../components/FooterBlock.vue'
 
@@ -159,6 +159,8 @@ export default {
         btnsLang[0].style.color = '#000000'
         btnsLang[1].style.color = '#888888'
 
+        this._changeLangContent(this.getLang.en)
+
         this.$children[2].definitionLang()
 
         this.langFooter = 'en'
@@ -166,15 +168,67 @@ export default {
         btnsLang[1].style.color = '#000000'
         btnsLang[0].style.color = '#888888'
 
+        this._changeLangContent(this.getLang.ru)
+
         this.$children[2].definitionLang()
 
         this.langFooter = 'ru'
       }
+    },
+
+    /**
+     * Изменение языка в блоках
+     * @param { String } language язык
+     */
+    _changeLangContent (language) {
+      // Переменные для смены языка
+      const menuLang = this.$el.getElementsByClassName('headerabout-transitions-menu-li-link')
+      const sectionMain = this.$el.getElementsByClassName('main')[0].children
+      const aboutDescription = this.$el.getElementsByClassName('aboutview-us-description')[0]
+      const infoDescription = this.$el.getElementsByClassName('advantagesabout-list-li')
+
+      // Меню
+      this._changeTextBlock(menuLang[0], language.menu.main)
+      this._changeTextBlock(menuLang[1], language.menu.blog)
+      this._changeTextBlock(menuLang[2], language.menu.aboutUs)
+
+      // Изменение заголовков у блоков
+      this._changeTextBlock(sectionMain[0].children[0].children[0], language.headings.aboutUs)
+      this._changeTextBlock(sectionMain[1].children[0], language.headings.advantages)
+
+      //  Описание блока о нас
+      this._changeTextBlock(aboutDescription, language.pageAboutUs.description)
+
+      // Описаниние о нас (перечисления)
+      this._changeTextBlock(infoDescription[0], language.pageAboutUs.info.project)
+      this._changeTextBlock(infoDescription[1], language.pageAboutUs.info.ourFormat)
+      this._changeTextBlock(infoDescription[2], language.pageAboutUs.info.regular)
+      this._changeTextBlock(infoDescription[3], language.pageAboutUs.info.exclusive)
+      this._changeTextBlock(infoDescription[4], language.pageAboutUs.info.artists)
+    },
+
+    /**
+     * Изменение в теге контента
+     * @param { Element } block Тег, который изменяет текст внутри себя
+     * @param { String } text Содержимое объекта языка
+     */
+    _changeTextBlock (block, text) {
+      block.textContent = `${text}`
     }
+  },
+
+  computed: {
+    ...mapGetters('aboutpage', {
+      getLang: 'getLang'
+    })
   },
 
   mounted () {
     this.fetchLang()
+  },
+
+  beforeUnmount () {
+    this.getLang = []
   }
 }
 </script>

@@ -140,6 +140,7 @@ export default {
       const footerProject = this.$el.getElementsByClassName('footer-up-left-projects')
 
       this._changeTextBlock(footerBroadcast, language.chapterAboutUs.broadcast)
+
       this._changeTextBlock(footerProject[0].children[0], language.headings.footerProject)
       this._changeTextBlock(footerProject[0].children[1].children[0], language.chapterProject.vibes)
       this._changeTextBlock(footerProject[0].children[2].children[0], language.chapterProject.woman)
