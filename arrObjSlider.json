@@ -1,5 +1,13 @@
 {
-    "contentSlider": [{
+    "contentSlider": [
+        {
+        "image": "https://sun9-54.userapi.com/impg/f6fd1SigvJ8u3vFviYoGawNzHi9DG2ZGv7CVag/suzaF73a2Aw.jpg?size=1267x757&quality=95&sign=d2e5b16af0511384ee5b240252d82083&type=album",
+        "title": "Beating Souls On Air",
+        "text": "Новиночка от итальянской Рэгги-группы Beating Souls",
+        "link": "https://reggaeuniverse.ru/blog/beating_souls_on_air/",
+        "data": "10.07.2023",
+        "color": ""
+    },   {
         "image": "https://reggaeuniverse.ru/blog/wp-content/uploads/2023/04/Alex.jpg",
         "title": "Алекс из Дансхол-группы TOK эволюционировал",
         "text": "Вот и добрались* мы до 4-го участника ямайского бойз-бэнда TOK (Touch of Klass)",
@@ -68,13 +76,6 @@
         "text": "Свежий дабплейт Если Любишь Дансхол от московского артиста Команданте (Komandante) пополнил эфирную сетку вещания радио Reggae Universe.",
         "link": "https://vk.com/reggae_universe?w=wall-73430637_2522/",
         "data": "16.05.2022",
-        "color": "black"
-    }, {
-        "image": "https://sun9-78.userapi.com/s/v1/ig2/f2esmhzdHKA0xrutD8cukkY0bHVSd8vEcGlw70M13tn0PXvL1R_Gq7sdBHq12HASv7LaTOdT7rBE0OfpqQ0Obb7Y.jpg?size=1684x1658&quality=95&type=album",
-        "title": "Bax4a (Бахча) On Air",
-        "text": "В России выпускают не только ракеты, но и музыку",
-        "link": "https://reggaeuniverse.ru/blog/bahcha/",
-        "data": "12.05.2022",
         "color": "black"
     } ]
  }
