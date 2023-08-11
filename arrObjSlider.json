@@ -1,6 +1,13 @@
 {
     "contentSlider": [
-     {
+    {
+        "image": "https://sun9-66.userapi.com/impg/F4LgswGFpxsT18F9j-dHENk4YXEAtkY1QxS8VQ/TUgCSFMhI04.jpg?size=858x741&quality=95&sign=7dfb9c76d9116e51cf9589b0896fb4c6&type=album",
+        "title": "В эфире Рэгги-Вселенной новый эксклюзивный дабплейт!",
+        "text": "На сей раз это свежий рутсовый сингл ‘Позволь Сказать Тебе’ итальянского исполнителя Бриско (Brisco)",
+        "link": "https://reggaeuniverse.ru/blog/brisco_on_air/",
+        "data": "03.08.2023",
+        "color": "black"
+    },    {
         "image": "https://sun9-33.userapi.com/impg/MuvAsu1zmOatnMuTR8mcaHb9663YmamGSf07wQ/WiNwSqhuP0E.jpg?size=1280x1278&quality=95&sign=ff26ddd879c39dfe126ece36a78a20db&type=album",
         "title": "Из проф-футбола в Дансхол",
         "text": "Выползаем из отпусков, возвращаясь на спорт-волну, ведь Усэйн Болт далеко не единственный спортсмен, ушедший с головою в продюсирование.",
@@ -69,13 +76,6 @@
         "text": "Словами не передать, как мы тащимся тут (втихаря) от раннего цифрового Дансхола в целом, и от Отвёртки в частности.",
         "link": "https://reggaeuniverse.ru/blog/screwdriver_1991_teach-dem/",
         "data": "09.08.2022",
-        "color": "black"
-    },  {
-        "image": "https://sun9-36.userapi.com/s/v1/if2/QFnRdgSRbjAzw1DQfSqGD9e05WRzZggma58SO1x_ih5lBGfG_fdKdweUvuuYje5FE42M102F6S_tJhXp6JfO1-dC.jpg?size=811x514&quality=95&type=album",
-        "title": "Джонни Кларк о золотой эре Регги",
-        "text": "Во второй части интервью Джонни Кларк вспоминает свой успех в 70-х",
-        "link": "https://reggaeuniverse.ru/blog/chernovikjohny_clarke_part_2/",
-        "data": "26.05.2022",
         "color": "black"
     } ]
  }
